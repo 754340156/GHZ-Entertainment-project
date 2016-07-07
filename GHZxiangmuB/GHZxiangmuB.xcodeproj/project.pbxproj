@@ -17,8 +17,15 @@
 		D630077B1D2E6DFF005A88B9 /* Text1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D630076C1D2E6DFF005A88B9 /* Text1ViewController.m */; };
 		D630077C1D2E6DFF005A88B9 /* Text2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D630076E1D2E6DFF005A88B9 /* Text2ViewController.m */; };
 		D630077F1D2E6E45005A88B9 /* GHZNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D630077E1D2E6E45005A88B9 /* GHZNewViewController.m */; };
-		D63007821D2E6E59005A88B9 /* GHZLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63007811D2E6E59005A88B9 /* GHZLiveViewController.m */; };
 		D63007851D2E6E65005A88B9 /* GHZChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63007841D2E6E65005A88B9 /* GHZChatViewController.m */; };
+		D630079E1D2E9178005A88B9 /* GHZLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63007911D2E9178005A88B9 /* GHZLiveViewController.m */; };
+		D630079F1D2E9178005A88B9 /* GHZSelectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = D63007951D2E9178005A88B9 /* GHZSelectedView.m */; };
+		D63007A21D2E9397005A88B9 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D63007A11D2E9397005A88B9 /* UIView+Extension.m */; };
+		D63007A51D2E9540005A88B9 /* GHZCareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63007A41D2E9540005A88B9 /* GHZCareViewController.m */; };
+		D63007A81D2E954C005A88B9 /* GHZHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63007A71D2E954C005A88B9 /* GHZHotViewController.m */; };
+		D63007B11D2EA2C1005A88B9 /* GHZLiveNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63007B01D2EA2C1005A88B9 /* GHZLiveNewViewController.m */; };
+		D63007B51D2EA7F3005A88B9 /* GHZNewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D63007B31D2EA7F3005A88B9 /* GHZNewTableViewCell.m */; };
+		D63007B61D2EA7F3005A88B9 /* GHZNewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D63007B41D2EA7F3005A88B9 /* GHZNewTableViewCell.xib */; };
 		D686B31E1D2DF27300648326 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D686B31D1D2DF27300648326 /* main.m */; };
 		D686B3211D2DF27300648326 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D686B3201D2DF27300648326 /* AppDelegate.m */; };
 		D686B3271D2DF27300648326 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D686B3251D2DF27300648326 /* Main.storyboard */; };
@@ -47,11 +54,24 @@
 		D630076E1D2E6DFF005A88B9 /* Text2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Text2ViewController.m; sourceTree = "<group>"; };
 		D630077D1D2E6E45005A88B9 /* GHZNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewViewController.h; sourceTree = "<group>"; };
 		D630077E1D2E6E45005A88B9 /* GHZNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewViewController.m; sourceTree = "<group>"; };
-		D63007801D2E6E59005A88B9 /* GHZLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZLiveViewController.h; sourceTree = "<group>"; };
-		D63007811D2E6E59005A88B9 /* GHZLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZLiveViewController.m; sourceTree = "<group>"; };
 		D63007831D2E6E65005A88B9 /* GHZChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZChatViewController.h; sourceTree = "<group>"; };
 		D63007841D2E6E65005A88B9 /* GHZChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZChatViewController.m; sourceTree = "<group>"; };
 		D63007861D2E6EAB005A88B9 /* PCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCH.pch; sourceTree = "<group>"; };
+		D63007901D2E9178005A88B9 /* GHZLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZLiveViewController.h; sourceTree = "<group>"; };
+		D63007911D2E9178005A88B9 /* GHZLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZLiveViewController.m; sourceTree = "<group>"; };
+		D63007941D2E9178005A88B9 /* GHZSelectedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZSelectedView.h; sourceTree = "<group>"; };
+		D63007951D2E9178005A88B9 /* GHZSelectedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZSelectedView.m; sourceTree = "<group>"; };
+		D63007A01D2E9397005A88B9 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		D63007A11D2E9397005A88B9 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		D63007A31D2E9540005A88B9 /* GHZCareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCareViewController.h; sourceTree = "<group>"; };
+		D63007A41D2E9540005A88B9 /* GHZCareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCareViewController.m; sourceTree = "<group>"; };
+		D63007A61D2E954C005A88B9 /* GHZHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZHotViewController.h; sourceTree = "<group>"; };
+		D63007A71D2E954C005A88B9 /* GHZHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZHotViewController.m; sourceTree = "<group>"; };
+		D63007AF1D2EA2C1005A88B9 /* GHZLiveNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZLiveNewViewController.h; sourceTree = "<group>"; };
+		D63007B01D2EA2C1005A88B9 /* GHZLiveNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZLiveNewViewController.m; sourceTree = "<group>"; };
+		D63007B21D2EA7F3005A88B9 /* GHZNewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewTableViewCell.h; sourceTree = "<group>"; };
+		D63007B31D2EA7F3005A88B9 /* GHZNewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewTableViewCell.m; sourceTree = "<group>"; };
+		D63007B41D2EA7F3005A88B9 /* GHZNewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZNewTableViewCell.xib; sourceTree = "<group>"; };
 		D686B3191D2DF27300648326 /* GHZxiangmuB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHZxiangmuB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D686B31D1D2DF27300648326 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D686B31F1D2DF27300648326 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -121,6 +141,8 @@
 		D63007281D2E67FE005A88B9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				D63007A01D2E9397005A88B9 /* UIView+Extension.h */,
+				D63007A11D2E9397005A88B9 /* UIView+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -298,34 +320,12 @@
 		D63007711D2E6DFF005A88B9 /* Live */ = {
 			isa = PBXGroup;
 			children = (
-				D63007721D2E6DFF005A88B9 /* Controller */,
-				D63007731D2E6DFF005A88B9 /* Model */,
-				D63007741D2E6DFF005A88B9 /* View */,
+				D630078E1D2E9178005A88B9 /* Home */,
+				D630079A1D2E9178005A88B9 /* New */,
+				D63007961D2E9178005A88B9 /* Hot */,
+				D630078A1D2E9178005A88B9 /* Care */,
 			);
 			path = Live;
-			sourceTree = "<group>";
-		};
-		D63007721D2E6DFF005A88B9 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				D63007801D2E6E59005A88B9 /* GHZLiveViewController.h */,
-				D63007811D2E6E59005A88B9 /* GHZLiveViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		D63007731D2E6DFF005A88B9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		D63007741D2E6DFF005A88B9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		D63007751D2E6DFF005A88B9 /* New */ = {
@@ -357,6 +357,143 @@
 		D63007781D2E6DFF005A88B9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D630078A1D2E9178005A88B9 /* Care */ = {
+			isa = PBXGroup;
+			children = (
+				D630078B1D2E9178005A88B9 /* Controller */,
+				D630078C1D2E9178005A88B9 /* Model */,
+				D630078D1D2E9178005A88B9 /* View */,
+			);
+			path = Care;
+			sourceTree = "<group>";
+		};
+		D630078B1D2E9178005A88B9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D63007A31D2E9540005A88B9 /* GHZCareViewController.h */,
+				D63007A41D2E9540005A88B9 /* GHZCareViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D630078C1D2E9178005A88B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D630078D1D2E9178005A88B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D630078E1D2E9178005A88B9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D630078F1D2E9178005A88B9 /* Controller */,
+				D63007921D2E9178005A88B9 /* Model */,
+				D63007931D2E9178005A88B9 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D630078F1D2E9178005A88B9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D63007901D2E9178005A88B9 /* GHZLiveViewController.h */,
+				D63007911D2E9178005A88B9 /* GHZLiveViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D63007921D2E9178005A88B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D63007931D2E9178005A88B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D63007941D2E9178005A88B9 /* GHZSelectedView.h */,
+				D63007951D2E9178005A88B9 /* GHZSelectedView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D63007961D2E9178005A88B9 /* Hot */ = {
+			isa = PBXGroup;
+			children = (
+				D63007971D2E9178005A88B9 /* Controller */,
+				D63007981D2E9178005A88B9 /* Model */,
+				D63007991D2E9178005A88B9 /* View */,
+			);
+			path = Hot;
+			sourceTree = "<group>";
+		};
+		D63007971D2E9178005A88B9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D63007A61D2E954C005A88B9 /* GHZHotViewController.h */,
+				D63007A71D2E954C005A88B9 /* GHZHotViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D63007981D2E9178005A88B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D63007991D2E9178005A88B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D630079A1D2E9178005A88B9 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				D630079B1D2E9178005A88B9 /* Controller */,
+				D630079C1D2E9178005A88B9 /* Model */,
+				D630079D1D2E9178005A88B9 /* View */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		D630079B1D2E9178005A88B9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D63007AF1D2EA2C1005A88B9 /* GHZLiveNewViewController.h */,
+				D63007B01D2EA2C1005A88B9 /* GHZLiveNewViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D630079C1D2E9178005A88B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D630079D1D2E9178005A88B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D63007B21D2EA7F3005A88B9 /* GHZNewTableViewCell.h */,
+				D63007B31D2EA7F3005A88B9 /* GHZNewTableViewCell.m */,
+				D63007B41D2EA7F3005A88B9 /* GHZNewTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -465,6 +602,7 @@
 			files = (
 				D686B32C1D2DF27300648326 /* LaunchScreen.storyboard in Resources */,
 				D686B3291D2DF27300648326 /* Assets.xcassets in Resources */,
+				D63007B61D2EA7F3005A88B9 /* GHZNewTableViewCell.xib in Resources */,
 				D686B3271D2DF27300648326 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,18 +662,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D63007A21D2E9397005A88B9 /* UIView+Extension.m in Sources */,
 				D630073F1D2E67FE005A88B9 /* GHZTabBarViewController.m in Sources */,
+				D630079F1D2E9178005A88B9 /* GHZSelectedView.m in Sources */,
 				D63007791D2E6DFF005A88B9 /* GHZCreamViewController.m in Sources */,
+				D63007A81D2E954C005A88B9 /* GHZHotViewController.m in Sources */,
+				D63007B11D2EA2C1005A88B9 /* GHZLiveNewViewController.m in Sources */,
 				D630077B1D2E6DFF005A88B9 /* Text1ViewController.m in Sources */,
+				D63007A51D2E9540005A88B9 /* GHZCareViewController.m in Sources */,
 				D63007851D2E6E65005A88B9 /* GHZChatViewController.m in Sources */,
 				D686B3211D2DF27300648326 /* AppDelegate.m in Sources */,
 				D630077F1D2E6E45005A88B9 /* GHZNewViewController.m in Sources */,
 				D686B31E1D2DF27300648326 /* main.m in Sources */,
 				D63007401D2E67FE005A88B9 /* GHZViewController.m in Sources */,
 				D630077A1D2E6DFF005A88B9 /* GHZLeftViewController.m in Sources */,
+				D63007B51D2EA7F3005A88B9 /* GHZNewTableViewCell.m in Sources */,
 				D630073E1D2E67FE005A88B9 /* GHZNavViewController.m in Sources */,
+				D630079E1D2E9178005A88B9 /* GHZLiveViewController.m in Sources */,
 				D630077C1D2E6DFF005A88B9 /* Text2ViewController.m in Sources */,
-				D63007821D2E6E59005A88B9 /* GHZLiveViewController.m in Sources */,
 				D63007451D2E67FE005A88B9 /* CoreLaunchLite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

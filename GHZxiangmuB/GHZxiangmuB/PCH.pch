@@ -9,8 +9,20 @@
 #ifndef PCH_pch
 #define PCH_pch
 
+#pragma mark - Frame相关
+// 屏幕宽/高
+#define GHZScreenWidth  [UIScreen mainScreen].bounds.size.width
+#define GHZScreenHeight [UIScreen mainScreen].bounds.size.height
 
+// 首页的选择器的宽度
+#define Home_Seleted_Item_W 60
+#define DefaultMargin       10
 
+#pragma mark - 通知
+// 当前没有关注的主播, 去看热门主播
+#define kNotifyToseeBigWorld @"kNotifyToseeBigWorld"
 
-
+#pragma mark - 导入库
+#import <Masonry/Masonry.h>
+#import "UIView+Extension.h"
 #endif /* PCH_pch */
