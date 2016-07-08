@@ -46,9 +46,32 @@
 #import <Masonry/Masonry.h>
 #import "UIView+Extension.h"
 
+<<<<<<< HEAD
+
+//GZH部分<<<<<<设置
+#ifdef DEBUG
+#define GHZLog(...) NSLog(__VA_ARGS__)
+#else
+#define GHZLog(...)
+#endif
+
+#define GHZLogFunc GHZLog(@"%s",__func__)
+#import "UIBarButtonItem+GHZExtention.h"
+//自定义颜色
+#define GHZRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+
+
+//
+
+
+=======
+>>>>>>> fb00d37fa9bf626cfee2578e0dba0e990bc7e900
 #endif /* PCH_pch */
 
 
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> fb00d37fa9bf626cfee2578e0dba0e990bc7e900
