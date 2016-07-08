@@ -12,4 +12,5 @@ pod 'MMDrawerController'
 pod 'BarrageRenderer'
 pod 'GPUImage'
 pod 'SDCycleScrollView'
+pod 'NJKWebViewProgress'
 end

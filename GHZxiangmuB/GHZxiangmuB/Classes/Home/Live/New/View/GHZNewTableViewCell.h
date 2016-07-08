@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class GHZLiveNewModel;
 @interface GHZNewTableViewCell : UITableViewCell
-
+@property (nonatomic,strong)GHZLiveNewModel *model;
 @end
