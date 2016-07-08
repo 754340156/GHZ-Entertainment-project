@@ -27,10 +27,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-<<<<<<< HEAD
+
     self.view.backgroundColor = [UIColor blueColor];
     
-=======
+
     [self setuptheNav];
     [self setupChildVC];//子控制器
     [self titleViewNA];//标签栏
@@ -98,7 +98,7 @@
 }
   
   [self.titleV addSubview:redView];
->>>>>>> fb00d37fa9bf626cfee2578e0dba0e990bc7e900
+
 }
 
 -(void)setupControlScroll{
