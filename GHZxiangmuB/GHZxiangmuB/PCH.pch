@@ -22,11 +22,21 @@
 // 当前没有关注的主播, 去看热门主播
 #define kNotifyToseeBigWorld @"kNotifyToseeBigWorld"
 
+#pragma mark - 颜色
+// 颜色相关
+#define Color(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define KeyColor Color(216, 41, 116)
 
 #pragma mark - 占位图
 #define cycleSVPlaceHolder @""
 #define cycleSVWidth 120
 
+#pragma mark - url
+//NewUrl
+#define liveNewUrl @"http://live.9158.com/Fans/GetHotLive?page="
+#define getADUrl @"http://live.9158.com/Living/GetAD"
+//HotUrl
+#define liveHotUrl @"http://live.9158.com/Room/GetNewRoomOnline?page="
 
 #pragma mark - 导入库
 #import <Masonry/Masonry.h>

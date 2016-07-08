@@ -23,21 +23,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setNavigationItem];
     [self setScrollView];
     [self setChildViewController];
     [self setTopMenuView];
     [self scrollViewDidEndScrollingAnimation:self.contentView];
 }
-- (void)setNavigationItem
+- (void)viewWillAppear:(BOOL)animated
 {
-    
+    [super viewWillAppear:animated];
+    self.topMenuView.hidden = NO;
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.topMenuView.hidden = YES;
 }
 - (void)setScrollView
 {
     self.contentView = [[UIScrollView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.contentView.contentSize = CGSizeMake(GHZScreenWidth * 3, 0);
-    self.contentView.backgroundColor = [UIColor whiteColor];
+//    self.contentView.backgroundColor = [UIColor whiteColor];
     // 去掉滚动条
     self.contentView.showsVerticalScrollIndicator = NO;
     self.contentView.showsHorizontalScrollIndicator = NO;
@@ -48,14 +53,13 @@
     // 去掉弹簧效果
     self.contentView.bounces = NO;
     
-    self.contentView.backgroundColor = [UIColor cyanColor];
+    self.contentView.backgroundColor = [UIColor clearColor];
     
     [self.view addSubview:self.contentView];
 }
 
 - (void)setChildViewController
 {
-    CGFloat height = GHZScreenHeight - 49;
     
     GHZLiveNewViewController *newVC = [[GHZLiveNewViewController alloc] init];
     [self addChildViewController:newVC];

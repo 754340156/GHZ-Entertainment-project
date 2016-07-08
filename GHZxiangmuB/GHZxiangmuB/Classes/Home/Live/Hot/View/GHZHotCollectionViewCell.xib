@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GHZHotCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="272" height="239"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="272" height="239"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gK0-8o-aYA">
+                        <rect key="frame" x="0.0" y="0.0" width="272" height="239"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag_new_33x17_" translatesAutoresizingMaskIntoConstraints="NO" id="4ia-IA-JlQ">
+                        <rect key="frame" x="229" y="5" width="33" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="1xk-5a-BhA"/>
+                            <constraint firstAttribute="width" constant="33" id="QIy-NL-tzY"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sV0-oA-YOB">
+                        <rect key="frame" x="10" y="10" width="100" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="KE8-Cs-2aY"/>
+                            <constraint firstAttribute="height" constant="12" id="Yu0-Pf-2n8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="北京市" image="location_white_8x9_"/>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl_star1_40x19" translatesAutoresizingMaskIntoConstraints="NO" id="nxd-CT-UVT">
+                        <rect key="frame" x="222" y="215" width="40" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="5vO-yK-ZRs"/>
+                            <constraint firstAttribute="height" constant="19" id="f59-tJ-Qzy"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVD-2V-Wtb">
+                        <rect key="frame" x="0.0" y="215" width="212" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="iFd-kN-AdR"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="nxd-CT-UVT" secondAttribute="bottom" constant="5" id="11Q-bd-kjk"/>
+                <constraint firstItem="4ia-IA-JlQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="4Mc-W9-xH6"/>
+                <constraint firstAttribute="bottom" secondItem="nxd-CT-UVT" secondAttribute="bottom" constant="5" id="5c6-zS-T8t"/>
+                <constraint firstItem="tVD-2V-Wtb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="8uo-mQ-e2l"/>
+                <constraint firstItem="gK0-8o-aYA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9Js-zN-e64"/>
+                <constraint firstItem="nxd-CT-UVT" firstAttribute="centerY" secondItem="tVD-2V-Wtb" secondAttribute="centerY" id="AHP-oa-Kcb"/>
+                <constraint firstAttribute="trailing" secondItem="4ia-IA-JlQ" secondAttribute="trailing" constant="10" id="FJ6-Yg-rmm"/>
+                <constraint firstItem="gK0-8o-aYA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GAH-dd-3Tm"/>
+                <constraint firstAttribute="bottom" secondItem="gK0-8o-aYA" secondAttribute="bottom" id="M0g-4m-6Z0"/>
+                <constraint firstItem="sV0-oA-YOB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="YdF-S3-bL1"/>
+                <constraint firstAttribute="bottom" secondItem="tVD-2V-Wtb" secondAttribute="bottom" constant="5" id="Zzd-c1-AZh"/>
+                <constraint firstItem="nxd-CT-UVT" firstAttribute="leading" secondItem="tVD-2V-Wtb" secondAttribute="trailing" constant="10" id="cLY-Dw-YSc"/>
+                <constraint firstAttribute="trailing" secondItem="gK0-8o-aYA" secondAttribute="trailing" id="nMp-b6-HVW"/>
+                <constraint firstAttribute="trailing" secondItem="nxd-CT-UVT" secondAttribute="trailing" constant="10" id="rS3-ah-WmX"/>
+                <constraint firstItem="sV0-oA-YOB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="rm0-J7-SuR"/>
+                <constraint firstAttribute="trailing" secondItem="nxd-CT-UVT" secondAttribute="trailing" constant="10" id="zPs-pG-hSU"/>
+            </constraints>
+            <size key="customSize" width="272" height="239"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="5c6-zS-T8t"/>
+                    <exclude reference="AHP-oa-Kcb"/>
+                    <exclude reference="zPs-pG-hSU"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="backImageView" destination="gK0-8o-aYA" id="I68-0y-TCL"/>
+                <outlet property="isNewImageView" destination="4ia-IA-JlQ" id="EKz-PK-ebt"/>
+                <outlet property="levelImageView" destination="nxd-CT-UVT" id="o8c-bW-wSy"/>
+                <outlet property="locationButton" destination="sV0-oA-YOB" id="wcX-Ca-Wzq"/>
+                <outlet property="nameLabel" destination="tVD-2V-Wtb" id="p3w-yv-bRF"/>
+            </connections>
+            <point key="canvasLocation" x="434" y="296.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="flag_new_33x17_" width="33" height="17"/>
+        <image name="girl_star1_40x19" width="40" height="19"/>
+        <image name="location_white_8x9_" width="8" height="9"/>
+    </resources>
+</document>

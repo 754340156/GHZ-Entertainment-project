@@ -8,77 +8,160 @@
 
 #import "GHZLiveNewViewController.h"
 #import <SDCycleScrollView/SDCycleScrollView.h>
+#import "GHZNewTableViewCell.h"
+#import <AFNetworking/AFNetworking.h>
+#import <MJRefresh/MJRefresh.h>
+#import "GHZLiveNewModel.h"
+#import "GHZLiveWebViewController.h"
 @interface GHZLiveNewViewController ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
 /**  头部轮播视图 */
 @property (nonatomic,strong) SDCycleScrollView *headerCycleView;
+/**  数据源 */
+@property (nonatomic,strong) NSMutableArray *dataArray;
+/**  顶部轮播数据源 */
+@property (nonatomic,strong) NSMutableArray *ADArray;
 @end
 
+static NSInteger currentPage = 1;
 @implementation GHZLiveNewViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTableView];
-    [self setHeaderView];
+//    [self setData];
+    [self setRefresh];
 }
+
 - (void)setTableView
 {
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    self.tableView.GHZ_height = self.view.GHZ_height - self.navigationController.navigationBar.GHZ_height - self.tabBarController.tabBar.GHZ_height - 20 ;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
+    [self.tableView registerNib:[UINib nibWithNibName:@"GHZNewTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"GHZNewTableViewCell"];
     
 }
-- (void)setHeaderView
+
+- (void)setData
 {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager GET:getADUrl parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        for (NSDictionary *dic in responseObject[@"data"]) {
+            GHZLiveNewSCVModel *model = [[GHZLiveNewSCVModel alloc] init];
+            [model setValuesForKeysWithDictionary:dic];
+            [self.ADArray addObject:model];
+        }
+        [self.tableView reloadData];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    [manager GET:[NSString stringWithFormat:@"%@1",liveNewUrl] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        for (NSDictionary *dic in responseObject[@"data"][@"list"]) {
+            GHZLiveNewModel *model = [[GHZLiveNewModel alloc] init];
+            [model setValuesForKeysWithDictionary:dic];
+            [self.dataArray addObject:model];
+        }
+        [self.tableView reloadData];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@",error);
+    }];
     
+}
+- (void)setRefresh
+{
+     __weak typeof(self)weakself = self;
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakself setData];
+        [weakself.tableView.mj_header endRefreshing];
+    }];
+    [self.tableView.mj_header beginRefreshing];
+    
+    
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+#warning 没有处理数据加载完成
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        [manager GET:[NSString stringWithFormat:@"%@%ld",liveNewUrl,(long)++currentPage] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            if (currentPage >2) {
+                for (NSDictionary *dic in responseObject[@"data"][@"list"]) {
+                    GHZLiveNewModel *model = [[GHZLiveNewModel alloc] init];
+                    [model setValuesForKeysWithDictionary:dic];
+                    [self.dataArray addObject:model];
+                }
+                [self.tableView reloadData];
+            }
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            
+        }];
+        [weakself.tableView.mj_footer endRefreshing];
+    }];
+    [self.tableView.mj_footer beginRefreshing];
 }
 #pragma mark - UITableViewDelegate
 - (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return self.dataArray.count + 1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"cell";
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    if (indexPath.row == 0) {
+        UITableViewCell  *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+            self.headerCycleView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, GHZScreenWidth, cycleSVWidth) delegate:self placeholderImage:[UIImage imageNamed:cycleSVPlaceHolder]];
+        NSMutableArray *array = [NSMutableArray array];
+        for (GHZLiveNewSCVModel *model in self.ADArray) {
+            [array addObject: model.imageUrl];
+        }
+        self.headerCycleView.imageURLStringsGroup = array.copy;
+        [cell addSubview:self.headerCycleView];
+        return cell;
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld,%ld",(long)indexPath.section,(long)indexPath.row];
+    GHZNewTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GHZNewTableViewCell"];
+    cell.model = self.dataArray[indexPath.row - 1];
     return cell;
+    
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 100;
-}
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-
-    self.headerCycleView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, GHZScreenWidth, cycleSVWidth) delegate:self placeholderImage:[UIImage imageNamed:cycleSVPlaceHolder]];
-    self.headerCycleView.imageURLStringsGroup = @[
-                                                  @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
-                                                  @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
-                                                  @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"
-                                                  ];
-    return self.headerCycleView;
+    if (indexPath.row == 0) {
+        return cycleSVWidth;
+    }
+    return 440;
 }
 #pragma mark  - SDCycleScrollViewDelegate
 /** 点击图片回调 */
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
-    NSLog(@"%ld",(long)index);
-
+    GHZLiveWebViewController *webV = [[GHZLiveWebViewController alloc] init];
+    
+    webV.webUrl =  [self.ADArray[index] link];
+    [self.navigationController pushViewController:webV animated:YES];
 }
 
 
+#pragma mark - 懒加载
+- (NSMutableArray *)dataArray
+{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
+}
 
 
-
-
+- (NSMutableArray *)ADArray
+{
+    if (!_ADArray) {
+        _ADArray = [NSMutableArray array];
+    }
+    return _ADArray;
+}
 
 
 

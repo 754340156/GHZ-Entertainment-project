@@ -32,6 +32,11 @@ PODS:
     - MMDrawerController/Core
   - MMDrawerController/Subclass (0.6.0):
     - MMDrawerController/Core
+  - NJKWebViewProgress (0.2.3):
+    - NJKWebViewProgress/Core (= 0.2.3)
+    - NJKWebViewProgress/ProgressView (= 0.2.3)
+  - NJKWebViewProgress/Core (0.2.3)
+  - NJKWebViewProgress/ProgressView (0.2.3)
   - SDCycleScrollView (1.65):
     - SDWebImage (~> 3.7)
   - SDWebImage (3.8.1):
@@ -47,6 +52,7 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - MMDrawerController
+  - NJKWebViewProgress
   - SDCycleScrollView
   - SDWebImage
 
@@ -59,9 +65,10 @@ SPEC CHECKSUMS:
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   MJRefresh: 70a47c5543b567cdaf70ead5a6e99ce820652eb9
   MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
+  NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
 
-PODFILE CHECKSUM: e284f9e22be6142d047f48b3060d8ac5e9273ccd
+PODFILE CHECKSUM: e3bd058f6dfacc71281235e4d47e89695a630e14
 
 COCOAPODS: 1.0.0
