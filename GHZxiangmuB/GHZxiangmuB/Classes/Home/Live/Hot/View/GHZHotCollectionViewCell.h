@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class GHZHotModel;
 @interface GHZHotCollectionViewCell : UICollectionViewCell
-
+@property (nonatomic,strong)GHZHotModel *model;
 @end

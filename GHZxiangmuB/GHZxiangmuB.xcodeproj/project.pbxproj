@@ -37,6 +37,11 @@
 		D6C787871D2FA84D006DBEF8 /* GHZHotCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C787851D2FA84D006DBEF8 /* GHZHotCollectionViewCell.m */; };
 		D6C787881D2FA84D006DBEF8 /* GHZHotCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C787861D2FA84D006DBEF8 /* GHZHotCollectionViewCell.xib */; };
 		D6C7878B1D2FAD19006DBEF8 /* GHZHotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7878A1D2FAD19006DBEF8 /* GHZHotModel.m */; };
+		D6C7879C1D2FD22C006DBEF8 /* GHZLivingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7879B1D2FD22C006DBEF8 /* GHZLivingViewController.m */; };
+		D6C7879F1D2FD2DC006DBEF8 /* GHZBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7879E1D2FD2DC006DBEF8 /* GHZBottomView.m */; };
+		D6C787A11D2FD2E9006DBEF8 /* GHZBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C787A01D2FD2E9006DBEF8 /* GHZBottomView.xib */; };
+		D6C787A41D2FE3B0006DBEF8 /* GHZLivingTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C787A31D2FE3B0006DBEF8 /* GHZLivingTopView.m */; };
+		D6C787A61D2FE3C2006DBEF8 /* GHZLivingTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C787A51D2FE3C2006DBEF8 /* GHZLivingTopView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +102,14 @@
 		D6C787861D2FA84D006DBEF8 /* GHZHotCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZHotCollectionViewCell.xib; sourceTree = "<group>"; };
 		D6C787891D2FAD19006DBEF8 /* GHZHotModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZHotModel.h; sourceTree = "<group>"; };
 		D6C7878A1D2FAD19006DBEF8 /* GHZHotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZHotModel.m; sourceTree = "<group>"; };
+		D6C7879A1D2FD22C006DBEF8 /* GHZLivingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZLivingViewController.h; sourceTree = "<group>"; };
+		D6C7879B1D2FD22C006DBEF8 /* GHZLivingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZLivingViewController.m; sourceTree = "<group>"; };
+		D6C7879D1D2FD2DC006DBEF8 /* GHZBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZBottomView.h; sourceTree = "<group>"; };
+		D6C7879E1D2FD2DC006DBEF8 /* GHZBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZBottomView.m; sourceTree = "<group>"; };
+		D6C787A01D2FD2E9006DBEF8 /* GHZBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZBottomView.xib; sourceTree = "<group>"; };
+		D6C787A21D2FE3B0006DBEF8 /* GHZLivingTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZLivingTopView.h; sourceTree = "<group>"; };
+		D6C787A31D2FE3B0006DBEF8 /* GHZLivingTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZLivingTopView.m; sourceTree = "<group>"; };
+		D6C787A51D2FE3C2006DBEF8 /* GHZLivingTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZLivingTopView.xib; sourceTree = "<group>"; };
 		FA98C4A23AC9EC665AB94AAD /* Pods-GHZxiangmuB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHZxiangmuB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GHZxiangmuB/Pods-GHZxiangmuB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -343,6 +356,7 @@
 				D630079A1D2E9178005A88B9 /* New */,
 				D63007961D2E9178005A88B9 /* Hot */,
 				D630078A1D2E9178005A88B9 /* Care */,
+				D6C787961D2FD1F7006DBEF8 /* Live */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -568,6 +582,45 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D6C787961D2FD1F7006DBEF8 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				D6C787971D2FD1F7006DBEF8 /* Controller */,
+				D6C787981D2FD1F7006DBEF8 /* Model */,
+				D6C787991D2FD1F7006DBEF8 /* View */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		D6C787971D2FD1F7006DBEF8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6C7879A1D2FD22C006DBEF8 /* GHZLivingViewController.h */,
+				D6C7879B1D2FD22C006DBEF8 /* GHZLivingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D6C787981D2FD1F7006DBEF8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6C787991D2FD1F7006DBEF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6C7879D1D2FD2DC006DBEF8 /* GHZBottomView.h */,
+				D6C7879E1D2FD2DC006DBEF8 /* GHZBottomView.m */,
+				D6C787A01D2FD2E9006DBEF8 /* GHZBottomView.xib */,
+				D6C787A21D2FE3B0006DBEF8 /* GHZLivingTopView.h */,
+				D6C787A31D2FE3B0006DBEF8 /* GHZLivingTopView.m */,
+				D6C787A51D2FE3C2006DBEF8 /* GHZLivingTopView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -631,7 +684,9 @@
 				D686B32C1D2DF27300648326 /* LaunchScreen.storyboard in Resources */,
 				D686B3291D2DF27300648326 /* Assets.xcassets in Resources */,
 				D63007B61D2EA7F3005A88B9 /* GHZNewTableViewCell.xib in Resources */,
+				D6C787A11D2FD2E9006DBEF8 /* GHZBottomView.xib in Resources */,
 				D6C787881D2FA84D006DBEF8 /* GHZHotCollectionViewCell.xib in Resources */,
+				D6C787A61D2FE3C2006DBEF8 /* GHZLivingTopView.xib in Resources */,
 				D686B3271D2DF27300648326 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -702,13 +757,16 @@
 				D63007851D2E6E65005A88B9 /* GHZChatViewController.m in Sources */,
 				D686B3211D2DF27300648326 /* AppDelegate.m in Sources */,
 				D630077F1D2E6E45005A88B9 /* GHZNewViewController.m in Sources */,
+				D6C787A41D2FE3B0006DBEF8 /* GHZLivingTopView.m in Sources */,
 				D686B31E1D2DF27300648326 /* main.m in Sources */,
 				D63007401D2E67FE005A88B9 /* GHZViewController.m in Sources */,
+				D6C7879F1D2FD2DC006DBEF8 /* GHZBottomView.m in Sources */,
 				D6C7878B1D2FAD19006DBEF8 /* GHZHotModel.m in Sources */,
 				D630077A1D2E6DFF005A88B9 /* GHZLeftViewController.m in Sources */,
 				D63007B51D2EA7F3005A88B9 /* GHZNewTableViewCell.m in Sources */,
 				D6C787871D2FA84D006DBEF8 /* GHZHotCollectionViewCell.m in Sources */,
 				D6AB0C021D2F5BE2003DDF59 /* UIImage+Extension.m in Sources */,
+				D6C7879C1D2FD22C006DBEF8 /* GHZLivingViewController.m in Sources */,
 				D630073E1D2E67FE005A88B9 /* GHZNavViewController.m in Sources */,
 				D6AB0BFC1D2F56CC003DDF59 /* GHZLiveNewModel.m in Sources */,
 				D630079E1D2E9178005A88B9 /* GHZLiveViewController.m in Sources */,

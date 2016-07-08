@@ -36,7 +36,9 @@
         image = [UIImage  circleImage:image borderColor:[UIColor redColor] borderWidth:2];
         self.iconImageView.image = image;
     }];
-    
+    if (!model.gps.length) {
+        model.gps = @"喵星";
+    }
     [self.locationButton setTitle:model.gps forState:UIControlStateNormal];
     self.nameLabel.text = model.myname;
     

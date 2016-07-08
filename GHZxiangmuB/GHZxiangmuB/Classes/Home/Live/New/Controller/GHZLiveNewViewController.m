@@ -13,6 +13,7 @@
 #import <MJRefresh/MJRefresh.h>
 #import "GHZLiveNewModel.h"
 #import "GHZLiveWebViewController.h"
+#import "GHZLivingViewController.h"
 @interface GHZLiveNewViewController ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
 /**  头部轮播视图 */
 @property (nonatomic,strong) SDCycleScrollView *headerCycleView;
@@ -28,7 +29,7 @@ static NSInteger currentPage = 1;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTableView];
-//    [self setData];
+    [self setADData];
     [self setRefresh];
 }
 
@@ -42,13 +43,13 @@ static NSInteger currentPage = 1;
     [self.tableView registerNib:[UINib nibWithNibName:@"GHZNewTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"GHZNewTableViewCell"];
     
 }
-
-- (void)setData
+- (void)setADData
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:getADUrl parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
         for (NSDictionary *dic in responseObject[@"data"]) {
             GHZLiveNewSCVModel *model = [[GHZLiveNewSCVModel alloc] init];
             [model setValuesForKeysWithDictionary:dic];
@@ -58,51 +59,49 @@ static NSInteger currentPage = 1;
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
-    [manager GET:[NSString stringWithFormat:@"%@1",liveNewUrl] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+}
+- (void)setData
+{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager GET:[NSString stringWithFormat:@"%@%ld",liveNewUrl,currentPage] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        for (NSDictionary *dic in responseObject[@"data"][@"list"]) {
-            GHZLiveNewModel *model = [[GHZLiveNewModel alloc] init];
-            [model setValuesForKeysWithDictionary:dic];
-            [self.dataArray addObject:model];
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
+        if ([responseObject[@"msg"] isEqualToString:@"操作成功"]) {
+            for (NSDictionary *dic in responseObject[@"data"][@"list"]) {
+                GHZLiveNewModel *model = [[GHZLiveNewModel alloc] init];
+                [model setValuesForKeysWithDictionary:dic];
+                [self.dataArray addObject:model];
+            }
+            [self.tableView reloadData];
+        }else
+        {
+            [self.tableView.mj_footer endRefreshingWithNoMoreData];
+            currentPage--;
         }
-        [self.tableView reloadData];
+
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
+        currentPage--;
     }];
     
 }
 - (void)setRefresh
 {
      __weak typeof(self)weakself = self;
+    currentPage = 1;
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        currentPage = 1;
         [weakself setData];
-        [weakself.tableView.mj_header endRefreshing];
     }];
+   self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+       [weakself setData];
+       currentPage++;
+   }];
     [self.tableView.mj_header beginRefreshing];
-    
-    
-    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-#warning 没有处理数据加载完成
-        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-        [manager GET:[NSString stringWithFormat:@"%@%ld",liveNewUrl,(long)++currentPage] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-            
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            if (currentPage >2) {
-                for (NSDictionary *dic in responseObject[@"data"][@"list"]) {
-                    GHZLiveNewModel *model = [[GHZLiveNewModel alloc] init];
-                    [model setValuesForKeysWithDictionary:dic];
-                    [self.dataArray addObject:model];
-                }
-                [self.tableView reloadData];
-            }
-            
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            
-        }];
-        [weakself.tableView.mj_footer endRefreshing];
-    }];
-    [self.tableView.mj_footer beginRefreshing];
 }
 #pragma mark - UITableViewDelegate
 - (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -113,7 +112,7 @@ static NSInteger currentPage = 1;
 {
     if (indexPath.row == 0) {
         UITableViewCell  *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-            self.headerCycleView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, GHZScreenWidth, cycleSVWidth) delegate:self placeholderImage:[UIImage imageNamed:cycleSVPlaceHolder]];
+        self.headerCycleView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, GHZScreenWidth, cycleSVWidth) delegate:self placeholderImage:[UIImage imageNamed:@"placeHolder_ad_414x100"]];
         NSMutableArray *array = [NSMutableArray array];
         for (GHZLiveNewSCVModel *model in self.ADArray) {
             [array addObject: model.imageUrl];
@@ -133,6 +132,22 @@ static NSInteger currentPage = 1;
         return cycleSVWidth;
     }
     return 440;
+}
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0) {
+        return cycleSVWidth;
+    }
+    return 440;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row > 0) {
+        GHZLivingViewController *livingVC = [[GHZLivingViewController alloc] init];
+        [self presentViewController:livingVC animated:YES completion:^{
+            
+        }];
+    }
 }
 #pragma mark  - SDCycleScrollViewDelegate
 /** 点击图片回调 */
