@@ -29,6 +29,7 @@
     
     [self setTabBarWithViewController:[[GHZChatViewController alloc]init] image:@"person" selectImage:@"personH" title:@"聊天"];
     
+    
 }
 
 

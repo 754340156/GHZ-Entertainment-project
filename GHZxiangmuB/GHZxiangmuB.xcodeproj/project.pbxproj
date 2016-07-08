@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9E277BE0A352B29B48F456E1 /* Pods_GHZxiangmuB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C47ACBD0F6DC0A4910B190A /* Pods_GHZxiangmuB.framework */; };
+		C2D06E961D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D06E951D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.m */; };
+		C2D06E9F1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D06E9E1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m */; };
 		D630073E1D2E67FE005A88B9 /* GHZNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63007231D2E67FE005A88B9 /* GHZNavViewController.m */; };
 		D630073F1D2E67FE005A88B9 /* GHZTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63007251D2E67FE005A88B9 /* GHZTabBarViewController.m */; };
 		D63007401D2E67FE005A88B9 /* GHZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63007271D2E67FE005A88B9 /* GHZViewController.m */; };
@@ -36,6 +38,10 @@
 /* Begin PBXFileReference section */
 		2C7C3BA1E080C169FD152043 /* Pods-GHZxiangmuB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHZxiangmuB.release.xcconfig"; path = "Pods/Target Support Files/Pods-GHZxiangmuB/Pods-GHZxiangmuB.release.xcconfig"; sourceTree = "<group>"; };
 		8C47ACBD0F6DC0A4910B190A /* Pods_GHZxiangmuB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GHZxiangmuB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2D06E941D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+GHZExtention.h"; sourceTree = "<group>"; };
+		C2D06E951D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+GHZExtention.m"; sourceTree = "<group>"; };
+		C2D06E9D1D2FDD3700CC8C0F /* GHZCrunchiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCrunchiesViewController.h; sourceTree = "<group>"; };
+		C2D06E9E1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCrunchiesViewController.m; sourceTree = "<group>"; };
 		D63007221D2E67FE005A88B9 /* GHZNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNavViewController.h; sourceTree = "<group>"; };
 		D63007231D2E67FE005A88B9 /* GHZNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNavViewController.m; sourceTree = "<group>"; };
 		D63007241D2E67FE005A88B9 /* GHZTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTabBarViewController.h; sourceTree = "<group>"; };
@@ -231,6 +237,10 @@
 			children = (
 				D630075F1D2E6DFF005A88B9 /* GHZCreamViewController.h */,
 				D63007601D2E6DFF005A88B9 /* GHZCreamViewController.m */,
+				C2D06E9D1D2FDD3700CC8C0F /* GHZCrunchiesViewController.h */,
+				C2D06E9E1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m */,
+				C2D06E941D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.h */,
+				C2D06E951D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -569,6 +579,7 @@
 		D686B3111D2DF27300648326 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = GHZ;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "lanou3g-22赵哲";
 				TargetAttributes = {
@@ -667,12 +678,14 @@
 				D630079F1D2E9178005A88B9 /* GHZSelectedView.m in Sources */,
 				D63007791D2E6DFF005A88B9 /* GHZCreamViewController.m in Sources */,
 				D63007A81D2E954C005A88B9 /* GHZHotViewController.m in Sources */,
+				C2D06E961D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.m in Sources */,
 				D63007B11D2EA2C1005A88B9 /* GHZLiveNewViewController.m in Sources */,
 				D630077B1D2E6DFF005A88B9 /* Text1ViewController.m in Sources */,
 				D63007A51D2E9540005A88B9 /* GHZCareViewController.m in Sources */,
 				D63007851D2E6E65005A88B9 /* GHZChatViewController.m in Sources */,
 				D686B3211D2DF27300648326 /* AppDelegate.m in Sources */,
 				D630077F1D2E6E45005A88B9 /* GHZNewViewController.m in Sources */,
+				C2D06E9F1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m in Sources */,
 				D686B31E1D2DF27300648326 /* main.m in Sources */,
 				D63007401D2E67FE005A88B9 /* GHZViewController.m in Sources */,
 				D630077A1D2E6DFF005A88B9 /* GHZLeftViewController.m in Sources */,

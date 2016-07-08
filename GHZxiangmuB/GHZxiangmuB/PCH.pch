@@ -25,5 +25,25 @@
 #pragma mark - 导入库
 #import <Masonry/Masonry.h>
 #import "UIView+Extension.h"
+
+
+//GZH部分<<<<<<设置
+#ifdef DEBUG
+#define GHZLog(...) NSLog(__VA_ARGS__)
+#else
+#define GHZLog(...)
+#endif
+
+#define GHZLogFunc GHZLog(@"%s",__func__)
+#import "UIBarButtonItem+GHZExtention.h"
+//自定义颜色
+#define GHZRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+
+
+//
+
+
 #endif /* PCH_pch */
-//jdafjajfda;sfjasfasdf
+
+
+
