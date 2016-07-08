@@ -22,7 +22,15 @@
 // 当前没有关注的主播, 去看热门主播
 #define kNotifyToseeBigWorld @"kNotifyToseeBigWorld"
 
+
+#pragma mark - 占位图
+#define cycleSVPlaceHolder @""
+#define cycleSVWidth 120
+
+
 #pragma mark - 导入库
 #import <Masonry/Masonry.h>
 #import "UIView+Extension.h"
+
+
 #endif /* PCH_pch */
