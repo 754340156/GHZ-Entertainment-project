@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		9E277BE0A352B29B48F456E1 /* Pods_GHZxiangmuB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C47ACBD0F6DC0A4910B190A /* Pods_GHZxiangmuB.framework */; };
+		C21B32A01D30F3E700B30A8C /* GHZAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C21B329F1D30F3E700B30A8C /* GHZAllViewController.m */; };
+		C21B32A31D30F40100B30A8C /* GHZVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C21B32A21D30F40100B30A8C /* GHZVideoViewController.m */; };
+		C21B32A61D30F40F00B30A8C /* GHZVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C21B32A51D30F40F00B30A8C /* GHZVoiceViewController.m */; };
+		C21B32A91D30F41E00B30A8C /* GHZPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C21B32A81D30F41E00B30A8C /* GHZPictureViewController.m */; };
+		C21B32AC1D30F42E00B30A8C /* GHZWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C21B32AB1D30F42E00B30A8C /* GHZWordViewController.m */; };
 		C2D06E961D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D06E951D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.m */; };
 		C2D06E9F1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D06E9E1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m */; };
-		C2FA87341D2FD32D006949D7 /* GHZNewAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA87331D2FD32D006949D7 /* GHZNewAllViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C2FA87371D2FD367006949D7 /* GHZNewWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA87361D2FD367006949D7 /* GHZNewWordViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C2FA873A1D2FD38A006949D7 /* GHZNewPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA87391D2FD38A006949D7 /* GHZNewPictureViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C2FA873D1D2FD3B7006949D7 /* GHZNewVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA873C1D2FD3B7006949D7 /* GHZNewVideoViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C2FA87401D2FD3FC006949D7 /* GHZNewMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA873F1D2FD3FC006949D7 /* GHZNewMusicViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C2FA87341D2FD32D006949D7 /* GHZNewAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA87331D2FD32D006949D7 /* GHZNewAllViewController.m */; };
+		C2FA87371D2FD367006949D7 /* GHZNewWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA87361D2FD367006949D7 /* GHZNewWordViewController.m */; };
+		C2FA873A1D2FD38A006949D7 /* GHZNewPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA87391D2FD38A006949D7 /* GHZNewPictureViewController.m */; };
+		C2FA873D1D2FD3B7006949D7 /* GHZNewVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA873C1D2FD3B7006949D7 /* GHZNewVideoViewController.m */; };
+		C2FA87401D2FD3FC006949D7 /* GHZNewMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA873F1D2FD3FC006949D7 /* GHZNewMusicViewController.m */; };
 		D630073E1D2E67FE005A88B9 /* GHZNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63007231D2E67FE005A88B9 /* GHZNavViewController.m */; };
 		D630073F1D2E67FE005A88B9 /* GHZTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63007251D2E67FE005A88B9 /* GHZTabBarViewController.m */; };
 		D63007401D2E67FE005A88B9 /* GHZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63007271D2E67FE005A88B9 /* GHZViewController.m */; };
@@ -54,11 +59,20 @@
 /* Begin PBXFileReference section */
 		2C7C3BA1E080C169FD152043 /* Pods-GHZxiangmuB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHZxiangmuB.release.xcconfig"; path = "Pods/Target Support Files/Pods-GHZxiangmuB/Pods-GHZxiangmuB.release.xcconfig"; sourceTree = "<group>"; };
 		8C47ACBD0F6DC0A4910B190A /* Pods_GHZxiangmuB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GHZxiangmuB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2D06E941D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+GHZExtention.h"; sourceTree = "<group>"; };
-		C2D06E951D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+GHZExtention.m"; sourceTree = "<group>"; };
+		C21B329E1D30F3E700B30A8C /* GHZAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZAllViewController.h; sourceTree = "<group>"; };
+		C21B329F1D30F3E700B30A8C /* GHZAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZAllViewController.m; sourceTree = "<group>"; };
+		C21B32A11D30F40100B30A8C /* GHZVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZVideoViewController.h; sourceTree = "<group>"; };
+		C21B32A21D30F40100B30A8C /* GHZVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZVideoViewController.m; sourceTree = "<group>"; };
+		C21B32A41D30F40F00B30A8C /* GHZVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZVoiceViewController.h; sourceTree = "<group>"; };
+		C21B32A51D30F40F00B30A8C /* GHZVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZVoiceViewController.m; sourceTree = "<group>"; };
+		C21B32A71D30F41E00B30A8C /* GHZPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZPictureViewController.h; sourceTree = "<group>"; };
+		C21B32A81D30F41E00B30A8C /* GHZPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZPictureViewController.m; sourceTree = "<group>"; };
+		C21B32AA1D30F42E00B30A8C /* GHZWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZWordViewController.h; sourceTree = "<group>"; };
+		C21B32AB1D30F42E00B30A8C /* GHZWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZWordViewController.m; sourceTree = "<group>"; };
+		C2D06E941D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+GHZExtention.h"; path = "../Home/Cream/Controller/UIBarButtonItem+GHZExtention.h"; sourceTree = "<group>"; };
+		C2D06E951D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+GHZExtention.m"; path = "../Home/Cream/Controller/UIBarButtonItem+GHZExtention.m"; sourceTree = "<group>"; };
 		C2D06E9D1D2FDD3700CC8C0F /* GHZCrunchiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCrunchiesViewController.h; sourceTree = "<group>"; };
 		C2D06E9E1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCrunchiesViewController.m; sourceTree = "<group>"; };
-
 		C2FA87321D2FD32D006949D7 /* GHZNewAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewAllViewController.h; sourceTree = "<group>"; };
 		C2FA87331D2FD32D006949D7 /* GHZNewAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewAllViewController.m; sourceTree = "<group>"; };
 		C2FA87351D2FD367006949D7 /* GHZNewWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewWordViewController.h; sourceTree = "<group>"; };
@@ -164,6 +178,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C21B329D1D30D21500B30A8C /* CrunchiesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C2D06E9D1D2FDD3700CC8C0F /* GHZCrunchiesViewController.h */,
+				C2D06E9E1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m */,
+			);
+			name = CrunchiesViewController;
+			sourceTree = "<group>";
+		};
 		D63007201D2E67FE005A88B9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +220,8 @@
 				D63007A11D2E9397005A88B9 /* UIView+Extension.m */,
 				D6AB0C001D2F5BE2003DDF59 /* UIImage+Extension.h */,
 				D6AB0C011D2F5BE2003DDF59 /* UIImage+Extension.m */,
+				C2D06E941D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.h */,
+				C2D06E951D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -285,10 +310,17 @@
 			children = (
 				D630075F1D2E6DFF005A88B9 /* GHZCreamViewController.h */,
 				D63007601D2E6DFF005A88B9 /* GHZCreamViewController.m */,
-				C2D06E9D1D2FDD3700CC8C0F /* GHZCrunchiesViewController.h */,
-				C2D06E9E1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m */,
-				C2D06E941D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.h */,
-				C2D06E951D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.m */,
+				C21B329E1D30F3E700B30A8C /* GHZAllViewController.h */,
+				C21B329F1D30F3E700B30A8C /* GHZAllViewController.m */,
+				C21B32A11D30F40100B30A8C /* GHZVideoViewController.h */,
+				C21B32A21D30F40100B30A8C /* GHZVideoViewController.m */,
+				C21B32A41D30F40F00B30A8C /* GHZVoiceViewController.h */,
+				C21B32A51D30F40F00B30A8C /* GHZVoiceViewController.m */,
+				C21B32A71D30F41E00B30A8C /* GHZPictureViewController.h */,
+				C21B32A81D30F41E00B30A8C /* GHZPictureViewController.m */,
+				C21B32AA1D30F42E00B30A8C /* GHZWordViewController.h */,
+				C21B32AB1D30F42E00B30A8C /* GHZWordViewController.m */,
+				C21B329D1D30D21500B30A8C /* CrunchiesViewController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -797,13 +829,11 @@
 				D63007851D2E6E65005A88B9 /* GHZChatViewController.m in Sources */,
 				D686B3211D2DF27300648326 /* AppDelegate.m in Sources */,
 				D630077F1D2E6E45005A88B9 /* GHZNewViewController.m in Sources */,
-
 				D6C787A41D2FE3B0006DBEF8 /* GHZLivingTopView.m in Sources */,
-
 				C2D06E9F1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m in Sources */,
-
 				D686B31E1D2DF27300648326 /* main.m in Sources */,
 				D63007401D2E67FE005A88B9 /* GHZViewController.m in Sources */,
+				C21B32A01D30F3E700B30A8C /* GHZAllViewController.m in Sources */,
 				D6C7879F1D2FD2DC006DBEF8 /* GHZBottomView.m in Sources */,
 				D6C7878B1D2FAD19006DBEF8 /* GHZHotModel.m in Sources */,
 				C2FA873A1D2FD38A006949D7 /* GHZNewPictureViewController.m in Sources */,
@@ -811,17 +841,19 @@
 				D63007B51D2EA7F3005A88B9 /* GHZNewTableViewCell.m in Sources */,
 				C2FA87341D2FD32D006949D7 /* GHZNewAllViewController.m in Sources */,
 				D6C787871D2FA84D006DBEF8 /* GHZHotCollectionViewCell.m in Sources */,
+				C21B32A31D30F40100B30A8C /* GHZVideoViewController.m in Sources */,
+				C21B32A91D30F41E00B30A8C /* GHZPictureViewController.m in Sources */,
 				D6AB0C021D2F5BE2003DDF59 /* UIImage+Extension.m in Sources */,
 				D6C7879C1D2FD22C006DBEF8 /* GHZLivingViewController.m in Sources */,
-
+				C21B32A61D30F40F00B30A8C /* GHZVoiceViewController.m in Sources */,
 				C2FA87371D2FD367006949D7 /* GHZNewWordViewController.m in Sources */,
-
 				D630073E1D2E67FE005A88B9 /* GHZNavViewController.m in Sources */,
 				D6AB0BFC1D2F56CC003DDF59 /* GHZLiveNewModel.m in Sources */,
 				D630079E1D2E9178005A88B9 /* GHZLiveViewController.m in Sources */,
 				D6C787831D2F930B006DBEF8 /* GHZLiveWebViewController.m in Sources */,
 				D630077C1D2E6DFF005A88B9 /* Text2ViewController.m in Sources */,
 				D63007451D2E67FE005A88B9 /* CoreLaunchLite.m in Sources */,
+				C21B32AC1D30F42E00B30A8C /* GHZWordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
