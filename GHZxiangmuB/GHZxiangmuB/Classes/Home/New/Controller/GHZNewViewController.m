@@ -43,22 +43,28 @@
  */
 -(void)setupChildVC{
     GHZNewAllViewController *all = [[GHZNewAllViewController alloc] init];
+    all.title = @"全部";
     [self addChildViewController:all];
-    GHZNewWordViewController *word = [[GHZNewWordViewController alloc] init];
-    [self addChildViewController:word];
+    GHZNewVideoViewController *video = [[GHZNewVideoViewController alloc] init];
+     video.title = @"视频";
+    [self addChildViewController:video];
     GHZNewMusicViewController *music = [[GHZNewMusicViewController alloc] init];
+    music.title = @"声音";
     [self addChildViewController:music];
     GHZNewPictureViewController *picture = [[GHZNewPictureViewController alloc] init];
+    picture.title = @"图片";
     [self addChildViewController:picture];
-    GHZNewVideoViewController *video = [[GHZNewVideoViewController alloc] init];
-    [self addChildViewController:video];
+    GHZNewWordViewController *word = [[GHZNewWordViewController alloc] init];
+    word.title = @"段子";
+    [self addChildViewController:word];
+   
 }
 -(void)titleViewNA{
     UIView *titleV = [[UIView alloc] init];
     titleV.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
     titleV.GHZ_width = self.view.GHZ_width;
-    titleV.GHZ_height = 35;
-    titleV.GHZ_y = 64;
+    titleV.GHZ_height = GHZTitleVH;
+    titleV.GHZ_y = GHZTitleVY;
     [self.view addSubview:titleV];
     self.titleV = titleV;
     
@@ -71,14 +77,16 @@
     
     self.redView = redView;
     
-    self.viewArr = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
-    for (NSInteger i = 0; i < self.viewArr.count; i++) {
+//    self.viewArr = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
+    for (NSInteger i = 0; i < self.childViewControllers.count; i++) {
         UIButton *button = [[UIButton alloc] init];
         button.tag = i;
-        button.GHZ_width = titleV.GHZ_width/self.viewArr.count;
+        button.GHZ_width = titleV.GHZ_width/self.childViewControllers.count;
         button.GHZ_height = titleV.GHZ_height;
-        button.GHZ_x = i * titleV.GHZ_width/self.viewArr.count;
-        [button setTitle:self.viewArr[i] forState:(UIControlStateNormal)];
+        button.GHZ_x = i * titleV.GHZ_width/self.childViewControllers.count;
+        UIViewController *v = self.childViewControllers[i];
+        
+        [button setTitle:v.title forState:(UIControlStateNormal)];
         [button setTitleColor:[UIColor grayColor] forState:(UIControlStateNormal)];
         [button setTitleColor:[UIColor redColor] forState:(UIControlStateDisabled)];
         [button addTarget:self action:@selector(titleClick:) forControlEvents:(UIControlEventTouchUpInside)];
@@ -123,12 +131,11 @@
     //当前索引
     NSInteger index = scrollView.contentOffset.x/scrollView.GHZ_width;
     //取出自控制器
-    UITableViewController *vc = self.childViewControllers[index];
-    CGFloat bottom = self.tabBarController.tabBar.GHZ_height;
-    CGFloat top = CGRectGetMaxY(self.titleV.frame);
-    //内边距
-    vc.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+    UIViewController *vc = self.childViewControllers[index];
     vc.view.GHZ_x = scrollView.contentOffset.x;
+    vc.view.GHZ_y = 0;
+    self.view.GHZ_height = scrollView.GHZ_height;
+    
     [scrollView addSubview:vc.view];
 }
 
