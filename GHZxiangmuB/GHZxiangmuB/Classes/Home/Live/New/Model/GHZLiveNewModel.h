@@ -50,15 +50,15 @@
 
 @interface GHZLiveNewSCVModel : NSObject
 /** 新增时间 */
-@property (nonatomic, copy  ) NSString   *addTime;
+@property (nonatomic, copy) NSString *addTime;
 /** AD图片 */
-@property (nonatomic, copy  ) NSString   *imageUrl;
+@property (nonatomic, copy  ) NSString *imageUrl;
 /** AD名 */
-@property (nonatomic, copy  ) NSString   *title;
+@property (nonatomic, copy  ) NSString *title;
 /** 倒计时 */
 @property (nonatomic, assign) NSUInteger cutTime;
 /** 链接 */
-@property (nonatomic, copy  ) NSString   *link;
+@property (nonatomic, copy  ) NSString *link;
 /** AD序号 */
 @property (nonatomic, assign) NSUInteger orderid;
 @end

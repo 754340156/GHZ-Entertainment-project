@@ -33,7 +33,7 @@
 {
     [self.bigPicImageView  sd_setImageWithURL:[NSURL URLWithString:model.bigpic] placeholderImage:[UIImage imageNamed:@"profile_user_414x414"]];
     [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:model.smallpic] placeholderImage:[UIImage imageNamed:@"placeholder_head"] options:SDWebImageRefreshCached completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        image = [UIImage  circleImage:image borderColor:[UIColor redColor] borderWidth:2];
+        image = [UIImage  circleImage:image borderColor:[UIColor redColor] borderWidth:iconBoundWidth];
         self.iconImageView.image = image;
     }];
     if (!model.gps.length) {

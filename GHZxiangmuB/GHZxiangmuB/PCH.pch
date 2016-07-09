@@ -13,6 +13,9 @@
 // 屏幕宽/高
 #define GHZScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define GHZScreenHeight [UIScreen mainScreen].bounds.size.height
+//所有头像圆角的描边宽度
+#define iconBoundWidth 2
+
 
 // 首页的选择器的宽度
 #define Home_Seleted_Item_W 60
@@ -21,6 +24,9 @@
 #pragma mark - 通知
 // 当前没有关注的主播, 去看热门主播
 #define kNotifyToseeBigWorld @"kNotifyToseeBigWorld"
+// 点击了用户头像
+#define kNotifyClickUser @"kNotifyClickUser"
+
 
 #pragma mark - 颜色
 // 颜色相关
@@ -33,7 +39,10 @@
 #pragma mark  - 直播界面
 //底部工具条的宽度
 #define livingBottomHeight 50
-
+#define livingTopHeight 100
+#define livingCatEarWidth 98
+#define livingUserWidth 300
+#define livingUserHeight 380
 
 #pragma mark - url
 //NewUrl
@@ -44,6 +53,7 @@
 
 #pragma mark - 导入库
 #import <Masonry/Masonry.h>
+
 #import "UIView+Extension.h"
 
 
@@ -56,7 +66,7 @@
 #endif
 
 #define GHZLogFunc GHZLog(@"%s",__func__)
-#import "UIBarButtonItem+GHZExtention.h"
+
 //自定义颜色
 #define GHZRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
 

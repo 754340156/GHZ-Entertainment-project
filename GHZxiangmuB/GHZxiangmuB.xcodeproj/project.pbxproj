@@ -8,13 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		9E277BE0A352B29B48F456E1 /* Pods_GHZxiangmuB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C47ACBD0F6DC0A4910B190A /* Pods_GHZxiangmuB.framework */; };
-		C2D06E961D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D06E951D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.m */; };
 		C2D06E9F1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D06E9E1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m */; };
-		C2FA87341D2FD32D006949D7 /* GHZNewAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA87331D2FD32D006949D7 /* GHZNewAllViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C2FA87371D2FD367006949D7 /* GHZNewWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA87361D2FD367006949D7 /* GHZNewWordViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C2FA873A1D2FD38A006949D7 /* GHZNewPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA87391D2FD38A006949D7 /* GHZNewPictureViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C2FA873D1D2FD3B7006949D7 /* GHZNewVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA873C1D2FD3B7006949D7 /* GHZNewVideoViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C2FA87401D2FD3FC006949D7 /* GHZNewMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA873F1D2FD3FC006949D7 /* GHZNewMusicViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C2FA87341D2FD32D006949D7 /* GHZNewAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA87331D2FD32D006949D7 /* GHZNewAllViewController.m */; };
+		C2FA87371D2FD367006949D7 /* GHZNewWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA87361D2FD367006949D7 /* GHZNewWordViewController.m */; };
+		C2FA873A1D2FD38A006949D7 /* GHZNewPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA87391D2FD38A006949D7 /* GHZNewPictureViewController.m */; };
+		C2FA873D1D2FD3B7006949D7 /* GHZNewVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA873C1D2FD3B7006949D7 /* GHZNewVideoViewController.m */; };
+		C2FA87401D2FD3FC006949D7 /* GHZNewMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA873F1D2FD3FC006949D7 /* GHZNewMusicViewController.m */; };
 		D630073E1D2E67FE005A88B9 /* GHZNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63007231D2E67FE005A88B9 /* GHZNavViewController.m */; };
 		D630073F1D2E67FE005A88B9 /* GHZTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63007251D2E67FE005A88B9 /* GHZTabBarViewController.m */; };
 		D63007401D2E67FE005A88B9 /* GHZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63007271D2E67FE005A88B9 /* GHZViewController.m */; };
@@ -40,6 +39,19 @@
 		D686B32C1D2DF27300648326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D686B32A1D2DF27300648326 /* LaunchScreen.storyboard */; };
 		D6AB0BFC1D2F56CC003DDF59 /* GHZLiveNewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6AB0BFB1D2F56CC003DDF59 /* GHZLiveNewModel.m */; };
 		D6AB0C021D2F5BE2003DDF59 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D6AB0C011D2F5BE2003DDF59 /* UIImage+Extension.m */; };
+		D6C49CA11D30884F0045731C /* UIBarButtonItem+GHZExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C49CA01D30884F0045731C /* UIBarButtonItem+GHZExtention.m */; };
+		D6C49CA41D3090870045731C /* GHZLivingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C49CA31D3090870045731C /* GHZLivingCollectionViewCell.m */; };
+		D6C49CA91D30A67E0045731C /* GHZLivingUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C49CA81D30A67E0045731C /* GHZLivingUserView.m */; };
+		D6C49CAD1D30A6BE0045731C /* GHZLivingUserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C49CAC1D30A6BE0045731C /* GHZLivingUserView.xib */; };
+		D6C49CB01D30A77C0045731C /* GHZLivingEndView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C49CAF1D30A77C0045731C /* GHZLivingEndView.m */; };
+		D6C49CB21D30A7940045731C /* GHZLivingEndView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C49CB11D30A7940045731C /* GHZLivingEndView.xib */; };
+		D6C49CB71D30E1CA0045731C /* UIDevice+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C49CB61D30E1CA0045731C /* UIDevice+Extension.m */; };
+		D6C49CBA1D30E35E0045731C /* UIImageView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C49CB91D30E35E0045731C /* UIImageView+Extension.m */; };
+		D6C49CBD1D30E3B80045731C /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C49CBC1D30E3B80045731C /* UIViewController+Extension.m */; };
+		D6C49CC01D30EBDB0045731C /* GHZLivingCatEarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C49CBF1D30EBDB0045731C /* GHZLivingCatEarView.m */; };
+		D6C49CC21D30ED040045731C /* GHZLivingCatEarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C49CC11D30ED040045731C /* GHZLivingCatEarView.xib */; };
+		D6C49CCC1D311B790045731C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C49CCB1D311B790045731C /* libz.tbd */; };
+		D6C49CCE1D311CE00045731C /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C49CCD1D311CE00045731C /* VideoToolbox.framework */; };
 		D6C787831D2F930B006DBEF8 /* GHZLiveWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C787821D2F930B006DBEF8 /* GHZLiveWebViewController.m */; };
 		D6C787871D2FA84D006DBEF8 /* GHZHotCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C787851D2FA84D006DBEF8 /* GHZHotCollectionViewCell.m */; };
 		D6C787881D2FA84D006DBEF8 /* GHZHotCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C787861D2FA84D006DBEF8 /* GHZHotCollectionViewCell.xib */; };
@@ -54,11 +66,8 @@
 /* Begin PBXFileReference section */
 		2C7C3BA1E080C169FD152043 /* Pods-GHZxiangmuB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHZxiangmuB.release.xcconfig"; path = "Pods/Target Support Files/Pods-GHZxiangmuB/Pods-GHZxiangmuB.release.xcconfig"; sourceTree = "<group>"; };
 		8C47ACBD0F6DC0A4910B190A /* Pods_GHZxiangmuB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GHZxiangmuB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2D06E941D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+GHZExtention.h"; sourceTree = "<group>"; };
-		C2D06E951D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+GHZExtention.m"; sourceTree = "<group>"; };
 		C2D06E9D1D2FDD3700CC8C0F /* GHZCrunchiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCrunchiesViewController.h; sourceTree = "<group>"; };
 		C2D06E9E1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCrunchiesViewController.m; sourceTree = "<group>"; };
-
 		C2FA87321D2FD32D006949D7 /* GHZNewAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewAllViewController.h; sourceTree = "<group>"; };
 		C2FA87331D2FD32D006949D7 /* GHZNewAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewAllViewController.m; sourceTree = "<group>"; };
 		C2FA87351D2FD367006949D7 /* GHZNewWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewWordViewController.h; sourceTree = "<group>"; };
@@ -117,6 +126,27 @@
 		D6AB0BFB1D2F56CC003DDF59 /* GHZLiveNewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZLiveNewModel.m; sourceTree = "<group>"; };
 		D6AB0C001D2F5BE2003DDF59 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		D6AB0C011D2F5BE2003DDF59 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		D6C49C9F1D30884F0045731C /* UIBarButtonItem+GHZExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+GHZExtention.h"; sourceTree = "<group>"; };
+		D6C49CA01D30884F0045731C /* UIBarButtonItem+GHZExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+GHZExtention.m"; sourceTree = "<group>"; };
+		D6C49CA21D3090870045731C /* GHZLivingCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZLivingCollectionViewCell.h; sourceTree = "<group>"; };
+		D6C49CA31D3090870045731C /* GHZLivingCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZLivingCollectionViewCell.m; sourceTree = "<group>"; };
+		D6C49CA71D30A67E0045731C /* GHZLivingUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZLivingUserView.h; sourceTree = "<group>"; };
+		D6C49CA81D30A67E0045731C /* GHZLivingUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZLivingUserView.m; sourceTree = "<group>"; };
+		D6C49CAC1D30A6BE0045731C /* GHZLivingUserView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZLivingUserView.xib; sourceTree = "<group>"; };
+		D6C49CAE1D30A77C0045731C /* GHZLivingEndView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZLivingEndView.h; sourceTree = "<group>"; };
+		D6C49CAF1D30A77C0045731C /* GHZLivingEndView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZLivingEndView.m; sourceTree = "<group>"; };
+		D6C49CB11D30A7940045731C /* GHZLivingEndView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZLivingEndView.xib; sourceTree = "<group>"; };
+		D6C49CB51D30E1CA0045731C /* UIDevice+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Extension.h"; sourceTree = "<group>"; };
+		D6C49CB61D30E1CA0045731C /* UIDevice+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extension.m"; sourceTree = "<group>"; };
+		D6C49CB81D30E35E0045731C /* UIImageView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Extension.h"; sourceTree = "<group>"; };
+		D6C49CB91D30E35E0045731C /* UIImageView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Extension.m"; sourceTree = "<group>"; };
+		D6C49CBB1D30E3B80045731C /* UIViewController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
+		D6C49CBC1D30E3B80045731C /* UIViewController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
+		D6C49CBE1D30EBDB0045731C /* GHZLivingCatEarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZLivingCatEarView.h; sourceTree = "<group>"; };
+		D6C49CBF1D30EBDB0045731C /* GHZLivingCatEarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZLivingCatEarView.m; sourceTree = "<group>"; };
+		D6C49CC11D30ED040045731C /* GHZLivingCatEarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZLivingCatEarView.xib; sourceTree = "<group>"; };
+		D6C49CCB1D311B790045731C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		D6C49CCD1D311CE00045731C /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		D6C787811D2F930B006DBEF8 /* GHZLiveWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZLiveWebViewController.h; sourceTree = "<group>"; };
 		D6C787821D2F930B006DBEF8 /* GHZLiveWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZLiveWebViewController.m; sourceTree = "<group>"; };
 		D6C787841D2FA84D006DBEF8 /* GHZHotCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZHotCollectionViewCell.h; sourceTree = "<group>"; };
@@ -140,6 +170,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6C49CCE1D311CE00045731C /* VideoToolbox.framework in Frameworks */,
+				D6C49CCC1D311B790045731C /* libz.tbd in Frameworks */,
 				9E277BE0A352B29B48F456E1 /* Pods_GHZxiangmuB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +182,8 @@
 		5A4F9C47C2CCB30AA9127C6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6C49CCD1D311CE00045731C /* VideoToolbox.framework */,
+				D6C49CCB1D311B790045731C /* libz.tbd */,
 				8C47ACBD0F6DC0A4910B190A /* Pods_GHZxiangmuB.framework */,
 			);
 			name = Frameworks;
@@ -197,6 +231,14 @@
 				D63007A11D2E9397005A88B9 /* UIView+Extension.m */,
 				D6AB0C001D2F5BE2003DDF59 /* UIImage+Extension.h */,
 				D6AB0C011D2F5BE2003DDF59 /* UIImage+Extension.m */,
+				D6C49CB81D30E35E0045731C /* UIImageView+Extension.h */,
+				D6C49CB91D30E35E0045731C /* UIImageView+Extension.m */,
+				D6C49CBB1D30E3B80045731C /* UIViewController+Extension.h */,
+				D6C49CBC1D30E3B80045731C /* UIViewController+Extension.m */,
+				D6C49C9F1D30884F0045731C /* UIBarButtonItem+GHZExtention.h */,
+				D6C49CA01D30884F0045731C /* UIBarButtonItem+GHZExtention.m */,
+				D6C49CB51D30E1CA0045731C /* UIDevice+Extension.h */,
+				D6C49CB61D30E1CA0045731C /* UIDevice+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -287,8 +329,6 @@
 				D63007601D2E6DFF005A88B9 /* GHZCreamViewController.m */,
 				C2D06E9D1D2FDD3700CC8C0F /* GHZCrunchiesViewController.h */,
 				C2D06E9E1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m */,
-				C2D06E941D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.h */,
-				C2D06E951D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -653,6 +693,17 @@
 				D6C787A21D2FE3B0006DBEF8 /* GHZLivingTopView.h */,
 				D6C787A31D2FE3B0006DBEF8 /* GHZLivingTopView.m */,
 				D6C787A51D2FE3C2006DBEF8 /* GHZLivingTopView.xib */,
+				D6C49CBE1D30EBDB0045731C /* GHZLivingCatEarView.h */,
+				D6C49CBF1D30EBDB0045731C /* GHZLivingCatEarView.m */,
+				D6C49CC11D30ED040045731C /* GHZLivingCatEarView.xib */,
+				D6C49CA21D3090870045731C /* GHZLivingCollectionViewCell.h */,
+				D6C49CA31D3090870045731C /* GHZLivingCollectionViewCell.m */,
+				D6C49CA71D30A67E0045731C /* GHZLivingUserView.h */,
+				D6C49CA81D30A67E0045731C /* GHZLivingUserView.m */,
+				D6C49CAC1D30A6BE0045731C /* GHZLivingUserView.xib */,
+				D6C49CAE1D30A77C0045731C /* GHZLivingEndView.h */,
+				D6C49CAF1D30A77C0045731C /* GHZLivingEndView.m */,
+				D6C49CB11D30A7940045731C /* GHZLivingEndView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -722,9 +773,12 @@
 				D686B3291D2DF27300648326 /* Assets.xcassets in Resources */,
 				D63007B61D2EA7F3005A88B9 /* GHZNewTableViewCell.xib in Resources */,
 				D6C787A11D2FD2E9006DBEF8 /* GHZBottomView.xib in Resources */,
+				D6C49CB21D30A7940045731C /* GHZLivingEndView.xib in Resources */,
 				D6C787881D2FA84D006DBEF8 /* GHZHotCollectionViewCell.xib in Resources */,
 				D6C787A61D2FE3C2006DBEF8 /* GHZLivingTopView.xib in Resources */,
+				D6C49CC21D30ED040045731C /* GHZLivingCatEarView.xib in Resources */,
 				D686B3271D2DF27300648326 /* Main.storyboard in Resources */,
+				D6C49CAD1D30A6BE0045731C /* GHZLivingUserView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,7 +843,7 @@
 				D630079F1D2E9178005A88B9 /* GHZSelectedView.m in Sources */,
 				D63007791D2E6DFF005A88B9 /* GHZCreamViewController.m in Sources */,
 				D63007A81D2E954C005A88B9 /* GHZHotViewController.m in Sources */,
-				C2D06E961D2FC3B800CC8C0F /* UIBarButtonItem+GHZExtention.m in Sources */,
+				D6C49CA41D3090870045731C /* GHZLivingCollectionViewCell.m in Sources */,
 				D63007B11D2EA2C1005A88B9 /* GHZLiveNewViewController.m in Sources */,
 				D630077B1D2E6DFF005A88B9 /* Text1ViewController.m in Sources */,
 				C2FA873D1D2FD3B7006949D7 /* GHZNewVideoViewController.m in Sources */,
@@ -797,30 +851,32 @@
 				D63007851D2E6E65005A88B9 /* GHZChatViewController.m in Sources */,
 				D686B3211D2DF27300648326 /* AppDelegate.m in Sources */,
 				D630077F1D2E6E45005A88B9 /* GHZNewViewController.m in Sources */,
-
 				D6C787A41D2FE3B0006DBEF8 /* GHZLivingTopView.m in Sources */,
-
 				C2D06E9F1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m in Sources */,
-
 				D686B31E1D2DF27300648326 /* main.m in Sources */,
 				D63007401D2E67FE005A88B9 /* GHZViewController.m in Sources */,
 				D6C7879F1D2FD2DC006DBEF8 /* GHZBottomView.m in Sources */,
+				D6C49CBA1D30E35E0045731C /* UIImageView+Extension.m in Sources */,
 				D6C7878B1D2FAD19006DBEF8 /* GHZHotModel.m in Sources */,
+				D6C49CA11D30884F0045731C /* UIBarButtonItem+GHZExtention.m in Sources */,
 				C2FA873A1D2FD38A006949D7 /* GHZNewPictureViewController.m in Sources */,
 				D630077A1D2E6DFF005A88B9 /* GHZLeftViewController.m in Sources */,
 				D63007B51D2EA7F3005A88B9 /* GHZNewTableViewCell.m in Sources */,
+				D6C49CC01D30EBDB0045731C /* GHZLivingCatEarView.m in Sources */,
 				C2FA87341D2FD32D006949D7 /* GHZNewAllViewController.m in Sources */,
 				D6C787871D2FA84D006DBEF8 /* GHZHotCollectionViewCell.m in Sources */,
 				D6AB0C021D2F5BE2003DDF59 /* UIImage+Extension.m in Sources */,
+				D6C49CBD1D30E3B80045731C /* UIViewController+Extension.m in Sources */,
 				D6C7879C1D2FD22C006DBEF8 /* GHZLivingViewController.m in Sources */,
-
 				C2FA87371D2FD367006949D7 /* GHZNewWordViewController.m in Sources */,
-
+				D6C49CB01D30A77C0045731C /* GHZLivingEndView.m in Sources */,
 				D630073E1D2E67FE005A88B9 /* GHZNavViewController.m in Sources */,
 				D6AB0BFC1D2F56CC003DDF59 /* GHZLiveNewModel.m in Sources */,
 				D630079E1D2E9178005A88B9 /* GHZLiveViewController.m in Sources */,
+				D6C49CB71D30E1CA0045731C /* UIDevice+Extension.m in Sources */,
 				D6C787831D2F930B006DBEF8 /* GHZLiveWebViewController.m in Sources */,
 				D630077C1D2E6DFF005A88B9 /* Text2ViewController.m in Sources */,
+				D6C49CA91D30A67E0045731C /* GHZLivingUserView.m in Sources */,
 				D63007451D2E67FE005A88B9 /* CoreLaunchLite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -864,6 +920,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -887,6 +944,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -925,6 +983,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -938,8 +997,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/GHZxiangmuB/Classes",
+				);
 				INFOPLIST_FILE = GHZxiangmuB/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GHZxiangmuB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -954,8 +1018,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/GHZxiangmuB/Classes",
+				);
 				INFOPLIST_FILE = GHZxiangmuB/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GHZxiangmuB;
 				PRODUCT_NAME = "$(TARGET_NAME)";

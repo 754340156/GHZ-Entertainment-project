@@ -82,6 +82,7 @@
         [self.collectionView.mj_header endRefreshing];
         [self.collectionView.mj_footer endRefreshing];
         if ([responseObject[@"msg"] isEqualToString:@"success"]) {
+            [responseObject[@"data"][@"list"] writeToFile:@"/Users/apple/Desktop/user.plist" atomically:YES];
             for (NSDictionary *dic in responseObject[@"data"][@"list"]) {
                 GHZHotModel *model = [[GHZHotModel alloc] init];
                 [model setValuesForKeysWithDictionary:dic];

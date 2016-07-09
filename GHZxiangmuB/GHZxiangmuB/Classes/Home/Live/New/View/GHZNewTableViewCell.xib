@@ -31,8 +31,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feo-uJ-K2r">
-                                <rect key="frame" x="65" y="5" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feo-uJ-K2r">
+                                <rect key="frame" x="65" y="5" width="36" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="bvc-aB-iRk"/>
                                 </constraints>
@@ -40,8 +40,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="girl_star1_40x19" translatesAutoresizingMaskIntoConstraints="NO" id="zcJ-Hq-lcV">
-                                <rect key="frame" x="117" y="6" width="40" height="19"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl_star1_40x19" translatesAutoresizingMaskIntoConstraints="NO" id="zcJ-Hq-lcV">
+                                <rect key="frame" x="111" y="6" width="40" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="60t-8y-Guu"/>
                                     <constraint firstAttribute="height" constant="19" id="jFX-tE-ZXo"/>
@@ -82,7 +82,7 @@
                             <constraint firstAttribute="height" constant="22" id="XDa-R4-peL"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FKH-S2-42b">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_user_414x414" translatesAutoresizingMaskIntoConstraints="NO" id="FKH-S2-42b">
                         <rect key="frame" x="0.0" y="55" width="320" height="384"/>
                     </imageView>
                 </subviews>
@@ -114,5 +114,6 @@
         <image name="home_live_43x22" width="43" height="22"/>
         <image name="home_location_8x8" width="8" height="8"/>
         <image name="placeholder_head" width="100" height="100"/>
+        <image name="profile_user_414x414" width="414" height="414"/>
     </resources>
 </document>

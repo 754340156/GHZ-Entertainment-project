@@ -26,7 +26,7 @@
      __weak typeof(self)weakself = self;
     [self.backImageView sd_setImageWithURL:[NSURL URLWithString:model.photo] placeholderImage:[UIImage imageNamed:@"placeholder_head"]completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         if (cacheType != SDImageCacheTypeMemory ) {
-            weakself.backImageView.transform = CGAffineTransformMakeScale(0, 0);
+            weakself.backImageView.transform = CGAffineTransformMakeScale(0.4, 0.4);
             [UIView animateWithDuration:0.4 animations:^{
                 weakself.backImageView.transform = CGAffineTransformIdentity;
             }];

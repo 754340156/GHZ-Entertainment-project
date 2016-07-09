@@ -20,7 +20,7 @@
 + (instancetype)GHZ_viewFromXib
 {
     
-    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].firstObject;
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].lastObject;
 }
 
 - (CGFloat)GHZ_centerX

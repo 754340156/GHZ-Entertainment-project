@@ -15,7 +15,6 @@
 
 - (IBAction)Action:(UIButton *)sender
 {
-    
     if (self.bottomClickAction) {
         self.bottomClickAction(sender.tag);
     }

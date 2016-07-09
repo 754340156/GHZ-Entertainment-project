@@ -144,6 +144,8 @@ static NSInteger currentPage = 1;
 {
     if (indexPath.row > 0) {
         GHZLivingViewController *livingVC = [[GHZLivingViewController alloc] init];
+        livingVC.currentIndex = indexPath.row - 1;
+        livingVC.livingModels = self.dataArray;
         [self presentViewController:livingVC animated:YES completion:^{
             
         }];

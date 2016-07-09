@@ -22,6 +22,8 @@
 @implementation GHZLiveViewController
 
 - (void)viewDidLoad {
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.barTintColor = [UIColor cyanColor];
     [super viewDidLoad];
     [self setScrollView];
     [self setChildViewController];
@@ -120,19 +122,6 @@
     }
     self.topMenuView.selectedType = (int)(page + 0.5);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
