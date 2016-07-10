@@ -28,4 +28,3 @@
 /**是否新浪V */
 @property (nonatomic,assign,getter=isSina_V) BOOL sina_v;
 @end
-/** */

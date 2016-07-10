@@ -9,8 +9,6 @@
 #import "GHZCreamViewController.h"
 #import "GHZCrunchiesViewController.h"
 #import "UIBarButtonItem+GHZExtention.h"
-@interface GHZCreamViewController ()
-
 #import "GHZAllViewController.h"
 #import "GHZVideoViewController.h"
 #import "GHZVoiceViewController.h"
@@ -49,8 +47,6 @@
     //底部的 scrollView
     [self setupContentView];
 
-    
-
 }
 
 /**
@@ -72,10 +68,6 @@
     
     GHZWordViewController *word = [GHZWordViewController new];
     [self addChildViewController:word];
-
-
-
-
 }
 
 
@@ -138,36 +130,28 @@
 //            self.indicatorView.GHZ_width =[titles[i] sizeWithAttributes:@{NSFontAttributeName:button.titleLabel.font}].width;
             self.indicatorView.GHZ_centerX = button.GHZ_centerX;
         }
-        
-        
+    
     }
     
     [titleView addSubview:indicatorView];
-
 }
 
 - (void)titleClick:(UIButton *)button{
-    
-    
     //修改我们按钮状态
     self.selectedButton.enabled = YES;
     button.enabled = NO;
     self.selectedButton = button;
     
     //动画
-[UIView animateWithDuration:0.25 animations:^{
-    self.indicatorView.GHZ_centerX = button.GHZ_centerX;
-    self.indicatorView.GHZ_width = button.titleLabel.GHZ_width;
-}];
+    [UIView animateWithDuration:0.25 animations:^{
+        self.indicatorView.GHZ_centerX = button.GHZ_centerX;
+        self.indicatorView.GHZ_width = button.titleLabel.GHZ_width;
+    }];
     //滚动
     CGPoint offset = self.contentView.contentOffset;
     offset.x = button.tag * self.contentView.GHZ_width;
     [self.contentView setContentOffset:offset animated:YES];
-
-
-
 }
-
 
 /**
  *  底部的 scrollView

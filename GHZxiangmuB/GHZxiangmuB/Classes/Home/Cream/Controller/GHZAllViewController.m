@@ -32,7 +32,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
+
     return 50;
 }
 
@@ -45,7 +45,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:ID];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%@------%d",[self class],indexPath];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@------%@",[self class],indexPath];
     return cell;
 }
 

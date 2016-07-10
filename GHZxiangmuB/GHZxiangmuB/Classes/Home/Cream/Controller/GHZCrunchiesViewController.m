@@ -11,13 +11,8 @@
 @implementation GHZCrunchiesViewController
 
 - (void)viewDidLoad{
-    
     [super viewDidLoad];
     self.view.backgroundColor = GHZRGBColor(223, 223, 223);
-    
-    
 }
-
-
 
 @end

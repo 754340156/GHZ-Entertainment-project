@@ -60,12 +60,12 @@
 }
 
 -(void)addRefresh{
-    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadingData)];
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadingData)];
     //自动改变透明
-    self.tableView.header.automaticallyChangeAlpha = YES;
-    [self.tableView.header beginRefreshing];
+    self.tableView.mj_header.automaticallyChangeAlpha = YES;
+    [self.tableView.mj_header beginRefreshing];
     
-    self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadingAddData)];
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadingAddData)];
     
 }
 
@@ -75,7 +75,7 @@
 -(void)loadingData{
     
     //结束上拉
-    [self.tableView.footer endRefreshing];
+    [self.tableView.mj_footer endRefreshing];
     
     
     //参数
@@ -85,23 +85,25 @@
     dic[@"type"] = @"41";
     self.params = dic;
     //发送请求
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:dic success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * responseObject) {
+    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:dic progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"%@",responseObject);
         if (self.params!=dic) {
             return ;
         }
-        self.topics = [GHZTopicModel objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        self.topics = [GHZTopicModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         self.maxtime = responseObject[@"info"][@"maxtime"];
         [self.tableView reloadData];
         self.page = 0;//页码
         //结束刷新
-        [self.tableView.header endRefreshing];
+        [self.tableView.mj_header endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
         if (self.params!=dic) {
             return ;
         }
-        [self.tableView.header endRefreshing];
+        [self.tableView.mj_header endRefreshing];
     }];
     
 }
@@ -119,7 +121,7 @@
  */
 -(void)loadingAddData{
     //结束下拉
-    [self.tableView.header endRefreshing];
+    [self.tableView.mj_header endRefreshing];
     self.page++;
     //参数
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
@@ -131,26 +133,29 @@
     dic[@"maxtime"] = self.maxtime;
     self.params = dic;
     //发送请求
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:dic success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * responseObject) {
+    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:dic progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"%@",responseObject);
         if (self.params!=dic) {
             return ;
         }
         //字典转模型
-        NSMutableArray *newtopics = [GHZTopicModel objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        NSMutableArray *newtopics = [GHZTopicModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.topics addObjectsFromArray:newtopics];
         //获取maxtime
         self.maxtime = responseObject[@"info"][@"maxtime"];
         [self.tableView reloadData];
         self.page = page; //加载成功page
         //结束刷新
-        [self.tableView.footer endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (self.params!=dic) {
             return ;
         }
-        [self.tableView.footer endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
         NSLog(@"%@",error);
+
     }];
     
 }
@@ -160,7 +165,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    self.tableView.footer.hidden = (self.topics.count==0);
+    self.tableView.mj_footer.hidden = (self.topics.count==0);
     return self.topics.count;
 }
 

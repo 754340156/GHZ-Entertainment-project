@@ -102,11 +102,11 @@
             [button.titleLabel sizeToFit];
             self.redView.GHZ_width = button.titleLabel.GHZ_width;
             self.redView.GHZ_centerX = button.GHZ_centerX;
-}
-}
-  
-  [self.titleV addSubview:redView];
-
+        }
+    }
+    
+    [self.titleV addSubview:redView];
+    
 }
 
 -(void)setupControlScroll{
@@ -167,7 +167,7 @@
 //导航设置
 -(void)setuptheNav{
     self.view.backgroundColor = [UIColor blueColor];
-  }
+}
 
 
 @end
