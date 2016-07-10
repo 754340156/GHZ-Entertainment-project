@@ -35,13 +35,13 @@ static NSInteger currentPage = 1;
 
 - (void)setTableView
 {
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
-    self.tableView.GHZ_height = self.view.GHZ_height - self.navigationController.navigationBar.GHZ_height - self.tabBarController.tabBar.GHZ_height - 20 ;
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.tableView.GHZ_height = GHZScreenHeight;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     [self.tableView registerNib:[UINib nibWithNibName:@"GHZNewTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"GHZNewTableViewCell"];
-    
 }
 - (void)setADData
 {
@@ -49,7 +49,6 @@ static NSInteger currentPage = 1;
     [manager GET:getADUrl parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
         for (NSDictionary *dic in responseObject[@"data"]) {
             GHZLiveNewSCVModel *model = [[GHZLiveNewSCVModel alloc] init];
             [model setValuesForKeysWithDictionary:dic];
@@ -63,6 +62,15 @@ static NSInteger currentPage = 1;
 - (void)setData
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    //请求最新好友列表
+    [manager GET:[NSString stringWithFormat:@"%@1",liveHotUrl] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if ([responseObject[@"msg"] isEqualToString:@"success"]) {
+            [responseObject[@"data"][@"list"] writeToFile:userPlist atomically:YES];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    }];
+
     [manager GET:[NSString stringWithFormat:@"%@%ld",liveNewUrl,currentPage] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -87,7 +95,6 @@ static NSInteger currentPage = 1;
         [self.tableView.mj_footer endRefreshing];
         currentPage--;
     }];
-    
 }
 - (void)setRefresh
 {
@@ -123,6 +130,7 @@ static NSInteger currentPage = 1;
     }
     GHZNewTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GHZNewTableViewCell"];
     cell.model = self.dataArray[indexPath.row - 1];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
     
 }
@@ -133,13 +141,7 @@ static NSInteger currentPage = 1;
     }
     return 440;
 }
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.row == 0) {
-        return cycleSVWidth;
-    }
-    return 440;
-}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row > 0) {
@@ -151,14 +153,44 @@ static NSInteger currentPage = 1;
         }];
     }
 }
-#pragma mark  - SDCycleScrollViewDelegate
+#pragma mark - UIScrollViewDelegate
+//当scrollView滚动的时候调用的代理方法
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    //scrollView已经有拖拽手势，直接拿到scrollView的拖拽手势
+    UIPanGestureRecognizer* pan = scrollView.panGestureRecognizer;
+    //获取到拖拽的速度 >0 向下拖动 <0 向上拖动
+    CGFloat velocity = [pan velocityInView:scrollView].y;
+    if (velocity<-5) {
+        //向上拖动，隐藏导航栏
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+        [UIView animateWithDuration:0.4 animations:^{
+            self.tabBarController.tabBar.transform =  CGAffineTransformMakeTranslation(0, 44);
+        } completion:^(BOOL finished) {
+             self.tabBarController.tabBar.hidden = YES;
+        }];
+    }
+    else if (velocity>5) {
+        //向下拖动，显示导航栏
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+        [UIView animateWithDuration:0.4 animations:^{
+            self.tabBarController.tabBar.hidden = NO;
+            self.tabBarController.tabBar.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+        }];
+    }
+    else if(velocity==0){
+        //停止拖拽
+    }
+}
+
+#pragma mark - SDCycleScrollViewDelegate
 /** 点击图片回调 */
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
-    GHZLiveWebViewController *webV = [[GHZLiveWebViewController alloc] init];
-    
-    webV.webUrl =  [self.ADArray[index] link];
-    [self.navigationController pushViewController:webV animated:YES];
+    GHZLiveWebViewController *webVC = [[GHZLiveWebViewController alloc] init];
+    webVC.webUrl =  [self.ADArray[index] link];
+    webVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 
 

@@ -54,8 +54,8 @@
 }
 - (void)setScrollView
 {
-    self.iconsScrollView.contentSize = CGSizeMake((self.iconsScrollView.GHZ_height + DefaultMargin) * self.userArray.count + DefaultMargin, 0);
-    CGFloat width = self.iconsScrollView.GHZ_height - 10;
+    self.iconsScrollView.contentSize = CGSizeMake(self.iconsScrollView.GHZ_height * self.userArray.count, 0);
+    CGFloat width = self.iconsScrollView.GHZ_height - DefaultMargin;
     CGFloat x = 0;
     for (int i = 0; i<self.userArray.count; i++) {
         x = 0 + (DefaultMargin + width) * i;
@@ -84,7 +84,8 @@
 - (NSMutableArray *)userArray
 {
     if (!_userArray) {
-        NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"user.plist" ofType:nil]];
+        NSArray *array = [NSArray arrayWithContentsOfFile:userPlist];
+        _userArray = [NSMutableArray array];
         for (NSDictionary *dic in array) {
             GHZHotModel *model = [[GHZHotModel alloc] init];
             [model setValuesForKeysWithDictionary:dic];

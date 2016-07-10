@@ -67,7 +67,7 @@
                         <constraint firstItem="CdC-mq-omU" firstAttribute="top" secondItem="4Ph-7w-eW2" secondAttribute="top" id="xZS-Qs-ENd"/>
                     </constraints>
                 </view>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1RT-mp-t1K">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RT-mp-t1K">
                     <rect key="frame" x="195" y="25" width="175" height="40"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>

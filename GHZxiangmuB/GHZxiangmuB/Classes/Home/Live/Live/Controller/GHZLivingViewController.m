@@ -9,12 +9,15 @@
 #import "GHZLivingViewController.h"
 #import "GHZLivingCollectionViewCell.h"
 #import "GHZLivingUserView.h"
+#import "GHZHotModel.h"
+#import "GHZLiveNewModel.h"
+#import <MJRefresh/MJRefresh.h>
 @interface GHZLivingViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 /**  collectionView */
 @property (nonatomic,strong) UICollectionView *collectionView;
 
 /**  点击头像推出的主播的详情 */
-@property (nonatomic,strong) GHZLivingUserView *userView;
+@property (nonatomic,weak) GHZLivingUserView *userView;
 @end
 
 @implementation GHZLivingViewController
@@ -23,6 +26,7 @@
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clickIcon:) name:kNotifyClickUser object:nil];
     [self setCollectionView];
+    [self setRefresh];
 }
 - (void)setCollectionView
 {
@@ -43,7 +47,13 @@
 - (void)clickIcon:(NSNotification *)userInfo
 {
     if (userInfo.userInfo[@"user"]) {
-        self.userView.hotModel  = userInfo.userInfo[@"user"];
+        
+        if ([userInfo.userInfo[@"user"] isKindOfClass:[GHZHotModel class]]) {
+             self.userView.hotModel  = userInfo.userInfo[@"user"];
+        }else
+        {
+            self.userView.liveNewModel = userInfo.userInfo[@"user"];
+        }
         [UIView animateWithDuration:0.25 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:12 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             self.userView.center = self.view.center;
             self.userView.GHZ_size = CGSizeMake(livingUserWidth, livingUserHeight);
@@ -53,6 +63,16 @@
         }];
     }
 }
+- (void)setRefresh
+{
+    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        NSLog(@"上啦");
+    }];
+    self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        
+    }];
+}
+
 #pragma mark - collectionView
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {

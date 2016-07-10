@@ -8,10 +8,11 @@
 
 #import "GHZHotViewController.h"
 #import "GHZHotModel.h"
+#import "GHZLiveNewModel.h"
 #import "GHZHotCollectionViewCell.h"
 #import <AFNetworking/AFNetworking.h>
 #import <MJRefresh/MJRefresh.h>
-
+#import "GHZLivingViewController.h"
 @interface GHZHotViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong)UICollectionView *collectionView;
 /**  记录当前页码 */
@@ -32,6 +33,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    //定时刷新
     self.timer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(autoRefresh) userInfo:nil repeats:YES];
    
 }
@@ -52,7 +54,7 @@
     flowLayout.minimumLineSpacing = 2;
     flowLayout.minimumInteritemSpacing = 2;
     flowLayout.itemSize = CGSizeMake((GHZScreenWidth-14)/3, (GHZScreenWidth-14)/3);
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height -108) collectionViewLayout:flowLayout];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
@@ -63,7 +65,7 @@
 {
      __weak typeof(self)weakself = self;
     self.currentPage = 1;
-    weakself.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         weakself.currentPage = 1;
         [weakself setData];
     }];
@@ -82,7 +84,6 @@
         [self.collectionView.mj_header endRefreshing];
         [self.collectionView.mj_footer endRefreshing];
         if ([responseObject[@"msg"] isEqualToString:@"success"]) {
-            [responseObject[@"data"][@"list"] writeToFile:@"/Users/apple/Desktop/user.plist" atomically:YES];
             for (NSDictionary *dic in responseObject[@"data"][@"list"]) {
                 GHZHotModel *model = [[GHZHotModel alloc] init];
                 [model setValuesForKeysWithDictionary:dic];
@@ -113,6 +114,56 @@
     cell.model = self.dataArray[indexPath.row];
     return cell;
 }
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    GHZLivingViewController *livingVC = [[GHZLivingViewController alloc] init];
+    NSMutableArray *arr = [NSMutableArray array];
+    for (GHZHotModel *model in self.dataArray) {
+        GHZLiveNewModel *live = [[GHZLiveNewModel alloc] init];
+        live.bigpic = model.photo;
+        live.myname = model.nickname;
+        live.smallpic = model.photo;
+        live.gps = model.position;
+        live.useridx = model.useridx;
+        live.allnum = model.allnum;
+        live.flv = model.flv;
+        [arr addObject:live];
+    }
+    livingVC.currentIndex = indexPath.row;
+    livingVC.livingModels = arr;
+    [self presentViewController:livingVC animated:YES completion:^{
+    }];
+}
+#pragma mark - UIScrollViewDelegate
+//当scrollView滚动的时候调用的代理方法
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    //scrollView已经有拖拽手势，直接拿到scrollView的拖拽手势
+    UIPanGestureRecognizer* pan = scrollView.panGestureRecognizer;
+    //获取到拖拽的速度 >0 向下拖动 <0 向上拖动
+    CGFloat velocity = [pan velocityInView:scrollView].y;
+    if (velocity<-5) {
+        //向上拖动，隐藏导航栏
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+        [UIView animateWithDuration:0.4 animations:^{
+            self.tabBarController.tabBar.transform =  CGAffineTransformMakeTranslation(0, 44);
+        } completion:^(BOOL finished) {
+            self.tabBarController.tabBar.hidden = YES;
+        }];
+    }
+    else if (velocity>5) {
+        //向下拖动，显示导航栏
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+        [UIView animateWithDuration:0.4 animations:^{
+            self.tabBarController.tabBar.hidden = NO;
+            self.tabBarController.tabBar.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+        }];
+    }
+    else if(velocity==0){
+        //停止拖拽
+    }
+}
+
 #pragma mark - 懒加载
 - (NSMutableArray*)dataArray
 {

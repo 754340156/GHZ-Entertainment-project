@@ -43,6 +43,8 @@
 #define livingCatEarWidth 98
 #define livingUserWidth 300
 #define livingUserHeight 380
+#define userPlist  [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"user.plist"]
+
 
 #pragma mark - url
 //NewUrl
@@ -71,7 +73,7 @@
 #define GHZRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
 
 
-//
+
 //标签参数
 #import "GHZConst.h"
 //比较时间差

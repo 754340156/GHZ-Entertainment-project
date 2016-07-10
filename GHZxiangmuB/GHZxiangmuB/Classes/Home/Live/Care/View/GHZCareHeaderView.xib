@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="GHZCareHeaderView" id="iN0-l3-epB" customClass="GHZCareHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ozN-nO-aVQ">
+                    <rect key="frame" x="10" y="5" width="5" height="20"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="5" id="59K-Cg-erS"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.0_live_bg_" translatesAutoresizingMaskIntoConstraints="NO" id="I2R-jP-aOh">
+                    <rect key="frame" x="0.0" y="30" width="375" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="bKO-5w-K1Q"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关注好友的直播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHx-fb-Cje">
+                    <rect key="frame" x="20" y="5" width="355" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="lf0-Qt-TAp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你的好友静悄悄此时还没有直播" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZX-3v-4U7">
+                    <rect key="frame" x="138" y="45" width="98" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="112" id="3xw-gp-Gsf"/>
+                        <constraint firstAttribute="width" constant="98" id="X5A-7U-xw5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="3xw-gp-Gsf"/>
+                        </mask>
+                    </variation>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WE3-Fc-tDv">
+                    <rect key="frame" x="88" y="99" width="200" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="aY5-wk-pua"/>
+                        <constraint firstAttribute="height" constant="30" id="lgB-Bd-hia"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="去看看最新精彩直播"/>
+                    <connections>
+                        <action selector="lookUserAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="1md-JA-V50"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="WE3-Fc-tDv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="I5Y-Kj-hbn"/>
+                <constraint firstItem="wZX-3v-4U7" firstAttribute="top" secondItem="lHx-fb-Cje" secondAttribute="bottom" constant="20" id="Rwm-9P-6NU"/>
+                <constraint firstItem="lHx-fb-Cje" firstAttribute="top" secondItem="ozN-nO-aVQ" secondAttribute="top" id="YnD-g3-69Q"/>
+                <constraint firstItem="ozN-nO-aVQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="bXP-Fi-AZv"/>
+                <constraint firstAttribute="trailing" secondItem="lHx-fb-Cje" secondAttribute="trailing" id="dXk-AJ-t8e"/>
+                <constraint firstAttribute="bottom" secondItem="I2R-jP-aOh" secondAttribute="bottom" id="hzY-bA-QnC"/>
+                <constraint firstItem="ozN-nO-aVQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="jXs-SR-GWU"/>
+                <constraint firstAttribute="trailing" secondItem="I2R-jP-aOh" secondAttribute="trailing" id="lO1-59-c5u"/>
+                <constraint firstItem="wZX-3v-4U7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="qrR-VM-FPO"/>
+                <constraint firstItem="lHx-fb-Cje" firstAttribute="leading" secondItem="ozN-nO-aVQ" secondAttribute="trailing" constant="5" id="rY5-0o-73U"/>
+                <constraint firstItem="I2R-jP-aOh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sAU-qb-J01"/>
+                <constraint firstItem="WE3-Fc-tDv" firstAttribute="top" secondItem="wZX-3v-4U7" secondAttribute="bottom" constant="20" id="usa-sB-bnq"/>
+                <constraint firstItem="I2R-jP-aOh" firstAttribute="top" secondItem="ozN-nO-aVQ" secondAttribute="bottom" constant="5" id="vUj-mm-4sS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lookUserbutton" destination="WE3-Fc-tDv" id="ZAH-6E-IEU"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="2.0_live_bg_" width="320" height="127"/>
+    </resources>
+</document>

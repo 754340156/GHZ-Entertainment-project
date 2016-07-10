@@ -35,7 +35,7 @@
     self.nameLabel.text = model.nickname;
     [self setLevelWithIndex:model.starlevel];
     if (!model.position.length) {
-        model.position = @"喵星";
+        model.position = @"来自火星";
     }
     [self.locationButton setTitle:model.position forState:UIControlStateNormal];
     self.isNewImageView.hidden = !model.new;

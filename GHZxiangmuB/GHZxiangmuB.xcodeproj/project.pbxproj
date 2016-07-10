@@ -50,6 +50,11 @@
 		D69190BF1D3211E800EF114D /* GHZNewWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FA87361D2FD367006949D7 /* GHZNewWordViewController.m */; };
 		D69190C01D3211E800EF114D /* GHZLiveNewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6AB0BFB1D2F56CC003DDF59 /* GHZLiveNewModel.m */; };
 		D69190C11D3211E800EF114D /* GHZNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63007231D2E67FE005A88B9 /* GHZNavViewController.m */; };
+		D69190CC1D3266E000EF114D /* GHZCareHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D69190CB1D3266E000EF114D /* GHZCareHeaderView.m */; };
+		D69190CE1D3266EC00EF114D /* GHZCareHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69190CD1D3266EB00EF114D /* GHZCareHeaderView.xib */; };
+		D69190D91D3270B300EF114D /* GHZShowingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69190D71D3270B300EF114D /* GHZShowingViewController.m */; };
+		D69190DD1D3271AE00EF114D /* GHZShowPlaceHolderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D69190DC1D3271AE00EF114D /* GHZShowPlaceHolderView.m */; };
+		D69190DF1D3271BA00EF114D /* GHZShowPlaceHolderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69190DE1D3271BA00EF114D /* GHZShowPlaceHolderView.xib */; };
 		D6AB0C021D2F5BE2003DDF59 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D6AB0C011D2F5BE2003DDF59 /* UIImage+Extension.m */; };
 		D6C49CA41D3090870045731C /* GHZLivingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C49CA31D3090870045731C /* GHZLivingCollectionViewCell.m */; };
 		D6C49CA91D30A67E0045731C /* GHZLivingUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C49CA81D30A67E0045731C /* GHZLivingUserView.m */; };
@@ -153,6 +158,14 @@
 		D686B3281D2DF27300648326 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D686B32B1D2DF27300648326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D686B32D1D2DF27300648326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D69190CA1D3266E000EF114D /* GHZCareHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCareHeaderView.h; sourceTree = "<group>"; };
+		D69190CB1D3266E000EF114D /* GHZCareHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCareHeaderView.m; sourceTree = "<group>"; };
+		D69190CD1D3266EB00EF114D /* GHZCareHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZCareHeaderView.xib; sourceTree = "<group>"; };
+		D69190D61D3270B300EF114D /* GHZShowingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZShowingViewController.h; sourceTree = "<group>"; };
+		D69190D71D3270B300EF114D /* GHZShowingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZShowingViewController.m; sourceTree = "<group>"; };
+		D69190DB1D3271AE00EF114D /* GHZShowPlaceHolderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZShowPlaceHolderView.h; sourceTree = "<group>"; };
+		D69190DC1D3271AE00EF114D /* GHZShowPlaceHolderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZShowPlaceHolderView.m; sourceTree = "<group>"; };
+		D69190DE1D3271BA00EF114D /* GHZShowPlaceHolderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZShowPlaceHolderView.xib; sourceTree = "<group>"; };
 		D6AB0BFA1D2F56CC003DDF59 /* GHZLiveNewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZLiveNewModel.h; sourceTree = "<group>"; };
 		D6AB0BFB1D2F56CC003DDF59 /* GHZLiveNewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZLiveNewModel.m; sourceTree = "<group>"; };
 		D6AB0C001D2F5BE2003DDF59 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
@@ -474,6 +487,7 @@
 				D63007961D2E9178005A88B9 /* Hot */,
 				D630078A1D2E9178005A88B9 /* Care */,
 				D6C787961D2FD1F7006DBEF8 /* Live */,
+				D69190CF1D32701400EF114D /* Show */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -555,6 +569,9 @@
 		D630078D1D2E9178005A88B9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D69190CA1D3266E000EF114D /* GHZCareHeaderView.h */,
+				D69190CB1D3266E000EF114D /* GHZCareHeaderView.m */,
+				D69190CD1D3266EB00EF114D /* GHZCareHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -714,6 +731,42 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D69190CF1D32701400EF114D /* Show */ = {
+			isa = PBXGroup;
+			children = (
+				D69190D01D32701400EF114D /* Controller */,
+				D69190D11D32701400EF114D /* Model */,
+				D69190D21D32701400EF114D /* View */,
+			);
+			path = Show;
+			sourceTree = "<group>";
+		};
+		D69190D01D32701400EF114D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D69190D61D3270B300EF114D /* GHZShowingViewController.h */,
+				D69190D71D3270B300EF114D /* GHZShowingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D69190D11D32701400EF114D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D69190D21D32701400EF114D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D69190DB1D3271AE00EF114D /* GHZShowPlaceHolderView.h */,
+				D69190DC1D3271AE00EF114D /* GHZShowPlaceHolderView.m */,
+				D69190DE1D3271BA00EF114D /* GHZShowPlaceHolderView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D6C787961D2FD1F7006DBEF8 /* Live */ = {
 			isa = PBXGroup;
 			children = (
@@ -835,6 +888,8 @@
 				D6C787A61D2FE3C2006DBEF8 /* GHZLivingTopView.xib in Resources */,
 				D6C49CC21D30ED040045731C /* GHZLivingCatEarView.xib in Resources */,
 				D686B3271D2DF27300648326 /* Main.storyboard in Resources */,
+				D69190DF1D3271BA00EF114D /* GHZShowPlaceHolderView.xib in Resources */,
+				D69190CE1D3266EC00EF114D /* GHZCareHeaderView.xib in Resources */,
 				D6C49CAD1D30A6BE0045731C /* GHZLivingUserView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -898,6 +953,7 @@
 				D630073F1D2E67FE005A88B9 /* GHZTabBarViewController.m in Sources */,
 				C243B6741D3118F100CFCDAE /* NSDate+GHZExtension.m in Sources */,
 				C2FA87401D2FD3FC006949D7 /* GHZNewMusicViewController.m in Sources */,
+				D69190D91D3270B300EF114D /* GHZShowingViewController.m in Sources */,
 				C21B32AF1D313FB000B30A8C /* UIBarButtonItem+GHZExtention.m in Sources */,
 				D630079F1D2E9178005A88B9 /* GHZSelectedView.m in Sources */,
 				D63007791D2E6DFF005A88B9 /* GHZCreamViewController.m in Sources */,
@@ -913,6 +969,7 @@
 				D6C787A41D2FE3B0006DBEF8 /* GHZLivingTopView.m in Sources */,
 				C2D06E9F1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m in Sources */,
 				D686B31E1D2DF27300648326 /* main.m in Sources */,
+				D69190DD1D3271AE00EF114D /* GHZShowPlaceHolderView.m in Sources */,
 				D63007401D2E67FE005A88B9 /* GHZViewController.m in Sources */,
 				C21B32A01D30F3E700B30A8C /* GHZAllViewController.m in Sources */,
 				D6C7879F1D2FD2DC006DBEF8 /* GHZBottomView.m in Sources */,
@@ -933,6 +990,7 @@
 				D69190BF1D3211E800EF114D /* GHZNewWordViewController.m in Sources */,
 				D6C49CB01D30A77C0045731C /* GHZLivingEndView.m in Sources */,
 				D69190C11D3211E800EF114D /* GHZNavViewController.m in Sources */,
+				D69190CC1D3266E000EF114D /* GHZCareHeaderView.m in Sources */,
 				D69190C01D3211E800EF114D /* GHZLiveNewModel.m in Sources */,
 				D69190BE1D3211E800EF114D /* GHZLiveViewController.m in Sources */,
 				D6C49CB71D30E1CA0045731C /* UIDevice+Extension.m in Sources */,

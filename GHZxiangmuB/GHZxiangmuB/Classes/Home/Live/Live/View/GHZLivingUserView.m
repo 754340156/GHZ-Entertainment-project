@@ -61,6 +61,24 @@
     [self addAttributeWithView:self.catfoodLable Color:[UIColor lightGrayColor] font:[UIFont systemFontOfSize:11] baseString:@"猫粮" otherString:@"112万"];
 }
 
+- (void)setHotModel:(GHZHotModel *)hotModel
+{
+    _hotModel = hotModel;
+    self.nameLabel.text = hotModel.nickname;
+//    self.signaturesLabel.text = hotModel.signatures;
+    self.userIDXLabel.text = [NSString stringWithFormat:@"IDX:%ld",(long)hotModel.useridx];
+    [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:hotModel.photo] options:SDWebImageDownloaderUseNSURLCache progress:nil completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.iconImageView.image = [UIImage circleImage:image borderColor:[UIColor whiteColor] borderWidth:iconBoundWidth];
+        });
+    }];
+    //富文本
+    [self addAttributeWithView:self.attentionLabel Color:[UIColor lightGrayColor] font:[UIFont systemFontOfSize:11] baseString:@"关注" otherString:@"500"];
+    [self addAttributeWithView:self.fansLabel Color:[UIColor lightGrayColor] font:[UIFont systemFontOfSize:11] baseString:@"粉丝" otherString:@"500"];
+    [self addAttributeWithView:self.saleLabel Color:[UIColor colorWithRed:156/255.0 green:156/255.0 blue:156/255.0 alpha:0.6] font:[UIFont systemFontOfSize:11] baseString:@"消费" otherString:@"113万"];
+    [self addAttributeWithView:self.catfoodLable Color:[UIColor lightGrayColor] font:[UIFont systemFontOfSize:11] baseString:@"猫粮" otherString:@"112万"];
+}
+
 #pragma mark - 按钮的点击事件
 //举报
 - (IBAction)reportAction:(UIButton *)sender

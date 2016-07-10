@@ -12,6 +12,8 @@
 #import "GHZLiveNewViewController.h"
 #import "GHZViewController.h"
 #import "GHZSelectedView.h"
+#import "GHZLiveWebViewController.h"
+#import "GHZShowingViewController.h"
 @interface GHZLiveViewController ()<UIScrollViewDelegate>
 /**  ScrollView */
 @property (nonatomic,strong)UIScrollView *contentView;
@@ -22,13 +24,14 @@
 @implementation GHZLiveViewController
 
 - (void)viewDidLoad {
-    self.navigationController.navigationBar.translucent = NO;
-    self.navigationController.navigationBar.barTintColor = [UIColor cyanColor];
     [super viewDidLoad];
     [self setScrollView];
     [self setChildViewController];
     [self setTopMenuView];
+    [self setNavigationItem];
     [self scrollViewDidEndScrollingAnimation:self.contentView];
+    self.navigationController.navigationBar.barTintColor = [UIColor cyanColor];
+    self.view.backgroundColor = [UIColor redColor];
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -83,12 +86,30 @@
      __weak typeof(self)weakself = self;
     self.topMenuView.selectedBlock = ^(HomeType type)
      {
-        [weakself.contentView setContentOffset:CGPointMake(type * GHZScreenWidth, 0)  animated:YES];
+        [weakself.contentView setContentOffset:CGPointMake(type * GHZScreenWidth, -64)  animated:YES];
      };
     [self.navigationController.navigationBar addSubview:self.topMenuView];
     
 }
-
+- (void)setNavigationItem
+{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"head_crown_24x24"] style:UIBarButtonItemStylePlain target:self action:@selector(rankAction)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"search_15x14"] style:UIBarButtonItemStylePlain target:self action:@selector(searchAction)];
+}
+- (void)rankAction
+{
+    GHZLiveWebViewController *webVC = [[GHZLiveWebViewController alloc] init];
+    webVC.webUrl = @"http://live.9158.com/Rank/WeekRank?Random";
+    webVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:webVC animated:YES];
+}
+- (void)searchAction
+{
+    //去直播
+    GHZShowingViewController *showingVC = [[GHZShowingViewController alloc] init];
+    [self presentViewController:showingVC animated:YES completion:^{
+    }];
+}
 #pragma mark - <UIScrollViewDelegate>
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
 {

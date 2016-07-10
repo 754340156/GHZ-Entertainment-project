@@ -32,10 +32,7 @@
     self.progressProxy.progressDelegate = self;
 
     CGRect navBounds = self.navigationController.navigationBar.bounds;
-    CGRect barFrame = CGRectMake(0,
-                                 navBounds.size.height - 2,
-                                 navBounds.size.width,
-                                 2);
+    CGRect barFrame = CGRectMake(0,navBounds.size.height - 2,navBounds.size.width,2);
     self.progressView = [[NJKWebViewProgressView alloc] initWithFrame:barFrame];
     self.progressView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     [self.progressView setProgress:0 animated:YES];
@@ -50,5 +47,8 @@
     self.title = [self.currentWebView stringByEvaluatingJavaScriptFromString:@"document.title"];
 }
 
-
+- (void)dealloc
+{
+    [self.progressView removeFromSuperview];
+}
 @end

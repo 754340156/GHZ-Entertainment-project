@@ -119,7 +119,6 @@
         {
             [weakself exit];
         };
-        
     }
     return _endView;
 }
@@ -334,7 +333,6 @@
 //播放完成
 - (void)moviePlayerDidFinish
 {
-//    NSLog(@"加载状态...%ld %ld %s", self.moviePlayer.loadState, self.moviePlayer.playbackState, __func__);
     // 因为网速或者其他原因导致直播stop了, 也要显示GIF
     if (self.moviePlayer.loadState & IJKMPMovieLoadStateStalled && !self.fatherVC.gifView) {
         [self.fatherVC showGifLoding:nil inView:self.moviePlayer.view];
