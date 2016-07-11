@@ -14,6 +14,9 @@
 		C21B32A91D30F41E00B30A8C /* GHZPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C21B32A81D30F41E00B30A8C /* GHZPictureViewController.m */; };
 		C21B32AC1D30F42E00B30A8C /* GHZWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C21B32AB1D30F42E00B30A8C /* GHZWordViewController.m */; };
 		C21B32AF1D313FB000B30A8C /* UIBarButtonItem+GHZExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = C21B32AE1D313FB000B30A8C /* UIBarButtonItem+GHZExtention.m */; };
+		C2244A8C1D337E1E001AB114 /* GHZTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = C2244A8B1D337E1E001AB114 /* GHZTopic.m */; };
+		C2244A931D33A5C6001AB114 /* GHZTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2244A911D33A5C6001AB114 /* GHZTopicCell.m */; };
+		C2244A941D33A5C6001AB114 /* GHZTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2244A921D33A5C6001AB114 /* GHZTopicCell.xib */; };
 		C243B5E01D308FDD00CFCDAE /* GHZTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C243B5DF1D308FDD00CFCDAE /* GHZTopicModel.m */; };
 		C243B5E31D30A8E300CFCDAE /* GHZConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C243B5E21D30A8E300CFCDAE /* GHZConst.m */; };
 		C243B5E71D30D1AD00CFCDAE /* GHZNewWordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C243B5E51D30D1AD00CFCDAE /* GHZNewWordCell.m */; };
@@ -104,6 +107,11 @@
 		C21B32AB1D30F42E00B30A8C /* GHZWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZWordViewController.m; sourceTree = "<group>"; };
 		C21B32AD1D313FB000B30A8C /* UIBarButtonItem+GHZExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+GHZExtention.h"; sourceTree = "<group>"; };
 		C21B32AE1D313FB000B30A8C /* UIBarButtonItem+GHZExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+GHZExtention.m"; sourceTree = "<group>"; };
+		C2244A8A1D337E1E001AB114 /* GHZTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHZTopic.h; path = GHZxiangmuB/Classes/Home/Cream/GHZTopic.h; sourceTree = SOURCE_ROOT; };
+		C2244A8B1D337E1E001AB114 /* GHZTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHZTopic.m; path = GHZxiangmuB/Classes/Home/Cream/GHZTopic.m; sourceTree = SOURCE_ROOT; };
+		C2244A901D33A5C6001AB114 /* GHZTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHZTopicCell.h; path = GHZxiangmuB/Classes/Home/Cream/GHZTopicCell.h; sourceTree = SOURCE_ROOT; };
+		C2244A911D33A5C6001AB114 /* GHZTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHZTopicCell.m; path = GHZxiangmuB/Classes/Home/Cream/GHZTopicCell.m; sourceTree = SOURCE_ROOT; };
+		C2244A921D33A5C6001AB114 /* GHZTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GHZTopicCell.xib; path = GHZxiangmuB/Classes/Home/Cream/GHZTopicCell.xib; sourceTree = SOURCE_ROOT; };
 		C243B5DE1D308FDD00CFCDAE /* GHZTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHZTopicModel.h; path = GHZxiangmuB/Classes/Home/New/Controller/GHZTopicModel.h; sourceTree = SOURCE_ROOT; };
 		C243B5DF1D308FDD00CFCDAE /* GHZTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHZTopicModel.m; path = GHZxiangmuB/Classes/Home/New/Controller/GHZTopicModel.m; sourceTree = SOURCE_ROOT; };
 		C243B5E11D30A8E300CFCDAE /* GHZConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZConst.h; sourceTree = "<group>"; };
@@ -593,6 +601,8 @@
 		D63007611D2E6DFF005A88B9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C2244A8A1D337E1E001AB114 /* GHZTopic.h */,
+				C2244A8B1D337E1E001AB114 /* GHZTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -600,6 +610,9 @@
 		D63007621D2E6DFF005A88B9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C2244A901D33A5C6001AB114 /* GHZTopicCell.h */,
+				C2244A911D33A5C6001AB114 /* GHZTopicCell.m */,
+				C2244A921D33A5C6001AB114 /* GHZTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1091,6 +1104,7 @@
 				D6C49CC21D30ED040045731C /* GHZLivingCatEarView.xib in Resources */,
 				D686B3271D2DF27300648326 /* Main.storyboard in Resources */,
 				D69190DF1D3271BA00EF114D /* GHZShowPlaceHolderView.xib in Resources */,
+				C2244A941D33A5C6001AB114 /* GHZTopicCell.xib in Resources */,
 				D69190CE1D3266EC00EF114D /* GHZCareHeaderView.xib in Resources */,
 				D6C49CAD1D30A6BE0045731C /* GHZLivingUserView.xib in Resources */,
 				D628EBCD1D33D64C00624AEE /* GHZLoginViewController.xib in Resources */,
@@ -1171,6 +1185,7 @@
 				D63007A51D2E9540005A88B9 /* GHZCareViewController.m in Sources */,
 				D686B3211D2DF27300648326 /* AppDelegate.m in Sources */,
 				D630077F1D2E6E45005A88B9 /* GHZNewViewController.m in Sources */,
+				C2244A8C1D337E1E001AB114 /* GHZTopic.m in Sources */,
 				D6C787A41D2FE3B0006DBEF8 /* GHZLivingTopView.m in Sources */,
 				C2D06E9F1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m in Sources */,
 				D686B31E1D2DF27300648326 /* main.m in Sources */,
@@ -1199,6 +1214,7 @@
 				D69190C11D3211E800EF114D /* GHZNavViewController.m in Sources */,
 				D69190CC1D3266E000EF114D /* GHZCareHeaderView.m in Sources */,
 				D69190C01D3211E800EF114D /* GHZLiveNewModel.m in Sources */,
+				C2244A931D33A5C6001AB114 /* GHZTopicCell.m in Sources */,
 				D69190BE1D3211E800EF114D /* GHZLiveViewController.m in Sources */,
 				D628E83B1D334A8E00624AEE /* GHZH264Encoder.m in Sources */,
 				D6C49CB71D30E1CA0045731C /* UIDevice+Extension.m in Sources */,
@@ -1338,7 +1354,7 @@
 					"$(PROJECT_DIR)/GHZxiangmuB/Classes",
 				);
 				INFOPLIST_FILE = GHZxiangmuB/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1347,9 +1363,11 @@
 					"$(PROJECT_DIR)/GHZxiangmuB/Classes/Lib/LiveVideoCoreSDK",
 					"$(PROJECT_DIR)/GHZxiangmuB/Classes/Lib/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/GHZxiangmuB/Classes/Lib/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
+					"$(PROJECT_DIR)/IJKMediaFramework.framework",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GHZxiangmuB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "05c836ed-0341-4623-a073-ad7b20859f9f";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1367,7 +1385,7 @@
 					"$(PROJECT_DIR)/GHZxiangmuB/Classes",
 				);
 				INFOPLIST_FILE = GHZxiangmuB/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1376,9 +1394,11 @@
 					"$(PROJECT_DIR)/GHZxiangmuB/Classes/Lib/LiveVideoCoreSDK",
 					"$(PROJECT_DIR)/GHZxiangmuB/Classes/Lib/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/GHZxiangmuB/Classes/Lib/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
+					"$(PROJECT_DIR)/IJKMediaFramework.framework",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GHZxiangmuB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "05c836ed-0341-4623-a073-ad7b20859f9f";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
