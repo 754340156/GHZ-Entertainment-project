@@ -166,26 +166,37 @@
                             <constraint firstAttribute="width" constant="14" id="vcG-lh-c99"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wz-iJ-bvg">
+                        <rect key="frame" x="10" y="55" width="352" height="17"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <animations/>
                 <constraints>
                     <constraint firstItem="FBS-Zh-OtB" firstAttribute="leading" secondItem="sBk-8c-KFJ" secondAttribute="leading" id="2Sc-I4-Bby"/>
                     <constraint firstItem="ayg-aN-o3F" firstAttribute="top" secondItem="sBk-8c-KFJ" secondAttribute="top" id="3Pv-CN-0rF"/>
                     <constraint firstItem="wUE-fN-ebb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="D2w-rJ-yTW"/>
+                    <constraint firstItem="6Wz-iJ-bvg" firstAttribute="top" secondItem="wUE-fN-ebb" secondAttribute="bottom" constant="10" id="GU1-W3-F5x"/>
                     <constraint firstItem="wUE-fN-ebb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="KY8-hW-NEB"/>
                     <constraint firstAttribute="trailing" secondItem="fA6-IT-7uA" secondAttribute="trailing" id="Mnh-e6-0P5"/>
                     <constraint firstItem="sBk-8c-KFJ" firstAttribute="leading" secondItem="wUE-fN-ebb" secondAttribute="trailing" constant="10" id="QQA-eh-eDP"/>
                     <constraint firstAttribute="trailing" secondItem="ayg-aN-o3F" secondAttribute="trailing" constant="10" id="a88-f3-nAX"/>
                     <constraint firstItem="fA6-IT-7uA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dx9-6N-Fll"/>
+                    <constraint firstItem="6Wz-iJ-bvg" firstAttribute="trailing" secondItem="ayg-aN-o3F" secondAttribute="trailing" id="f6V-D1-hxP"/>
                     <constraint firstItem="sBk-8c-KFJ" firstAttribute="top" secondItem="wUE-fN-ebb" secondAttribute="top" id="fwK-E1-hiz"/>
                     <constraint firstItem="Dcr-qi-hrJ" firstAttribute="bottom" secondItem="wUE-fN-ebb" secondAttribute="bottom" constant="5" id="hRi-tb-gBU"/>
                     <constraint firstAttribute="bottom" secondItem="fA6-IT-7uA" secondAttribute="bottom" id="ht4-yd-UJf"/>
                     <constraint firstItem="FBS-Zh-OtB" firstAttribute="bottom" secondItem="wUE-fN-ebb" secondAttribute="bottom" id="mrm-8D-qV8"/>
                     <constraint firstItem="Dcr-qi-hrJ" firstAttribute="trailing" secondItem="wUE-fN-ebb" secondAttribute="trailing" constant="5" id="uZc-jI-WMD"/>
+                    <constraint firstItem="6Wz-iJ-bvg" firstAttribute="leading" secondItem="wUE-fN-ebb" secondAttribute="leading" id="zdF-ms-phv"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>
             <connections>
+                <outlet property="TextsLabel" destination="6Wz-iJ-bvg" id="OhB-fY-zxW"/>
                 <outlet property="caiButton" destination="hxD-F1-GBk" id="Tf9-zm-nsa"/>
                 <outlet property="commentsButton" destination="gGd-dr-fRH" id="bJh-CN-waf"/>
                 <outlet property="createTimeLabel" destination="FBS-Zh-OtB" id="wqu-J8-IP3"/>

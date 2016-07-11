@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
 
     [self setuptheNav];
@@ -42,26 +42,31 @@
  * 初始化子控制器
  */
 -(void)setupChildVC{
-    GHZNewAllViewController *all = [[GHZNewAllViewController alloc] init];
+    GHZTopicViewController *all = [[GHZTopicViewController alloc] init];
     all.title = @"全部";
+    all.type = All;
     [self addChildViewController:all];
-    GHZNewVideoViewController *video = [[GHZNewVideoViewController alloc] init];
+    GHZTopicViewController *video = [[GHZTopicViewController alloc] init];
      video.title = @"视频";
+    video.type = Video;
     [self addChildViewController:video];
-    GHZNewMusicViewController *music = [[GHZNewMusicViewController alloc] init];
+    GHZTopicViewController *music = [[GHZTopicViewController alloc] init];
     music.title = @"声音";
+    music.type = Music;
     [self addChildViewController:music];
-    GHZNewPictureViewController *picture = [[GHZNewPictureViewController alloc] init];
+    GHZTopicViewController *picture = [[GHZTopicViewController alloc] init];
     picture.title = @"图片";
+    picture.type = Picture;
     [self addChildViewController:picture];
-    GHZNewWordViewController *word = [[GHZNewWordViewController alloc] init];
+    GHZTopicViewController *word = [[GHZTopicViewController alloc] init];
     word.title = @"段子";
+    word.type = Word;
     [self addChildViewController:word];
    
 }
 -(void)titleViewNA{
     UIView *titleV = [[UIView alloc] init];
-    titleV.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
+    titleV.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
     titleV.GHZ_width = self.view.GHZ_width;
     titleV.GHZ_height = GHZTitleVH;
     titleV.GHZ_y = GHZTitleVY;
@@ -89,9 +94,9 @@
         [button setTitle:v.title forState:(UIControlStateNormal)];
         [button setTitleColor:[UIColor grayColor] forState:(UIControlStateNormal)];
         [button setTitleColor:[UIColor redColor] forState:(UIControlStateDisabled)];
+        button.titleLabel.font = [UIFont systemFontOfSize:14];
         [button addTarget:self action:@selector(titleClick:) forControlEvents:(UIControlEventTouchUpInside)];
         [titleV addSubview:button];
-        
         
         
                //默认点击第一个
@@ -153,9 +158,9 @@
     button.enabled = NO;
     self.selectBtn.enabled = YES;
      self.selectBtn = button;
-   
+
        //红色底线动画
-    [UIView animateWithDuration:0.25 animations:^{
+    [UIView animateWithDuration:0.1 animations:^{
         self.redView.GHZ_width = button.titleLabel.GHZ_width;
         self.redView.GHZ_centerX = button.GHZ_centerX;
     }];

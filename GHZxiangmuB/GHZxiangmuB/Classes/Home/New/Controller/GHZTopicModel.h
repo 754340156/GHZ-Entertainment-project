@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface GHZTopicModel : NSObject
 /** 名称*/ 
 @property (nonatomic,strong)NSString *name;
@@ -27,4 +27,24 @@
 @property (nonatomic,assign)NSInteger comment;
 /**是否新浪V */
 @property (nonatomic,assign,getter=isSina_V) BOOL sina_v;
+/**图片宽度*/
+@property (nonatomic,assign)CGFloat width;
+/**图片高度*/
+@property (nonatomic,assign)CGFloat height;
+/**小图片的路径*/
+@property (nonatomic,copy)NSString *smallImage;
+/**大图片的路径*/
+@property (nonatomic,copy)NSString *bigImage;
+/**中图片的路径*/
+@property (nonatomic,copy)NSString *middleImage;
+/**cell高度*/
+@property (nonatomic,assign,readonly)CGFloat cellHeight;
+/**类型*/
+@property (nonatomic,assign)GHZTopicType type;
+
+/**图片的frame*/
+@property (nonatomic,assign,readonly)CGRect pictureViewFrame;
+
+/**图片是否为长图*/
+@property (nonatomic,assign,getter=longPicture)BOOL longPicture;
 @end

@@ -19,7 +19,7 @@
 @property (nonatomic, assign) CGFloat GHZ_y;
 @property (nonatomic, assign) CGFloat GHZ_centerX;
 @property (nonatomic, assign) CGFloat GHZ_centerY;
-
+@property(nonatomic,assign)CGSize size;
 /**
  *  快速根据xib创建View
  */

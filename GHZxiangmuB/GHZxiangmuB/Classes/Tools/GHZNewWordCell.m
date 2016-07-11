@@ -8,6 +8,7 @@
 
 #import "GHZNewWordCell.h"
 #import "GHZTopicModel.h"
+#import "GHZPictureView.h"
 #import "UIImageView+WebCache.h"
 @interface GHZNewWordCell ()
 /** 头像*/
@@ -26,10 +27,23 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentsButton;
 /** 新浪用户V*/
 @property (weak, nonatomic) IBOutlet UIImageView *sinaVView;
-
+/**文本内容*/
+@property (weak, nonatomic) IBOutlet UILabel *TextsLabel;
+/**图片中间的view*/
+@property (nonatomic,weak)GHZPictureView *pictureView;
 @end
 
 @implementation GHZNewWordCell
+
+-(GHZPictureView *)pictureView{
+    if (!_pictureView) {
+        GHZPictureView *pictureView = [GHZPictureView pictureView];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
+}
+
 
 
 -(void)awakeFromNib{
@@ -69,6 +83,13 @@
     [self ButtonTitle:self.caiButton count:model.cai placeholder:@"踩"];
     [self ButtonTitle:self.shareButton count:model.repost placeholder:@"分享"];
     [self ButtonTitle:self.commentsButton count:model.comment placeholder:@"评论"];
+    self.TextsLabel.text = model.text;
+   // NSLog(@"%@",model.text);
+   // NSLog(@"%@  %@ %@",model.smallImage,model.bigImage,model.middleImage);
+    if (model.type == Picture) { //根据类型把相应的view贴到view上
+        self.pictureView.model = model;
+        self.pictureView.frame = model.pictureViewFrame;
+    }
 }
 -(void)testDate:(NSString *)create_time
 {
@@ -86,7 +107,7 @@
 
 //按钮参数格式
 -(void)ButtonTitle:(UIButton *)button count:(NSInteger)count placeholder:(NSString *)placeholder{
-    NSString *title = nil;
+   // NSString *title = nil;
      //大于一万之后 参数格式
     if (count>10000) {
         placeholder = [NSString stringWithFormat:@"%.1f万",count/10000.0];
@@ -96,10 +117,10 @@
     [button setTitle:placeholder forState:(UIControlStateNormal)];
 }
 -(void)setFrame:(CGRect)frame{
-    frame.origin.x = 10;
+    frame.origin.x = GHZCellmargin ;
     frame.size.width-= 2 * frame.origin.x;
-    frame.size.height -= 10;
-    frame.origin.y += 10;
+    frame.size.height -= GHZCellmargin;
+    frame.origin.y += GHZCellmargin;
     [super setFrame:frame];
 }
 

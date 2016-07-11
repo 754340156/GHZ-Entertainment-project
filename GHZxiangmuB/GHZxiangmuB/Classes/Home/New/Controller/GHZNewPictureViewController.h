@@ -6,8 +6,9 @@
 //  Copyright © 2016年 lanou3g-22赵哲. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GHZTopicViewController.h"
 
-@interface GHZNewPictureViewController : UITableViewController
+
+@interface GHZNewPictureViewController : GHZTopicViewController
 
 @end

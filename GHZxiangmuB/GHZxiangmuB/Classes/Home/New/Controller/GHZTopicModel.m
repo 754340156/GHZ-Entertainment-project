@@ -7,8 +7,23 @@
 //
 
 #import "GHZTopicModel.h"
+//#import <MJExtension/MJExtension.h>
+
 
 @implementation GHZTopicModel
+{
+    CGFloat _cellHeight;
+    CGRect _pictureViewFrame;
+}
+
+//setvalueforundefinde key
++ (NSDictionary *)replacedKeyFromPropertyName
+{
+    
+    return @{@"smallImage" : @"image0",@"bigImage" : @"image1",@"middleImage" : @"image2"};
+}
+
+
 -(NSString *)create_time{
     
     //发帖时间
@@ -37,9 +52,36 @@
        return _create_time;
     }
     
-    
-    
-    
 }
+/**计算cell的高度*/
+-(CGFloat)cellHeight{
+    if (!_cellHeight) {
+        //文字的范围
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width-GHZCellmargin*4, MAXFLOAT);
+        //文字搞
+        CGFloat textH = [self.text boundingRectWithSize:maxSize options:(NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName :[UIFont systemFontOfSize:14]} context:nil].size.height;
+        _cellHeight = GHZCellTextY + textH + GHZCellmargin ;
+        //根据段子类型判断cell高度
+        if (self.type == Picture) {
+            //图片宽度
+            CGFloat pictureW = maxSize.width;
+            //显示高度
+            CGFloat pictureH = pictureW * self.height / self.width;
+            if (pictureH >= GHZCellPictureMaxH) {
+                pictureH = GHZCellPictureBreakH;
+                self.longPicture = YES;
+            }
+            //计算出图片的frame
+            CGFloat pictureX = GHZCellmargin;
+            CGFloat pictureY = GHZCellTextY + textH + GHZCellmargin;
+            _pictureViewFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+            _cellHeight += pictureH + GHZCellmargin;
+        }
+        //底部
+        _cellHeight += GHZCelltoolH + GHZCellmargin;
+    }
+    return _cellHeight;
+}
+
 
 @end

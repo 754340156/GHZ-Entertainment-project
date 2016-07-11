@@ -101,4 +101,16 @@
     frame.origin.y = GHZ_y;
     self.frame = frame;
 }
+- (void)setSize:(CGSize)size
+{
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
+}
+
+- (CGSize)size
+{
+    return self.frame.size;
+}
+
 @end
