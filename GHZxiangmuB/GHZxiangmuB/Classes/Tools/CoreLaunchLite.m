@@ -60,6 +60,7 @@
 //    NSAssert(image != nil, @"Charlin Feng提示您：请添加启动图片！");
     
     return image;
+
     
     
 }

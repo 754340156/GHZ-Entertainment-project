@@ -1,6 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
-use_frameworks!
+
 target :'GHZxiangmuB' do
 pod 'SDWebImage'
 pod 'MBProgressHUD'
@@ -12,5 +12,7 @@ pod 'MMDrawerController'
 pod 'SDCycleScrollView'
 pod 'NJKWebViewProgress'
 pod 'BarrageRenderer'
-pod 'GPUImage'
+pod 'LFLiveKit'
+pod 'HyphenateSDK'
+pod 'JSQMessagesViewController'
 end

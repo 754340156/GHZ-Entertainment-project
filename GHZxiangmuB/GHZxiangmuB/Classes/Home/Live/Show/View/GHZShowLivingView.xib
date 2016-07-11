@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GHZShowLivingView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5B-iP-KjJ">
+                    <rect key="frame" x="255" y="20" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="TQc-IF-Ql9"/>
+                        <constraint firstAttribute="height" constant="40" id="kAs-kh-onb"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="camera_change"/>
+                    <connections>
+                        <action selector="cameraAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Z4E-Oz-f25"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaA-AP-WB6">
+                    <rect key="frame" x="315" y="20" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="0L7-Nj-h2F"/>
+                        <constraint firstAttribute="height" constant="40" id="4e0-Dp-2Lr"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="talk_close_40x40"/>
+                    <connections>
+                        <action selector="closeAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="8Jj-JH-aFF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfL-To-m44">
+                    <rect key="frame" x="20" y="20" width="170" height="38"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.39523168103448275" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="2Hg-fN-Amm"/>
+                        <constraint firstAttribute="width" constant="170" id="aBN-R3-U4W"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="智能美颜已开启" image="icon_beautifulface_19x19"/>
+                    <connections>
+                        <action selector="beautifulAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="aO1-cO-xEW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="OaA-AP-WB6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="GCp-lq-76O"/>
+                <constraint firstItem="gfL-To-m44" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="QGa-m2-XSU"/>
+                <constraint firstItem="gfL-To-m44" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="U53-cm-l6H"/>
+                <constraint firstAttribute="trailing" secondItem="OaA-AP-WB6" secondAttribute="trailing" constant="20" id="VAt-e0-8DT"/>
+                <constraint firstItem="a5B-iP-KjJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="cUC-Ml-jgw"/>
+                <constraint firstItem="OaA-AP-WB6" firstAttribute="leading" secondItem="a5B-iP-KjJ" secondAttribute="trailing" constant="20" id="sHo-MX-YUx"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <connections>
+                <outlet property="beautifulButton" destination="gfL-To-m44" id="jik-jL-F9U"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="camera_change" width="40" height="40"/>
+        <image name="icon_beautifulface_19x19" width="19" height="19"/>
+        <image name="talk_close_40x40" width="40" height="40"/>
+    </resources>
+</document>

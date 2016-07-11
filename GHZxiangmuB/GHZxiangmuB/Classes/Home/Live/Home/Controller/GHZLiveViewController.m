@@ -31,7 +31,7 @@
     [self setNavigationItem];
     [self scrollViewDidEndScrollingAnimation:self.contentView];
     self.navigationController.navigationBar.barTintColor = [UIColor cyanColor];
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -99,7 +99,7 @@
 - (void)rankAction
 {
     GHZLiveWebViewController *webVC = [[GHZLiveWebViewController alloc] init];
-    webVC.webUrl = @"http://live.9158.com/Rank/WeekRank?Random";
+    webVC.webUrl = rankUrl;
     webVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:webVC animated:YES];
 }
@@ -120,13 +120,7 @@
     GHZViewController *vc = self.childViewControllers[index];
     vc.view.GHZ_x = scrollView.contentOffset.x;
     vc.view.GHZ_y = 0; // 设置控制器view的y值为0(默认是20)
-    vc.view.GHZ_height = scrollView.GHZ_height; // 设置控制器view的height值为整个屏幕的高度(默认是比屏幕高度少个20)
-    // 设置内边距
-//    CGFloat bottom = self.tabBarController.tabBar.GHZ_height;
-//    CGFloat top = CGRectGetMaxY(self.titlesView.frame);
-//    vc.tableView.contentInset = UIEdgeInsetsMake(0, 0, bottom, 0);
-    // 设置滚动条的内边距
-//    vc.tableView.scrollIndicatorInsets = vc.tableView.contentInset;
+    vc.view.GHZ_height = scrollView.GHZ_height;
     [scrollView addSubview:vc.view];
 }
 
