@@ -53,21 +53,26 @@
  *  初始化子控制器
  */
 - (void)setupChildsVc{
-
+    
+    GHZWordViewController *word = [GHZWordViewController new];
+    word.title = @"段子";
+    [self addChildViewController:word];
+    
     GHZAllViewController *all = [GHZAllViewController new];
+    all.title = @"全部";
     [self addChildViewController:all];
     
     GHZVideoViewController *video = [GHZVideoViewController new];
+    video.title = @"视频";
     [self addChildViewController:video];
     
     GHZVoiceViewController *voice = [GHZVoiceViewController new];
+    voice.title = @"声音";
     [self addChildViewController:voice];
     
     GHZPictureViewController *picture = [GHZPictureViewController new];
+    picture.title = @"图片";
     [self addChildViewController:picture];
-    
-    GHZWordViewController *word = [GHZWordViewController new];
-    [self addChildViewController:word];
 }
 
 
@@ -82,8 +87,8 @@
 //    titleView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
     titleView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
     titleView.GHZ_width = self.view.GHZ_width;
-    titleView.GHZ_height = 35;
-    titleView.GHZ_y = 64;
+    titleView.GHZ_height = GHZTitleVH;
+    titleView.GHZ_y = GHZTitleVY;
     [self.view addSubview:titleView];
     self.titlesView = titleView;
     
@@ -98,19 +103,17 @@
     
     
     //内部的子标签
-    NSArray *titles = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
     
-    
-    NSInteger count = 5;
-    CGFloat width = titleView.GHZ_width / count;
+    CGFloat width = titleView.GHZ_width / self.childViewControllers.count;
     CGFloat height = titleView.GHZ_height;
-    for (NSInteger i = 0; i < count; i++) {
+    for (NSInteger i = 0; i < self.childViewControllers.count; i++) {
         UIButton *button = [[UIButton alloc] init];
         button.tag = i;
         button.GHZ_height = height;
         button.GHZ_width = width;
         button.GHZ_x = i *  width;
-        [button setTitle:titles[i] forState:(UIControlStateNormal)];
+        UIViewController *vc = self.childViewControllers[i];
+        [button setTitle:vc.title forState:(UIControlStateNormal)];
         //[button layoutIfNeeded]; //强制布局(强制更新子控件的 frame)
         [button setTitleColor:[UIColor grayColor] forState:(UIControlStateNormal)];
         [button setTitleColor:[UIColor redColor] forState:(UIControlStateDisabled)];
@@ -127,7 +130,6 @@
             //让按钮内部的 label 根据文字内容来计算尺寸
             [button.titleLabel sizeToFit];
             self.indicatorView.GHZ_width = button.titleLabel.GHZ_width;
-//            self.indicatorView.GHZ_width =[titles[i] sizeWithAttributes:@{NSFontAttributeName:button.titleLabel.font}].width;
             self.indicatorView.GHZ_centerX = button.GHZ_centerX;
         }
     
@@ -162,14 +164,10 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     UIScrollView *contentView = [UIScrollView new];
-//    contentView.backgroundColor = [UIColor blueColor];
     contentView.frame = self.view.bounds;
     contentView.delegate = self;
     contentView.pagingEnabled = YES;
-    //设置内边距
-//    CGFloat bottom = self.tabBarController.tabBar.GHZ_height;
-//    CGFloat top = CGRectGetMaxY(self.titlesView.frame);
-//    contentView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+   
     [self.view insertSubview:contentView atIndex:0];
     contentView.contentSize = CGSizeMake(contentView.GHZ_width * self.childViewControllers.count, 0);
     self.contentView = contentView;
@@ -214,30 +212,23 @@
     NSInteger index = scrollView.contentOffset.x / scrollView.GHZ_width;
 
     //取出控制器
-    UITableViewController *vc = self.childViewControllers[index];
+    UIViewController *vc = self.childViewControllers[index];
     vc.view.GHZ_x = scrollView.contentOffset.x;
-    
-    
-    //设置内边距
-    CGFloat bottom = self.tabBarController.tabBar.GHZ_height;
-    CGFloat top = CGRectGetMaxY(self.titlesView.frame);
-    vc.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+    vc.view.GHZ_y = 0;  //设置控制的y 值等于0(默认是20)
+    vc.view.GHZ_height = scrollView.GHZ_height; //设置控制器 view 的 height 值为整个屏幕的高度(默认是比屏幕高度少个20)
     
     [scrollView addSubview:vc.view];
  }
 
-- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
 
-
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    
     [self scrollViewDidEndScrollingAnimation:scrollView];
     
     //点击按钮
     NSInteger index = scrollView.contentOffset.x / scrollView.GHZ_width;
     [self titleClick:self.titlesView.subviews[index]];
-
 }
-
-
 
 
 
