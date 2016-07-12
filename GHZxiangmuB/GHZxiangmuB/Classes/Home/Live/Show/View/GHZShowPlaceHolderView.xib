@@ -30,12 +30,12 @@
                     <state key="normal" title="北京市" image="launch_map_on">
                         <color key="titleColor" white="1" alpha="0.60304418103448276" colorSpace="calibratedWhite"/>
                     </state>
-                    <state key="selected" image="launch_map_off"/>
+                    <state key="selected" title=" " image="launch_map_off"/>
                     <connections>
                         <action selector="locationAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Se2-Zk-LyD"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWq-F1-Rn5">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWq-F1-Rn5">
                     <rect key="frame" x="311" y="0.0" width="64" height="64"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -56,6 +56,9 @@
                     <state key="normal" title="#添加话题">
                         <color key="titleColor" white="1" alpha="0.70288254310344822" colorSpace="calibratedWhite"/>
                     </state>
+                    <state key="selected" title="#添加话题">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="topicAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="aoL-ur-twH"/>
                     </connections>
@@ -68,6 +71,9 @@
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="私密" image="launch_lock_on">
                         <color key="titleColor" white="1" alpha="0.70288254310344822" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" title="私密 " image="launch_lock_off">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="secretAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="h1c-mN-z9p"/>
@@ -136,19 +142,6 @@
                         <action selector="shareAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="MYV-Zd-ExT"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UC5-PI-SF4">
-                    <rect key="frame" x="30" y="346" width="315" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="ZXj-Sc-eXt"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                    <state key="normal" title="开始直播">
-                        <color key="titleColor" red="0.21024848303847765" green="0.83885360004702425" blue="1" alpha="0.69838362068965498" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="startShowingAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="bV7-hD-2gr"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSN-6S-2YO">
                     <rect key="frame" x="37" y="286" width="60" height="60"/>
                     <constraints>
@@ -159,6 +152,19 @@
                     <state key="selected" backgroundImage="launch_weibo_on"/>
                     <connections>
                         <action selector="shareAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="7Im-ch-deW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UC5-PI-SF4">
+                    <rect key="frame" x="30" y="346" width="315" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ZXj-Sc-eXt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                    <state key="normal" title="开始直播">
+                        <color key="titleColor" red="0.21024848300000001" green="0.83885359999999998" blue="1" alpha="0.69838362070000004" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="startShowingAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="bV7-hD-2gr"/>
                     </connections>
                 </button>
             </subviews>
@@ -202,6 +208,11 @@
             <connections>
                 <outlet property="closeButton" destination="LWq-F1-Rn5" id="t45-eI-9ad"/>
                 <outlet property="locationButton" destination="5CB-ki-rmr" id="cXS-Xm-5P8"/>
+                <outlet property="share1" destination="JSN-6S-2YO" id="ICf-W7-wY3"/>
+                <outlet property="share2" destination="tir-ru-HvM" id="ckz-Su-DiX"/>
+                <outlet property="share3" destination="9Ej-Bs-9ls" id="Pif-oC-Ed3"/>
+                <outlet property="share4" destination="pUa-aW-iD0" id="ta9-5M-vMl"/>
+                <outlet property="share5" destination="CL7-aS-rOo" id="0IJ-74-TH1"/>
                 <outlet property="showNameTextView" destination="fFE-3R-M1n" id="SLU-gq-YR0"/>
                 <outlet property="startShowingButton" destination="UC5-PI-SF4" id="dfC-Gh-heV"/>
             </connections>
@@ -210,6 +221,7 @@
     <resources>
         <image name="bg_zbfx" width="250" height="444"/>
         <image name="launch_close" width="64" height="64"/>
+        <image name="launch_lock_off" width="35" height="35"/>
         <image name="launch_lock_on" width="35" height="35"/>
         <image name="launch_map_off" width="26" height="26"/>
         <image name="launch_map_on" width="26" height="26"/>

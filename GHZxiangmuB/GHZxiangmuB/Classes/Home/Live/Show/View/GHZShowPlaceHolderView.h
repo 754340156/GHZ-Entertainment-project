@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface GHZShowPlaceHolderView : UIView
-
-
+/**  直播按钮 */
+@property (nonatomic,copy) void (^startShowingAction)(UIButton *);
 /** 关闭按钮 */
 @property (nonatomic,copy) void (^closeAction)(UIButton *);
 @end

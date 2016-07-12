@@ -26,6 +26,7 @@
 static NSInteger currentPage = 1;
 @implementation GHZLiveNewViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTableView];
@@ -156,20 +157,22 @@ static NSInteger currentPage = 1;
 #pragma mark - UIScrollViewDelegate
 //当scrollView滚动的时候调用的代理方法
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+     self.view.frame = CGRectMake(0, -20, GHZScreenWidth, GHZScreenHeight);
     //scrollView已经有拖拽手势，直接拿到scrollView的拖拽手势
     UIPanGestureRecognizer* pan = scrollView.panGestureRecognizer;
     //获取到拖拽的速度 >0 向下拖动 <0 向上拖动
     CGFloat velocity = [pan velocityInView:scrollView].y;
-    if (velocity<-5) {
+    if (velocity < -30) {
         //向上拖动，隐藏导航栏
         [self.navigationController setNavigationBarHidden:YES animated:YES];
+
         [UIView animateWithDuration:0.4 animations:^{
             self.tabBarController.tabBar.transform =  CGAffineTransformMakeTranslation(0, 44);
         } completion:^(BOOL finished) {
              self.tabBarController.tabBar.hidden = YES;
         }];
     }
-    else if (velocity>5) {
+    else if (velocity > 30) {
         //向下拖动，显示导航栏
         [self.navigationController setNavigationBarHidden:NO animated:YES];
         [UIView animateWithDuration:0.4 animations:^{
@@ -182,7 +185,6 @@ static NSInteger currentPage = 1;
         //停止拖拽
     }
 }
-
 #pragma mark - SDCycleScrollViewDelegate
 /** 点击图片回调 */
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index

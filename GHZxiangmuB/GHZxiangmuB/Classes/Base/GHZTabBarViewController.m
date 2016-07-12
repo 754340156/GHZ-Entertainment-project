@@ -11,7 +11,7 @@
 #import "GHZCreamViewController.h"
 #import "GHZNewViewController.h"
 #import "GHZLiveViewController.h"
-#import "GHZChatViewController.h"
+#import "GHZChatHomeViewController.h"
 
 @interface GHZTabBarViewController ()
 
@@ -27,7 +27,7 @@
     
     [self setTabBarWithViewController:[[GHZLiveViewController alloc]init] image:@"2image" selectImage:@"2imageH" title:@"直播"];
     
-    [self setTabBarWithViewController:[[GHZChatViewController alloc]init] image:@"person" selectImage:@"personH" title:@"聊天"];
+    [self setTabBarWithViewController:[[GHZChatHomeViewController alloc]init] image:@"person" selectImage:@"personH" title:@"聊天"];
     
     
 }
