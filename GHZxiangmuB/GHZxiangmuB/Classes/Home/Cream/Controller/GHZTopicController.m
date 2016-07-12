@@ -1,12 +1,12 @@
 //
-//  GHZWordViewController.m
+//  GHZTopicController.m
 //  GHZxiangmuB
 //
 //  Created by lanou3g on 16/7/9.
 //  Copyright © 2016年 lanou3g-22赵哲. All rights reserved.
 //
 
-#import "GHZWordViewController.h"
+#import "GHZTopicController.h"
 #import <AFNetworking/AFNetworking.h>
 #import "UIImageView+WebCache.h"
 #import "GHZTopic.h"
@@ -15,7 +15,7 @@
 #import "GHZTopicCell.h"
 
 
-@interface GHZWordViewController ()
+@interface GHZTopicController ()
 /**
  *  帖子数据
  */
@@ -30,14 +30,15 @@
 
 @end
 
-@implementation GHZWordViewController
+@implementation GHZTopicController
+
 
 - (NSMutableArray *)topics{
     if (!_topics) {
         _topics = [NSMutableArray array];
     }
     return _topics;
-
+    
 }
 
 
@@ -58,7 +59,7 @@ static NSString  *const GHZTopicCellId = @"topic";
     //设置内边距
     CGFloat bottom = self.tabBarController.tabBar.GHZ_height;
     CGFloat top = GHZTitleVY + GHZTitleVH;
-//    CGFloat top = CGRectGetMaxY(self.titlesView.frame);
+    //    CGFloat top = CGRectGetMaxY(self.titlesView.frame);
     self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
     //设置滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
@@ -72,7 +73,7 @@ static NSString  *const GHZTopicCellId = @"topic";
 }
 
 - (void)setupRefresh{
-
+    
     self.tableView.mj_header = [MJRefreshNormalHeader  headerWithRefreshingTarget:self refreshingAction:@selector(loadNewTopics)];
     //自动改变透明度
     self.tableView.mj_header.automaticallyChangeAlpha = YES;
@@ -80,7 +81,7 @@ static NSString  *const GHZTopicCellId = @"topic";
     
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
     self.tableView.mj_footer.hidden = YES;
-
+    
 }
 
 
@@ -96,7 +97,7 @@ static NSString  *const GHZTopicCellId = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = @"29";
+    params[@"type"] =@(self.type);
     
     self.params = params;
     //发送请求
@@ -141,7 +142,7 @@ static NSString  *const GHZTopicCellId = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = @"29";
+    params[@"type"] =@(self.type);
     NSInteger page = self.page + 1;
     params[@"page"] = @(page);
     params[@"maxtime"] = self.maxtime;
@@ -164,13 +165,13 @@ static NSString  *const GHZTopicCellId = @"topic";
         self.page = page;
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (self.params != params) return ;
-
+        
         //结束刷新
         [self.tableView.mj_footer endRefreshing];
-//        //恢复页码
-//        self.page--;
+        //        //恢复页码
+        //        self.page--;
     }];
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -197,53 +198,10 @@ static NSString  *const GHZTopicCellId = @"topic";
 
 #pragma mark - 代理方法
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    
     return 200;
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
