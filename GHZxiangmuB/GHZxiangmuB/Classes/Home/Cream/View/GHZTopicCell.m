@@ -25,6 +25,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *shareButton;
 //评论
 @property (strong, nonatomic) IBOutlet UIButton *commentButton;
+//新浪加 V
+@property (strong, nonatomic) IBOutlet UIImageView *sinaVView;
 
 @end
 
@@ -42,20 +44,15 @@
 - (void)setTopic:(GHZTopic *)topic{
 
     _topic = topic;
+    
+    //新浪加 V
+    self.sinaVView.hidden = !topic.sina_v;
+    //设置头像
     [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    //设置名字
     self.nameLabel.text = topic.name;
     
-    //日期格式化类: NSString -> NSDate
-    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
-    //设置日期格式(y:年 M: 月 d: 天, H: 小时, m: 分, s: 秒)
-    fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-    
-    //当前时间
-    NSDate *now = [NSDate date];
-    //发帖时间
-    NSDate *create = [fmt dateFromString:topic.create_time];
-    [now deltaFrom:create];
-    
+    //设置帖子的创建时间
     self.createTimeLabel.text = topic.create_time;
    
     //设置按钮文字
