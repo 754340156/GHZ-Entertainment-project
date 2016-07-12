@@ -53,27 +53,27 @@
     
     GHZTopicController *all = [GHZTopicController new];
     all.title = @"全部";
-    all.type = GHZTopicType1All;
+    all.type = All;
     [self addChildViewController:all];
     
     GHZTopicController *video = [GHZTopicController new];
     video.title = @"视频";
-    all.type = GHZTopicType1Video;
+    video.type = Video;
     [self addChildViewController:video];
     
     GHZTopicController *voice = [GHZTopicController new];
     voice.title = @"声音";
-    all.type = GHZTopicType1Voice;
+    voice.type = Music;
     [self addChildViewController:voice];
     
     GHZTopicController *picture = [GHZTopicController new];
     picture.title = @"图片";
-    all.type = GHZTopicType1Picture;
+    picture.type = Picture;
     [self addChildViewController:picture];
     
     GHZTopicController *word = [GHZTopicController new];
     word.title = @"段子";
-    all.type = GHZTopicType1Word;
+    word.type = Word;
     [self addChildViewController:word];
 
 }

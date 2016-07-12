@@ -154,20 +154,29 @@
                             <constraint firstAttribute="height" constant="14" id="kVK-Ip-sSh"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kit-Xq-nks">
+                        <rect key="frame" x="10" y="55" width="300" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="vei-pN-SQr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="08P-yf-pdU"/>
                     <constraint firstItem="3pg-LX-9rL" firstAttribute="bottom" secondItem="vei-pN-SQr" secondAttribute="bottom" id="9fm-Gy-07f"/>
                     <constraint firstItem="Iti-WL-sma" firstAttribute="top" secondItem="Wwz-cf-NyS" secondAttribute="top" id="C90-dl-haF"/>
+                    <constraint firstItem="kit-Xq-nks" firstAttribute="top" secondItem="vei-pN-SQr" secondAttribute="bottom" constant="10" id="FLh-a6-13f"/>
                     <constraint firstAttribute="trailing" secondItem="Iti-WL-sma" secondAttribute="trailing" constant="10" id="OPr-ZQ-B0q"/>
                     <constraint firstItem="gG8-KZ-leB" firstAttribute="trailing" secondItem="vei-pN-SQr" secondAttribute="trailing" constant="5" id="Rdv-ra-frK"/>
                     <constraint firstItem="gG8-KZ-leB" firstAttribute="bottom" secondItem="vei-pN-SQr" secondAttribute="bottom" constant="5" id="THE-zo-Euw"/>
                     <constraint firstAttribute="trailing" secondItem="gXG-UE-vBQ" secondAttribute="trailing" id="UaK-Mc-I9i"/>
                     <constraint firstItem="gXG-UE-vBQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Wpf-iM-iNs"/>
                     <constraint firstItem="Wwz-cf-NyS" firstAttribute="top" secondItem="vei-pN-SQr" secondAttribute="top" id="a5d-fO-X47"/>
+                    <constraint firstItem="kit-Xq-nks" firstAttribute="trailing" secondItem="Iti-WL-sma" secondAttribute="trailing" id="aKc-gS-ZaU"/>
                     <constraint firstItem="3pg-LX-9rL" firstAttribute="leading" secondItem="Wwz-cf-NyS" secondAttribute="leading" id="d2Q-p9-ecH"/>
                     <constraint firstItem="vei-pN-SQr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="de9-JZ-3DZ"/>
                     <constraint firstItem="Wwz-cf-NyS" firstAttribute="leading" secondItem="vei-pN-SQr" secondAttribute="trailing" constant="10" id="dif-2e-JIR"/>
+                    <constraint firstItem="kit-Xq-nks" firstAttribute="leading" secondItem="vei-pN-SQr" secondAttribute="leading" id="fw7-MK-v7c"/>
                     <constraint firstAttribute="bottom" secondItem="gXG-UE-vBQ" secondAttribute="bottom" id="vDI-7a-5Ub"/>
                 </constraints>
             </tableViewCellContentView>
@@ -180,6 +189,7 @@
                 <outlet property="profileImageView" destination="vei-pN-SQr" id="aQg-yW-D0M"/>
                 <outlet property="shareButton" destination="jB3-kt-yTl" id="eR6-qh-C6D"/>
                 <outlet property="sinaVView" destination="gG8-KZ-leB" id="RM2-5n-THZ"/>
+                <outlet property="text_Label" destination="kit-Xq-nks" id="YCG-wl-45j"/>
             </connections>
             <point key="canvasLocation" x="322" y="396.5"/>
         </tableViewCell>

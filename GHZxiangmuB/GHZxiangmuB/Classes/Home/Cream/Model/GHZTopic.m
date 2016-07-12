@@ -7,8 +7,26 @@
 //
 
 #import "GHZTopic.h"
+#import <MJExtension.h>
 
 @implementation GHZTopic
+{
+    CGFloat _cellHeight;
+    CGRect _pictureF;
+}
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName{
+
+    return @{
+             @"small_image" : @"image0",
+             @"large_image" : @"image1",
+             @"middle_image" : @"image2"
+             };
+
+}
+
+
+
 - (NSString *)create_time{
     //日期格式化类: NSString -> NSDate
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
@@ -46,4 +64,43 @@
     }
 
 }
+
+- (CGFloat)cellHeight{
+   
+    if (!_cellHeight) {
+        //文字的最大尺寸
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * GHZCellmargin, MAXFLOAT);
+        //计算文字的高度
+        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:14]} context:nil].size.height;
+        
+        //cell的高度
+        _cellHeight = GHZCellTextY + textH + GHZCelltoolH + 2 * GHZCellmargin;
+        
+        //根据帖子的类型来计算高度
+        if (self.type == Picture) {  //图片帖子
+            //图片显示出来的宽度
+            CGFloat pictureW = maxSize.width;
+            //显示出来的高度
+            CGFloat pictureH = pictureW * self.height / self.width;
+            
+            //计算图片控件的 frame
+            CGFloat pictureX = GHZCellmargin;
+            CGFloat pictureY = GHZCellTextY + textH + GHZCellmargin;
+            _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+            
+            _cellHeight += pictureH;
+        }
+    }
+    return _cellHeight;
+
+}
+
 @end
+
+
+
+
+
+
+
+

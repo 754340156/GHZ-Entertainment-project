@@ -95,7 +95,7 @@ static NSString  *const GHZTopicCellId = @"topic";
     
     //参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = @"newlist";
     params[@"c"] = @"data";
     params[@"type"] =@(self.type);
     
@@ -198,10 +198,15 @@ static NSString  *const GHZTopicCellId = @"topic";
 
 #pragma mark - 代理方法
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    //取出帖子的模型
+    GHZTopic *topic = self.topics[indexPath.row];
     
-    return 200;
+    //topic.cellHeight = 10;
+    //[topic setValue:@"10" forKeyPath:@"cellHeight"];
+    //返回这个模型对应 cell 的高度
+    return topic.cellHeight;
 }
 
-
+    
 
 @end
