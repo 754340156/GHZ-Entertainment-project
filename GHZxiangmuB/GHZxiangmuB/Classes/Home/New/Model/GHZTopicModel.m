@@ -76,6 +76,20 @@
             CGFloat pictureY = GHZCellTextY + textH + GHZCellmargin;
             _pictureViewFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
             _cellHeight += pictureH + GHZCellmargin;
+        }else if (self.type == Music){ //声音
+            CGFloat musicX = GHZCellmargin;
+            CGFloat musicY = GHZCellTextY + textH + GHZCellmargin;
+            CGFloat musicW = maxSize.width;
+            CGFloat musicH = musicW * self.height / self.width;
+            _musicViewFrame = CGRectMake(musicX, musicY, musicW, musicH);
+            _cellHeight += GHZCellmargin + musicH;
+        } if (self.type == Video) {
+            CGFloat videoX = GHZCellmargin;
+            CGFloat videoY = GHZCellTextY + textH + GHZCellmargin;
+            CGFloat videoW = maxSize.width;
+            CGFloat videoH = videoW * self.height / self.width;
+            _videoViewFrame = CGRectMake(videoX, videoY, videoW, videoH);
+            _cellHeight +=GHZCellmargin + videoH;
         }
         //底部
         _cellHeight += GHZCelltoolH + GHZCellmargin;

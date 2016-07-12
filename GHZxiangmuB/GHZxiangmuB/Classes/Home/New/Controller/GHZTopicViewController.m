@@ -46,7 +46,7 @@
 }
 
 -(void)setupTable{
-    self.view.backgroundColor = [UIColor orangeColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     CGFloat bottom = self.tabBarController.tabBar.GHZ_height;
     CGFloat top = GHZTitleVH+GHZTitleVY;
@@ -83,11 +83,9 @@
     dic[@"c"] = @"data";
     dic[@"type"] = @(self.type);
     self.params = dic;
-    NSLog(@"%@",dic);
     //发送请求
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:dic progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@",responseObject);
         if (self.params!=dic) {
             return ;
         }
@@ -134,7 +132,6 @@
     //发送请求
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:dic progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@",responseObject);
         if (self.params!=dic) {
             return ;
         }
@@ -152,7 +149,6 @@
             return ;
         }
         [self.tableView.mj_footer endRefreshing];
-        NSLog(@"%@",error);
     }];
     
 }
@@ -170,11 +166,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     GHZNewWordCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GHZNewWordCell" forIndexPath:indexPath];
     GHZTopicModel *dic = self.topics[indexPath.row];
+    cell.selectionStyle =  UITableViewCellSelectionStyleNone;
     cell.model = dic;
-    //    cell.textLabel.text = dic.name;
-    //    cell.detailTextLabel.text = dic.text;
-    //    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:dic.profile_image] placeholderImage:[UIImage imageNamed:@"Default"]];
-    return cell;
+    
+    
+    
+    
+    
+     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

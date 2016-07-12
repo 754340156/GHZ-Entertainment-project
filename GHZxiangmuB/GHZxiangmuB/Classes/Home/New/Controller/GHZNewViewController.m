@@ -62,7 +62,7 @@
 }
 -(void)titleViewNA{
     UIView *titleV = [[UIView alloc] init];
-    titleV.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
+    titleV.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.9];
     titleV.GHZ_width = self.view.GHZ_width;
     titleV.GHZ_height = GHZTitleVH;
     titleV.GHZ_y = GHZTitleVY;
