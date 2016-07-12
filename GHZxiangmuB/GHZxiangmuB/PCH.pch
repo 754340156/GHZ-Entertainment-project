@@ -48,7 +48,7 @@
 
 #pragma mark - url
 //推流url727908 rtmp://daniulive.com:1935/hls/stream727908
-#define rtmpUrl @"rtmp://172.21.24.160:1935/rtmplive/room"
+#define rtmpUrl @"rtmp://172.21.24.160:5920/rtmplive/room"
 //rank
 #define rankUrl @"http://live.9158.com/Rank/WeekRank?Random"
 //NewUrl

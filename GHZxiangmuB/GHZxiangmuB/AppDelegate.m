@@ -10,6 +10,7 @@
 #import "GHZLeftViewController.h"
 #import "CoreLaunchLite.h"
 #import "GHZTabBarViewController.h"
+#import "EaseUI.h"
 @interface AppDelegate ()
 
 @end
@@ -18,7 +19,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-   
+    //环信
+    EMOptions *options = [EMOptions optionsWithAppkey:@"a754340156#ghzxiangmub"];
+    options.apnsCertName = nil;
+    options.enableConsoleLog = NO;
+    [[EMClient sharedClient] initializeSDKWithOptions:options];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -43,9 +48,6 @@
     self.window.rootViewController = self.drawerController;
     //设置启动图
     [CoreLaunchLite animWithWindow:self.window image:nil];
-
-    
-    
     return YES;
 }
 

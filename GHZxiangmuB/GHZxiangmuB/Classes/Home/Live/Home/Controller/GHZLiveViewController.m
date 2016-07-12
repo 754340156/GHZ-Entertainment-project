@@ -65,7 +65,6 @@
 
 - (void)setChildViewController
 {
-    
     GHZLiveNewViewController *newVC = [[GHZLiveNewViewController alloc] init];
     [self addChildViewController:newVC];
     
@@ -74,8 +73,6 @@
     
     GHZCareViewController *careVC = [[GHZCareViewController alloc] init];
     [self addChildViewController:careVC];
-    
-    
 }
 // 设置顶部选择器
 - (void)setTopMenuView

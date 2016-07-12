@@ -181,7 +181,6 @@ static NSString  *const GHZTopicCellId = @"topic";
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     self.tableView.mj_footer.hidden = (self.topics.count == 0);
     return self.topics.count;
 }

@@ -114,12 +114,12 @@
 
 /** live debug info callback */
 - (void)liveSession:(nullable LFLiveSession *)session debugInfo:(nullable LFLiveDebug*)debugInfo{
-    
+    NSLog(@"%@",debugInfo);
 }
 
 /** callback socket errorcode */
 - (void)liveSession:(nullable LFLiveSession*)session errorCode:(LFLiveSocketErrorCode)errorCode{
-    
+    NSLog(@"%lu",(unsigned long)errorCode);
 }
 #pragma mark - 懒加载
 

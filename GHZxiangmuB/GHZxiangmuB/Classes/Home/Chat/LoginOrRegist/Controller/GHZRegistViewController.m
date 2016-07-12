@@ -7,8 +7,11 @@
 //
 
 #import "GHZRegistViewController.h"
-
+#import <EMSDK.h>
 @interface GHZRegistViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *userNameLabel;
+@property (weak, nonatomic) IBOutlet UITextField *passwordLabel;
+@property (weak, nonatomic) IBOutlet UITextField *conPasswordLabel;
 
 @end
 
@@ -23,15 +26,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)registAction:(UIButton *)sender
+{
+    [[EMClient sharedClient] asyncRegisterWithUsername:self.userNameLabel.text password:self.passwordLabel.text success:^{
+        NSLog(@"注册成功");
+        [self.navigationController popViewControllerAnimated:YES];
+    } failure:^(EMError *aError) {
+         NSLog(@"注册失败 = %@",aError.errorDescription);
+    }];
 }
-*/
+
 
 @end

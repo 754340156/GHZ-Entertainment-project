@@ -12,7 +12,8 @@
 #import "GHZNewViewController.h"
 #import "GHZLiveViewController.h"
 #import "GHZChatHomeViewController.h"
-
+#import "GHZLoginViewController.h"
+#import "EMSDK.h"
 @interface GHZTabBarViewController ()
 
 @end
@@ -26,10 +27,8 @@
     [self setTabBarWithViewController:[[GHZNewViewController alloc]init] image:@"video" selectImage:@"videoH" title:@"最新"];
     
     [self setTabBarWithViewController:[[GHZLiveViewController alloc]init] image:@"2image" selectImage:@"2imageH" title:@"直播"];
-    
-    [self setTabBarWithViewController:[[GHZChatHomeViewController alloc]init] image:@"person" selectImage:@"personH" title:@"聊天"];
-    
-    
+    //自定登录判定
+    [self setTabBarWithViewController:[self setIsAutoLoginWithChatHomeVC:[[GHZChatHomeViewController alloc]init] loginVC:[[GHZLoginViewController alloc]init]] image:@"person" selectImage:@"personH" title:@"聊天"];
 }
 
 
@@ -44,5 +43,15 @@
     [navc.tabBarItem setSelectedImage:[[UIImage imageNamed:selectImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [self addChildViewController:navc];
 }
+ //自定登录判定方法
+- (UIViewController *)setIsAutoLoginWithChatHomeVC:(GHZChatHomeViewController *)chatHomeVC loginVC:(GHZLoginViewController *)loginVC
+{
+    BOOL isAutoLogin = [EMClient sharedClient].options.isAutoLogin;
+    if (isAutoLogin) {
+        return chatHomeVC;
+    }
+    return loginVC;
+}
+
 
 @end
