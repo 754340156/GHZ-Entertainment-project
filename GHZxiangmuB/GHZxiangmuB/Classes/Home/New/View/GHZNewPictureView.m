@@ -6,12 +6,12 @@
 //  Copyright © 2016年 lanou3g-22赵哲. All rights reserved.
 //
 
-#import "GHZPictureView.h"
+#import "GHZNewPictureView.h"
 #import "GHZTopicModel.h"
 #import "UIImageView+WebCache.h"
 #import "MBProgressHUD.h"
 #import "GHZShowpirtureController.h"
-@interface GHZPictureView ()
+@interface GHZNewPictureView ()
 /**图片*/
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 /**gif*/
@@ -23,7 +23,7 @@
 
 @end
 
-@implementation GHZPictureView
+@implementation GHZNewPictureView
 +(instancetype)pictureView{
     
     return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].lastObject;
@@ -36,7 +36,6 @@
     
 }
 -(void)showPicture{
-    NSLog(@"qweqwe");
     GHZShowpirtureController *show = [[GHZShowpirtureController alloc] init];
     show.model = self.model;
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:show animated:YES completion:nil];
@@ -57,7 +56,24 @@
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.bigImage] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
       
            } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-         }];
+               if (model.longPicture==NO) {
+                   return ;
+               }
+               //s图像上下文
+               UIGraphicsBeginImageContextWithOptions(model.pictureViewFrame.size, YES, 0.0);
+               //将下载的图片绘制到图形上下文
+               CGFloat with = model.pictureViewFrame.size.width;
+               CGFloat height = with *image.size.height / image.size.width;
+               [image drawInRect:CGRectMake(0, 0, with, height)];
+
+               //获取图片
+               self.imageView.image =
+               UIGraphicsGetImageFromCurrentImageContext();
+               //结束上下文
+               UIGraphicsEndImageContext();
+               
+           }];
+    
     
     //判断是否为gif
     NSString *extension = model.bigImage.pathExtension;
@@ -67,9 +83,10 @@
     if (model.longPicture) {
         
         self.lookButton.hidden = NO;
-        self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+        //self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     }else{
         self.lookButton.hidden = YES;
+        //self.imageView.contentMode = UIViewContentModeScaleToFill;
     }
     
 }

@@ -7,13 +7,10 @@
 //
 
 #import "GHZCreamViewController.h"
-#import "GHZCrunchiesViewController.h"
-#import "UIBarButtonItem+GHZExtention.h"
-#import "GHZAllViewController.h"
-#import "GHZVideoViewController.h"
-#import "GHZVoiceViewController.h"
-#import "GHZPictureViewController.h"
-#import "GHZWordViewController.h"
+
+
+#import "GHZTopicController.h"
+
 
 
 @interface GHZCreamViewController ()<UIScrollViewDelegate>
@@ -54,25 +51,31 @@
  */
 - (void)setupChildsVc{
     
-    GHZWordViewController *word = [GHZWordViewController new];
-    word.title = @"段子";
-    [self addChildViewController:word];
-    
-    GHZAllViewController *all = [GHZAllViewController new];
+    GHZTopicController *all = [GHZTopicController new];
     all.title = @"全部";
+    all.type = All;
     [self addChildViewController:all];
     
-    GHZVideoViewController *video = [GHZVideoViewController new];
+    GHZTopicController *video = [GHZTopicController new];
     video.title = @"视频";
+    video.type = Video;
     [self addChildViewController:video];
     
-    GHZVoiceViewController *voice = [GHZVoiceViewController new];
+    GHZTopicController *voice = [GHZTopicController new];
     voice.title = @"声音";
+    voice.type = Music;
     [self addChildViewController:voice];
     
-    GHZPictureViewController *picture = [GHZPictureViewController new];
+    GHZTopicController *picture = [GHZTopicController new];
     picture.title = @"图片";
+    picture.type = Picture;
     [self addChildViewController:picture];
+    
+    GHZTopicController *word = [GHZTopicController new];
+    word.title = @"段子";
+    word.type = Word;
+    [self addChildViewController:word];
+
 }
 
 
@@ -196,8 +199,7 @@
 
 
 - (void)tagClick{
-    GHZCrunchiesViewController *CrunchiesVC = [GHZCrunchiesViewController new];
-    [self.navigationController pushViewController:CrunchiesVC animated:YES];
+    
 
     GHZLogFunc;
 

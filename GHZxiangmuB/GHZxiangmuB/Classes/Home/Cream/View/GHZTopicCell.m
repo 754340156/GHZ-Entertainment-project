@@ -9,6 +9,7 @@
 #import "GHZTopicCell.h"
 #import "GHZTopic.h"
 #import "UIImageView+WebCache.h"
+#import "GHZTopicPictureView.h"
 
 @interface GHZTopicCell ()
 //头像
@@ -25,11 +26,30 @@
 @property (strong, nonatomic) IBOutlet UIButton *shareButton;
 //评论
 @property (strong, nonatomic) IBOutlet UIButton *commentButton;
+//新浪加 V
+@property (strong, nonatomic) IBOutlet UIImageView *sinaVView;
+//帖子的文字内容
+@property (strong, nonatomic) IBOutlet UILabel *text_Label;
+//图片帖子中间的内容
+@property (nonatomic, weak) GHZTopicPictureView *pictureView;
 
 @end
 
 
 @implementation GHZTopicCell
+
+//懒加载
+- (GHZTopicPictureView *)pictureView{
+
+    if (!_pictureView) {
+        GHZTopicPictureView *pictureView = [GHZTopicPictureView pictureView];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
+}
+
+
 
 - (void)awakeFromNib{
 
@@ -42,20 +62,15 @@
 - (void)setTopic:(GHZTopic *)topic{
 
     _topic = topic;
+    
+    //新浪加 V
+    self.sinaVView.hidden = !topic.sina_v;
+    //设置头像
     [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    //设置名字
     self.nameLabel.text = topic.name;
     
-    //日期格式化类: NSString -> NSDate
-    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
-    //设置日期格式(y:年 M: 月 d: 天, H: 小时, m: 分, s: 秒)
-    fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-    
-    //当前时间
-    NSDate *now = [NSDate date];
-    //发帖时间
-    NSDate *create = [fmt dateFromString:topic.create_time];
-    [now deltaFrom:create];
-    
+    //设置帖子的创建时间
     self.createTimeLabel.text = topic.create_time;
    
     //设置按钮文字
@@ -63,48 +78,17 @@
     [self setupButtonTitle:self.caiButton count:topic.cai placeholder:@"踩"];
     [self setupButtonTitle:self.shareButton count:topic.repost placeholder:@"分享"];
     [self setupButtonTitle:self.commentButton  count:topic.comment placeholder:@"评论"];
+    //设置帖子的文字内容
+    self.text_Label.text = topic.text;
     
-    //[self testDate:topic.create_time];
+    //根据模型的类型(帖子内容)添加对应的内容到 cell 的中间
+    if (topic.type == Picture) {  //图片帖子
+        self.pictureView.topic = topic;
+        self.pictureView.frame = topic.pictureF;
+    }
     
 }
 
-//- (void)testDate:(NSString *)create_time{
-//    
-//
-//    
-//    
-//    //日历
-//    NSCalendar *calendar = [NSCalendar currentCalendar];
-//    
-//    //比较时间
-//    NSCalendarUnit unit = NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
-//    NSDateComponents *cmps = [calendar components:unit fromDate:create toDate:now options:0];
-//    
-//    
-//    //获得 NSDate 的每一个元素
-////    NSInteger year = [calendar component:NSCalendarUnitYear fromDate:now];
-////    NSInteger month = [calendar component:NSCalendarUnitMonth fromDate:now];
-////    NSInteger day = [calendar component:NSCalendarUnitDay fromDate:now];
-//    
-////    NSDateComponents *cmps = [calendar components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:now];
-////    GHZLog(@"%@",cmps);
-//}
-
-
-
-
-//- (void)testDate:(NSString *)create_time{
-//    //当前时间
-//    NSDate *now = [NSDate date];
-//    //发帖时间
-//    //NSString -> NSDate
-//    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
-//    //设置日期格式(y:年 M: 月 d: 天, H: 小时, m: 分, s: 秒)
-//    fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-//    NSDate *create = [fmt dateFromString:create_time];
-//    NSTimeInterval dalta = [now timeIntervalSinceDate:create];
-//    GHZLog(@"%f",dalta);
-//}
 
 //设置各个按钮的显示文字
 - (void)setupButtonTitle:(UIButton *)button count:(NSInteger)count placeholder:(NSString *)placeholder{
@@ -118,11 +102,11 @@
 
 
 - (void)setFrame:(CGRect)frame{
-    static CGFloat margin = 10;
-    frame.origin.x = margin;
-    frame.size.width -= 2 * margin;
-    frame.size.height -= margin;
-    frame.origin.y += margin;
+    
+    frame.origin.x = GHZCellmargin;
+    frame.size.width -= 2 * GHZCellmargin;
+    frame.size.height -= GHZCellmargin;
+    frame.origin.y += GHZCellmargin;
     
     [super setFrame:frame];
 }

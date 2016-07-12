@@ -8,8 +8,10 @@
 
 #import "GHZNewWordCell.h"
 #import "GHZTopicModel.h"
-#import "GHZPictureView.h"
+#import "GHZNewPictureView.h"
 #import "UIImageView+WebCache.h"
+#import "GHZNewMusicView.h"
+#import "GHZNewVideoView.h"
 @interface GHZNewWordCell ()
 /** 头像*/
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -30,20 +32,40 @@
 /**文本内容*/
 @property (weak, nonatomic) IBOutlet UILabel *TextsLabel;
 /**图片中间的view*/
-@property (nonatomic,weak)GHZPictureView *pictureView;
+@property (nonatomic,weak)GHZNewPictureView *pictureView;
+/**音乐播放界面*/
+@property (nonatomic,weak)GHZNewMusicView *musicView;
+/**视频播放界面*/
+@property (nonatomic,weak)GHZNewVideoView *videoView;
 @end
 
 @implementation GHZNewWordCell
 
--(GHZPictureView *)pictureView{
+-(GHZNewPictureView *)pictureView{
     if (!_pictureView) {
-        GHZPictureView *pictureView = [GHZPictureView pictureView];
+        GHZNewPictureView *pictureView = [GHZNewPictureView pictureView];
         [self.contentView addSubview:pictureView];
         _pictureView = pictureView;
     }
     return _pictureView;
 }
 
+-(GHZNewMusicView *)musicView{
+    if (!_musicView) {
+        GHZNewMusicView *musicView = [GHZNewMusicView MusicView];
+        [self.contentView addSubview:musicView];
+        _musicView = musicView;
+    }
+    return _musicView;
+}
+-(GHZNewVideoView *)videoView{
+    if (!_videoView) {
+        GHZNewVideoView *videoView = [GHZNewVideoView videoView];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
+}
 
 
 -(void)awakeFromNib{
@@ -84,11 +106,18 @@
     [self ButtonTitle:self.shareButton count:model.repost placeholder:@"分享"];
     [self ButtonTitle:self.commentsButton count:model.comment placeholder:@"评论"];
     self.TextsLabel.text = model.text;
+    
    // NSLog(@"%@",model.text);
    // NSLog(@"%@  %@ %@",model.smallImage,model.bigImage,model.middleImage);
     if (model.type == Picture) { //根据类型把相应的view贴到view上
         self.pictureView.model = model;
         self.pictureView.frame = model.pictureViewFrame;
+    }if (model.type == Music) { //音乐
+        self.musicView.model = model;
+        self.musicView.frame = model.musicViewFrame;
+    }if (model.type ==Video) {
+        self.videoView.model = model;
+        self.videoView.frame = model.videoViewFrame;
     }
 }
 -(void)testDate:(NSString *)create_time

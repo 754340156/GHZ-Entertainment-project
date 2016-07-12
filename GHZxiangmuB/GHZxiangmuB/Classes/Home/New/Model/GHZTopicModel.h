@@ -41,10 +41,18 @@
 @property (nonatomic,assign,readonly)CGFloat cellHeight;
 /**类型*/
 @property (nonatomic,assign)GHZTopicType type;
-
 /**图片的frame*/
 @property (nonatomic,assign,readonly)CGRect pictureViewFrame;
-
+/**声音控件frame*/
+@property (nonatomic,assign,readonly)CGRect musicViewFrame;
+/**视频控件frame*/
+@property (nonatomic,assign,readonly)CGRect videoViewFrame;
 /**图片是否为长图*/
 @property (nonatomic,assign,getter=longPicture)BOOL longPicture;
+/**音频时长*/
+@property (nonatomic,assign)NSInteger voicetime;
+/**视频时长*/
+@property (nonatomic,assign)NSInteger videotime;
+/**播放次数*/
+@property (nonatomic,assign)NSInteger playcount;
 @end
