@@ -7,11 +7,7 @@
 //
 
 #import "GHZNewViewController.h"
-#import "GHZNewAllViewController.h"
-#import "GHZNewMusicViewController.h"
-#import "GHZNewPictureViewController.h"
-#import "GHZNewVideoViewController.h"
-#import "GHZNewWordViewController.h"
+#import "GHZTopicViewController.h"
 @interface GHZNewViewController ()<UIScrollViewDelegate>
 @property (nonatomic,strong)NSArray *viewArr;
 @property (nonatomic,weak)UIView *titleV;
