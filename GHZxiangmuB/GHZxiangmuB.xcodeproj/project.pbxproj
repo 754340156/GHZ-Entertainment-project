@@ -17,6 +17,10 @@
 		C243B5E31D30A8E300CFCDAE /* GHZConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C243B5E21D30A8E300CFCDAE /* GHZConst.m */; };
 		C243B6741D3118F100CFCDAE /* NSDate+GHZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C243B6731D3118F100CFCDAE /* NSDate+GHZExtension.m */; };
 		C2681EE91D332A83002FA23F /* GHZTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2681EE81D332A83002FA23F /* GHZTopicViewController.m */; };
+		C2C8600F1D34D9C400A59EEF /* GHZNewMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C8600E1D34D9C400A59EEF /* GHZNewMusicView.m */; settings = {ASSET_TAGS = (); }; };
+		C2C860111D34DA0F00A59EEF /* GHZNewMusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C860101D34DA0F00A59EEF /* GHZNewMusicView.xib */; settings = {ASSET_TAGS = (); }; };
+		C2C860141D35104200A59EEF /* GHZNewVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C860131D35104200A59EEF /* GHZNewVideoView.m */; settings = {ASSET_TAGS = (); }; };
+		C2C860161D35106A00A59EEF /* GHZNewVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C860151D35106A00A59EEF /* GHZNewVideoView.xib */; settings = {ASSET_TAGS = (); }; };
 		C2D06E9F1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D06E9E1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m */; };
 		C2E5E1621D33CDC600409261 /* GHZShowpirtureController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E5E1601D33CDC600409261 /* GHZShowpirtureController.m */; };
 		C2E5E1631D33CDC600409261 /* GHZShowpirtureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E5E1611D33CDC600409261 /* GHZShowpirtureController.xib */; };
@@ -113,6 +117,12 @@
 		C243B6731D3118F100CFCDAE /* NSDate+GHZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GHZExtension.m"; sourceTree = "<group>"; };
 		C2681EE71D332A83002FA23F /* GHZTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTopicViewController.h; sourceTree = "<group>"; };
 		C2681EE81D332A83002FA23F /* GHZTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZTopicViewController.m; sourceTree = "<group>"; };
+		C2C8600D1D34D9C400A59EEF /* GHZNewMusicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewMusicView.h; sourceTree = "<group>"; };
+		C2C8600E1D34D9C400A59EEF /* GHZNewMusicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewMusicView.m; sourceTree = "<group>"; };
+		C2C860101D34DA0F00A59EEF /* GHZNewMusicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZNewMusicView.xib; sourceTree = "<group>"; };
+		C2C860121D35104200A59EEF /* GHZNewVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewVideoView.h; sourceTree = "<group>"; };
+		C2C860131D35104200A59EEF /* GHZNewVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewVideoView.m; sourceTree = "<group>"; };
+		C2C860151D35106A00A59EEF /* GHZNewVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZNewVideoView.xib; sourceTree = "<group>"; };
 		C2D06E9D1D2FDD3700CC8C0F /* GHZCrunchiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCrunchiesViewController.h; sourceTree = "<group>"; };
 		C2D06E9E1D2FDD3700CC8C0F /* GHZCrunchiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCrunchiesViewController.m; sourceTree = "<group>"; };
 		C2E5E15F1D33CDC600409261 /* GHZShowpirtureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZShowpirtureController.h; sourceTree = "<group>"; };
@@ -730,6 +740,12 @@
 				D637B6081D3485E000B8FA18 /* GHZNewPictureView.h */,
 				D637B6091D3485E000B8FA18 /* GHZNewPictureView.m */,
 				D637B60A1D3485E000B8FA18 /* GHZNewPictureView.xib */,
+				C2C8600D1D34D9C400A59EEF /* GHZNewMusicView.h */,
+				C2C8600E1D34D9C400A59EEF /* GHZNewMusicView.m */,
+				C2C860101D34DA0F00A59EEF /* GHZNewMusicView.xib */,
+				C2C860121D35104200A59EEF /* GHZNewVideoView.h */,
+				C2C860131D35104200A59EEF /* GHZNewVideoView.m */,
+				C2C860151D35106A00A59EEF /* GHZNewVideoView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1089,11 +1105,13 @@
 				D6C787A11D2FD2E9006DBEF8 /* GHZBottomView.xib in Resources */,
 				D6C49CB21D30A7940045731C /* GHZLivingEndView.xib in Resources */,
 				D6C787881D2FA84D006DBEF8 /* GHZHotCollectionViewCell.xib in Resources */,
+				C2C860111D34DA0F00A59EEF /* GHZNewMusicView.xib in Resources */,
 				D6C787A61D2FE3C2006DBEF8 /* GHZLivingTopView.xib in Resources */,
 				D6C49CC21D30ED040045731C /* GHZLivingCatEarView.xib in Resources */,
 				C2E5E1631D33CDC600409261 /* GHZShowpirtureController.xib in Resources */,
 				D686B3271D2DF27300648326 /* Main.storyboard in Resources */,
 				D69190DF1D3271BA00EF114D /* GHZShowPlaceHolderView.xib in Resources */,
+				C2C860161D35106A00A59EEF /* GHZNewVideoView.xib in Resources */,
 				D69190CE1D3266EC00EF114D /* GHZCareHeaderView.xib in Resources */,
 				D637B60E1D3485E000B8FA18 /* GHZNewPictureView.xib in Resources */,
 				D6C49CAD1D30A6BE0045731C /* GHZLivingUserView.xib in Resources */,
@@ -1158,6 +1176,7 @@
 			files = (
 				D63007A21D2E9397005A88B9 /* UIView+Extension.m in Sources */,
 				D630073F1D2E67FE005A88B9 /* GHZTabBarViewController.m in Sources */,
+				C2C8600F1D34D9C400A59EEF /* GHZNewMusicView.m in Sources */,
 				C243B6741D3118F100CFCDAE /* NSDate+GHZExtension.m in Sources */,
 				D69190D91D3270B300EF114D /* GHZShowingViewController.m in Sources */,
 				D628EBE01D33E81100624AEE /* GHZSeletedChatView.m in Sources */,
@@ -1184,6 +1203,7 @@
 				C21B32A01D30F3E700B30A8C /* GHZAllViewController.m in Sources */,
 				D6C7879F1D2FD2DC006DBEF8 /* GHZBottomView.m in Sources */,
 				D6C49CBA1D30E35E0045731C /* UIImageView+Extension.m in Sources */,
+				C2C860141D35104200A59EEF /* GHZNewVideoView.m in Sources */,
 				D637B6131D3486EB00B8FA18 /* GHZTopic.m in Sources */,
 				D6C7878B1D2FAD19006DBEF8 /* GHZHotModel.m in Sources */,
 				D630077A1D2E6DFF005A88B9 /* GHZLeftViewController.m in Sources */,
