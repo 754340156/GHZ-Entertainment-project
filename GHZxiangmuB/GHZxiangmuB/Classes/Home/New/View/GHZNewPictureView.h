@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class GHZTopicModel;
-@interface GHZPictureView : UIView
+@interface GHZNewPictureView : UIView
 +(instancetype)pictureView;
 /** 段子model*/
 @property (nonatomic,strong)GHZTopicModel *model;

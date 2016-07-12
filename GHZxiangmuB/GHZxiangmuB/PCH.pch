@@ -82,7 +82,8 @@
 #import "GHZConst.h"
 //比较时间差
 #import "NSDate+GHZExtension.h"
-
+//mb
+#import "MBProgressHUD.h"
 #endif /* PCH_pch */
 
 

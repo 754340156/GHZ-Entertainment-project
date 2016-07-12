@@ -51,8 +51,8 @@
 		D637B6041D3485A300B8FA18 /* GHZTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D637B6031D3485A300B8FA18 /* GHZTopicModel.m */; };
 		D637B60B1D3485E000B8FA18 /* GHZNewWordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D637B6061D3485E000B8FA18 /* GHZNewWordCell.m */; };
 		D637B60C1D3485E000B8FA18 /* GHZNewWordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D637B6071D3485E000B8FA18 /* GHZNewWordCell.xib */; };
-		D637B60D1D3485E000B8FA18 /* GHZPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = D637B6091D3485E000B8FA18 /* GHZPictureView.m */; };
-		D637B60E1D3485E000B8FA18 /* GHZPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D637B60A1D3485E000B8FA18 /* GHZPictureView.xib */; };
+		D637B60D1D3485E000B8FA18 /* GHZNewPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = D637B6091D3485E000B8FA18 /* GHZNewPictureView.m */; };
+		D637B60E1D3485E000B8FA18 /* GHZNewPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D637B60A1D3485E000B8FA18 /* GHZNewPictureView.xib */; };
 		D637B6131D3486EB00B8FA18 /* GHZTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = D637B6121D3486EB00B8FA18 /* GHZTopic.m */; };
 		D637B6171D3486F600B8FA18 /* GHZTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D637B6151D3486F600B8FA18 /* GHZTopicCell.m */; };
 		D637B6181D3486F600B8FA18 /* GHZTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D637B6161D3486F600B8FA18 /* GHZTopicCell.xib */; };
@@ -177,9 +177,9 @@
 		D637B6051D3485E000B8FA18 /* GHZNewWordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewWordCell.h; sourceTree = "<group>"; };
 		D637B6061D3485E000B8FA18 /* GHZNewWordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewWordCell.m; sourceTree = "<group>"; };
 		D637B6071D3485E000B8FA18 /* GHZNewWordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZNewWordCell.xib; sourceTree = "<group>"; };
-		D637B6081D3485E000B8FA18 /* GHZPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZPictureView.h; sourceTree = "<group>"; };
-		D637B6091D3485E000B8FA18 /* GHZPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZPictureView.m; sourceTree = "<group>"; };
-		D637B60A1D3485E000B8FA18 /* GHZPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZPictureView.xib; sourceTree = "<group>"; };
+		D637B6081D3485E000B8FA18 /* GHZNewPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewPictureView.h; sourceTree = "<group>"; };
+		D637B6091D3485E000B8FA18 /* GHZNewPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewPictureView.m; sourceTree = "<group>"; };
+		D637B60A1D3485E000B8FA18 /* GHZNewPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZNewPictureView.xib; sourceTree = "<group>"; };
 		D637B6111D3486E300B8FA18 /* GHZTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTopic.h; sourceTree = "<group>"; };
 		D637B6121D3486EB00B8FA18 /* GHZTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZTopic.m; sourceTree = "<group>"; };
 		D637B6141D3486F600B8FA18 /* GHZTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTopicCell.h; sourceTree = "<group>"; };
@@ -727,9 +727,9 @@
 				D637B6051D3485E000B8FA18 /* GHZNewWordCell.h */,
 				D637B6061D3485E000B8FA18 /* GHZNewWordCell.m */,
 				D637B6071D3485E000B8FA18 /* GHZNewWordCell.xib */,
-				D637B6081D3485E000B8FA18 /* GHZPictureView.h */,
-				D637B6091D3485E000B8FA18 /* GHZPictureView.m */,
-				D637B60A1D3485E000B8FA18 /* GHZPictureView.xib */,
+				D637B6081D3485E000B8FA18 /* GHZNewPictureView.h */,
+				D637B6091D3485E000B8FA18 /* GHZNewPictureView.m */,
+				D637B60A1D3485E000B8FA18 /* GHZNewPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1095,7 +1095,7 @@
 				D686B3271D2DF27300648326 /* Main.storyboard in Resources */,
 				D69190DF1D3271BA00EF114D /* GHZShowPlaceHolderView.xib in Resources */,
 				D69190CE1D3266EC00EF114D /* GHZCareHeaderView.xib in Resources */,
-				D637B60E1D3485E000B8FA18 /* GHZPictureView.xib in Resources */,
+				D637B60E1D3485E000B8FA18 /* GHZNewPictureView.xib in Resources */,
 				D6C49CAD1D30A6BE0045731C /* GHZLivingUserView.xib in Resources */,
 				D628EBCD1D33D64C00624AEE /* GHZLoginViewController.xib in Resources */,
 			);
@@ -1199,7 +1199,7 @@
 				D6AB0C021D2F5BE2003DDF59 /* UIImage+Extension.m in Sources */,
 				D6C49CBD1D30E3B80045731C /* UIViewController+Extension.m in Sources */,
 				D6C7879C1D2FD22C006DBEF8 /* GHZLivingViewController.m in Sources */,
-				D637B60D1D3485E000B8FA18 /* GHZPictureView.m in Sources */,
+				D637B60D1D3485E000B8FA18 /* GHZNewPictureView.m in Sources */,
 				D6C49CB01D30A77C0045731C /* GHZLivingEndView.m in Sources */,
 				D69190C11D3211E800EF114D /* GHZNavViewController.m in Sources */,
 				D69190CC1D3266E000EF114D /* GHZCareHeaderView.m in Sources */,

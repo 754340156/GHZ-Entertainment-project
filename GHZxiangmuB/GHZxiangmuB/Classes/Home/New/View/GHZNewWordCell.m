@@ -8,7 +8,7 @@
 
 #import "GHZNewWordCell.h"
 #import "GHZTopicModel.h"
-#import "GHZPictureView.h"
+#import "GHZNewPictureView.h"
 #import "UIImageView+WebCache.h"
 @interface GHZNewWordCell ()
 /** 头像*/
@@ -30,14 +30,14 @@
 /**文本内容*/
 @property (weak, nonatomic) IBOutlet UILabel *TextsLabel;
 /**图片中间的view*/
-@property (nonatomic,weak)GHZPictureView *pictureView;
+@property (nonatomic,weak)GHZNewPictureView *pictureView;
 @end
 
 @implementation GHZNewWordCell
 
--(GHZPictureView *)pictureView{
+-(GHZNewPictureView *)pictureView{
     if (!_pictureView) {
-        GHZPictureView *pictureView = [GHZPictureView pictureView];
+        GHZNewPictureView *pictureView = [GHZNewPictureView pictureView];
         [self.contentView addSubview:pictureView];
         _pictureView = pictureView;
     }

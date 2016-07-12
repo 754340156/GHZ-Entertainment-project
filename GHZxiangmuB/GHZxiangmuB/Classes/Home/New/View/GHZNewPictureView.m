@@ -6,12 +6,12 @@
 //  Copyright © 2016年 lanou3g-22赵哲. All rights reserved.
 //
 
-#import "GHZPictureView.h"
+#import "GHZNewPictureView.h"
 #import "GHZTopicModel.h"
 #import "UIImageView+WebCache.h"
 #import "MBProgressHUD.h"
 #import "GHZShowpirtureController.h"
-@interface GHZPictureView ()
+@interface GHZNewPictureView ()
 /**图片*/
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 /**gif*/
@@ -23,7 +23,7 @@
 
 @end
 
-@implementation GHZPictureView
+@implementation GHZNewPictureView
 +(instancetype)pictureView{
     
     return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].lastObject;
