@@ -55,7 +55,6 @@
 {
     self.contentView = [[UIScrollView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.contentView.contentSize = CGSizeMake(GHZScreenWidth * 3, 0);
-    //    self.contentView.backgroundColor = [UIColor whiteColor];
     // 去掉滚动条
     self.contentView.showsVerticalScrollIndicator = NO;
     self.contentView.showsHorizontalScrollIndicator = NO;
@@ -100,16 +99,13 @@
     // 添加
     UIAlertAction *doAction = [UIAlertAction actionWithTitle:@"添加" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
         NSString *friend = controller.textFields[0].text;
-        [[EMClient sharedClient].contactManager asyncAddContact:friend message:@"请求加你为好友" success:^{
-            dispatch_async(dispatch_get_main_queue(), ^{
-                NSLog(@"发送好友请求成功");
-            });
-        } failure:^(EMError *aError) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                NSLog(@"发送好友请求失败");
-            });
-        }];
-        
+       EMError *error = [[EMClient sharedClient].contactManager addContact:friend message:@"请求加你为好友" ];
+        if (!error) {
+             NSLog(@"发送好友请求成功");
+        }else
+        {
+            NSLog(@"发送好友请求失败%u",error.code);
+        } 
     }];
     [controller addAction:doAction];
     // textfield

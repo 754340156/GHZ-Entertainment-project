@@ -45,6 +45,8 @@
 //             drawerController.leftDrawerViewController.view .alpha = percentVisible;
 //        }
 //    }];
+    self.drawerController.view.backgroundColor = [UIColor whiteColor];
+    self.drawerController.centerViewController.view.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = self.drawerController;
     //设置启动图
     [CoreLaunchLite animWithWindow:self.window image:nil];

@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GHZRegistViewController">
             <connections>
+                <outlet property="backView" destination="xM7-gH-oDG" id="jIn-Qd-pt5"/>
                 <outlet property="conPasswordLabel" destination="hFj-Jk-bhF" id="YyI-kl-sMl"/>
                 <outlet property="passwordLabel" destination="LiW-cc-Wef" id="H2L-0c-4A7"/>
                 <outlet property="userNameLabel" destination="Yn2-pK-abN" id="baW-NR-hnF"/>
@@ -20,6 +21,7 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading_bg" translatesAutoresizingMaskIntoConstraints="NO" id="UMg-A7-lsY">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.3970366379310345" colorSpace="calibratedWhite"/>
                 </imageView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="请输入用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yn2-pK-abN">
                     <rect key="frame" x="20" y="200" width="560" height="30"/>
@@ -57,12 +59,37 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xM7-gH-oDG">
+                    <rect key="frame" x="20" y="20" width="40" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibT-dT-AgU">
+                            <rect key="frame" x="10" y="10" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="2CR-uR-LoR"/>
+                                <constraint firstAttribute="width" constant="20" id="mrz-QA-BkM"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="back"/>
+                            <connections>
+                                <action selector="backAction:" destination="-1" eventType="touchUpInside" id="8o3-H4-L36"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.19913793103448277" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Rco-MQ-dKx"/>
+                        <constraint firstItem="ibT-dT-AgU" firstAttribute="leading" secondItem="xM7-gH-oDG" secondAttribute="leading" constant="10" id="mYf-oz-HUf"/>
+                        <constraint firstItem="ibT-dT-AgU" firstAttribute="top" secondItem="xM7-gH-oDG" secondAttribute="top" constant="10" id="qWA-HM-gv3"/>
+                        <constraint firstAttribute="height" constant="40" id="rvZ-85-ZBT"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="xM7-gH-oDG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="0a8-nf-JMp"/>
                 <constraint firstItem="LiW-cc-Wef" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="8XL-VT-x07"/>
                 <constraint firstItem="hFj-Jk-bhF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="9dY-Tt-7AA"/>
                 <constraint firstAttribute="trailing" secondItem="hFj-Jk-bhF" secondAttribute="trailing" constant="20" id="Fb6-w1-WNf"/>
+                <constraint firstItem="xM7-gH-oDG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Fdo-cD-Gjb"/>
                 <constraint firstItem="Yn2-pK-abN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="IFS-oh-Ijd"/>
                 <constraint firstAttribute="bottom" secondItem="UMg-A7-lsY" secondAttribute="bottom" id="WKu-ya-d40"/>
                 <constraint firstItem="UMg-A7-lsY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eEW-TS-5Kt"/>
@@ -79,6 +106,7 @@
         </view>
     </objects>
     <resources>
+        <image name="back" width="32" height="32"/>
         <image name="loading_bg" width="320" height="568"/>
     </resources>
 </document>

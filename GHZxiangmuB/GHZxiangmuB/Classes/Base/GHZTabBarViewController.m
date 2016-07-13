@@ -11,10 +11,10 @@
 #import "GHZCreamViewController.h"
 #import "GHZNewViewController.h"
 #import "GHZLiveViewController.h"
-#import "GHZChatHomeViewController.h"
+#import "GHZProfileViewController.h"
 #import "GHZLoginViewController.h"
 #import "EMSDK.h"
-@interface GHZTabBarViewController ()
+@interface GHZTabBarViewController ()<EMClientDelegate>
 
 @end
 
@@ -28,7 +28,8 @@
     
     [self setTabBarWithViewController:[[GHZLiveViewController alloc]init] image:@"2image" selectImage:@"2imageH" title:@"直播"];
     //自定登录判定
-    [self setTabBarWithViewController:[self setIsAutoLoginWithChatHomeVC:[[GHZChatHomeViewController alloc]init] loginVC:[[GHZLoginViewController alloc]init]] image:@"person" selectImage:@"personH" title:@"聊天"];
+    [self setTabBarWithViewController:[self setIsAutoLoginWithChatHomeVC:[[GHZProfileViewController alloc]init] loginVC:[[GHZLoginViewController alloc]init]] image:@"person" selectImage:@"personH" title:@"聊天"];
+    [[EMClient sharedClient]addDelegate:self delegateQueue:nil];
 }
 
 
@@ -44,14 +45,35 @@
     [self addChildViewController:navc];
 }
  //自定登录判定方法
-- (UIViewController *)setIsAutoLoginWithChatHomeVC:(GHZChatHomeViewController *)chatHomeVC loginVC:(GHZLoginViewController *)loginVC
+- (UIViewController *)setIsAutoLoginWithChatHomeVC:(GHZProfileViewController *)profileVC loginVC:(GHZLoginViewController *)loginVC
 {
     BOOL isAutoLogin = [EMClient sharedClient].options.isAutoLogin;
     if (isAutoLogin) {
-        return chatHomeVC;
+        return profileVC;
     }
     return loginVC;
 }
+//1.监听网络状态
+- (void)didConnectionStateChanged:(EMConnectionState)connectionState{
+    //EMConnectionConnected = 0,  /*! *\~chinese 已连接
+    //EMConnectionDisconnected,   /*! *\~chinese 未连接
+    if (connectionState == EMConnectionDisconnected) {
+        NSLog(@"网络断开，未连接...");
+    }else{
+        NSLog(@"网络通了...");
 
+    }
+}
+-(void)willAutoReconnect{
+    NSLog(@"将自动重连接...");
 
+}
+-(void)didAutoReconnectFinishedWithError:(NSError *)error{
+    if (!error) {
+        NSLog(@"自动重连接成功...");
+
+    }else{
+        NSLog(@"自动重连接失败... %@",error);
+    }
+}
 @end

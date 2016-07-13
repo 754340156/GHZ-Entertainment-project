@@ -6,7 +6,7 @@
 //  Copyright © 2016年 lanou3g-22赵哲. All rights reserved.
 //
 
-#import <EaseUI.h>
+#import <EaseUI/EaseUI.h>
 
 @interface GHZFriendViewController : EaseUsersListViewController
 

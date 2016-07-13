@@ -7,8 +7,9 @@
 //
 
 #import "GHZFriendViewController.h"
-
-@interface GHZFriendViewController ()<EMUserListViewControllerDelegate,EMUserListViewControllerDataSource,EMContactManagerDelegate>
+#import "GHZChatViewController.h"
+#import <EMSDK.h>
+@interface GHZFriendViewController ()<EMUserListViewControllerDataSource,EMUserListViewControllerDelegate,EMContactManagerDelegate>
 /**  数据源 */
 @property (nonatomic,strong) NSMutableArray *userListArray;
 @end
@@ -24,57 +25,33 @@
 {
     [super viewWillDisappear:animated];
     [[EMClient sharedClient].contactManager removeDelegate:self];
-
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.delegate = self;
-    self.dataSource = self;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 
-//    self.showSearchBar = YES;
-    
-    [self setUserListArray];
-    
-}
-- (void)setUserListArray
-{
-    //从数据库加载好友
-    [self.dataArray addObject:[[EMClient sharedClient].contactManager getContactsFromDB]];
-    //从服务器获取好友列表
-    [[EMClient sharedClient].contactManager asyncGetContactsFromServer:^(NSArray *aList) {
-        //替换
-        [self.userListArray removeLastObject];
-        [self.userListArray addObject:aList];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
-        });
-    } failure:^(EMError *aError) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"从服务器获取好友列表失败%@",aError.errorDescription);
-        });
-    }];
 }
 
 #pragma mark - EMUserListViewControllerDelegate
+////联系人列表扩展样例
+//- (id<IUserModel>)userListViewController:(EaseUsersListViewController *)userListViewController
+//                           modelForBuddy:(NSString *)buddy
+//{
+//    //用户可以根据自己的用户体系，根据buddy设置用户昵称和头像
+//    id<IUserModel> model = nil;
+//    model = [[EaseUserModel alloc] initWithBuddy:buddy];
+//    model.avatarURLPath = @"";//头像网络地址
+//    model.nickname = @"昵称";//用户昵称
+//    return model;
+//}
 - (void)userListViewController:(EaseUsersListViewController *)userListViewController
             didSelectUserModel:(id<IUserModel>)userModel
 {
-    NSLog(@"点击选中的user%@",userModel);
-}
-//- (NSInteger)numberOfRowInUserListViewController:(EaseUsersListViewController *)userListViewController
-//{
-//    return 1;
-//}
-//联系人列表扩展样例
-- (id<IUserModel>)userListViewController:(EaseUsersListViewController *)userListViewController
-                   userModelForIndexPath:(NSIndexPath *)indexPath
-{
-    //用户可以根据自己的用户体系，根据buddy设置用户昵称和头像
-    id<IUserModel> model = nil;
-    model = [[EaseUserModel alloc] init];
-    model.avatarURLPath = @"";//头像网络地址
-    model.nickname = @"昵称";//用户昵称
-    return model;
+    GHZChatViewController *chatVC = [[GHZChatViewController alloc] initWithConversationChatter:userModel.nickname conversationType:EMConversationTypeChat];
+    [self.navigationController  presentViewController:chatVC animated:YES completion:^{
+        
+    }];
 }
 #pragma mark - EMContactManagerDelegate
 - (void)didReceiveFriendInvitationFromUsername:(NSString *)aUsername
@@ -82,7 +59,7 @@
 {
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"%@%@",aUsername,aMessage]preferredStyle:(UIAlertControllerStyleAlert)];
     UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
-        EMError *error = [[EMClient sharedClient].contactManager declineInvitationForUsername:@"8001"];
+        EMError *error = [[EMClient sharedClient].contactManager declineInvitationForUsername:aUsername];
         if (!error) {
             NSLog(@"发送拒绝成功");
         }

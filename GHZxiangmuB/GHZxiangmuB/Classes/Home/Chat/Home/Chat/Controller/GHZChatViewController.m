@@ -16,47 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.title = self.conversation.conversationId;
     self.delegate = self;
     self.dataSource = self;
 }
 
-/*!
- @method
- @brief 获取消息自定义cell
- @discussion 用户根据messageModel判断是否显示自定义cell。返回nil显示默认cell，否则显示用户自定义cell
- @param tableView 当前消息视图的tableView
- @param messageModel 消息模型
- @result 返回用户自定义cell
- */
-- (UITableViewCell *)messageViewController:(UITableView *)tableView
-                       cellForMessageModel:(id<IMessageModel>)messageModel
-{
-    return nil;
-}
-
-/*!
- @method
- @brief 获取消息cell高度
- @discussion 用户根据messageModel判断，是否自定义显示cell的高度
- @param viewController 当前消息视图
- @param messageModel 消息模型
- @param cellWidth 视图宽度
- @result 返回用户自定义cell
- */
-- (CGFloat)messageViewController:(EaseMessageViewController *)viewController
-           heightForMessageModel:(id<IMessageModel>)messageModel
-                   withCellWidth:(CGFloat)cellWidth
-{
-    return 0;
-}
-/*!
- @method
- @brief 选中消息的回调
- @discussion 用户根据messageModel判断，是否自定义处理消息选中时间。返回YES为自定义处理，返回NO为默认处理
- @param viewController 当前消息视图
- @param messageModel 消息模型
- @result 是否采用自定义处理
- */
+//选中消息回调的样例：
 - (BOOL)messageViewController:(EaseMessageViewController *)viewController
         didSelectMessageModel:(id<IMessageModel>)messageModel
 {
@@ -79,5 +44,66 @@
     }
     return flag;
 }
-
+//录音按钮状态的回调样例：
+- (void)messageViewController:(EaseMessageViewController *)viewController
+          didSelectRecordView:(UIView *)recordView
+                 withEvenType:(EaseRecordViewType)type
+{
+    /*
+     EaseRecordViewTypeTouchDown,//录音按钮按下
+     EaseRecordViewTypeTouchUpInside,//手指在录音按钮内部时离开
+     EaseRecordViewTypeTouchUpOutside,//手指在录音按钮外部时离开
+     EaseRecordViewTypeDragInside,//手指移动到录音按钮内部
+     EaseRecordViewTypeDragOutside,//手指移动到录音按钮外部
+     */
+    //根据type类型，用户自定义处理UI的逻辑
+    switch (type) {
+        case EaseRecordViewTypeTouchDown:
+        {
+            if ([self.recordView isKindOfClass:[EaseRecordView class]]) {
+                [(EaseRecordView *)self.recordView  recordButtonTouchDown];
+            }
+        }
+            break;
+        case EaseRecordViewTypeTouchUpInside:
+        {
+            if ([self.recordView isKindOfClass:[EaseRecordView class]]) {
+                [(EaseRecordView *)self.recordView recordButtonTouchUpInside];
+            }
+            [self.recordView removeFromSuperview];
+        }
+            break;
+        case EaseRecordViewTypeTouchUpOutside:
+        {
+            if ([self.recordView isKindOfClass:[EaseRecordView class]]) {
+                [(EaseRecordView *)self.recordView recordButtonTouchUpOutside];
+            }
+            [self.recordView removeFromSuperview];
+        }
+            break;
+        case EaseRecordViewTypeDragInside:
+        {
+            if ([self.recordView isKindOfClass:[EaseRecordView class]]) {
+                [(EaseRecordView *)self.recordView recordButtonDragInside];
+            }
+        }
+            break;
+        case EaseRecordViewTypeDragOutside:
+        {
+            if ([self.recordView isKindOfClass:[EaseRecordView class]]) {
+                [(EaseRecordView *)self.recordView recordButtonDragOutside];
+            }
+        }
+            break;
+        default:
+            break;
+    }
+}
+//长按收拾回调样例：
+- (BOOL)messageViewController:(EaseMessageViewController *)viewController
+   canLongPressRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //样例给出的逻辑是所有cell都允许长按
+    return YES;
+}
 @end

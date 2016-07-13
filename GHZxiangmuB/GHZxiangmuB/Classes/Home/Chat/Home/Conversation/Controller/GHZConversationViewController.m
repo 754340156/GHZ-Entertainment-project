@@ -7,6 +7,7 @@
 //
 
 #import "GHZConversationViewController.h"
+#import "GHZChatViewController.h"
 @interface GHZConversationViewController ()<EaseConversationListViewControllerDataSource,EaseConversationListViewControllerDelegate>
 
 @end
@@ -15,38 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor greenColor];
+    [self tableViewDidTriggerHeaderRefresh];
     self.delegate = self;
     self.dataSource = self;
 
 }
 #pragma mark - EaseConversationListViewControllerDelegate
-/*!
- @method
- @brief 获取点击会话列表的回调
- @discussion 获取点击会话列表的回调后,点击会话列表用户可以根据conversationModel自定义处理逻辑
- @param conversationListViewController 当前会话列表视图
- @param IConversationModel 会话模型
- @result
- */
 - (void)conversationListViewController:(EaseConversationListViewController *)conversationListViewController
             didSelectConversationModel:(id<IConversationModel>)conversationModel
 {
-    
+    GHZChatViewController *chatVC = [[GHZChatViewController alloc] initWithConversationChatter:conversationModel .title conversationType:EMConversationTypeChat];
+    [self.navigationController pushViewController:chatVC animated:YES];
 }
 #pragma mark  - EaseConversationListViewControllerDataSource
-- (id<IConversationModel>)conversationListViewController:(EaseConversationListViewController *)conversationListViewController modelForConversation:(EMConversation *)conversation
-{
-    return nil;
-}
-/*!
- @method
- @brief 获取最后一条消息显示的内容
- @discussion 用户根据conversationModel实现,实现自定义会话中最后一条消息文案的显示内容
- @param conversationListViewController 当前会话列表视图
- @param IConversationModel 会话模型
- @result 返回用户最后一条消息显示的内容
- */
+//最后一条消息展示内容样例
 - (NSString *)conversationListViewController:(EaseConversationListViewController *)conversationListViewController
       latestMessageTitleForConversationModel:(id<IConversationModel>)conversationModel
 {
@@ -56,7 +39,7 @@
         EMMessageBody *messageBody = lastMessage.body;
         switch (messageBody.type) {
             case EMMessageBodyTypeImage:{
-                latestMessageTitle = NSLocalizedString(@"message.image1", @"[image]");
+                latestMessageTitle = NSLocalizedString(@"[图片]", @"[image]");
             } break;
             case EMMessageBodyTypeText:{
                 // 表情映射。
@@ -68,16 +51,16 @@
                 }
             } break;
             case EMMessageBodyTypeVoice:{
-                latestMessageTitle = NSLocalizedString(@"message.voice1", @"[voice]");
+                latestMessageTitle = NSLocalizedString(@"[语音]", @"[voice]");
             } break;
             case EMMessageBodyTypeLocation: {
-                latestMessageTitle = NSLocalizedString(@"message.location1", @"[location]");
+                latestMessageTitle = NSLocalizedString(@"[位置]", @"[location]");
             } break;
             case EMMessageBodyTypeVideo: {
-                latestMessageTitle = NSLocalizedString(@"message.video1", @"[video]");
+                latestMessageTitle = NSLocalizedString(@"[视频]", @"[video]");
             } break;
             case EMMessageBodyTypeFile: {
-                latestMessageTitle = NSLocalizedString(@"message.file1", @"[file]");
+                latestMessageTitle = NSLocalizedString(@"[文件]", @"[file]");
             } break;
             default: {
             } break;
@@ -86,15 +69,7 @@
     
     return latestMessageTitle;
 }
-
-/*!
- @method
- @brief 获取最后一条消息显示的时间
- @discussion 用户可以根据conversationModel,自定义实现会话列表中时间文案的显示内容
- @param conversationListViewController 当前会话列表视图
- @param IConversationModel 会话模型
- @result 返回用户最后一条消息时间的显示文案
- */
+//最后一条消息展示时间
 - (NSString *)conversationListViewController:(EaseConversationListViewController *)conversationListViewController
        latestMessageTimeForConversationModel:(id<IConversationModel>)conversationModel
 {

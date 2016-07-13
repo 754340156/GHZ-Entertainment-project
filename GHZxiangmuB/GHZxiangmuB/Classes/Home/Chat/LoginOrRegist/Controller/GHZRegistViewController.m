@@ -9,22 +9,28 @@
 #import "GHZRegistViewController.h"
 #import <EMSDK.h>
 @interface GHZRegistViewController ()
+@property (weak, nonatomic) IBOutlet UIView *backView;
 @property (weak, nonatomic) IBOutlet UITextField *userNameLabel;
 @property (weak, nonatomic) IBOutlet UITextField *passwordLabel;
 @property (weak, nonatomic) IBOutlet UITextField *conPasswordLabel;
-
 @end
 
 @implementation GHZRegistViewController
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.backView.layer.masksToBounds = YES;
+    self.backView.layer.cornerRadius = self.backView.GHZ_width * 0.5;
+    
 }
 - (IBAction)registAction:(UIButton *)sender
 {
@@ -34,6 +40,10 @@
     } failure:^(EMError *aError) {
          NSLog(@"注册失败 = %@",aError.errorDescription);
     }];
+}
+- (IBAction)backAction:(UIButton *)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
