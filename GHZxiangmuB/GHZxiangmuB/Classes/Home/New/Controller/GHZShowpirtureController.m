@@ -12,13 +12,13 @@
 @interface GHZShowpirtureController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic,strong)UIImageView *imageView;
+@property (nonatomic,strong)MBProgressHUD *hud;
 @end
 
 @implementation GHZShowpirtureController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     //宽
     //图片宽度 高度
     UIImageView *imageView = [[UIImageView alloc] init];
@@ -51,18 +51,17 @@
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{
     NSLog(@"%@",error);
     if (error) {
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        hud.labelText = @"保存失败!";
-        hud.mode = MBProgressHUDModeCustomView;
-        hud.removeFromSuperViewOnHide = YES;
-        [hud hide:YES afterDelay:1];
+        self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        self.hud.mode = MBProgressHUDModeCustomView;
+       self.hud.labelText = @"保存失败";
+            self.hud.removeFromSuperViewOnHide = YES;
+           [self.hud hide:YES afterDelay:1];
     }else{
-        
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        hud.labelText = @"保存成功";
-        hud.mode = MBProgressHUDModeCustomView;
-        hud.removeFromSuperViewOnHide = YES;
-        [hud hide:YES afterDelay:1];
+        self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        self.hud.mode = MBProgressHUDModeCustomView;
+        self.hud.labelText = @"保存成功";
+        self.hud.removeFromSuperViewOnHide = YES;
+       [self.hud hide:YES afterDelay:1];
     }
 }
 

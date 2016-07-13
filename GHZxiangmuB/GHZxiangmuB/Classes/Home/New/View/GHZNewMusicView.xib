@@ -46,6 +46,9 @@
                         <constraint firstAttribute="height" constant="63" id="vQS-k0-Cho"/>
                     </constraints>
                     <state key="normal" image="playButtonPlay" backgroundImage="playButton"/>
+                    <connections>
+                        <action selector="Playing:" destination="iN0-l3-epB" eventType="touchUpInside" id="Gyd-jT-qV6"/>
+                    </connections>
                 </button>
             </subviews>
             <animations/>
@@ -68,6 +71,7 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="Playbtn" destination="8at-zg-f1W" id="99m-Fn-80L"/>
                 <outlet property="imageView" destination="iaw-gF-6lZ" id="Wdj-yM-3PI"/>
                 <outlet property="playcountLabel" destination="vO7-LZ-5KA" id="pQb-JN-SVg"/>
                 <outlet property="voicelengthLabel" destination="dXS-Rl-DNd" id="E5E-34-Tbz"/>

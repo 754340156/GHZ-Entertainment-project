@@ -110,15 +110,33 @@
    // NSLog(@"%@",model.text);
    // NSLog(@"%@  %@ %@",model.smallImage,model.bigImage,model.middleImage);
     if (model.type == Picture) { //根据类型把相应的view贴到view上
+        self.pictureView.hidden = NO;
         self.pictureView.model = model;
         self.pictureView.frame = model.pictureViewFrame;
+        self.musicView.hidden = YES;
+        self.videoView.hidden =YES;
     }if (model.type == Music) { //音乐
+        self.musicView.hidden = NO;
         self.musicView.model = model;
         self.musicView.frame = model.musicViewFrame;
+        self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
+
     }if (model.type ==Video) {
+        self.videoView.hidden = NO;
         self.videoView.model = model;
         self.videoView.frame = model.videoViewFrame;
-    }
+        self.pictureView.hidden = YES;
+        self.musicView.hidden = YES;
+    }if (model.type ==Word) {
+        self.pictureView.hidden = YES;
+        self.musicView.hidden = YES;
+        self.videoView.hidden = YES;
+    }{
+//        self.videoView.hidden = YES;
+//        self.musicView.hidden = YES;
+//        self.pictureView.hidden = YES;
+                    }
 }
 -(void)testDate:(NSString *)create_time
 {
