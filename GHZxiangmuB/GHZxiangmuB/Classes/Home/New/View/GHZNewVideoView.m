@@ -9,11 +9,14 @@
 #import "GHZNewVideoView.h"
 #import "GHZTopicModel.h"
 #import "UIImageView+WebCache.h"
+#import "WMPlayer.h"
 @interface GHZNewVideoView ()
 @property (weak, nonatomic) IBOutlet UILabel *playcountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *videotimeLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-
+@property (nonatomic,assign)CGRect c;
+@property (nonatomic,strong)WMPlayer *videoPlay;
+@property (nonatomic,copy)NSString *url;
 @end
 
 @implementation GHZNewVideoView
@@ -27,11 +30,6 @@
     self.imageView.userInteractionEnabled = YES;
     [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showVideo)]];
 }
-
--(IBAction)showVideo{
-
-}
-
 -(void)setModel:(GHZTopicModel *)model{
     _model = model;
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.bigImage]];
@@ -42,6 +40,13 @@
     NSInteger f = model.videotime/60;
     NSInteger m = model.videotime%60;
     self.videotimeLabel.text = [NSString stringWithFormat:@"%.02ld:%.02ld",f,m];
+    self.c = model.videoViewFrame;
+    self.url = model.videouri;
 }
+
+-(IBAction)showVideo{
+    
+}
+
 
 @end

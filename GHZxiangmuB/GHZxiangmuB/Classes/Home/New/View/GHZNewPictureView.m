@@ -11,6 +11,7 @@
 #import "UIImageView+WebCache.h"
 #import "MBProgressHUD.h"
 #import "GHZShowpirtureController.h"
+#import <DALabeledCircularProgressView.h>
 @interface GHZNewPictureView ()
 /**图片*/
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -18,8 +19,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *gifView;
 /**查看*/
 @property (weak, nonatomic) IBOutlet UIButton *lookButton;
-@property (weak, nonatomic) IBOutlet UIView *loding;
 @property (nonatomic,strong) MBProgressHUD *hud;
+/**进度条*/
+@property (weak, nonatomic) IBOutlet DALabeledCircularProgressView *Loding;
+
 
 @end
 
@@ -33,7 +36,7 @@
     self.autoresizingMask = UIViewAutoresizingNone;
     self.imageView.userInteractionEnabled = YES;
     [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPicture)]];
-    
+    self.Loding.roundedCorners = 2;
 }
 -(void)showPicture{
     GHZShowpirtureController *show = [[GHZShowpirtureController alloc] init];
@@ -42,7 +45,9 @@
         
   
 }
-
+-(IBAction)play{
+    
+}
 -(void)setModel:(GHZTopicModel *)model{
     _model = model;
     
@@ -54,8 +59,15 @@
 //    [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.bigImage] placeholderImage:[UIImage imageNamed:@""]];
     
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.bigImage] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-      
+        self.Loding.hidden = NO;
+        CGFloat progress = 1.0 * receivedSize / expectedSize;
+        progress = (progress < 0?0 :progress);
+        [self.Loding setProgress:progress animated:YES];
+        self.Loding.progressLabel.text = [NSString stringWithFormat:@"%.0f%%",progress * 100];
+        self.Loding.progressLabel.alpha = 0.5;
+
            } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+               self.Loding.hidden = YES;
                if (model.longPicture==NO) {
                    return ;
                }

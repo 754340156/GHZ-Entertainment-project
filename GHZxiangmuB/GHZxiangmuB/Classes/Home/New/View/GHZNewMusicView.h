@@ -11,4 +11,5 @@
 @interface GHZNewMusicView : UIView
 +(instancetype)MusicView;
 @property (nonatomic,strong)GHZTopicModel *model;
+-(void)reset;
 @end

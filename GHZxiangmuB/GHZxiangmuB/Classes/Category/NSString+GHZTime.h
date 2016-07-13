@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (GHZTime)
-
++ (NSString *)stringWithTime:(NSTimeInterval)time;
 @end

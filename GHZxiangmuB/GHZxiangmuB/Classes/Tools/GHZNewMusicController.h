@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface GHZNewMusicController : UIViewController
-
+@property (nonatomic,copy)NSString *url;
+@property (nonatomic,assign) NSInteger totalTime;
+-(void)dismiss;
 @end

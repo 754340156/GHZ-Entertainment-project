@@ -55,4 +55,6 @@
 @property (nonatomic,assign)NSInteger videotime;
 /**播放次数*/
 @property (nonatomic,assign)NSInteger playcount;
+@property (nonatomic,copy)NSString *voiceuri;
+@property (nonatomic,copy)NSString *videouri;
 @end
