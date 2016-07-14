@@ -8,11 +8,11 @@ pod 'MJExtension'
 pod 'MJRefresh'
 pod 'AFNetworking'
 pod 'Masonry'
-pod 'MMDrawerController'
 pod 'SDCycleScrollView'
 pod 'NJKWebViewProgress'
 pod 'BarrageRenderer'
 pod 'LFLiveKit'
 pod 'HyphenateSDK'
+
 pod 'EaseUI', :git => 'https://github.com/easemob/easeui-ios-hyphenate-cocoapods.git'
 end

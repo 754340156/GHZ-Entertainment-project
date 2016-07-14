@@ -28,8 +28,7 @@
     
     [self setTabBarWithViewController:[[GHZLiveViewController alloc]init] image:@"2image" selectImage:@"2imageH" title:@"直播"];
     //自定登录判定
-    [self setTabBarWithViewController:[self setIsAutoLoginWithChatHomeVC:[[GHZProfileViewController alloc]init] loginVC:[[GHZLoginViewController alloc]init]] image:@"person" selectImage:@"personH" title:@"聊天"];
-    [[EMClient sharedClient]addDelegate:self delegateQueue:nil];
+    [self setTabBarWithViewController:[[GHZProfileViewController alloc]init] image:@"person" selectImage:@"personH" title:@"个人中心"];
 }
 
 
@@ -52,6 +51,20 @@
         return profileVC;
     }
     return loginVC;
+}
+#pragma mark -  EMClientDelegate
+//自动登录是否成功
+- (void)didAutoLoginWithError:(EMError *)aError
+{
+    if (!aError) {
+        NSLog(@"自动登录成功");
+        EMError *error = nil;
+        EMPushOptions *options = [[EMClient sharedClient] getPushOptionsFromServerWithError:&error];
+        NSLog(@"%@",options.nickname);
+    }else
+    {
+        NSLog(@"自动登录失败%@",aError.errorDescription);
+    }
 }
 //1.监听网络状态
 - (void)didConnectionStateChanged:(EMConnectionState)connectionState{

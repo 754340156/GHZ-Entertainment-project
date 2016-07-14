@@ -105,10 +105,11 @@ static NSInteger currentPage = 1;
         currentPage = 1;
         [weakself setData];
     }];
-   self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-       [weakself setData];
-       currentPage++;
-   }];
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        currentPage++;
+        [weakself setData];
+        
+    }];
     [self.tableView.mj_header beginRefreshing];
 }
 #pragma mark - UITableViewDelegate
