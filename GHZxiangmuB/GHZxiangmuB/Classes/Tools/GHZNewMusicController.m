@@ -22,7 +22,14 @@
 @end
 
 @implementation GHZNewMusicController
-
+static GHZNewMusicController *tool = nil;
++(instancetype)sharinit{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        tool = [[GHZNewMusicController alloc] initWithNibName:@"GHZNewMusicController" bundle:nil];
+    });
+    return tool;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.progress setThumbImage:[UIImage imageNamed:@"kr-video-player-point"] forState:(UIControlStateNormal)];
@@ -53,7 +60,7 @@
     self.progress.value = self.player.currentPlaybackTime / self.player.duration;
 }
 -(IBAction)startSlide{
-   // [self removeProgressTimer];
+    [self removeProgressTimer];
 }
 -(IBAction)sliderValueChange{
     

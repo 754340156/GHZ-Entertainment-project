@@ -40,7 +40,6 @@
 @end
 
 @implementation GHZNewWordCell
-
 -(GHZNewPictureView *)pictureView{
     if (!_pictureView) {
         GHZNewPictureView *pictureView = [GHZNewPictureView pictureView];
@@ -95,7 +94,7 @@
     //新浪V
     self.sinaVView.hidden = !model.sina_v;
     //头像
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:model.profile_image] placeholderImage:[UIImage imageNamed:@""]];
+    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:model.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     //昵称
     self.nameLabel.text = model.name;
     //设置时间
@@ -165,7 +164,7 @@
 }
 -(void)setFrame:(CGRect)frame{
     frame.origin.x = GHZCellmargin ;
-    frame.size.width-= 2 * frame.origin.x;
+    frame.size.width-= 2 * GHZCellmargin;
     frame.size.height -= GHZCellmargin;
     frame.origin.y += GHZCellmargin;
     [super setFrame:frame];

@@ -24,8 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.view.backgroundColor = GHZRGBColor(223, 223, 223);
 
     [self setuptheNav];
     [self setupChildVC];//子控制器
@@ -62,7 +61,7 @@
 }
 -(void)titleViewNA{
     UIView *titleV = [[UIView alloc] init];
-    titleV.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.9];
+    titleV.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
     titleV.GHZ_width = self.view.GHZ_width;
     titleV.GHZ_height = GHZTitleVH;
     titleV.GHZ_y = GHZTitleVY;
@@ -167,7 +166,7 @@
 }
 //导航设置
 -(void)setuptheNav{
-    self.view.backgroundColor = [UIColor blueColor];
+//    self.view.backgroundColor = [UIColor blueColor];
 }
 
 

@@ -56,7 +56,7 @@
 }
 - (IBAction)Playing:(id)sender {
     self.Playbtn.hidden = YES;
-    self.musicPlayer = [[GHZNewMusicController alloc] initWithNibName:@"GHZNewMusicController" bundle:nil];
+    self.musicPlayer = [GHZNewMusicController sharinit];
     self.musicPlayer.url = self.model.voiceuri;
     self.musicPlayer.totalTime = self.model.voicetime;
     NSLog(@"%ld",(long)self.model.voicetime);

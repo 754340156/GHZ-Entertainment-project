@@ -13,4 +13,5 @@
 @property (nonatomic,copy)NSString *url;
 @property (nonatomic,assign) NSInteger totalTime;
 -(void)dismiss;
++(instancetype)sharinit;
 @end

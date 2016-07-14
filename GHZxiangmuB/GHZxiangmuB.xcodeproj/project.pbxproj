@@ -20,10 +20,9 @@
 		C26821B71D34BCCA005EAF3D /* GHZTopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26821B61D34BCCA005EAF3D /* GHZTopicController.m */; };
 		C26821BC1D352A86005EAF3D /* GHZTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = C26821BB1D352A86005EAF3D /* GHZTopicPictureView.m */; };
 		C26821BE1D352AF6005EAF3D /* GHZTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26821BD1D352AF6005EAF3D /* GHZTopicPictureView.xib */; };
-		C2C8600F1D34D9C400A59EEF /* GHZNewMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C8600E1D34D9C400A59EEF /* GHZNewMusicView.m */; };
-		C2C860111D34DA0F00A59EEF /* GHZNewMusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C860101D34DA0F00A59EEF /* GHZNewMusicView.xib */; };
-		C2C860141D35104200A59EEF /* GHZNewVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C860131D35104200A59EEF /* GHZNewVideoView.m */; };
-		C2C860161D35106A00A59EEF /* GHZNewVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C860151D35106A00A59EEF /* GHZNewVideoView.xib */; };
+		C2C6E3241D37391700B005E4 /* ImageResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C2C6E31E1D37391700B005E4 /* ImageResources.bundle */; settings = {ASSET_TAGS = (); }; };
+		C2C6E3251D37391700B005E4 /* XLSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C6E3211D37391700B005E4 /* XLSlider.m */; settings = {ASSET_TAGS = (); }; };
+		C2C6E3261D37391700B005E4 /* XLVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C6E3231D37391700B005E4 /* XLVideoPlayer.m */; settings = {ASSET_TAGS = (); }; };
 		C2C8600F1D34D9C400A59EEF /* GHZNewMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C8600E1D34D9C400A59EEF /* GHZNewMusicView.m */; settings = {ASSET_TAGS = (); }; };
 		C2C860111D34DA0F00A59EEF /* GHZNewMusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C860101D34DA0F00A59EEF /* GHZNewMusicView.xib */; settings = {ASSET_TAGS = (); }; };
 		C2C860141D35104200A59EEF /* GHZNewVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C860131D35104200A59EEF /* GHZNewVideoView.m */; settings = {ASSET_TAGS = (); }; };
@@ -133,6 +132,11 @@
 		C26821BA1D352A86005EAF3D /* GHZTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTopicPictureView.h; sourceTree = "<group>"; };
 		C26821BB1D352A86005EAF3D /* GHZTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZTopicPictureView.m; sourceTree = "<group>"; };
 		C26821BD1D352AF6005EAF3D /* GHZTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZTopicPictureView.xib; sourceTree = "<group>"; };
+		C2C6E31E1D37391700B005E4 /* ImageResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ImageResources.bundle; sourceTree = "<group>"; };
+		C2C6E3201D37391700B005E4 /* XLSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLSlider.h; sourceTree = "<group>"; };
+		C2C6E3211D37391700B005E4 /* XLSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLSlider.m; sourceTree = "<group>"; };
+		C2C6E3221D37391700B005E4 /* XLVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLVideoPlayer.h; sourceTree = "<group>"; };
+		C2C6E3231D37391700B005E4 /* XLVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLVideoPlayer.m; sourceTree = "<group>"; };
 		C2C8600D1D34D9C400A59EEF /* GHZNewMusicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewMusicView.h; sourceTree = "<group>"; };
 		C2C8600E1D34D9C400A59EEF /* GHZNewMusicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewMusicView.m; sourceTree = "<group>"; };
 		C2C860101D34DA0F00A59EEF /* GHZNewMusicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZNewMusicView.xib; sourceTree = "<group>"; };
@@ -322,6 +326,26 @@
 			path = WMPlayer;
 			sourceTree = "<group>";
 		};
+		C2C6E31D1D37391700B005E4 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				C2C6E31E1D37391700B005E4 /* ImageResources.bundle */,
+				C2C6E31F1D37391700B005E4 /* Slider */,
+				C2C6E3221D37391700B005E4 /* XLVideoPlayer.h */,
+				C2C6E3231D37391700B005E4 /* XLVideoPlayer.m */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		C2C6E31F1D37391700B005E4 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				C2C6E3201D37391700B005E4 /* XLSlider.h */,
+				C2C6E3211D37391700B005E4 /* XLSlider.m */,
+			);
+			path = Slider;
+			sourceTree = "<group>";
+		};
 		D628EA191D33CFBD00624AEE /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -457,6 +481,7 @@
 		D630073B1D2E67FE005A88B9 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C2C6E31D1D37391700B005E4 /* VideoPlayer */,
 				C25239591D3663350046B246 /* WMPlayer */,
 				D630073C1D2E67FE005A88B9 /* CoreLaunchLite.h */,
 				D630073D1D2E67FE005A88B9 /* CoreLaunchLite.m */,
@@ -1199,6 +1224,7 @@
 				D6C49CC21D30ED040045731C /* GHZLivingCatEarView.xib in Resources */,
 				C2E5E1631D33CDC600409261 /* GHZShowpirtureController.xib in Resources */,
 				D686B3271D2DF27300648326 /* Main.storyboard in Resources */,
+				C2C6E3241D37391700B005E4 /* ImageResources.bundle in Resources */,
 				D69190DF1D3271BA00EF114D /* GHZShowPlaceHolderView.xib in Resources */,
 				C2C860161D35106A00A59EEF /* GHZNewVideoView.xib in Resources */,
 				D69190CE1D3266EC00EF114D /* GHZCareHeaderView.xib in Resources */,
@@ -1307,6 +1333,7 @@
 				D637B6041D3485A300B8FA18 /* GHZTopicModel.m in Sources */,
 				D628E8761D33A0F700624AEE /* GHZShowEndView.m in Sources */,
 				D628E8411D334B6D00624AEE /* GHZBeautifulFace.m in Sources */,
+				C2C6E3261D37391700B005E4 /* XLVideoPlayer.m in Sources */,
 				D6AB0C021D2F5BE2003DDF59 /* UIImage+Extension.m in Sources */,
 				C25238401D365D7F0046B246 /* GHZNewMusicController.m in Sources */,
 				D6C49CBD1D30E3B80045731C /* UIViewController+Extension.m in Sources */,
@@ -1319,6 +1346,7 @@
 				D69190C01D3211E800EF114D /* GHZLiveNewModel.m in Sources */,
 				D69190BE1D3211E800EF114D /* GHZLiveViewController.m in Sources */,
 				D628E83B1D334A8E00624AEE /* GHZH264Encoder.m in Sources */,
+				C2C6E3251D37391700B005E4 /* XLSlider.m in Sources */,
 				D6C49CB71D30E1CA0045731C /* UIDevice+Extension.m in Sources */,
 				C252395E1D3663350046B246 /* WMPlayer.m in Sources */,
 				D628EBD81D33E50A00624AEE /* GHZLoginViewController.m in Sources */,
