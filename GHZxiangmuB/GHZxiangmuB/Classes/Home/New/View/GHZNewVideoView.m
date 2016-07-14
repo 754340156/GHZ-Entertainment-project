@@ -9,14 +9,15 @@
 #import "GHZNewVideoView.h"
 #import "GHZTopicModel.h"
 #import "UIImageView+WebCache.h"
-#import "WMPlayer.h"
+#import "XLVideoPlayer.h"
+
 @interface GHZNewVideoView ()
 @property (weak, nonatomic) IBOutlet UILabel *playcountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *videotimeLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+//@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (nonatomic,assign)CGRect c;
-@property (nonatomic,strong)WMPlayer *videoPlay;
 @property (nonatomic,copy)NSString *url;
+
 @end
 
 @implementation GHZNewVideoView
@@ -45,6 +46,29 @@
 }
 
 -(IBAction)showVideo{
+   
+//    
+//    if (self.click) {
+//        self.click(sender);
+//    }
+//    
+//    if (self.delegate && [self respondsToSelector:@selector(clickWithbutton:)])
+//    {
+//        [self.delegate clickWithbutton:sender];
+//    }
+    
+    self.player = [[XLVideoPlayer alloc] init];
+    self.player.videoUrl = self.model.videouri;
+    self.player.frame = CGRectMake(0, 0, self.model.videoViewFrame.size.width, self.model.self.height);
+    [self addSubview:self.player];
+}
+
+- (IBAction)VideoButton:(UIButton *)sender {
+    NSLog(@"1");
+    if (self.delegate && [self respondsToSelector:@selector(clickWithbutton:)]) {
+        [self.delegate clickWithbutton:sender];
+    }
+    
     
 }
 

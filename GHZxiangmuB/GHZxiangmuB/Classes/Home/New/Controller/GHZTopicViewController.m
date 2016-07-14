@@ -12,7 +12,10 @@
 #import "MJExtension.h"
 #import "MJRefresh.h"
 #import "GHZNewWordCell.h"
-@interface GHZTopicViewController ()
+#import "GHZNewVideoView.h"
+#import "XLVideoPlayer.h"
+#import "GHZNewVideoView.h"
+@interface GHZTopicViewController ()<UIScrollViewDelegate,GHZNewVideoViewDelegate>
 /** 段子*/
 @property (nonatomic,strong)NSMutableArray *topics;
 /** 当前页数*/
@@ -21,6 +24,11 @@
 @property (nonatomic,copy)NSString *maxtime;
 /** 上一次请求的参数*/
 @property (nonatomic,strong)NSDictionary *params;
+@property (nonatomic,strong)NSIndexPath *paths;
+@property (nonatomic,strong)GHZNewVideoView *v;
+@property (nonatomic,strong) XLVideoPlayer *player;
+@property (nonatomic,strong)GHZTopicModel *mm;
+
 @end
 
 @implementation GHZTopicViewController
@@ -30,10 +38,11 @@
     }
     return _topics;
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+
     //初始化
     [self setupTable];
     
@@ -45,6 +54,7 @@
     
 }
 
+
 -(void)setupTable{
     self.view.backgroundColor = [UIColor whiteColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -53,7 +63,7 @@
     //内边距
     self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
-    
+    self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView registerNib:[UINib nibWithNibName:@"GHZNewWordCell" bundle:nil] forCellReuseIdentifier:@"GHZNewWordCell"];
     
 }
@@ -164,16 +174,12 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GHZNewWordCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GHZNewWordCell" forIndexPath:indexPath];
-    GHZTopicModel *dic = self.topics[indexPath.row];
+    GHZNewWordCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GHZNewWordCell"];
+    self.mm = self.topics[indexPath.row];
     cell.selectionStyle =  UITableViewCellSelectionStyleNone;
-    cell.model = dic;
-    
-    
-    
-    
-    
-     return cell;
+    cell.model = self.mm;
+    self.paths = indexPath;
+    return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -225,5 +231,36 @@
  // Pass the selected object to the new view controller.
  }
  */
+-(void)clickWithbutton:(UIButton *)sender{
+   
+//    self.player = [[XLVideoPlayer alloc] init];
+//    self.player.videoUrl = self.mm.videouri;
+//    [self.player playerBindTableView:self.tableView currentIndexPath:];
+//    self.player.frame = CGRectMake(0, 0, self.mm.videoViewFrame.size.width, self.mm.videoViewFrame.size.height);
+//    GHZNewWordCell *cell = [[GHZNewWordCell alloc] init];
+//    [cell.contentView addSubview:self.player];
+    NSLog(@"1");
+}
 
+
+
+-(GHZNewVideoView *)v{
+    if (!_v) {
+        _v = [[GHZNewVideoView alloc] init];
+        _v.delegate = self;
+    }
+    return _v;
+}
+
+//- (GHZNewVideoView *)v
+//{
+//    if (!_v) {
+//        _v = [[GHZNewVideoView alloc]init];
+//        _v.delegate = self;
+////        _v.click = ^(UIButton *sender)
+////        {
+////            
+//        };
+//    }
+//}
 @end

@@ -11,4 +11,5 @@
 @interface GHZNewWordCell : UITableViewCell
 /** 段子model*/
 @property (nonatomic,strong)GHZTopicModel *model;
+
 @end

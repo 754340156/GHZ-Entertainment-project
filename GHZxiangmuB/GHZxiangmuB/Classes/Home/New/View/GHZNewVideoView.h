@@ -8,7 +8,27 @@
 
 #import <UIKit/UIKit.h>
 @class GHZTopicModel;
+#import "XLVideoPlayer.h"
+
+
+
+
+@protocol GHZNewVideoViewDelegate <NSObject>
+- (void)clickWithbutton:(UIButton *)sender;
+
+@end
 @interface GHZNewVideoView : UIView
+
+
+
+
 +(instancetype)videoView;
 @property (nonatomic,strong)GHZTopicModel *model;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic,strong)XLVideoPlayer *player;
+
+
+
+@property ( nonatomic,weak)id <GHZNewVideoViewDelegate>delegate;
+//@property (nonatomic,copy)void(^click)(UIButton *);
 @end

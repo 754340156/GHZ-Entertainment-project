@@ -31,7 +31,7 @@
                     </constraints>
                     <state key="normal" image="video-play"/>
                     <connections>
-                        <action selector="showVideo" destination="iN0-l3-epB" eventType="touchUpInside" id="jdL-23-SeB"/>
+                        <action selector="VideoButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="g5w-o8-QX4"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fw2-WN-0Jg" userLabel="播放次数">

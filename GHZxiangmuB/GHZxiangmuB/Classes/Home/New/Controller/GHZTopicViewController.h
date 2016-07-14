@@ -12,4 +12,5 @@
 
 @interface GHZTopicViewController : UITableViewController
 @property (nonatomic,assign)GHZTopicType type; //控制器的类型
+
 @end

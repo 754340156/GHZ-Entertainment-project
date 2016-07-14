@@ -109,6 +109,8 @@
     frame.origin.y += GHZCellmargin;
     
     [super setFrame:frame];
+    
+   
 }
 
 @end
