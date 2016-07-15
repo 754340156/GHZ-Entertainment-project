@@ -95,7 +95,7 @@ static NSString  *const GHZTopicCellId = @"topic";
     
     //参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"newlist";
+    params[@"a"] = @"list";
     params[@"c"] = @"data";
     params[@"type"] =@(self.type);
     

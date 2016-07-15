@@ -10,6 +10,9 @@
 #import "GHZTopic.h"
 #import "UIImageView+WebCache.h"
 #import "GHZTopicPictureView.h"
+#import "GHZTopicVoiceView.h"
+#import "GHZTopicVideoView.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface GHZTopicCell ()
 //头像
@@ -32,6 +35,10 @@
 @property (strong, nonatomic) IBOutlet UILabel *text_Label;
 //图片帖子中间的内容
 @property (nonatomic, weak) GHZTopicPictureView *pictureView;
+//声音帖子中间的内容
+@property (nonatomic, weak) GHZTopicVoiceView *voiceView;
+//视频帖子中间的内容
+@property (nonatomic, weak) GHZTopicVideoView *videoView;
 
 @end
 
@@ -39,6 +46,7 @@
 @implementation GHZTopicCell
 
 //懒加载
+//图片
 - (GHZTopicPictureView *)pictureView{
 
     if (!_pictureView) {
@@ -49,7 +57,28 @@
     return _pictureView;
 }
 
+// 声音
+- (GHZTopicVoiceView *)voiceView{
+    
+    if (!_voiceView) {
+        GHZTopicVoiceView *voiceView = [GHZTopicVoiceView voiceView];
+        [self.contentView addSubview:voiceView];
+        _voiceView = voiceView;
+    }
+    return _voiceView;
+}
 
+
+// 视频
+- (GHZTopicVideoView *) videoView{
+    
+    if (!_videoView) {
+        GHZTopicVideoView *videoView = [GHZTopicVideoView videoView];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
+}
 
 - (void)awakeFromNib{
 
@@ -83,8 +112,30 @@
     
     //根据模型的类型(帖子内容)添加对应的内容到 cell 的中间
     if (topic.type == Picture) {  //图片帖子
+        self.pictureView.hidden = NO;
         self.pictureView.topic = topic;
         self.pictureView.frame = topic.pictureF;
+        
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
+    }else if (topic.type == Music){  //声音帖子
+        self.voiceView.hidden = NO;
+        self.voiceView.topic = topic;
+        self.voiceView.frame = topic.voiceF;
+    
+        self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
+    }else if (topic.type == Video){  //视频帖子
+        self.videoView.hidden = NO;
+        self.videoView.topic = topic;
+        self.videoView.frame = topic.videoF;
+        
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
+    }else{  //段子帖子
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.pictureView.hidden = YES;
     }
     
 }
@@ -103,8 +154,8 @@
 
 - (void)setFrame:(CGRect)frame{
     
-    frame.origin.x = GHZCellmargin;
-    frame.size.width -= 2 * GHZCellmargin;
+    frame.origin.x = 3;
+    frame.size.width -= 2 * 3;
     frame.size.height -= GHZCellmargin;
     frame.origin.y += GHZCellmargin;
     

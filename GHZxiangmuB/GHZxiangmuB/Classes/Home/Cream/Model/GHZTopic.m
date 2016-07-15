@@ -12,7 +12,7 @@
 @implementation GHZTopic
 {
     CGFloat _cellHeight;
-    CGRect _pictureF;
+    
 }
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName{
@@ -74,7 +74,8 @@
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:14]} context:nil].size.height;
         
         //cell的高度
-        _cellHeight = GHZCellTextY + textH + GHZCelltoolH + 2 * GHZCellmargin;
+        //文字部分高度
+        _cellHeight = GHZCellTextY + textH +  GHZCellmargin;
         
         //根据帖子的类型来计算高度
         if (self.type == Picture) {  //图片帖子
@@ -83,13 +84,37 @@
             //显示出来的高度
             CGFloat pictureH = pictureW * self.height / self.width;
             
+            if (pictureH >= GHZCellPictureMaxH) {  //图片高度过长
+                pictureH = GHZCellPictureBreakH;
+                self.bigPicture = YES;  //大图
+            }
+            
             //计算图片控件的 frame
             CGFloat pictureX = GHZCellmargin;
             CGFloat pictureY = GHZCellTextY + textH + GHZCellmargin;
             _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
             
-            _cellHeight += pictureH;
+            _cellHeight += pictureH + GHZCellmargin;
+        }else if (self.type == Music){  //声音帖子
+            CGFloat voiceX = GHZCellmargin;
+            CGFloat voiceY = GHZCellTextY + textH + GHZCellmargin;
+            CGFloat voiceW = maxSize.width ;
+            CGFloat voiceH = voiceW * self.height / self.width;
+            _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
+            _cellHeight += voiceH + GHZCellmargin;
+        }else if (self.type == Video){  //视频帖子
+            CGFloat videoX = GHZCellmargin;
+            CGFloat videoY = GHZCellTextY + textH + GHZCellmargin;
+            CGFloat videoW = maxSize.width ;
+            CGFloat videoH = videoW * self.height / self.width;
+            _videoF = CGRectMake(videoX, videoY, videoW, videoH);
+            _cellHeight += videoH + GHZCellmargin;   
+        
         }
+        
+        
+        //底部工具条的高度
+        _cellHeight += GHZCelltoolH + GHZCellmargin;
     }
     return _cellHeight;
 

@@ -86,8 +86,7 @@
     
     //标题栏整体
     UIView *titleView = [[UIView alloc] init];
-//    titleView.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.5];
-//    titleView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+
     titleView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
     titleView.GHZ_width = self.view.GHZ_width;
     titleView.GHZ_height = GHZTitleVH;
@@ -185,8 +184,8 @@
  */
 - (void)setupNav{
 
-    //设置导航栏内容
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
+//    //设置导航栏内容
+//    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
     //设置导航栏左边的按钮
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" hightImage:@"MainTagSubIconClick" target:self action:@selector(tagClick)];
     
