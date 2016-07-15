@@ -56,8 +56,10 @@
 @property(nonatomic,assign)  NSInteger videotime;
 /**音频的 URL*/
 @property(nonatomic,copy) NSString *voiceuri;
-
-
+/**视频的 url*/
+@property(nonatomic,copy) NSString *videouri;
+/**分享到微信的 URL*/
+@property(nonatomic,copy) NSString *weixin_url;
 
 /*****额外的辅助属性*****/
 /**cell的高度*/

@@ -21,6 +21,8 @@ UIKIT_EXTERN CGFloat const GHZTitleVH;
 UIKIT_EXTERN CGFloat const GHZTitleVY;
 /**cell之间的空隙*/
 UIKIT_EXTERN CGFloat const GHZCellmargin;
+/**text的x值*/
+UIKIT_EXTERN CGFloat const GHZCellTextX;
 /**文字的Y*/
 UIKIT_EXTERN CGFloat const GHZCellTextY;
 /**底部点赞栏的高度*/

@@ -14,6 +14,8 @@ CGFloat const GHZTitleVY = 64;
 
 /**cell间距*/
 CGFloat const GHZCellmargin = 10;
+/**text的x值*/
+CGFloat const GHZCellTextX = 3;
 /**text的y值*/
 CGFloat const GHZCellTextY = 55;
 /**下面工具栏的高*/

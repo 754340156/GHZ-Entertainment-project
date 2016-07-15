@@ -83,6 +83,11 @@
     
 }
 
+- (IBAction)shareButton:(id)sender {
+}
+
+
+
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{
     if (error) {
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];

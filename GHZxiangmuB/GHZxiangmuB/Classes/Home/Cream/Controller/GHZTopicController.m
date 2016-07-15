@@ -14,8 +14,8 @@
 #import <MJRefresh/MJRefresh.h>
 #import "GHZTopicCell.h"
 
-
-@interface GHZTopicController ()
+#import "UMSocial.h"
+@interface GHZTopicController ()<GHZTopicCellDelegate,UMSocialDataDelegate,UMSocialUIDelegate>
 /**
  *  帖子数据
  */
@@ -191,6 +191,7 @@ static NSString  *const GHZTopicCellId = @"topic";
     GHZTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:GHZTopicCellId];
     
     cell.topic = self.topics[indexPath.row];
+    cell.delegate =self;
     return cell;
 }
 
@@ -206,6 +207,21 @@ static NSString  *const GHZTopicCellId = @"topic";
     return topic.cellHeight;
 }
 
+- (void)getClick:(NSString *)image url:(NSString *)url text:(NSString *)text{
+    if (!(self.type == Word)) {
+        [[UMSocialData defaultData].urlResource setResourceType:UMSocialUrlResourceTypeImage url:image];
+
+    }
     
+    [UMSocialData defaultData].extConfig.title = @"分享 title";
+    [UMSocialData defaultData].extConfig.qqData.url = @"www.baidu.com";
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:@"57490f1ee0f55a75d5002f3f"
+                                      shareText:[NSString stringWithFormat:@"%@%@",text,url]
+                                     shareImage:[UIImage imageNamed:@"icon"]
+                                shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToQQ,UMShareToQzone]
+                                       delegate:self];
+
+}
 
 @end

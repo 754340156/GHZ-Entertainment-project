@@ -56,6 +56,9 @@
                         <constraint firstAttribute="height" constant="25" id="pCv-bE-ttD"/>
                     </constraints>
                     <state key="normal" title="转发"/>
+                    <connections>
+                        <action selector="shareButton:" destination="-1" eventType="touchUpInside" id="FM6-4c-d2X"/>
+                    </connections>
                 </button>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vpg-P3-qQa" userLabel="进度条" customClass="GHZCreamProgressView">
                     <rect key="frame" x="250" y="250" width="100" height="100"/>

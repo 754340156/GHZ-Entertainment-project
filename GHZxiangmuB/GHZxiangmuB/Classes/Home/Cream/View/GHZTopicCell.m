@@ -14,6 +14,7 @@
 #import "GHZTopicVideoView.h"
 #import <AVFoundation/AVFoundation.h>
 
+
 @interface GHZTopicCell ()
 //头像
 @property (strong, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -85,6 +86,8 @@
     UIImageView *bgView = [[UIImageView alloc] init];
     bgView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bgView;
+    
+    
 
 }
 
@@ -162,6 +165,22 @@
     [super setFrame:frame];
     
    
+}
+- (IBAction)shareButtonClick:(id)sender {
+    
+    NSString *url = [[NSString alloc] init];
+    if (_topic.type == Video ) {
+        url = _topic.videouri;
+    }else if (_topic.type == Music){
+    
+        url = _topic.voiceuri;
+    }else if(_topic.type == Picture){
+    
+        url = _topic.large_image;
+    }
+    
+    [self.delegate getClick:_topic.large_image url:url text:_topic.text];
+    
 }
 
 @end
