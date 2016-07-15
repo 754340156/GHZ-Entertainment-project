@@ -48,12 +48,30 @@
 @property(nonatomic,copy) NSString *middle_image;
 /**帖子的类型*/
 @property(nonatomic,assign) GHZTopicType type;
+/**音频时长*/
+@property(nonatomic,assign)  NSInteger voicetime;
+/**播放次数*/
+@property(nonatomic,assign) NSInteger playcount;
+/**视频时长*/
+@property(nonatomic,assign)  NSInteger videotime;
+/**音频的 URL*/
+@property(nonatomic,copy) NSString *voiceuri;
+/**视频的 url*/
+@property(nonatomic,copy) NSString *videouri;
+/**分享到微信的 URL*/
+@property(nonatomic,copy) NSString *weixin_url;
 
-
-/**额外的辅助属性*/
+/*****额外的辅助属性*****/
 /**cell的高度*/
 @property(nonatomic,assign, readonly) CGFloat cellHeight;
 /**图片控件的 frame*/
 @property(nonatomic,assign, readonly) CGRect pictureF;
-
+/**图片是否太大*/
+@property(nonatomic,assign, getter = isBigPicture) BOOL bigPicture;
+/**图片的下载进度*/
+@property(nonatomic,assign)  CGFloat pictureProgress;
+/**声音控件的 frame*/
+@property(nonatomic,assign, readonly) CGRect  voiceF;    
+/**视频控件的 frame*/
+@property(nonatomic,assign, readonly) CGRect  videoF;
 @end

@@ -155,7 +155,7 @@
      self.selectBtn = button;
 
        //红色底线动画
-    [UIView animateWithDuration:0.1 animations:^{
+    [UIView animateWithDuration:0.25 animations:^{
         self.redView.GHZ_width = button.titleLabel.GHZ_width;
         self.redView.GHZ_centerX = button.GHZ_centerX;
     }];

@@ -16,11 +16,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6e-D1-QBg">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <animations/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJ8-V4-C6d">
                     <rect key="frame" x="15" y="40" width="30" height="30"/>
                     <animations/>
@@ -45,7 +40,7 @@
                         <constraint firstAttribute="height" constant="25" id="xoe-TA-HIZ"/>
                     </constraints>
                     <state key="normal" title="转发">
-                        <color key="titleColor" red="0.86216239100000003" green="1" blue="0.69205338390000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eED-eg-FtM">
@@ -57,12 +52,17 @@
                         <constraint firstAttribute="height" constant="25" id="Kf9-OR-HA6"/>
                     </constraints>
                     <state key="normal" title="保存">
-                        <color key="titleColor" red="0.86216239100000003" green="1" blue="0.69205338390000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="save" destination="-1" eventType="touchUpInside" id="umu-nK-Qg5"/>
                     </connections>
                 </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6e-D1-QBg">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </scrollView>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -78,7 +78,7 @@
                 <constraint firstAttribute="bottom" secondItem="MU2-95-Gib" secondAttribute="bottom" constant="20" id="o6C-EP-W2W"/>
                 <constraint firstAttribute="bottom" secondItem="eED-eg-FtM" secondAttribute="bottom" constant="20" id="w5H-rj-yke"/>
             </constraints>
-            <point key="canvasLocation" x="224" y="331"/>
+            <point key="canvasLocation" x="119" y="357"/>
         </view>
     </objects>
 </document>

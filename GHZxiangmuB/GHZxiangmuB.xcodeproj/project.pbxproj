@@ -8,18 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		7ED621499AB0A47C38A4912E /* libPods-GHZxiangmuB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA80B1A43D034F7E977A430 /* libPods-GHZxiangmuB.a */; };
+		C2173B4C1D387497006113F1 /* GHZCreamProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2173B401D387497006113F1 /* GHZCreamProgressView.m */; };
+		C2173B4D1D387497006113F1 /* GHZTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2173B421D387497006113F1 /* GHZTopicPictureView.m */; };
+		C2173B4E1D387497006113F1 /* GHZTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2173B431D387497006113F1 /* GHZTopicPictureView.xib */; };
+		C2173B4F1D387497006113F1 /* GHZTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2173B461D387497006113F1 /* GHZTopicVideoView.m */; };
+		C2173B501D387497006113F1 /* GHZTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2173B471D387497006113F1 /* GHZTopicVideoView.xib */; };
+		C2173B511D387497006113F1 /* GHZTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2173B4A1D387497006113F1 /* GHZTopicVoiceView.m */; };
+		C2173B521D387497006113F1 /* GHZTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2173B4B1D387497006113F1 /* GHZTopicVoiceView.xib */; };
+		C2173B561D3874CB006113F1 /* GHZShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2173B541D3874CB006113F1 /* GHZShowPictureViewController.m */; };
+		C2173B571D3874CB006113F1 /* GHZShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2173B551D3874CB006113F1 /* GHZShowPictureViewController.xib */; };
 		C21B32AF1D313FB000B30A8C /* UIBarButtonItem+GHZExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = C21B32AE1D313FB000B30A8C /* UIBarButtonItem+GHZExtention.m */; };
 		C243B5E31D30A8E300CFCDAE /* GHZConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C243B5E21D30A8E300CFCDAE /* GHZConst.m */; };
 		C243B6741D3118F100CFCDAE /* NSDate+GHZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C243B6731D3118F100CFCDAE /* NSDate+GHZExtension.m */; };
-		C25238401D365D7F0046B246 /* GHZNewMusicController.m in Sources */ = {isa = PBXBuildFile; fileRef = C252383E1D365D7F0046B246 /* GHZNewMusicController.m */; };
-		C25238411D365D7F0046B246 /* GHZNewMusicController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C252383F1D365D7F0046B246 /* GHZNewMusicController.xib */; };
 		C252395D1D3663350046B246 /* WMPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C252395A1D3663350046B246 /* WMPlayer.bundle */; };
 		C252395E1D3663350046B246 /* WMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C252395C1D3663350046B246 /* WMPlayer.m */; };
 		C25239611D3665720046B246 /* NSString+GHZTime.m in Sources */ = {isa = PBXBuildFile; fileRef = C25239601D3665720046B246 /* NSString+GHZTime.m */; };
 		C2681EE91D332A83002FA23F /* GHZTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2681EE81D332A83002FA23F /* GHZTopicViewController.m */; };
 		C26821B71D34BCCA005EAF3D /* GHZTopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26821B61D34BCCA005EAF3D /* GHZTopicController.m */; };
-		C26821BC1D352A86005EAF3D /* GHZTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = C26821BB1D352A86005EAF3D /* GHZTopicPictureView.m */; };
-		C26821BE1D352AF6005EAF3D /* GHZTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26821BD1D352AF6005EAF3D /* GHZTopicPictureView.xib */; };
 		C2C6E3241D37391700B005E4 /* ImageResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C2C6E31E1D37391700B005E4 /* ImageResources.bundle */; };
 		C2C6E3251D37391700B005E4 /* XLSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C6E3211D37391700B005E4 /* XLSlider.m */; };
 		C2C6E3261D37391700B005E4 /* XLVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C6E3231D37391700B005E4 /* XLVideoPlayer.m */; };
@@ -64,6 +69,8 @@
 		D65F3CA61D38FFF100B83694 /* GHZResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F3CA51D38FFF100B83694 /* GHZResultTableViewController.m */; };
 		D65F3CB11D39257C00B83694 /* NarikoTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F3CB01D39257C00B83694 /* NarikoTextField.m */; };
 		D65F3CB41D392C4700B83694 /* GHZFileDataHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F3CB31D392C4700B83694 /* GHZFileDataHandle.m */; };
+		D65F3CB81D39327100B83694 /* GHZNewMusicController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F3CB61D39327100B83694 /* GHZNewMusicController.m */; };
+		D65F3CB91D39327100B83694 /* GHZNewMusicController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65F3CB71D39327100B83694 /* GHZNewMusicController.xib */; };
 		D686B31E1D2DF27300648326 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D686B31D1D2DF27300648326 /* main.m */; };
 		D686B3211D2DF27300648326 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D686B3201D2DF27300648326 /* AppDelegate.m */; };
 		D686B3271D2DF27300648326 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D686B3251D2DF27300648326 /* Main.storyboard */; };
@@ -385,15 +392,26 @@
 /* Begin PBXFileReference section */
 		2C7C3BA1E080C169FD152043 /* Pods-GHZxiangmuB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHZxiangmuB.release.xcconfig"; path = "Pods/Target Support Files/Pods-GHZxiangmuB/Pods-GHZxiangmuB.release.xcconfig"; sourceTree = "<group>"; };
 		9CA80B1A43D034F7E977A430 /* libPods-GHZxiangmuB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GHZxiangmuB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2173B3F1D387497006113F1 /* GHZCreamProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCreamProgressView.h; sourceTree = "<group>"; };
+		C2173B401D387497006113F1 /* GHZCreamProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCreamProgressView.m; sourceTree = "<group>"; };
+		C2173B411D387497006113F1 /* GHZTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTopicPictureView.h; sourceTree = "<group>"; };
+		C2173B421D387497006113F1 /* GHZTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZTopicPictureView.m; sourceTree = "<group>"; };
+		C2173B431D387497006113F1 /* GHZTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZTopicPictureView.xib; sourceTree = "<group>"; };
+		C2173B451D387497006113F1 /* GHZTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTopicVideoView.h; sourceTree = "<group>"; };
+		C2173B461D387497006113F1 /* GHZTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZTopicVideoView.m; sourceTree = "<group>"; };
+		C2173B471D387497006113F1 /* GHZTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZTopicVideoView.xib; sourceTree = "<group>"; };
+		C2173B491D387497006113F1 /* GHZTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTopicVoiceView.h; sourceTree = "<group>"; };
+		C2173B4A1D387497006113F1 /* GHZTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZTopicVoiceView.m; sourceTree = "<group>"; };
+		C2173B4B1D387497006113F1 /* GHZTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZTopicVoiceView.xib; sourceTree = "<group>"; };
+		C2173B531D3874CB006113F1 /* GHZShowPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZShowPictureViewController.h; sourceTree = "<group>"; };
+		C2173B541D3874CB006113F1 /* GHZShowPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZShowPictureViewController.m; sourceTree = "<group>"; };
+		C2173B551D3874CB006113F1 /* GHZShowPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZShowPictureViewController.xib; sourceTree = "<group>"; };
 		C21B32AD1D313FB000B30A8C /* UIBarButtonItem+GHZExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+GHZExtention.h"; sourceTree = "<group>"; };
 		C21B32AE1D313FB000B30A8C /* UIBarButtonItem+GHZExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+GHZExtention.m"; sourceTree = "<group>"; };
 		C243B5E11D30A8E300CFCDAE /* GHZConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZConst.h; sourceTree = "<group>"; };
 		C243B5E21D30A8E300CFCDAE /* GHZConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZConst.m; sourceTree = "<group>"; };
 		C243B6721D3118F100CFCDAE /* NSDate+GHZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+GHZExtension.h"; sourceTree = "<group>"; };
 		C243B6731D3118F100CFCDAE /* NSDate+GHZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GHZExtension.m"; sourceTree = "<group>"; };
-		C252383D1D365D7F0046B246 /* GHZNewMusicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewMusicController.h; sourceTree = "<group>"; };
-		C252383E1D365D7F0046B246 /* GHZNewMusicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewMusicController.m; sourceTree = "<group>"; };
-		C252383F1D365D7F0046B246 /* GHZNewMusicController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZNewMusicController.xib; sourceTree = "<group>"; };
 		C252395A1D3663350046B246 /* WMPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WMPlayer.bundle; sourceTree = "<group>"; };
 		C252395B1D3663350046B246 /* WMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayer.h; sourceTree = "<group>"; };
 		C252395C1D3663350046B246 /* WMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayer.m; sourceTree = "<group>"; };
@@ -403,9 +421,6 @@
 		C2681EE81D332A83002FA23F /* GHZTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZTopicViewController.m; sourceTree = "<group>"; };
 		C26821B51D34BCCA005EAF3D /* GHZTopicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTopicController.h; sourceTree = "<group>"; };
 		C26821B61D34BCCA005EAF3D /* GHZTopicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZTopicController.m; sourceTree = "<group>"; };
-		C26821BA1D352A86005EAF3D /* GHZTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTopicPictureView.h; sourceTree = "<group>"; };
-		C26821BB1D352A86005EAF3D /* GHZTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZTopicPictureView.m; sourceTree = "<group>"; };
-		C26821BD1D352AF6005EAF3D /* GHZTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZTopicPictureView.xib; sourceTree = "<group>"; };
 		C2C6E31E1D37391700B005E4 /* ImageResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ImageResources.bundle; sourceTree = "<group>"; };
 		C2C6E3201D37391700B005E4 /* XLSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLSlider.h; sourceTree = "<group>"; };
 		C2C6E3211D37391700B005E4 /* XLSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLSlider.m; sourceTree = "<group>"; };
@@ -485,6 +500,9 @@
 		D65F3CB01D39257C00B83694 /* NarikoTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NarikoTextField.m; sourceTree = "<group>"; };
 		D65F3CB21D392C4700B83694 /* GHZFileDataHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZFileDataHandle.h; sourceTree = "<group>"; };
 		D65F3CB31D392C4700B83694 /* GHZFileDataHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZFileDataHandle.m; sourceTree = "<group>"; };
+		D65F3CB51D39327000B83694 /* GHZNewMusicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewMusicController.h; sourceTree = "<group>"; };
+		D65F3CB61D39327100B83694 /* GHZNewMusicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewMusicController.m; sourceTree = "<group>"; };
+		D65F3CB71D39327100B83694 /* GHZNewMusicController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZNewMusicController.xib; sourceTree = "<group>"; };
 		D686B3191D2DF27300648326 /* GHZxiangmuB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHZxiangmuB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D686B31D1D2DF27300648326 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D686B31F1D2DF27300648326 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1177,6 +1195,38 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C2173B3E1D387497006113F1 /* GHZTopicPictureView */ = {
+			isa = PBXGroup;
+			children = (
+				C2173B3F1D387497006113F1 /* GHZCreamProgressView.h */,
+				C2173B401D387497006113F1 /* GHZCreamProgressView.m */,
+				C2173B411D387497006113F1 /* GHZTopicPictureView.h */,
+				C2173B421D387497006113F1 /* GHZTopicPictureView.m */,
+				C2173B431D387497006113F1 /* GHZTopicPictureView.xib */,
+			);
+			path = GHZTopicPictureView;
+			sourceTree = "<group>";
+		};
+		C2173B441D387497006113F1 /* GHZTopicVideoView */ = {
+			isa = PBXGroup;
+			children = (
+				C2173B451D387497006113F1 /* GHZTopicVideoView.h */,
+				C2173B461D387497006113F1 /* GHZTopicVideoView.m */,
+				C2173B471D387497006113F1 /* GHZTopicVideoView.xib */,
+			);
+			path = GHZTopicVideoView;
+			sourceTree = "<group>";
+		};
+		C2173B481D387497006113F1 /* GHZTopicVoiceView */ = {
+			isa = PBXGroup;
+			children = (
+				C2173B491D387497006113F1 /* GHZTopicVoiceView.h */,
+				C2173B4A1D387497006113F1 /* GHZTopicVoiceView.m */,
+				C2173B4B1D387497006113F1 /* GHZTopicVoiceView.xib */,
+			);
+			path = GHZTopicVoiceView;
+			sourceTree = "<group>";
+		};
 		C25239591D3663350046B246 /* WMPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -1217,7 +1267,8 @@
 				D630073A1D2E67FE005A88B9 /* Other */,
 				D630073B1D2E67FE005A88B9 /* Tools */,
 			);
-			path = Classes;
+			name = Classes;
+			path = GHZxiangmuB/Classes;
 			sourceTree = "<group>";
 		};
 		D63007211D2E67FE005A88B9 /* Base */ = {
@@ -1309,9 +1360,6 @@
 				D65F3C971D38DF0B00B83694 /* GHZUserSetting.m */,
 				D65F3C9C1D38E62D00B83694 /* GHZMBManager.h */,
 				D65F3C9D1D38E62D00B83694 /* GHZMBManager.m */,
-				C252383D1D365D7F0046B246 /* GHZNewMusicController.h */,
-				C252383E1D365D7F0046B246 /* GHZNewMusicController.m */,
-				C252383F1D365D7F0046B246 /* GHZNewMusicController.xib */,
 				D65F3CAF1D39257C00B83694 /* NarikoTextField.h */,
 				D65F3CB01D39257C00B83694 /* NarikoTextField.m */,
 				D65F3CB21D392C4700B83694 /* GHZFileDataHandle.h */,
@@ -1337,6 +1385,9 @@
 				D63007601D2E6DFF005A88B9 /* GHZCreamViewController.m */,
 				C26821B51D34BCCA005EAF3D /* GHZTopicController.h */,
 				C26821B61D34BCCA005EAF3D /* GHZTopicController.m */,
+				C2173B531D3874CB006113F1 /* GHZShowPictureViewController.h */,
+				C2173B541D3874CB006113F1 /* GHZShowPictureViewController.m */,
+				C2173B551D3874CB006113F1 /* GHZShowPictureViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1356,9 +1407,9 @@
 				D637B6141D3486F600B8FA18 /* GHZTopicCell.h */,
 				D637B6151D3486F600B8FA18 /* GHZTopicCell.m */,
 				D637B6161D3486F600B8FA18 /* GHZTopicCell.xib */,
-				C26821BA1D352A86005EAF3D /* GHZTopicPictureView.h */,
-				C26821BB1D352A86005EAF3D /* GHZTopicPictureView.m */,
-				C26821BD1D352AF6005EAF3D /* GHZTopicPictureView.xib */,
+				C2173B3E1D387497006113F1 /* GHZTopicPictureView */,
+				C2173B441D387497006113F1 /* GHZTopicVideoView */,
+				C2173B481D387497006113F1 /* GHZTopicVoiceView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1389,6 +1440,9 @@
 		D63007761D2E6DFF005A88B9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D65F3CB51D39327000B83694 /* GHZNewMusicController.h */,
+				D65F3CB61D39327100B83694 /* GHZNewMusicController.m */,
+				D65F3CB71D39327100B83694 /* GHZNewMusicController.xib */,
 				D630077D1D2E6E45005A88B9 /* GHZNewViewController.h */,
 				D630077E1D2E6E45005A88B9 /* GHZNewViewController.m */,
 				C2681EE71D332A83002FA23F /* GHZTopicViewController.h */,
@@ -1580,6 +1634,7 @@
 		D686B3101D2DF27300648326 = {
 			isa = PBXGroup;
 			children = (
+				D63007201D2E67FE005A88B9 /* Classes */,
 				D686B31B1D2DF27300648326 /* GHZxiangmuB */,
 				D686B31A1D2DF27300648326 /* Products */,
 				6A368DFDEB8919DA8B912498 /* Pods */,
@@ -1598,7 +1653,6 @@
 		D686B31B1D2DF27300648326 /* GHZxiangmuB */ = {
 			isa = PBXGroup;
 			children = (
-				D63007201D2E67FE005A88B9 /* Classes */,
 				D686B31F1D2DF27300648326 /* AppDelegate.h */,
 				D686B3201D2DF27300648326 /* AppDelegate.m */,
 				D63007861D2E6EAB005A88B9 /* PCH.pch */,
@@ -2934,14 +2988,15 @@
 			files = (
 				D628E8461D3350A700624AEE /* GHZShowLivingView.xib in Resources */,
 				D686B32C1D2DF27300648326 /* LaunchScreen.storyboard in Resources */,
+				C2173B501D387497006113F1 /* GHZTopicVideoView.xib in Resources */,
 				D6963E0B1D37363A000C58B4 /* UMSCommentDetailController.xib in Resources */,
 				D628E8781D33A10600624AEE /* GHZShowEndView.xib in Resources */,
 				D6963E0E1D37363A000C58B4 /* UMShareEditViewController.xib in Resources */,
 				D686B3291D2DF27300648326 /* Assets.xcassets in Resources */,
+				C2173B4E1D387497006113F1 /* GHZTopicPictureView.xib in Resources */,
 				D637B6181D3486F600B8FA18 /* GHZTopicCell.xib in Resources */,
 				D6963EB31D377E99000C58B4 /* GHZProfileHeaderView.xib in Resources */,
 				D637B60C1D3485E000B8FA18 /* GHZNewWordCell.xib in Resources */,
-				C26821BE1D352AF6005EAF3D /* GHZTopicPictureView.xib in Resources */,
 				D6963EBF1D377EA0000C58B4 /* GHZRegistViewController.xib in Resources */,
 				D6963E191D37363A000C58B4 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				D6963E121D37363A000C58B4 /* UMSShareListController.xib in Resources */,
@@ -2949,10 +3004,11 @@
 				D63007B61D2EA7F3005A88B9 /* GHZNewTableViewCell.xib in Resources */,
 				C252395D1D3663350046B246 /* WMPlayer.bundle in Resources */,
 				D6963E161D37363A000C58B4 /* WeiboSDK.bundle in Resources */,
+				D65F3CB91D39327100B83694 /* GHZNewMusicController.xib in Resources */,
 				D6BDC5C81D37D76900BD3C19 /* CodeScan.bundle in Resources */,
 				D6963E1C1D37363A000C58B4 /* README.txt in Resources */,
-				C25238411D365D7F0046B246 /* GHZNewMusicController.xib in Resources */,
 				D6C787A11D2FD2E9006DBEF8 /* GHZBottomView.xib in Resources */,
+				C2173B571D3874CB006113F1 /* GHZShowPictureViewController.xib in Resources */,
 				D6C49CB21D30A7940045731C /* GHZLivingEndView.xib in Resources */,
 				D6963E111D37363A000C58B4 /* UMSnsAccountViewController.xib in Resources */,
 				D6C787881D2FA84D006DBEF8 /* GHZHotCollectionViewCell.xib in Resources */,
@@ -2972,6 +3028,7 @@
 				D6C49CAD1D30A6BE0045731C /* GHZLivingUserView.xib in Resources */,
 				D6963E0F1D37363A000C58B4 /* UMShareEditViewControlleriPad.xib in Resources */,
 				D6963EBD1D377EA0000C58B4 /* GHZLoginViewController.xib in Resources */,
+				C2173B521D387497006113F1 /* GHZTopicVoiceView.xib in Resources */,
 				D6963E101D37363A000C58B4 /* UMSLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3033,6 +3090,7 @@
 			files = (
 				D6BDC6161D37D76900BD3C19 /* ZXDecoderResult.m in Sources */,
 				D6BDC5E21D37D76900BD3C19 /* ZXAbstractDoCoMoResultParser.m in Sources */,
+				C2173B4C1D387497006113F1 /* GHZCreamProgressView.m in Sources */,
 				D6BDC6171D37D76900BD3C19 /* ZXDefaultGridSampler.m in Sources */,
 				D63007A21D2E9397005A88B9 /* UIView+Extension.m in Sources */,
 				D6BDC6281D37D76900BD3C19 /* ZXPlanarYUVLuminanceSource.m in Sources */,
@@ -3235,6 +3293,7 @@
 				D6BDC6521D37D76900BD3C19 /* ZXRSSExpandedCurrentParsingState.m in Sources */,
 				D6BDC6761D37D76900BD3C19 /* ZXUPCAWriter.m in Sources */,
 				D6BDC67C1D37D76900BD3C19 /* ZXUPCEReader.m in Sources */,
+				C2173B561D3874CB006113F1 /* GHZShowPictureViewController.m in Sources */,
 				D6BDC62B1D37D76900BD3C19 /* ZXRGBLuminanceSource.m in Sources */,
 				D6BDC67D1D37D76900BD3C19 /* ZXModulusGF.m in Sources */,
 				D6BDC65C1D37D76900BD3C19 /* ZXRSSExpandedRow.m in Sources */,
@@ -3248,22 +3307,23 @@
 				D6BDC60F1D37D76900BD3C19 /* ZXReedSolomonEncoder.m in Sources */,
 				D6BDC5E11D37D76900BD3C19 /* ZXAztecWriter.m in Sources */,
 				D6BDC66E1D37D76900BD3C19 /* ZXEANManufacturerOrgSupport.m in Sources */,
-				C25238401D365D7F0046B246 /* GHZNewMusicController.m in Sources */,
 				D6BDC62E1D37D76900BD3C19 /* ZXDataMatrixDecodedBitStreamParser.m in Sources */,
 				D6BDC5E51D37D76900BD3C19 /* ZXAddressBookParsedResult.m in Sources */,
 				D6BDC6461D37D76900BD3C19 /* ZXAbstractExpandedDecoder.m in Sources */,
 				D6BDC5E41D37D76900BD3C19 /* ZXAddressBookDoCoMoResultParser.m in Sources */,
+				C2173B511D387497006113F1 /* GHZTopicVoiceView.m in Sources */,
 				D6BDC6071D37D76900BD3C19 /* ZXCGImageLuminanceSource.m in Sources */,
+				C2173B4D1D387497006113F1 /* GHZTopicPictureView.m in Sources */,
 				D6C49CBD1D30E3B80045731C /* UIViewController+Extension.m in Sources */,
 				D6C7879C1D2FD22C006DBEF8 /* GHZLivingViewController.m in Sources */,
 				D6BDC6261D37D76900BD3C19 /* ZXInvertedLuminanceSource.m in Sources */,
-				C26821BC1D352A86005EAF3D /* GHZTopicPictureView.m in Sources */,
 				D637B60D1D3485E000B8FA18 /* GHZNewPictureView.m in Sources */,
 				D6C49CB01D30A77C0045731C /* GHZLivingEndView.m in Sources */,
 				D6BDC5F21D37D76900BD3C19 /* ZXParsedResult.m in Sources */,
 				D6BDC6891D37D76900BD3C19 /* ZXPDF417ScanningDecoder.m in Sources */,
 				D6BDC6871D37D76900BD3C19 /* ZXPDF417DetectionResultColumn.m in Sources */,
 				D6BDC65B1D37D76900BD3C19 /* ZXRSSExpandedReader.m in Sources */,
+				C2173B4F1D387497006113F1 /* GHZTopicVideoView.m in Sources */,
 				D6BDC64A1D37D76900BD3C19 /* ZXAI01393xDecoder.m in Sources */,
 				D6BDC69A1D37D76900BD3C19 /* ZXQRCodeDecoder.m in Sources */,
 				D6BDC5CA1D37D76900BD3C19 /* LBXScanNative.m in Sources */,
@@ -3339,6 +3399,7 @@
 				D6BDC63C1D37D76900BD3C19 /* ZXDataMatrixTextEncoder.m in Sources */,
 				D6BDC5D21D37D76900BD3C19 /* LBXZXCapture.m in Sources */,
 				D6BDC60D1D37D76900BD3C19 /* ZXGenericGFPoly.m in Sources */,
+				D65F3CB81D39327100B83694 /* GHZNewMusicController.m in Sources */,
 				D6BDC6031D37D76900BD3C19 /* ZXVINResultParser.m in Sources */,
 				D628E8441D33509C00624AEE /* GHZShowLivingView.m in Sources */,
 				D6BDC5FE1D37D76900BD3C19 /* ZXURIResultParser.m in Sources */,
@@ -3397,8 +3458,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Zhang (Z496ZX8FT7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yang Zhang (Z496ZX8FT7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: yang shaofeng (YYWE3E7V7A)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yang shaofeng (YYWE3E7V7A)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_BITCODE = NO;
@@ -3422,7 +3483,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "423ce11a-f18c-49bd-82fe-c4adecb14c0c";
+				PROVISIONING_PROFILE = "b0f50157-b5b9-4bd5-a0ee-d1ad5ec1eebf";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -3445,8 +3506,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Zhang (Z496ZX8FT7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: yang shaofeng (YYWE3E7V7A)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yang shaofeng (YYWE3E7V7A)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
@@ -3463,7 +3524,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "423ce11a-f18c-49bd-82fe-c4adecb14c0c";
+				PROVISIONING_PROFILE = "b0f50157-b5b9-4bd5-a0ee-d1ad5ec1eebf";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3506,7 +3567,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GHZxiangmuB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b0f50157-b5b9-4bd5-a0ee-d1ad5ec1eebf";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -3546,7 +3607,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GHZxiangmuB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b0f50157-b5b9-4bd5-a0ee-d1ad5ec1eebf";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

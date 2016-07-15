@@ -81,6 +81,9 @@
                                 <state key="highlighted" image="mainCellShareClick">
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="shareButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wNy-0m-low"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="Yy5-Q6-E0w" userLabel="分割1">
                                 <rect key="frame" x="93" y="0.0" width="1" height="44"/>
@@ -180,6 +183,7 @@
                     </label>
                 </subviews>
                 <animations/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="FBS-Zh-OtB" firstAttribute="leading" secondItem="sBk-8c-KFJ" secondAttribute="leading" id="2Sc-I4-Bby"/>
                     <constraint firstItem="ayg-aN-o3F" firstAttribute="top" secondItem="sBk-8c-KFJ" secondAttribute="top" id="3Pv-CN-0rF"/>

@@ -15,7 +15,8 @@
 #import "GHZNewVideoView.h"
 #import "XLVideoPlayer.h"
 #import "GHZNewVideoView.h"
-@interface GHZTopicViewController ()<UIScrollViewDelegate,GHZNewVideoViewDelegate>
+#import "UMSocial.h"
+@interface GHZTopicViewController ()<UIScrollViewDelegate,GHZNewWordCellDelegate,UMSocialDataDelegate,UMSocialUIDelegate>
 /** 段子*/
 @property (nonatomic,strong)NSMutableArray *topics;
 /** 当前页数*/
@@ -28,7 +29,7 @@
 @property (nonatomic,strong)GHZNewVideoView *v;
 @property (nonatomic,strong) XLVideoPlayer *player;
 @property (nonatomic,strong)GHZTopicModel *mm;
-
+@property (nonatomic,strong)NSIndexPath *indexs;
 @end
 
 @implementation GHZTopicViewController
@@ -41,8 +42,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-
     //初始化
     [self setupTable];
     
@@ -52,6 +51,12 @@
     
     
     
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [_player destroyPlayer];
+    _player = nil;
 }
 
 
@@ -178,7 +183,7 @@
     self.mm = self.topics[indexPath.row];
     cell.selectionStyle =  UITableViewCellSelectionStyleNone;
     cell.model = self.mm;
-    self.paths = indexPath;
+    cell.delegate =self;
     return cell;
 }
 
@@ -241,16 +246,26 @@
 //    [cell.contentView addSubview:self.player];
     NSLog(@"1");
 }
-
-
-
--(GHZNewVideoView *)v{
-    if (!_v) {
-        _v = [[GHZNewVideoView alloc] init];
-        _v.delegate = self;
-    }
-    return _v;
+-(void)getclick:(NSString *)image url:(NSString *)url text:(NSString *)text{
+    [[UMSocialData defaultData].urlResource setResourceType:(UMSocialUrlResourceTypeImage) url:image];
+    [UMSocialData defaultData].extConfig.title = @"";
+    [UMSocialData defaultData].extConfig.qqData.url = @"http://baidu.com";
+    [UMSocialSnsService presentSnsIconSheetView:self appKey:@"57490f1ee0f55a75d5002f3f" shareText:[NSString stringWithFormat:@"%@%@",text,image] shareImage:image shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToQQ,UMShareToQzone] delegate:self];
+    
 }
+
+-(void)click:(NSString *)viedourl width:(NSInteger)width height:(NSInteger)height btn:(UIButton *)btn{
+  
+}
+
+
+//
+//-(GHZNewVideoView *)v{
+//    if (!_v) {
+//        _v = [[GHZNewVideoView alloc] init];
+//    }
+//    return _v;
+//}
 
 //- (GHZNewVideoView *)v
 //{
