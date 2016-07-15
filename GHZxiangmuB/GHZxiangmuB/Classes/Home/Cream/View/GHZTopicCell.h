@@ -8,7 +8,18 @@
 
 #import <UIKit/UIKit.h>
 @class GHZTopic;
+
+@protocol GHZTopicCellDelegate <NSObject>
+
+- (void)getClick:(NSString *)image url:(NSString *)url text:(NSString *)text;
+
+@end
+
+
 @interface GHZTopicCell : UITableViewCell
 /**帖子数据*/
 @property(nonatomic, strong)  GHZTopic *topic;
+
+@property (nonatomic, weak) id <GHZTopicCellDelegate> delegate;
+
 @end

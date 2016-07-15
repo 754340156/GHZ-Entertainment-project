@@ -69,9 +69,9 @@
    
     if (!_cellHeight) {
         //文字的最大尺寸
-        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * GHZCellmargin, MAXFLOAT);
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * GHZCellTextX, MAXFLOAT);
         //计算文字的高度
-        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:14]} context:nil].size.height;
+        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:14]} context:nil].size.height + 8;
         
         //cell的高度
         //文字部分高度
@@ -90,20 +90,20 @@
             }
             
             //计算图片控件的 frame
-            CGFloat pictureX = GHZCellmargin;
+            CGFloat pictureX = GHZCellTextX;
             CGFloat pictureY = GHZCellTextY + textH + GHZCellmargin;
             _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
             
             _cellHeight += pictureH + GHZCellmargin;
         }else if (self.type == Music){  //声音帖子
-            CGFloat voiceX = GHZCellmargin;
+            CGFloat voiceX = GHZCellTextX;
             CGFloat voiceY = GHZCellTextY + textH + GHZCellmargin;
             CGFloat voiceW = maxSize.width ;
             CGFloat voiceH = voiceW * self.height / self.width;
             _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
             _cellHeight += voiceH + GHZCellmargin;
         }else if (self.type == Video){  //视频帖子
-            CGFloat videoX = GHZCellmargin;
+            CGFloat videoX = GHZCellTextX;
             CGFloat videoY = GHZCellTextY + textH + GHZCellmargin;
             CGFloat videoW = maxSize.width ;
             CGFloat videoH = videoW * self.height / self.width;
