@@ -37,6 +37,7 @@
     self.imageView.userInteractionEnabled = YES;
     [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPicture)]];
     self.Loding.roundedCorners = 2;
+    self.Loding.progressTintColor = [UIColor whiteColor];
 }
 -(void)showPicture{
     GHZShowpirtureController *show = [[GHZShowpirtureController alloc] init];
@@ -54,16 +55,16 @@
     /**
      *在不知道图片扩展名的情况下,取出第一个字节就能知道图片的类型
      */
-    
+    [self.Loding setProgress:model.progressTime animated:NO];
     
 //    [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.bigImage] placeholderImage:[UIImage imageNamed:@""]];
     
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.bigImage] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         self.Loding.hidden = NO;
-        CGFloat progress = 1.0 * receivedSize / expectedSize;
-        progress = (progress < 0?0 :progress);
-        [self.Loding setProgress:progress animated:YES];
-        self.Loding.progressLabel.text = [NSString stringWithFormat:@"%.0f%%",progress * 100];
+        model.progressTime = 1.0 * receivedSize / expectedSize;
+        model.progressTime = (model.progressTime < 0?0 :model.progressTime);
+        [self.Loding setProgress:model.progressTime animated:NO];
+        self.Loding.progressLabel.text = [NSString stringWithFormat:@"%.0f%%",model.progressTime * 100];
         self.Loding.progressLabel.alpha = 0.5;
         
            } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {

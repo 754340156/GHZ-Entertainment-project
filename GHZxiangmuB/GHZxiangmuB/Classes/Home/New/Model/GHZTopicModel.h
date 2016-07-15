@@ -57,4 +57,5 @@
 @property (nonatomic,assign)NSInteger playcount;
 @property (nonatomic,copy)NSString *voiceuri;
 @property (nonatomic,copy)NSString *videouri;
+@property (nonatomic,assign)CGFloat progressTime;
 @end

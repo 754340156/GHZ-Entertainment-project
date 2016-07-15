@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GHZLoginViewController">
@@ -19,9 +19,11 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading_bg" translatesAutoresizingMaskIntoConstraints="NO" id="8DC-IK-zdX">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <animations/>
                 </imageView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="请输入用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Fx-NS-Rsm">
                     <rect key="frame" x="20" y="200" width="560" height="30"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="soj-Cf-4p4"/>
                     </constraints>
@@ -30,6 +32,7 @@
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="请输入密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g7X-pM-mjC">
                     <rect key="frame" x="20" y="250" width="560" height="30"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="EJK-Wv-E2o"/>
                     </constraints>
@@ -39,6 +42,7 @@
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gh0-UM-Iz5">
                     <rect key="frame" x="250" y="330" width="100" height="30"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="OIY-aH-s0q"/>
                     </constraints>
@@ -51,6 +55,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSr-vI-vtt">
                     <rect key="frame" x="456" y="300" width="64" height="30"/>
+                    <animations/>
                     <state key="normal" title="&gt;&gt;去注册">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
@@ -60,12 +65,14 @@
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第三方登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpP-cT-d5X">
                     <rect key="frame" x="258" y="410" width="85" height="21"/>
+                    <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sf2-HH-hfA">
                     <rect key="frame" x="282" y="451" width="36" height="36"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="36" id="3AQ-Uj-V13"/>
                         <constraint firstAttribute="height" constant="36" id="zct-B8-MOX"/>
@@ -77,6 +84,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbr-6X-PPl">
                     <rect key="frame" x="166" y="451" width="36" height="36"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="36" id="dbD-NS-Yp8"/>
                         <constraint firstAttribute="height" constant="36" id="ixy-Iw-HkW"/>
@@ -88,6 +96,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsz-qE-dee">
                     <rect key="frame" x="398" y="451" width="36" height="36"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="36" id="64O-Zw-Wji"/>
                         <constraint firstAttribute="width" constant="36" id="R8T-YB-MMC"/>
@@ -98,6 +107,7 @@
                     </connections>
                 </button>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="8DC-IK-zdX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3C6-Ss-BPN"/>

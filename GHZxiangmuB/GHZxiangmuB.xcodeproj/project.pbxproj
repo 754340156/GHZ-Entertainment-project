@@ -27,17 +27,6 @@
 		C25239611D3665720046B246 /* NSString+GHZTime.m in Sources */ = {isa = PBXBuildFile; fileRef = C25239601D3665720046B246 /* NSString+GHZTime.m */; };
 		C2681EE91D332A83002FA23F /* GHZTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2681EE81D332A83002FA23F /* GHZTopicViewController.m */; };
 		C26821B71D34BCCA005EAF3D /* GHZTopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26821B61D34BCCA005EAF3D /* GHZTopicController.m */; };
-
-		C26821BC1D352A86005EAF3D /* GHZTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = C26821BB1D352A86005EAF3D /* GHZTopicPictureView.m */; };
-		C26821BE1D352AF6005EAF3D /* GHZTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26821BD1D352AF6005EAF3D /* GHZTopicPictureView.xib */; };
-		C2C6E3241D37391700B005E4 /* ImageResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C2C6E31E1D37391700B005E4 /* ImageResources.bundle */; settings = {ASSET_TAGS = (); }; };
-		C2C6E3251D37391700B005E4 /* XLSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C6E3211D37391700B005E4 /* XLSlider.m */; settings = {ASSET_TAGS = (); }; };
-		C2C6E3261D37391700B005E4 /* XLVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C6E3231D37391700B005E4 /* XLVideoPlayer.m */; settings = {ASSET_TAGS = (); }; };
-		C2C8600F1D34D9C400A59EEF /* GHZNewMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C8600E1D34D9C400A59EEF /* GHZNewMusicView.m */; settings = {ASSET_TAGS = (); }; };
-		C2C860111D34DA0F00A59EEF /* GHZNewMusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C860101D34DA0F00A59EEF /* GHZNewMusicView.xib */; settings = {ASSET_TAGS = (); }; };
-		C2C860141D35104200A59EEF /* GHZNewVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C860131D35104200A59EEF /* GHZNewVideoView.m */; settings = {ASSET_TAGS = (); }; };
-		C2C860161D35106A00A59EEF /* GHZNewVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C860151D35106A00A59EEF /* GHZNewVideoView.xib */; settings = {ASSET_TAGS = (); }; };
-
 		C2C6E3241D37391700B005E4 /* ImageResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C2C6E31E1D37391700B005E4 /* ImageResources.bundle */; };
 		C2C6E3251D37391700B005E4 /* XLSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C6E3211D37391700B005E4 /* XLSlider.m */; };
 		C2C6E3261D37391700B005E4 /* XLVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C6E3231D37391700B005E4 /* XLVideoPlayer.m */; };
@@ -45,7 +34,6 @@
 		C2C860111D34DA0F00A59EEF /* GHZNewMusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C860101D34DA0F00A59EEF /* GHZNewMusicView.xib */; };
 		C2C860141D35104200A59EEF /* GHZNewVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C860131D35104200A59EEF /* GHZNewVideoView.m */; };
 		C2C860161D35106A00A59EEF /* GHZNewVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C860151D35106A00A59EEF /* GHZNewVideoView.xib */; };
-
 		C2E5E1621D33CDC600409261 /* GHZShowpirtureController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E5E1601D33CDC600409261 /* GHZShowpirtureController.m */; };
 		C2E5E1631D33CDC600409261 /* GHZShowpirtureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E5E1611D33CDC600409261 /* GHZShowpirtureController.xib */; };
 		D628E8381D33478300624AEE /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C49CCD1D311CE00045731C /* VideoToolbox.framework */; };
@@ -423,9 +411,9 @@
 		C243B5E21D30A8E300CFCDAE /* GHZConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZConst.m; sourceTree = "<group>"; };
 		C243B6721D3118F100CFCDAE /* NSDate+GHZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+GHZExtension.h"; sourceTree = "<group>"; };
 		C243B6731D3118F100CFCDAE /* NSDate+GHZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GHZExtension.m"; sourceTree = "<group>"; };
-		C252383D1D365D7F0046B246 /* GHZNewMusicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewMusicController.h; sourceTree = "<group>"; };
-		C252383E1D365D7F0046B246 /* GHZNewMusicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewMusicController.m; sourceTree = "<group>"; };
-		C252383F1D365D7F0046B246 /* GHZNewMusicController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZNewMusicController.xib; sourceTree = "<group>"; };
+		C252383D1D365D7F0046B246 /* GHZNewMusicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHZNewMusicController.h; path = ../../../Tools/GHZNewMusicController.h; sourceTree = "<group>"; };
+		C252383E1D365D7F0046B246 /* GHZNewMusicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHZNewMusicController.m; path = ../../../Tools/GHZNewMusicController.m; sourceTree = "<group>"; };
+		C252383F1D365D7F0046B246 /* GHZNewMusicController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GHZNewMusicController.xib; path = ../../../Tools/GHZNewMusicController.xib; sourceTree = "<group>"; };
 		C252395A1D3663350046B246 /* WMPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WMPlayer.bundle; sourceTree = "<group>"; };
 		C252395B1D3663350046B246 /* WMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayer.h; sourceTree = "<group>"; };
 		C252395C1D3663350046B246 /* WMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayer.m; sourceTree = "<group>"; };
@@ -1201,7 +1189,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-
 		C2173B3E1D387497006113F1 /* GHZTopicPictureView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1234,7 +1221,6 @@
 			path = GHZTopicVoiceView;
 			sourceTree = "<group>";
 		};
-
 		C25239591D3663350046B246 /* WMPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -1364,9 +1350,6 @@
 				D628E83A1D334A8E00624AEE /* GHZH264Encoder.m */,
 				D628E83F1D334B6D00624AEE /* GHZBeautifulFace.h */,
 				D628E8401D334B6D00624AEE /* GHZBeautifulFace.m */,
-				C252383D1D365D7F0046B246 /* GHZNewMusicController.h */,
-				C252383E1D365D7F0046B246 /* GHZNewMusicController.m */,
-				C252383F1D365D7F0046B246 /* GHZNewMusicController.xib */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1478,6 +1461,9 @@
 				C2C860121D35104200A59EEF /* GHZNewVideoView.h */,
 				C2C860131D35104200A59EEF /* GHZNewVideoView.m */,
 				C2C860151D35106A00A59EEF /* GHZNewVideoView.xib */,
+				C252383D1D365D7F0046B246 /* GHZNewMusicController.h */,
+				C252383E1D365D7F0046B246 /* GHZNewMusicController.m */,
+				C252383F1D365D7F0046B246 /* GHZNewMusicController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3537,8 +3523,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Zhang (Z496ZX8FT7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yang Zhang (Z496ZX8FT7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: yang shaofeng (YYWE3E7V7A)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yang shaofeng (YYWE3E7V7A)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -3567,6 +3553,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GHZxiangmuB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b0f50157-b5b9-4bd5-a0ee-d1ad5ec1eebf";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -3577,7 +3564,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Zhang (Z496ZX8FT7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: yang shaofeng (YYWE3E7V7A)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -3606,6 +3593,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GHZxiangmuB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b0f50157-b5b9-4bd5-a0ee-d1ad5ec1eebf";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

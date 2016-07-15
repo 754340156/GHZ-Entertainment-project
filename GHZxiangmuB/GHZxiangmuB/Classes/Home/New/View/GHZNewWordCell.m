@@ -12,7 +12,7 @@
 #import "UIImageView+WebCache.h"
 #import "GHZNewMusicView.h"
 #import "GHZNewVideoView.h"
-@interface GHZNewWordCell ()
+@interface GHZNewWordCell ()<GHZNewVideoViewDelegate>
 /** 头像*/
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 /** 昵称*/
@@ -62,6 +62,7 @@
         GHZNewVideoView *videoView = [GHZNewVideoView videoView];
         [self.contentView addSubview:videoView];
         _videoView = videoView;
+        _videoView.delegate =self;
     }
     return _videoView;
 }
@@ -94,7 +95,7 @@
     //新浪V
     self.sinaVView.hidden = !model.sina_v;
     //头像
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:model.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+     [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:model.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     //昵称
     self.nameLabel.text = model.name;
     //设置时间
@@ -163,11 +164,29 @@
     [button setTitle:placeholder forState:(UIControlStateNormal)];
 }
 -(void)setFrame:(CGRect)frame{
-    frame.origin.x = GHZCellmargin ;
-    frame.size.width-= 2 * GHZCellmargin;
+    frame.origin.x = 3 ;
+    frame.size.width-= 2 * 3;
     frame.size.height -= GHZCellmargin;
     frame.origin.y += GHZCellmargin;
     [super setFrame:frame];
 }
 
+
+- (void)clickWithbutton:(UIButton*)btn
+{
+    
+    
+    [self.delegate click:self.model.videouri width:self.model.videoViewFrame.size.width height:self.model.videoViewFrame.size.height btn:btn];
+}
+- (IBAction)shareButtonClick:(id)sender {
+    NSString *url = [[NSString alloc] init];
+    if (_model.type ==Video) {
+        url = _model.videouri;
+    }else if(_model.type ==Music){
+        url = _model.voiceuri;
+    }else if (_model.type ==Picture){
+        url = _model.bigImage;
+    }
+    [self.delegate getclick:_model.bigImage url:url text:_model.text];
+}
 @end

@@ -57,7 +57,7 @@
 -(CGFloat)cellHeight{
     if (!_cellHeight) {
         //文字的范围
-        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width-GHZCellmargin*4, MAXFLOAT);
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width-GHZCellTextX*4, MAXFLOAT);
         //文字搞
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:(NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName :[UIFont systemFontOfSize:14]} context:nil].size.height;
         _cellHeight = GHZCellTextY + textH + GHZCellmargin ;
@@ -72,19 +72,19 @@
                 self.longPicture = YES;
             }
             //计算出图片的frame
-            CGFloat pictureX = GHZCellmargin;
+            CGFloat pictureX = GHZCellTextX;
             CGFloat pictureY = GHZCellTextY + textH + GHZCellmargin;
             _pictureViewFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
             _cellHeight += pictureH + GHZCellmargin;
         }else if (self.type == Music){ //声音
-            CGFloat musicX = GHZCellmargin;
+            CGFloat musicX = GHZCellTextX;
             CGFloat musicY = GHZCellTextY + textH + GHZCellmargin;
             CGFloat musicW = maxSize.width;
             CGFloat musicH = musicW * self.height / self.width;
             _musicViewFrame = CGRectMake(musicX, musicY, musicW, musicH);
             _cellHeight += GHZCellmargin + musicH;
         } if (self.type == Video) {
-            CGFloat videoX = GHZCellmargin;
+            CGFloat videoX = GHZCellTextX;
             CGFloat videoY = GHZCellTextY + textH + GHZCellmargin;
             CGFloat videoW = maxSize.width;
             CGFloat videoH = videoW * self.height / self.width;
