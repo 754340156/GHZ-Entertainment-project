@@ -43,50 +43,6 @@
     [navc.tabBarItem setSelectedImage:[[UIImage imageNamed:selectImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [self addChildViewController:navc];
 }
- //自定登录判定方法
-- (UIViewController *)setIsAutoLoginWithChatHomeVC:(GHZProfileViewController *)profileVC loginVC:(GHZLoginViewController *)loginVC
-{
-    BOOL isAutoLogin = [EMClient sharedClient].options.isAutoLogin;
-    if (isAutoLogin) {
-        return profileVC;
-    }
-    return loginVC;
-}
-#pragma mark -  EMClientDelegate
-//自动登录是否成功
-- (void)didAutoLoginWithError:(EMError *)aError
-{
-    if (!aError) {
-        NSLog(@"自动登录成功");
-        EMError *error = nil;
-        EMPushOptions *options = [[EMClient sharedClient] getPushOptionsFromServerWithError:&error];
-        NSLog(@"%@",options.nickname);
-    }else
-    {
-        NSLog(@"自动登录失败%@",aError.errorDescription);
-    }
-}
-//1.监听网络状态
-- (void)didConnectionStateChanged:(EMConnectionState)connectionState{
-    //EMConnectionConnected = 0,  /*! *\~chinese 已连接
-    //EMConnectionDisconnected,   /*! *\~chinese 未连接
-    if (connectionState == EMConnectionDisconnected) {
-        NSLog(@"网络断开，未连接...");
-    }else{
-        NSLog(@"网络通了...");
 
-    }
-}
--(void)willAutoReconnect{
-    NSLog(@"将自动重连接...");
 
-}
--(void)didAutoReconnectFinishedWithError:(NSError *)error{
-    if (!error) {
-        NSLog(@"自动重连接成功...");
-
-    }else{
-        NSLog(@"自动重连接失败... %@",error);
-    }
-}
 @end

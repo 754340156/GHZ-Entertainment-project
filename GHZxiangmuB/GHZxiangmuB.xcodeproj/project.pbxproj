@@ -20,17 +20,13 @@
 		C26821B71D34BCCA005EAF3D /* GHZTopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26821B61D34BCCA005EAF3D /* GHZTopicController.m */; };
 		C26821BC1D352A86005EAF3D /* GHZTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = C26821BB1D352A86005EAF3D /* GHZTopicPictureView.m */; };
 		C26821BE1D352AF6005EAF3D /* GHZTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26821BD1D352AF6005EAF3D /* GHZTopicPictureView.xib */; };
+		C2C6E3241D37391700B005E4 /* ImageResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C2C6E31E1D37391700B005E4 /* ImageResources.bundle */; };
+		C2C6E3251D37391700B005E4 /* XLSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C6E3211D37391700B005E4 /* XLSlider.m */; };
+		C2C6E3261D37391700B005E4 /* XLVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C6E3231D37391700B005E4 /* XLVideoPlayer.m */; };
 		C2C8600F1D34D9C400A59EEF /* GHZNewMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C8600E1D34D9C400A59EEF /* GHZNewMusicView.m */; };
 		C2C860111D34DA0F00A59EEF /* GHZNewMusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C860101D34DA0F00A59EEF /* GHZNewMusicView.xib */; };
 		C2C860141D35104200A59EEF /* GHZNewVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C860131D35104200A59EEF /* GHZNewVideoView.m */; };
 		C2C860161D35106A00A59EEF /* GHZNewVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C860151D35106A00A59EEF /* GHZNewVideoView.xib */; };
-		C2C6E3241D37391700B005E4 /* ImageResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C2C6E31E1D37391700B005E4 /* ImageResources.bundle */; settings = {ASSET_TAGS = (); }; };
-		C2C6E3251D37391700B005E4 /* XLSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C6E3211D37391700B005E4 /* XLSlider.m */; settings = {ASSET_TAGS = (); }; };
-		C2C6E3261D37391700B005E4 /* XLVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C6E3231D37391700B005E4 /* XLVideoPlayer.m */; settings = {ASSET_TAGS = (); }; };
-		C2C8600F1D34D9C400A59EEF /* GHZNewMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C8600E1D34D9C400A59EEF /* GHZNewMusicView.m */; settings = {ASSET_TAGS = (); }; };
-		C2C860111D34DA0F00A59EEF /* GHZNewMusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C860101D34DA0F00A59EEF /* GHZNewMusicView.xib */; settings = {ASSET_TAGS = (); }; };
-		C2C860141D35104200A59EEF /* GHZNewVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C860131D35104200A59EEF /* GHZNewVideoView.m */; settings = {ASSET_TAGS = (); }; };
-		C2C860161D35106A00A59EEF /* GHZNewVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C860151D35106A00A59EEF /* GHZNewVideoView.xib */; settings = {ASSET_TAGS = (); }; };
 		C2E5E1621D33CDC600409261 /* GHZShowpirtureController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E5E1601D33CDC600409261 /* GHZShowpirtureController.m */; };
 		C2E5E1631D33CDC600409261 /* GHZShowpirtureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E5E1611D33CDC600409261 /* GHZShowpirtureController.xib */; };
 		D628E8381D33478300624AEE /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C49CCD1D311CE00045731C /* VideoToolbox.framework */; };
@@ -61,6 +57,13 @@
 		D637B6171D3486F600B8FA18 /* GHZTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D637B6151D3486F600B8FA18 /* GHZTopicCell.m */; };
 		D637B6181D3486F600B8FA18 /* GHZTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D637B6161D3486F600B8FA18 /* GHZTopicCell.xib */; };
 		D63C47DF1D314C1A00BB5A46 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C49CCB1D311B790045731C /* libz.tbd */; };
+		D65F3C951D38799C00B83694 /* GHZLiveWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F3C941D38799C00B83694 /* GHZLiveWebViewController.m */; };
+		D65F3C981D38DF0B00B83694 /* GHZUserSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F3C971D38DF0B00B83694 /* GHZUserSetting.m */; };
+		D65F3C9E1D38E62D00B83694 /* GHZMBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F3C9D1D38E62D00B83694 /* GHZMBManager.m */; };
+		D65F3CA21D38FFC500B83694 /* GHZAddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F3CA01D38FFC500B83694 /* GHZAddFriendViewController.m */; };
+		D65F3CA61D38FFF100B83694 /* GHZResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F3CA51D38FFF100B83694 /* GHZResultTableViewController.m */; };
+		D65F3CB11D39257C00B83694 /* NarikoTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F3CB01D39257C00B83694 /* NarikoTextField.m */; };
+		D65F3CB41D392C4700B83694 /* GHZFileDataHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = D65F3CB31D392C4700B83694 /* GHZFileDataHandle.m */; };
 		D686B31E1D2DF27300648326 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D686B31D1D2DF27300648326 /* main.m */; };
 		D686B3211D2DF27300648326 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D686B3201D2DF27300648326 /* AppDelegate.m */; };
 		D686B3271D2DF27300648326 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D686B3251D2DF27300648326 /* Main.storyboard */; };
@@ -117,10 +120,6 @@
 		D6963EBE1D377EA0000C58B4 /* GHZRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6963EBA1D377EA0000C58B4 /* GHZRegistViewController.m */; };
 		D6963EBF1D377EA0000C58B4 /* GHZRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6963EBB1D377EA0000C58B4 /* GHZRegistViewController.xib */; };
 		D6963EC21D37994A000C58B4 /* GHZOutPutView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6963EC11D37994A000C58B4 /* GHZOutPutView.m */; };
-		D6963EC61D37B8EC000C58B4 /* GHZScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6963EC41D37B8EC000C58B4 /* GHZScanViewController.m */; };
-		D6963EC71D37B8EC000C58B4 /* GHZScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6963EC51D37B8EC000C58B4 /* GHZScanViewController.xib */; };
-		D6963ECB1D37B8FE000C58B4 /* GHZAddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6963EC91D37B8FE000C58B4 /* GHZAddFriendViewController.m */; };
-		D6963ECC1D37B8FE000C58B4 /* GHZAddFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6963ECA1D37B8FE000C58B4 /* GHZAddFriendViewController.xib */; };
 		D6AB0C021D2F5BE2003DDF59 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D6AB0C011D2F5BE2003DDF59 /* UIImage+Extension.m */; };
 		D6BDC5C41D37D76900BD3C19 /* UIActionSheet+LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BDC3B01D37D76900BD3C19 /* UIActionSheet+LBXAlertAction.m */; };
 		D6BDC5C51D37D76900BD3C19 /* UIAlertController+supportedInterfaceOrientations.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BDC3B21D37D76900BD3C19 /* UIAlertController+supportedInterfaceOrientations.m */; };
@@ -363,7 +362,6 @@
 		D6BDC6B21D37D76900BD3C19 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D6BDC5BF1D37D76900BD3C19 /* README.md */; };
 		D6BDC6B31D37D76900BD3C19 /* UIImageView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BDC5C31D37D76900BD3C19 /* UIImageView+CornerRadius.m */; };
 		D6BDC6B71D37D79500BD3C19 /* ScanResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BDC6B51D37D79500BD3C19 /* ScanResultViewController.m */; };
-		D6BDC6B81D37D79500BD3C19 /* ScanResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6BDC6B61D37D79500BD3C19 /* ScanResultViewController.xib */; };
 		D6C49CA41D3090870045731C /* GHZLivingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C49CA31D3090870045731C /* GHZLivingCollectionViewCell.m */; };
 		D6C49CA91D30A67E0045731C /* GHZLivingUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C49CA81D30A67E0045731C /* GHZLivingUserView.m */; };
 		D6C49CAD1D30A6BE0045731C /* GHZLivingUserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C49CAC1D30A6BE0045731C /* GHZLivingUserView.xib */; };
@@ -374,7 +372,6 @@
 		D6C49CBD1D30E3B80045731C /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C49CBC1D30E3B80045731C /* UIViewController+Extension.m */; };
 		D6C49CC01D30EBDB0045731C /* GHZLivingCatEarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C49CBF1D30EBDB0045731C /* GHZLivingCatEarView.m */; };
 		D6C49CC21D30ED040045731C /* GHZLivingCatEarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C49CC11D30ED040045731C /* GHZLivingCatEarView.xib */; };
-		D6C787831D2F930B006DBEF8 /* GHZLiveWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C787821D2F930B006DBEF8 /* GHZLiveWebViewController.m */; };
 		D6C787871D2FA84D006DBEF8 /* GHZHotCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C787851D2FA84D006DBEF8 /* GHZHotCollectionViewCell.m */; };
 		D6C787881D2FA84D006DBEF8 /* GHZHotCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C787861D2FA84D006DBEF8 /* GHZHotCollectionViewCell.xib */; };
 		D6C7878B1D2FAD19006DBEF8 /* GHZHotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7878A1D2FAD19006DBEF8 /* GHZHotModel.m */; };
@@ -474,6 +471,20 @@
 		D637B6141D3486F600B8FA18 /* GHZTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTopicCell.h; sourceTree = "<group>"; };
 		D637B6151D3486F600B8FA18 /* GHZTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZTopicCell.m; sourceTree = "<group>"; };
 		D637B6161D3486F600B8FA18 /* GHZTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZTopicCell.xib; sourceTree = "<group>"; };
+		D65F3C931D38799C00B83694 /* GHZLiveWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZLiveWebViewController.h; sourceTree = "<group>"; };
+		D65F3C941D38799C00B83694 /* GHZLiveWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZLiveWebViewController.m; sourceTree = "<group>"; };
+		D65F3C961D38DF0B00B83694 /* GHZUserSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZUserSetting.h; sourceTree = "<group>"; };
+		D65F3C971D38DF0B00B83694 /* GHZUserSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZUserSetting.m; sourceTree = "<group>"; };
+		D65F3C9C1D38E62D00B83694 /* GHZMBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZMBManager.h; sourceTree = "<group>"; };
+		D65F3C9D1D38E62D00B83694 /* GHZMBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZMBManager.m; sourceTree = "<group>"; };
+		D65F3C9F1D38FFC500B83694 /* GHZAddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZAddFriendViewController.h; sourceTree = "<group>"; };
+		D65F3CA01D38FFC500B83694 /* GHZAddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZAddFriendViewController.m; sourceTree = "<group>"; };
+		D65F3CA41D38FFF100B83694 /* GHZResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZResultTableViewController.h; sourceTree = "<group>"; };
+		D65F3CA51D38FFF100B83694 /* GHZResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZResultTableViewController.m; sourceTree = "<group>"; };
+		D65F3CAF1D39257C00B83694 /* NarikoTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NarikoTextField.h; sourceTree = "<group>"; };
+		D65F3CB01D39257C00B83694 /* NarikoTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NarikoTextField.m; sourceTree = "<group>"; };
+		D65F3CB21D392C4700B83694 /* GHZFileDataHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZFileDataHandle.h; sourceTree = "<group>"; };
+		D65F3CB31D392C4700B83694 /* GHZFileDataHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZFileDataHandle.m; sourceTree = "<group>"; };
 		D686B3191D2DF27300648326 /* GHZxiangmuB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHZxiangmuB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D686B31D1D2DF27300648326 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D686B31F1D2DF27300648326 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -575,12 +586,6 @@
 		D6963EBB1D377EA0000C58B4 /* GHZRegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZRegistViewController.xib; sourceTree = "<group>"; };
 		D6963EC01D37994A000C58B4 /* GHZOutPutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZOutPutView.h; sourceTree = "<group>"; };
 		D6963EC11D37994A000C58B4 /* GHZOutPutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZOutPutView.m; sourceTree = "<group>"; };
-		D6963EC31D37B8EC000C58B4 /* GHZScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZScanViewController.h; sourceTree = "<group>"; };
-		D6963EC41D37B8EC000C58B4 /* GHZScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZScanViewController.m; sourceTree = "<group>"; };
-		D6963EC51D37B8EC000C58B4 /* GHZScanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZScanViewController.xib; sourceTree = "<group>"; };
-		D6963EC81D37B8FE000C58B4 /* GHZAddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZAddFriendViewController.h; sourceTree = "<group>"; };
-		D6963EC91D37B8FE000C58B4 /* GHZAddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZAddFriendViewController.m; sourceTree = "<group>"; };
-		D6963ECA1D37B8FE000C58B4 /* GHZAddFriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZAddFriendViewController.xib; sourceTree = "<group>"; };
 		D6AB0BFA1D2F56CC003DDF59 /* GHZLiveNewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZLiveNewModel.h; sourceTree = "<group>"; };
 		D6AB0BFB1D2F56CC003DDF59 /* GHZLiveNewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZLiveNewModel.m; sourceTree = "<group>"; };
 		D6AB0C001D2F5BE2003DDF59 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
@@ -1083,7 +1088,6 @@
 		D6BDC5C31D37D76900BD3C19 /* UIImageView+CornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CornerRadius.m"; sourceTree = "<group>"; };
 		D6BDC6B41D37D79500BD3C19 /* ScanResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanResultViewController.h; sourceTree = "<group>"; };
 		D6BDC6B51D37D79500BD3C19 /* ScanResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanResultViewController.m; sourceTree = "<group>"; };
-		D6BDC6B61D37D79500BD3C19 /* ScanResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanResultViewController.xib; sourceTree = "<group>"; };
 		D6C49CA21D3090870045731C /* GHZLivingCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZLivingCollectionViewCell.h; sourceTree = "<group>"; };
 		D6C49CA31D3090870045731C /* GHZLivingCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZLivingCollectionViewCell.m; sourceTree = "<group>"; };
 		D6C49CA71D30A67E0045731C /* GHZLivingUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZLivingUserView.h; sourceTree = "<group>"; };
@@ -1103,8 +1107,6 @@
 		D6C49CC11D30ED040045731C /* GHZLivingCatEarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZLivingCatEarView.xib; sourceTree = "<group>"; };
 		D6C49CCB1D311B790045731C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		D6C49CCD1D311CE00045731C /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
-		D6C787811D2F930B006DBEF8 /* GHZLiveWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZLiveWebViewController.h; sourceTree = "<group>"; };
-		D6C787821D2F930B006DBEF8 /* GHZLiveWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZLiveWebViewController.m; sourceTree = "<group>"; };
 		D6C787841D2FA84D006DBEF8 /* GHZHotCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZHotCollectionViewCell.h; sourceTree = "<group>"; };
 		D6C787851D2FA84D006DBEF8 /* GHZHotCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZHotCollectionViewCell.m; sourceTree = "<group>"; };
 		D6C787861D2FA84D006DBEF8 /* GHZHotCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZHotCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -1205,62 +1207,6 @@
 			path = Slider;
 			sourceTree = "<group>";
 		};
-		D628EA191D33CFBD00624AEE /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				D628EA1A1D33CFBD00624AEE /* Controller */,
-				D628EA1D1D33CFBD00624AEE /* Model */,
-				D628EA1E1D33CFBD00624AEE /* View */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		D628EA1A1D33CFBD00624AEE /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				D628EBC91D33D64C00624AEE /* GHZChatHomeViewController.h */,
-				D628EBCA1D33D64C00624AEE /* GHZChatHomeViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		D628EA1D1D33CFBD00624AEE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		D628EA1E1D33CFBD00624AEE /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D628EBDE1D33E81100624AEE /* GHZSeletedChatView.h */,
-				D628EBDF1D33E81100624AEE /* GHZSeletedChatView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		D628EBD41D33E4DE00624AEE /* LoginOrRegist */ = {
-			isa = PBXGroup;
-			children = (
-				D628EBD51D33E4DE00624AEE /* Controller */,
-			);
-			path = LoginOrRegist;
-			sourceTree = "<group>";
-		};
-		D628EBD51D33E4DE00624AEE /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				D628EBD61D33E50A00624AEE /* GHZLoginViewController.h */,
-				D628EBD71D33E50A00624AEE /* GHZLoginViewController.m */,
-				D628EBCB1D33D64C00624AEE /* GHZLoginViewController.xib */,
-				D628EBD91D33E52300624AEE /* GHZRegistViewController.h */,
-				D628EBDA1D33E52300624AEE /* GHZRegistViewController.m */,
-				D628EBDB1D33E52300624AEE /* GHZRegistViewController.xib */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		D63007201D2E67FE005A88B9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -1359,9 +1305,17 @@
 				D628E83A1D334A8E00624AEE /* GHZH264Encoder.m */,
 				D628E83F1D334B6D00624AEE /* GHZBeautifulFace.h */,
 				D628E8401D334B6D00624AEE /* GHZBeautifulFace.m */,
+				D65F3C961D38DF0B00B83694 /* GHZUserSetting.h */,
+				D65F3C971D38DF0B00B83694 /* GHZUserSetting.m */,
+				D65F3C9C1D38E62D00B83694 /* GHZMBManager.h */,
+				D65F3C9D1D38E62D00B83694 /* GHZMBManager.m */,
 				C252383D1D365D7F0046B246 /* GHZNewMusicController.h */,
 				C252383E1D365D7F0046B246 /* GHZNewMusicController.m */,
 				C252383F1D365D7F0046B246 /* GHZNewMusicController.xib */,
+				D65F3CAF1D39257C00B83694 /* NarikoTextField.h */,
+				D65F3CB01D39257C00B83694 /* NarikoTextField.m */,
+				D65F3CB21D392C4700B83694 /* GHZFileDataHandle.h */,
+				D65F3CB31D392C4700B83694 /* GHZFileDataHandle.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1525,6 +1479,8 @@
 			children = (
 				D63007901D2E9178005A88B9 /* GHZLiveViewController.h */,
 				D63007911D2E9178005A88B9 /* GHZLiveViewController.m */,
+				D65F3C931D38799C00B83694 /* GHZLiveWebViewController.h */,
+				D65F3C941D38799C00B83694 /* GHZLiveWebViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1598,8 +1554,6 @@
 			children = (
 				D63007AF1D2EA2C1005A88B9 /* GHZLiveNewViewController.h */,
 				D63007B01D2EA2C1005A88B9 /* GHZLiveNewViewController.m */,
-				D6C787811D2F930B006DBEF8 /* GHZLiveWebViewController.h */,
-				D6C787821D2F930B006DBEF8 /* GHZLiveWebViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1911,12 +1865,10 @@
 			children = (
 				D6963E901D377E99000C58B4 /* GHZChatHomeViewController.h */,
 				D6963E911D377E99000C58B4 /* GHZChatHomeViewController.m */,
-				D6963EC81D37B8FE000C58B4 /* GHZAddFriendViewController.h */,
-				D6963EC91D37B8FE000C58B4 /* GHZAddFriendViewController.m */,
-				D6963ECA1D37B8FE000C58B4 /* GHZAddFriendViewController.xib */,
-				D6963EC31D37B8EC000C58B4 /* GHZScanViewController.h */,
-				D6963EC41D37B8EC000C58B4 /* GHZScanViewController.m */,
-				D6963EC51D37B8EC000C58B4 /* GHZScanViewController.xib */,
+				D65F3C9F1D38FFC500B83694 /* GHZAddFriendViewController.h */,
+				D65F3CA01D38FFC500B83694 /* GHZAddFriendViewController.m */,
+				D65F3CA41D38FFF100B83694 /* GHZResultTableViewController.h */,
+				D65F3CA51D38FFF100B83694 /* GHZResultTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2118,7 +2070,6 @@
 				D6BDC3D31D37D76900BD3C19 /* ZXingWrapper.m */,
 				D6BDC6B41D37D79500BD3C19 /* ScanResultViewController.h */,
 				D6BDC6B51D37D79500BD3C19 /* ScanResultViewController.m */,
-				D6BDC6B61D37D79500BD3C19 /* ScanResultViewController.xib */,
 			);
 			path = LBXScan;
 			sourceTree = "<group>";
@@ -2988,7 +2939,6 @@
 				D6963E0E1D37363A000C58B4 /* UMShareEditViewController.xib in Resources */,
 				D686B3291D2DF27300648326 /* Assets.xcassets in Resources */,
 				D637B6181D3486F600B8FA18 /* GHZTopicCell.xib in Resources */,
-				D6BDC6B81D37D79500BD3C19 /* ScanResultViewController.xib in Resources */,
 				D6963EB31D377E99000C58B4 /* GHZProfileHeaderView.xib in Resources */,
 				D637B60C1D3485E000B8FA18 /* GHZNewWordCell.xib in Resources */,
 				C26821BE1D352AF6005EAF3D /* GHZTopicPictureView.xib in Resources */,
@@ -2996,9 +2946,7 @@
 				D6963E191D37363A000C58B4 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				D6963E121D37363A000C58B4 /* UMSShareListController.xib in Resources */,
 				D6963E0C1D37363A000C58B4 /* UMSCommentInputController.xib in Resources */,
-				D6963ECC1D37B8FE000C58B4 /* GHZAddFriendViewController.xib in Resources */,
 				D63007B61D2EA7F3005A88B9 /* GHZNewTableViewCell.xib in Resources */,
-				D6963EC71D37B8EC000C58B4 /* GHZScanViewController.xib in Resources */,
 				C252395D1D3663350046B246 /* WMPlayer.bundle in Resources */,
 				D6963E161D37363A000C58B4 /* WeiboSDK.bundle in Resources */,
 				D6BDC5C81D37D76900BD3C19 /* CodeScan.bundle in Resources */,
@@ -3115,7 +3063,9 @@
 				C21B32AF1D313FB000B30A8C /* UIBarButtonItem+GHZExtention.m in Sources */,
 				D6BDC6621D37D76900BD3C19 /* ZXRSSUtils.m in Sources */,
 				D630079F1D2E9178005A88B9 /* GHZSelectedView.m in Sources */,
+				D65F3CB41D392C4700B83694 /* GHZFileDataHandle.m in Sources */,
 				D6BDC60A1D37D76900BD3C19 /* ZXMonochromeRectangleDetector.m in Sources */,
+				D65F3C981D38DF0B00B83694 /* GHZUserSetting.m in Sources */,
 				D6BDC6101D37D76900BD3C19 /* ZXBitArray.m in Sources */,
 				D6BDC5ED1D37D76900BD3C19 /* ZXExpandedProductResultParser.m in Sources */,
 				D63007791D2E6DFF005A88B9 /* GHZCreamViewController.m in Sources */,
@@ -3170,6 +3120,7 @@
 				D6BDC6741D37D76900BD3C19 /* ZXOneDReader.m in Sources */,
 				D6BDC6301D37D76900BD3C19 /* ZXDataMatrixVersion.m in Sources */,
 				D6BDC6591D37D76900BD3C19 /* ZXBitArrayBuilder.m in Sources */,
+				D65F3CA21D38FFC500B83694 /* GHZAddFriendViewController.m in Sources */,
 				D6BDC6981D37D76900BD3C19 /* ZXQRCodeDataMask.m in Sources */,
 				D6BDC5DD1D37D76900BD3C19 /* ZXAztecState.m in Sources */,
 				D6BDC5EE1D37D76900BD3C19 /* ZXGeoParsedResult.m in Sources */,
@@ -3254,7 +3205,9 @@
 				C25239611D3665720046B246 /* NSString+GHZTime.m in Sources */,
 				D6BDC5CE1D37D76900BD3C19 /* LBXScanView.m in Sources */,
 				D6BDC67F1D37D76900BD3C19 /* ZXPDF417ECErrorCorrection.m in Sources */,
+				D65F3C9E1D38E62D00B83694 /* GHZMBManager.m in Sources */,
 				D6BDC68F1D37D76900BD3C19 /* ZXPDF417Dimensions.m in Sources */,
+				D65F3CB11D39257C00B83694 /* NarikoTextField.m in Sources */,
 				D63007B51D2EA7F3005A88B9 /* GHZNewTableViewCell.m in Sources */,
 				D6C49CC01D30EBDB0045731C /* GHZLivingCatEarView.m in Sources */,
 				D6BDC5D61D37D76900BD3C19 /* ZXAztecDecoder.m in Sources */,
@@ -3273,7 +3226,6 @@
 				D6BDC5D41D37D76900BD3C19 /* SubLBXScanViewController.m in Sources */,
 				D6BDC68D1D37D76900BD3C19 /* ZXPDF417BarcodeMatrix.m in Sources */,
 				D628E8411D334B6D00624AEE /* GHZBeautifulFace.m in Sources */,
-
 				D6BDC64B1D37D76900BD3C19 /* ZXAI013x0x1xDecoder.m in Sources */,
 				D6BDC5F91D37D76900BD3C19 /* ZXSMTPResultParser.m in Sources */,
 				D6BDC6011D37D76900BD3C19 /* ZXVEventResultParser.m in Sources */,
@@ -3321,6 +3273,7 @@
 				D6BDC63F1D37D76900BD3C19 /* ZXDataMatrixWriter.m in Sources */,
 				D69190C11D3211E800EF114D /* GHZNavViewController.m in Sources */,
 				D6BDC5F31D37D76900BD3C19 /* ZXProductParsedResult.m in Sources */,
+				D65F3CA61D38FFF100B83694 /* GHZResultTableViewController.m in Sources */,
 				D69190CC1D3266E000EF114D /* GHZCareHeaderView.m in Sources */,
 				D6BDC6211D37D76900BD3C19 /* ZXByteMatrix.m in Sources */,
 				D69190C01D3211E800EF114D /* GHZLiveNewModel.m in Sources */,
@@ -3357,7 +3310,6 @@
 				D6BDC6941D37D76900BD3C19 /* ZXPDF417ResultMetadata.m in Sources */,
 				D6BDC6311D37D76900BD3C19 /* ZXDataMatrixDetector.m in Sources */,
 				D6BDC6601D37D76900BD3C19 /* ZXRSSFinderPattern.m in Sources */,
-				D6C787831D2F930B006DBEF8 /* GHZLiveWebViewController.m in Sources */,
 				D6BDC5DE1D37D76900BD3C19 /* ZXAztecToken.m in Sources */,
 				D6BDC5FC1D37D76900BD3C19 /* ZXTextParsedResult.m in Sources */,
 				D6BDC6781D37D76900BD3C19 /* ZXUPCEANExtension5Support.m in Sources */,
@@ -3369,6 +3321,7 @@
 				D6BDC6481D37D76900BD3C19 /* ZXAI01320xDecoder.m in Sources */,
 				D6BDC68E1D37D76900BD3C19 /* ZXPDF417BarcodeRow.m in Sources */,
 				D6BDC6721D37D76900BD3C19 /* ZXMultiFormatUPCEANReader.m in Sources */,
+				D65F3C951D38799C00B83694 /* GHZLiveWebViewController.m in Sources */,
 				D6BDC6A11D37D76900BD3C19 /* ZXQRCodeAlignmentPatternFinder.m in Sources */,
 				D6BDC66A1D37D76900BD3C19 /* ZXEAN13Reader.m in Sources */,
 				C243B5E31D30A8E300CFCDAE /* GHZConst.m in Sources */,
@@ -3390,9 +3343,7 @@
 				D628E8441D33509C00624AEE /* GHZShowLivingView.m in Sources */,
 				D6BDC5FE1D37D76900BD3C19 /* ZXURIResultParser.m in Sources */,
 				D6BDC5D91D37D76900BD3C19 /* ZXAztecCode.m in Sources */,
-				D6963ECB1D37B8FE000C58B4 /* GHZAddFriendViewController.m in Sources */,
 				D6BDC6451D37D76900BD3C19 /* ZXGenericMultipleBarcodeReader.m in Sources */,
-				D6963EC61D37B8EC000C58B4 /* GHZScanViewController.m in Sources */,
 				D6BDC5D31D37D76900BD3C19 /* MyQRViewController.m in Sources */,
 				D6BDC6401D37D76900BD3C19 /* ZXMaxiCodeBitMatrixParser.m in Sources */,
 			);
@@ -3471,6 +3422,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "423ce11a-f18c-49bd-82fe-c4adecb14c0c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -3511,6 +3463,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "423ce11a-f18c-49bd-82fe-c4adecb14c0c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3523,8 +3476,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Zhang (Z496ZX8FT7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yang Zhang (Z496ZX8FT7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: yang shaofeng (YYWE3E7V7A)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yang shaofeng (YYWE3E7V7A)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -3553,6 +3506,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GHZxiangmuB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -3563,7 +3517,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Zhang (Z496ZX8FT7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: yang shaofeng (YYWE3E7V7A)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -3592,6 +3546,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GHZxiangmuB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

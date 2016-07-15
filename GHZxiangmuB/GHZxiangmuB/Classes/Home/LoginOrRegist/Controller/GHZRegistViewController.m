@@ -7,6 +7,7 @@
 //
 
 #import "GHZRegistViewController.h"
+#import "GHZMBManager.h"
 #import <EMSDK.h>
 @interface GHZRegistViewController ()
 @property (weak, nonatomic) IBOutlet UIView *backView;
@@ -34,9 +35,10 @@
 - (IBAction)registAction:(UIButton *)sender
 {
     [[EMClient sharedClient] asyncRegisterWithUsername:self.userNameLabel.text password:self.passwordLabel.text success:^{
-        NSLog(@"注册成功");
+         [GHZMBManager showBriefMessage:@"注册成功" InView:self.view];
         [self.navigationController popViewControllerAnimated:YES];
     } failure:^(EMError *aError) {
+        [GHZMBManager showBriefMessage:@"注册失败" InView:self.view];
          NSLog(@"注册失败 = %@",aError.errorDescription);
     }];
 }

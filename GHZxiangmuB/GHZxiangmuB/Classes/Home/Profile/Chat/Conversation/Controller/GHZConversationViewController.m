@@ -8,15 +8,28 @@
 
 #import "GHZConversationViewController.h"
 #import "GHZChatViewController.h"
-@interface GHZConversationViewController ()<EaseConversationListViewControllerDataSource,EaseConversationListViewControllerDelegate>
+@interface GHZConversationViewController ()<EaseConversationListViewControllerDataSource,EaseConversationListViewControllerDelegate,EMChatManagerDelegate>
 
 @end
 
 @implementation GHZConversationViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+     [self tableViewDidTriggerHeaderRefresh];
+    [[EMClient sharedClient].chatManager addDelegate:self delegateQueue:nil];
+    [self refreshAndSortView];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[EMClient sharedClient].chatManager removeDelegate:self];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self tableViewDidTriggerHeaderRefresh];
+   
     self.delegate = self;
     self.dataSource = self;
 
@@ -79,5 +92,12 @@
         latestMessageTime = [NSDate formattedTimeFromTimeInterval:lastMessage.timestamp];
     }
     return latestMessageTime;
+}
+#pragma mark -EMChatManagerDelegate
+
+- (void)didReceiveMessages:(NSArray *)aMessages;
+{
+     [self tableViewDidTriggerHeaderRefresh];
+     [self refreshAndSortView];
 }
 @end

@@ -9,11 +9,13 @@
 #import "GHZChatHomeViewController.h"
 #import "GHZConversationViewController.h"
 #import "GHZFriendViewController.h"
+#import "GHZAddFriendViewController.h"
 #import "GHZAssistViewController.h"
 #import "GHZSeletedChatView.h"
 #import "GHZOutPutView.h"
-#import "GHZScanViewController.h"
-@interface GHZChatHomeViewController ()<UIScrollViewDelegate,GHZOutPutViewDelegate>
+#import "SubLBXScanViewController.h"
+#import <EMSDK.h>
+@interface GHZChatHomeViewController ()<UIScrollViewDelegate,GHZOutPutViewDelegate,EMContactManagerDelegate>
 /**  ScrollView */
 @property (nonatomic,strong)UIScrollView *contentView;
 /**  顶部选择器 */
@@ -38,11 +40,13 @@
 {
     [super viewWillAppear:animated];
     self.topMenuView.hidden = NO;
+    [[EMClient sharedClient].contactManager addDelegate:self delegateQueue:nil];
 }
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     self.topMenuView.hidden = YES;
+    [[EMClient sharedClient].contactManager removeDelegate:self];
 }
 - (void)setChildViewController
 {
@@ -95,29 +99,6 @@
 - (void)addFriendAction
 {
     [self.outputView pop];
-//    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"提示" message:@"添加好友" preferredStyle:(UIAlertControllerStyleAlert)];
-//    // 取消
-//    UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
-//        
-//    }];
-//    [controller addAction:cancleAction];
-//    // 添加
-//    UIAlertAction *doAction = [UIAlertAction actionWithTitle:@"添加" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
-//        NSString *friend = controller.textFields[0].text;
-//       EMError *error = [[EMClient sharedClient].contactManager addContact:friend message:@"请求加你为好友" ];
-//        if (!error) {
-//             NSLog(@"发送好友请求成功");
-//        }else
-//        {
-//            NSLog(@"发送好友请求失败%u",error.code);
-//        } 
-//    }];
-//    [controller addAction:doAction];
-//    // textfield
-//    [controller addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-//        
-//    }];
-//    [self presentViewController:controller animated:YES completion:nil];
 }
 #pragma mark - <UIScrollViewDelegate>
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
@@ -153,18 +134,43 @@
         
     }else if (indexPath.row == 1)
     {
-        
+        GHZAddFriendViewController *addFriendVC =[[GHZAddFriendViewController alloc] init];
+        [self.navigationController pushViewController:addFriendVC animated:YES];
     }
     else if (indexPath.row == 2)
     {
-        GHZScanViewController *scanVC = [[GHZScanViewController alloc] init];
-        [self.navigationController pushViewController:scanVC animated:YES];
+        [self setStyle];
     }
     else if (indexPath.row == 3)
     {
         
     }
 }
+#pragma mark - 二维码
+- (void)setStyle
+{
+    //设置扫码区域参数
+    LBXScanViewStyle *style = [[LBXScanViewStyle alloc]init];
+    style.centerUpOffset = 44;
+    style.photoframeAngleStyle = LBXScanViewPhotoframeAngleStyle_Inner;
+    style.photoframeLineW = 3;
+    style.photoframeAngleW = 18;
+    style.photoframeAngleH = 18;
+    style.isNeedShowRetangle = NO;
+    
+    style.anmiationStyle = LBXScanViewAnimationStyle_LineMove;
+    
+    //qq里面的线条图片
+    UIImage *imgLine = [UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_light_green"];
+    
+    style.animationImage = imgLine;
+    //SubLBXScanViewController继承自LBXScanViewController
+    //添加一些扫码或相册结果处理
+    SubLBXScanViewController *vc = [SubLBXScanViewController new];
+    vc.style = style;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 #pragma mark - 懒加载
 - (GHZOutPutView *)outputView
 {
@@ -181,5 +187,47 @@
         };
     }
     return _outputView;
+}
+#pragma mark - EMContactManagerDelegate
+- (void)didReceiveFriendInvitationFromUsername:(NSString *)aUsername
+                                       message:(NSString *)aMessage
+{
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"%@%@",aUsername,aMessage]preferredStyle:(UIAlertControllerStyleAlert)];
+    UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
+        EMError *error = [[EMClient sharedClient].contactManager declineInvitationForUsername:aUsername];
+        if (!error) {
+            NSLog(@"发送拒绝成功");
+        }
+    }];
+    [controller addAction:cancleAction];
+    UIAlertAction *doAction = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        EMError *error = [[EMClient sharedClient].contactManager acceptInvitationForUsername:aUsername];
+        if (!error) {
+            NSLog(@"发送同意成功");
+            [[NSNotificationCenter defaultCenter] postNotificationName:kNotifyAgreeFriend object:nil];
+        }
+    }];
+    [controller addAction:doAction];
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+- (void)didReceiveAgreedFromUsername:(NSString *)aUsername
+{
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"%@同意了你的好友请求",aUsername]preferredStyle:(UIAlertControllerStyleAlert)];
+    UIAlertAction *doAction = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kNotifyReceiveFriendAgree object:nil];
+    }];
+    [controller addAction:doAction];
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+
+- (void)didReceiveDeclinedFromUsername:(NSString *)aUsername
+{
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"%@拒绝了你的好友请求",aUsername]preferredStyle:(UIAlertControllerStyleAlert)];
+    UIAlertAction *doAction = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+    }];
+    [controller addAction:doAction];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 @end

@@ -11,6 +11,7 @@
 #import "GHZChatHomeViewController.h"
 #import "GHZNavViewController.h"
 #import "GHZLoginViewController.h"
+#import "GHZFileDataHandle.h"
 #import <EMSDK.h>
 @interface GHZProfileViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
@@ -59,19 +60,20 @@
     
     switch (indexPath.row) {
         case 0:
-            cell.textLabel.text = @"退出";
+            cell.textLabel.text = @"";
             break;
         case 1:
-            
+            cell.textLabel.text = @"收藏";
             break;
         case 2:
-            
+            cell.textLabel.text = @"清除缓存";
+            cell.accessoryView = [self createClearLabel];
             break;
         case 3:
-            
+            cell.textLabel.text = @"";
             break;
         case 4:
-            
+            cell.textLabel.text = @"退出";
             break;
     }
 
@@ -104,11 +106,20 @@
     }
     else if (indexPath.row == 1)
     {
-        
+
     }
     else if (indexPath.row == 2)
     {
-        
+        UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"提示" message:@"确定要清除缓存吗?" preferredStyle:(UIAlertControllerStyleAlert)];
+        UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
+        }];
+        [controller addAction:cancleAction];
+        UIAlertAction *doAction = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+            [[GHZFileDataHandle shareInstance] clearDisk];
+            [self.tableView reloadData];
+        }];
+        [controller addAction:doAction];
+        [self presentViewController:controller animated:YES completion:nil];
     }
     else if (indexPath.row == 3)
     {
@@ -119,15 +130,26 @@
         
     }
 }
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 70;
+}
+#pragma mark - tools
+//创建缓存的label
+- (UILabel *)createClearLabel
+{
+    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 70, 30)];
+    label.textColor = [UIColor grayColor];
+    label.text = [NSString stringWithFormat:@"%.2lfM",[[GHZFileDataHandle shareInstance] getDiskSize]];
+    return label;
+}
 #pragma mark - 懒加载
 - (GHZProfileHeaderView *)headerView
-{
+{             __weak typeof(self)weakself = self;
     if (!_headerView) {
         _headerView = [GHZProfileHeaderView GHZ_viewFromXib];
         _headerView.chatAction = ^(UIButton *sender)
         {
-             __weak typeof(self)weakself = self;
           //跳到聊天界面
             GHZChatHomeViewController *chatHomeVC = [[GHZChatHomeViewController alloc] init];
             chatHomeVC.hidesBottomBarWhenPushed = YES;
