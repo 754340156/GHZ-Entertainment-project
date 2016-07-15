@@ -14,7 +14,7 @@
 
 
 @protocol GHZNewVideoViewDelegate <NSObject>
-- (void)clickWithbutton:(UIButton *)sender;
+- (void)clickWithbutton:(UIButton *)sender url:(NSString *)url;
 
 @end
 @interface GHZNewVideoView : UIView

@@ -27,6 +27,17 @@
 		C25239611D3665720046B246 /* NSString+GHZTime.m in Sources */ = {isa = PBXBuildFile; fileRef = C25239601D3665720046B246 /* NSString+GHZTime.m */; };
 		C2681EE91D332A83002FA23F /* GHZTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2681EE81D332A83002FA23F /* GHZTopicViewController.m */; };
 		C26821B71D34BCCA005EAF3D /* GHZTopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26821B61D34BCCA005EAF3D /* GHZTopicController.m */; };
+
+		C26821BC1D352A86005EAF3D /* GHZTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = C26821BB1D352A86005EAF3D /* GHZTopicPictureView.m */; };
+		C26821BE1D352AF6005EAF3D /* GHZTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26821BD1D352AF6005EAF3D /* GHZTopicPictureView.xib */; };
+		C2C6E3241D37391700B005E4 /* ImageResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C2C6E31E1D37391700B005E4 /* ImageResources.bundle */; settings = {ASSET_TAGS = (); }; };
+		C2C6E3251D37391700B005E4 /* XLSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C6E3211D37391700B005E4 /* XLSlider.m */; settings = {ASSET_TAGS = (); }; };
+		C2C6E3261D37391700B005E4 /* XLVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C6E3231D37391700B005E4 /* XLVideoPlayer.m */; settings = {ASSET_TAGS = (); }; };
+		C2C8600F1D34D9C400A59EEF /* GHZNewMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C8600E1D34D9C400A59EEF /* GHZNewMusicView.m */; settings = {ASSET_TAGS = (); }; };
+		C2C860111D34DA0F00A59EEF /* GHZNewMusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C860101D34DA0F00A59EEF /* GHZNewMusicView.xib */; settings = {ASSET_TAGS = (); }; };
+		C2C860141D35104200A59EEF /* GHZNewVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C860131D35104200A59EEF /* GHZNewVideoView.m */; settings = {ASSET_TAGS = (); }; };
+		C2C860161D35106A00A59EEF /* GHZNewVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C860151D35106A00A59EEF /* GHZNewVideoView.xib */; settings = {ASSET_TAGS = (); }; };
+
 		C2C6E3241D37391700B005E4 /* ImageResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C2C6E31E1D37391700B005E4 /* ImageResources.bundle */; };
 		C2C6E3251D37391700B005E4 /* XLSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C6E3211D37391700B005E4 /* XLSlider.m */; };
 		C2C6E3261D37391700B005E4 /* XLVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C6E3231D37391700B005E4 /* XLVideoPlayer.m */; };
@@ -34,6 +45,7 @@
 		C2C860111D34DA0F00A59EEF /* GHZNewMusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C860101D34DA0F00A59EEF /* GHZNewMusicView.xib */; };
 		C2C860141D35104200A59EEF /* GHZNewVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C860131D35104200A59EEF /* GHZNewVideoView.m */; };
 		C2C860161D35106A00A59EEF /* GHZNewVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C860151D35106A00A59EEF /* GHZNewVideoView.xib */; };
+
 		C2E5E1621D33CDC600409261 /* GHZShowpirtureController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E5E1601D33CDC600409261 /* GHZShowpirtureController.m */; };
 		C2E5E1631D33CDC600409261 /* GHZShowpirtureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E5E1611D33CDC600409261 /* GHZShowpirtureController.xib */; };
 		D628E8381D33478300624AEE /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C49CCD1D311CE00045731C /* VideoToolbox.framework */; };
@@ -1189,6 +1201,7 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+
 		C2173B3E1D387497006113F1 /* GHZTopicPictureView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1221,6 +1234,7 @@
 			path = GHZTopicVoiceView;
 			sourceTree = "<group>";
 		};
+
 		C25239591D3663350046B246 /* WMPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -1261,7 +1275,8 @@
 				D630073A1D2E67FE005A88B9 /* Other */,
 				D630073B1D2E67FE005A88B9 /* Tools */,
 			);
-			path = Classes;
+			name = Classes;
+			path = GHZxiangmuB/Classes;
 			sourceTree = "<group>";
 		};
 		D63007211D2E67FE005A88B9 /* Base */ = {
@@ -1619,6 +1634,7 @@
 		D686B3101D2DF27300648326 = {
 			isa = PBXGroup;
 			children = (
+				D63007201D2E67FE005A88B9 /* Classes */,
 				D686B31B1D2DF27300648326 /* GHZxiangmuB */,
 				D686B31A1D2DF27300648326 /* Products */,
 				6A368DFDEB8919DA8B912498 /* Pods */,
@@ -1637,7 +1653,6 @@
 		D686B31B1D2DF27300648326 /* GHZxiangmuB */ = {
 			isa = PBXGroup;
 			children = (
-				D63007201D2E67FE005A88B9 /* Classes */,
 				D686B31F1D2DF27300648326 /* AppDelegate.h */,
 				D686B3201D2DF27300648326 /* AppDelegate.m */,
 				D63007861D2E6EAB005A88B9 /* PCH.pch */,

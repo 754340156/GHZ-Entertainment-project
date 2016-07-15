@@ -65,7 +65,7 @@
         [self.Loding setProgress:progress animated:YES];
         self.Loding.progressLabel.text = [NSString stringWithFormat:@"%.0f%%",progress * 100];
         self.Loding.progressLabel.alpha = 0.5;
-
+        
            } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                self.Loding.hidden = YES;
                if (model.longPicture==NO) {
