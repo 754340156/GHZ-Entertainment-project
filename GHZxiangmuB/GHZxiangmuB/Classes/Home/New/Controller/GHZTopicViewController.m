@@ -244,6 +244,7 @@
 
 
 
+
 -(GHZNewVideoView *)v{
     if (!_v) {
         _v = [[GHZNewVideoView alloc] init];

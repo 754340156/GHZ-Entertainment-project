@@ -65,8 +65,8 @@
 
 - (IBAction)VideoButton:(UIButton *)sender {
     NSLog(@"1");
-    if (self.delegate && [self respondsToSelector:@selector(clickWithbutton:)]) {
-        [self.delegate clickWithbutton:sender];
+    if (self.delegate && [self respondsToSelector:@selector(clickWithbutton:url:)]) {
+        [self.delegate clickWithbutton:sender url:self.model.videouri];
     }
     
     
