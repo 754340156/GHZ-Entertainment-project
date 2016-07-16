@@ -1,161 +1,129 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GHZLoginViewController">
             <connections>
-                <outlet property="passwordLabel" destination="g7X-pM-mjC" id="JfB-np-eCG"/>
-                <outlet property="userNameLabel" destination="3Fx-NS-Rsm" id="xht-qI-uM6"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="passwordLabel" destination="kgl-LH-MpI" id="IAz-OW-EGz"/>
+                <outlet property="userNameLabel" destination="9Ho-vj-HkG" id="e4F-GA-Mca"/>
+                <outlet property="view" destination="iN0-l3-epB" id="VSh-mo-a51"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading_bg" translatesAutoresizingMaskIntoConstraints="NO" id="8DC-IK-zdX">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading_bg" translatesAutoresizingMaskIntoConstraints="NO" id="IjI-iW-UTB">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <animations/>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Fx-NS-Rsm" customClass="NarikoTextField">
-                    <rect key="frame" x="20" y="150" width="560" height="80"/>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="请输入用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Fx-NS-Rsm">
-                    <rect key="frame" x="20" y="200" width="560" height="30"/>
-                    <animations/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="80" id="soj-Cf-4p4"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gh0-UM-Iz5">
-                    <rect key="frame" x="250" y="400" width="100" height="33"/>
-                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="请输入密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g7X-pM-mjC">
-                    <rect key="frame" x="20" y="250" width="560" height="30"/>
-                    <animations/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="EJK-Wv-E2o"/>
-                    </constraints>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gh0-UM-Iz5">
-                    <rect key="frame" x="250" y="330" width="100" height="30"/>
-                    <animations/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="100" id="OIY-aH-s0q"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="登录">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="UXd-Mp-PHz"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSr-vI-vtt">
-                    <rect key="frame" x="447" y="360" width="73" height="33"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <rect key="frame" x="456" y="300" width="64" height="30"/>
-                    <animations/>
-                    <state key="normal" title="&gt;&gt;去注册">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="registAction:" destination="-1" eventType="touchUpInside" id="cg7-nx-mUw"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第三方登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpP-cT-d5X">
-                    <rect key="frame" x="258" y="503" width="85" height="21"/>
-                    <rect key="frame" x="258" y="410" width="85" height="21"/>
-                    <animations/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第三方登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b88-R0-2FM">
+                    <rect key="frame" x="255" y="504" width="90" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sf2-HH-hfA">
-                    <rect key="frame" x="282" y="544" width="36" height="36"/>
-                    <rect key="frame" x="282" y="451" width="36" height="36"/>
-                    <animations/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkB-XI-O3k">
+                    <rect key="frame" x="60" y="546" width="40" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="36" id="3AQ-Uj-V13"/>
-                        <constraint firstAttribute="height" constant="36" id="zct-B8-MOX"/>
-                    </constraints>
-                    <state key="normal" backgroundImage="login_new_weixin"/>
-                    <connections>
-                        <action selector="weixinLoginAction:" destination="-1" eventType="touchUpInside" id="YQk-ry-f6c"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbr-6X-PPl">
-                    <rect key="frame" x="166" y="544" width="36" height="36"/>
-                    <rect key="frame" x="166" y="451" width="36" height="36"/>
-                    <animations/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="36" id="dbD-NS-Yp8"/>
-                        <constraint firstAttribute="height" constant="36" id="ixy-Iw-HkW"/>
+                        <constraint firstAttribute="width" constant="40" id="3da-9y-cAL"/>
+                        <constraint firstAttribute="height" constant="40" id="bMQ-Mf-LVB"/>
                     </constraints>
                     <state key="normal" backgroundImage="login_new_weibo"/>
                     <connections>
-                        <action selector="weiboLoginAction:" destination="-1" eventType="touchUpInside" id="dBB-YR-Im1"/>
+                        <action selector="weiboLoginAction:" destination="-1" eventType="touchUpInside" id="I2s-ko-sYL"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsz-qE-dee">
-                    <rect key="frame" x="398" y="544" width="36" height="36"/>
-                    <rect key="frame" x="398" y="451" width="36" height="36"/>
-                    <animations/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXl-UC-QrW">
+                    <rect key="frame" x="280" y="546" width="40" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="36" id="64O-Zw-Wji"/>
-                        <constraint firstAttribute="width" constant="36" id="R8T-YB-MMC"/>
+                        <constraint firstAttribute="width" constant="40" id="jKs-8Q-BnW"/>
+                        <constraint firstAttribute="height" constant="40" id="yff-ki-3xf"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="login_new_weixin"/>
+                    <connections>
+                        <action selector="weixinLoginAction:" destination="-1" eventType="touchUpInside" id="fxq-1h-wOS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvG-Lt-WPJ">
+                    <rect key="frame" x="500" y="546" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="1VM-4x-c5k"/>
+                        <constraint firstAttribute="height" constant="40" id="652-6f-MgR"/>
                     </constraints>
                     <state key="normal" backgroundImage="login_new_qq"/>
                     <connections>
-                        <action selector="QQLgoinAction:" destination="-1" eventType="touchUpInside" id="BDo-1v-Ln6"/>
+                        <action selector="QQLgoinAction:" destination="-1" eventType="touchUpInside" id="h5w-kt-tVz"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g7X-pM-mjC" customClass="NarikoTextField">
-                    <rect key="frame" x="20" y="250" width="560" height="80"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXs-Ze-mtd">
+                    <rect key="frame" x="200" y="400" width="200" height="34"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="80" id="EJK-Wv-E2o"/>
+                        <constraint firstAttribute="width" constant="200" id="nTb-Bn-ypS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="登录">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="Zvb-iu-VbK"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ho-vj-HkG" customClass="NarikoTextField">
+                    <rect key="frame" x="20" y="150" width="560" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="O8d-ul-ohN"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                    <textInputTraits key="textInputTraits"/>
                 </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kgl-LH-MpI" customClass="NarikoTextField">
+                    <rect key="frame" x="20" y="250" width="560" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="F7o-I4-Vtj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIn-ol-Ch0">
+                    <rect key="frame" x="452" y="360" width="88" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="&gt;&gt;&gt;去注册">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="registAction:" destination="-1" eventType="touchUpInside" id="2UI-y1-qrU"/>
+                    </connections>
+                </button>
             </subviews>
-            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="8DC-IK-zdX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3C6-Ss-BPN"/>
-                <constraint firstItem="g7X-pM-mjC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="4wK-8p-8zB"/>
-                <constraint firstItem="Xsz-qE-dee" firstAttribute="top" secondItem="Sf2-HH-hfA" secondAttribute="top" id="5ke-W2-moa"/>
-                <constraint firstAttribute="trailing" secondItem="DSr-vI-vtt" secondAttribute="trailing" constant="80" id="7dP-5g-9KH"/>
-                <constraint firstAttribute="trailing" secondItem="8DC-IK-zdX" secondAttribute="trailing" id="9Q9-C3-Wuo"/>
-                <constraint firstItem="FpP-cT-d5X" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GQa-mH-8he"/>
-                <constraint firstAttribute="bottom" secondItem="8DC-IK-zdX" secondAttribute="bottom" id="M6V-5s-37x"/>
-                <constraint firstItem="3Fx-NS-Rsm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="T9r-ii-EEB"/>
-                <constraint firstAttribute="trailing" secondItem="3Fx-NS-Rsm" secondAttribute="trailing" constant="20" id="Ye6-dQ-ILA"/>
-                <constraint firstItem="Sf2-HH-hfA" firstAttribute="top" secondItem="FpP-cT-d5X" secondAttribute="bottom" constant="20" id="dLz-4S-DcD"/>
-                <constraint firstItem="Sbr-6X-PPl" firstAttribute="top" secondItem="Sf2-HH-hfA" secondAttribute="top" id="dNE-ae-ofh"/>
-                <constraint firstItem="DSr-vI-vtt" firstAttribute="top" secondItem="g7X-pM-mjC" secondAttribute="bottom" constant="30" id="dOy-iT-RjX"/>
-                <constraint firstItem="g7X-pM-mjC" firstAttribute="top" secondItem="3Fx-NS-Rsm" secondAttribute="bottom" constant="20" id="gk8-zc-hIO"/>
-                <constraint firstItem="FpP-cT-d5X" firstAttribute="top" secondItem="gh0-UM-Iz5" secondAttribute="bottom" constant="70" id="kk1-J7-CRC"/>
-                <constraint firstAttribute="trailing" secondItem="g7X-pM-mjC" secondAttribute="trailing" constant="20" id="lHY-nJ-HUW"/>
-                <constraint firstItem="gh0-UM-Iz5" firstAttribute="top" secondItem="g7X-pM-mjC" secondAttribute="bottom" constant="70" id="mCn-1g-EJd"/>
-                <constraint firstItem="8DC-IK-zdX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nBc-w2-eak"/>
-                <constraint firstItem="gh0-UM-Iz5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nx2-S8-pBS"/>
-                <constraint firstItem="3Fx-NS-Rsm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="pXV-uH-BBf"/>
-                <constraint firstItem="Xsz-qE-dee" firstAttribute="leading" secondItem="Sf2-HH-hfA" secondAttribute="trailing" constant="80" id="tDc-hD-2Pz"/>
-                <constraint firstItem="Sf2-HH-hfA" firstAttribute="leading" secondItem="Sbr-6X-PPl" secondAttribute="trailing" constant="80" id="uN3-YC-THr"/>
-                <constraint firstItem="Sf2-HH-hfA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yde-rp-qqA"/>
+                <constraint firstItem="b88-R0-2FM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="0Wz-Fr-gHx"/>
+                <constraint firstItem="kgl-LH-MpI" firstAttribute="top" secondItem="9Ho-vj-HkG" secondAttribute="bottom" constant="20" id="0X5-sE-XRT"/>
+                <constraint firstItem="lXl-UC-QrW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3UP-Re-uEy"/>
+                <constraint firstItem="kgl-LH-MpI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="3rI-tP-2qR"/>
+                <constraint firstItem="dvG-Lt-WPJ" firstAttribute="top" secondItem="lXl-UC-QrW" secondAttribute="top" id="5Nx-r7-Idg"/>
+                <constraint firstItem="QIn-ol-Ch0" firstAttribute="top" secondItem="kgl-LH-MpI" secondAttribute="bottom" constant="30" id="6k8-T9-SK5"/>
+                <constraint firstItem="IjI-iW-UTB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IR9-j6-smU"/>
+                <constraint firstAttribute="trailing" secondItem="9Ho-vj-HkG" secondAttribute="trailing" constant="20" id="Iim-4u-lUf"/>
+                <constraint firstItem="IjI-iW-UTB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JVt-Hg-4Fq"/>
+                <constraint firstAttribute="bottom" secondItem="IjI-iW-UTB" secondAttribute="bottom" id="Mrq-V1-vdS"/>
+                <constraint firstAttribute="trailing" secondItem="IjI-iW-UTB" secondAttribute="trailing" id="TpX-KL-Ore"/>
+                <constraint firstItem="b88-R0-2FM" firstAttribute="top" secondItem="NXs-Ze-mtd" secondAttribute="bottom" constant="70" id="VkU-Kx-DD6"/>
+                <constraint firstAttribute="trailing" secondItem="QIn-ol-Ch0" secondAttribute="trailing" constant="60" id="VtF-bR-Mv1"/>
+                <constraint firstItem="NXs-Ze-mtd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XAD-7Y-awC"/>
+                <constraint firstItem="9Ho-vj-HkG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="YGR-UE-dw6"/>
+                <constraint firstItem="NXs-Ze-mtd" firstAttribute="top" secondItem="kgl-LH-MpI" secondAttribute="bottom" constant="70" id="dcS-Z6-8IY"/>
+                <constraint firstItem="9Ho-vj-HkG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="150" id="gfG-I5-cJF"/>
+                <constraint firstAttribute="trailing" secondItem="dvG-Lt-WPJ" secondAttribute="trailing" constant="60" id="iFW-Ri-mgj"/>
+                <constraint firstAttribute="trailing" secondItem="kgl-LH-MpI" secondAttribute="trailing" constant="20" id="oeE-cc-yr0"/>
+                <constraint firstItem="RkB-XI-O3k" firstAttribute="top" secondItem="lXl-UC-QrW" secondAttribute="top" id="tis-zP-Sv1"/>
+                <constraint firstItem="lXl-UC-QrW" firstAttribute="top" secondItem="b88-R0-2FM" secondAttribute="bottom" constant="20" id="vZF-pq-L5L"/>
+                <constraint firstItem="RkB-XI-O3k" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="60" id="ycc-kb-Lq1"/>
             </constraints>
-            <point key="canvasLocation" x="518" y="296"/>
         </view>
     </objects>
     <resources>

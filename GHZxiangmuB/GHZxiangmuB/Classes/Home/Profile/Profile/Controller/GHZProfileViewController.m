@@ -91,18 +91,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
-        [[EMClient sharedClient] asyncLogout:YES success:^{
-            NSLog(@"退出成功");
-            dispatch_async(dispatch_get_main_queue(), ^{
-                //跳到主界面
-                self.view.window.backgroundColor = [UIColor grayColor];
-                GHZNavViewController *navVC = [[GHZNavViewController alloc] initWithRootViewController:[[GHZLoginViewController alloc]init]];
-                self.view.window.rootViewController = navVC;
-                [self.view.window makeKeyAndVisible];
-            });
-        } failure:^(EMError *aError) {
-            NSLog(@"退出失败");
-        }];
+
     }
     else if (indexPath.row == 1)
     {
@@ -127,7 +116,18 @@
     }
     else if (indexPath.row == 4)
     {
-        
+        [[EMClient sharedClient] asyncLogout:YES success:^{
+            NSLog(@"退出成功");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //跳到主界面
+                self.view.window.backgroundColor = [UIColor grayColor];
+                GHZNavViewController *navVC = [[GHZNavViewController alloc] initWithRootViewController:[[GHZLoginViewController alloc]init]];
+                self.view.window.rootViewController = navVC;
+                [self.view.window makeKeyAndVisible];
+            });
+        } failure:^(EMError *aError) {
+            NSLog(@"退出失败");
+        }];
     }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

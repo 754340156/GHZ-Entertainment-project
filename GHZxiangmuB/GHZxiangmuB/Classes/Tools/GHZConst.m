@@ -24,4 +24,6 @@ CGFloat const GHZCelltoolH = 44;
 CGFloat const GHZCellPictureMaxH = 1000;
 /**图片高度超出规定的参数*/
 CGFloat const GHZCellPictureBreakH = 300;
-CGFloat const GHZCellTextX = 3;
+
+//CGFloat const GHZCellTextX = 3;
+
