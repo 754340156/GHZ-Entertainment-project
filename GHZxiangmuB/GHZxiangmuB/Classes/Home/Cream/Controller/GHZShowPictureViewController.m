@@ -11,8 +11,8 @@
 #import "GHZTopic.h"
 #import <MBProgressHUD.h>
 #import "GHZCreamProgressView.h"
-
-@interface GHZShowPictureViewController ()
+#import "UMSocial.h"
+@interface GHZShowPictureViewController ()<UMSocialUIDelegate,UMSocialDataDelegate>
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet GHZCreamProgressView *progressView;
@@ -84,6 +84,35 @@
 }
 
 - (IBAction)shareButton:(id)sender {
+    
+    NSString *url = [[NSString alloc] init];
+    if (_topic.type == Video ) {
+        url = _topic.videouri;
+    }else if (_topic.type == Music){
+        
+        url = _topic.voiceuri;
+    }else if(_topic.type == Picture){
+        
+        url = _topic.large_image;
+    }
+
+    if (!(_topic.type == Word)) {
+        [[UMSocialData defaultData].urlResource setResourceType:UMSocialUrlResourceTypeImage url:_topic.large_image];
+        
+    }
+    
+    [UMSocialData defaultData].extConfig.title = @"分享 title";
+    [UMSocialData defaultData].extConfig.qqData.url = @"www.baidu.com";
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:@"57490f1ee0f55a75d5002f3f"
+                                      shareText:[NSString stringWithFormat:@"%@%@",_topic.text, url]
+                                     shareImage:[UIImage imageNamed:@"icon"]
+                                shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToQQ,UMShareToQzone]
+                                       delegate:self];
+
+    
+    
+    
 }
 
 
