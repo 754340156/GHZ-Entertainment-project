@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7ED621499AB0A47C38A4912E /* libPods-GHZxiangmuB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA80B1A43D034F7E977A430 /* libPods-GHZxiangmuB.a */; };
-		C26AF8C01D3A0F5C0037415B /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C26AF8BF1D3A0F5C0037415B /* IJKMediaFramework.framework */; };
+		C22577211D39D6A8006D5B28 /* GHZCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C22577201D39D6A8006D5B28 /* GHZCollectionView.m */; };
+		C22577241D39E75B006D5B28 /* GHZCollctionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22577231D39E75B006D5B28 /* GHZCollctionListViewController.m */; };
 		D628E8381D33478300624AEE /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C49CCD1D311CE00045731C /* VideoToolbox.framework */; };
 		D63C47DF1D314C1A00BB5A46 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C49CCB1D311B790045731C /* libz.tbd */; };
 		D67091631D39C48A004A80B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708DC31D39C489004A80B4 /* AppDelegate.m */; };
@@ -394,8 +395,12 @@
 /* Begin PBXFileReference section */
 		2C7C3BA1E080C169FD152043 /* Pods-GHZxiangmuB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHZxiangmuB.release.xcconfig"; path = "Pods/Target Support Files/Pods-GHZxiangmuB/Pods-GHZxiangmuB.release.xcconfig"; sourceTree = "<group>"; };
 		9CA80B1A43D034F7E977A430 /* libPods-GHZxiangmuB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GHZxiangmuB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C22577191D39CBF7006D5B28 /* GHZxiangmuB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHZxiangmuB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C225771F1D39D6A8006D5B28 /* GHZCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCollectionView.h; sourceTree = "<group>"; };
+		C22577201D39D6A8006D5B28 /* GHZCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCollectionView.m; sourceTree = "<group>"; };
+		C22577221D39E75B006D5B28 /* GHZCollctionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCollctionListViewController.h; sourceTree = "<group>"; };
+		C22577231D39E75B006D5B28 /* GHZCollctionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCollctionListViewController.m; sourceTree = "<group>"; };
 		C26AF8BE1D3A0F460037415B /* GHZxiangmuB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHZxiangmuB.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C26AF8BF1D3A0F5C0037415B /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		D6708DC21D39C489004A80B4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6708DC31D39C489004A80B4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D6708DC41D39C489004A80B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1164,7 +1169,6 @@
 				D628E8381D33478300624AEE /* VideoToolbox.framework in Frameworks */,
 				D63C47DF1D314C1A00BB5A46 /* libz.tbd in Frameworks */,
 				D67091E81D39C48A004A80B4 /* libWeChatSDK.a in Frameworks */,
-				C26AF8C01D3A0F5C0037415B /* IJKMediaFramework.framework in Frameworks */,
 				7ED621499AB0A47C38A4912E /* libPods-GHZxiangmuB.a in Frameworks */,
 				D67091E71D39C48A004A80B4 /* libSocialWechat.a in Frameworks */,
 			);
@@ -1893,6 +1897,10 @@
 			children = (
 				D6708EA41D39C489004A80B4 /* GHZProfileViewController.h */,
 				D6708EA51D39C489004A80B4 /* GHZProfileViewController.m */,
+				C225771F1D39D6A8006D5B28 /* GHZCollectionView.h */,
+				C22577201D39D6A8006D5B28 /* GHZCollectionView.m */,
+				C22577221D39E75B006D5B28 /* GHZCollctionListViewController.h */,
+				C22577231D39E75B006D5B28 /* GHZCollctionListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2912,11 +2920,11 @@
 		D686B3101D2DF27300648326 = {
 			isa = PBXGroup;
 			children = (
-				C26AF8BF1D3A0F5C0037415B /* IJKMediaFramework.framework */,
 				D6708DC11D39C489004A80B4 /* GHZxiangmuB */,
 				6A368DFDEB8919DA8B912498 /* Pods */,
 				5A4F9C47C2CCB30AA9127C6E /* Frameworks */,
 				C26AF8BE1D3A0F460037415B /* GHZxiangmuB.app */,
+				C22577191D39CBF7006D5B28 /* GHZxiangmuB.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2940,7 +2948,7 @@
 			);
 			name = GHZxiangmuB;
 			productName = GHZxiangmuB;
-			productReference = C26AF8BE1D3A0F460037415B /* GHZxiangmuB.app */;
+			productReference = C22577191D39CBF7006D5B28 /* GHZxiangmuB.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -3129,6 +3137,7 @@
 				D670919D1D39C48A004A80B4 /* GHZShowEndView.m in Sources */,
 				D67091981D39C48A004A80B4 /* GHZLiveNewViewController.m in Sources */,
 				D67092B71D39C48A004A80B4 /* ZXQRCodeFinderPattern.m in Sources */,
+				C22577211D39D6A8006D5B28 /* GHZCollectionView.m in Sources */,
 				D67092471D39C48A004A80B4 /* ZXDataMatrixBase256Encoder.m in Sources */,
 				D670923F1D39C48A004A80B4 /* ZXRGBLuminanceSource.m in Sources */,
 				D670922D1D39C48A004A80B4 /* ZXGlobalHistogramBinarizer.m in Sources */,
@@ -3162,6 +3171,7 @@
 				D670922E1D39C48A004A80B4 /* ZXGridSampler.m in Sources */,
 				D670929F1D39C48A004A80B4 /* ZXPDF417DetectorResult.m in Sources */,
 				D67092841D39C48A004A80B4 /* ZXITFWriter.m in Sources */,
+				C22577241D39E75B006D5B28 /* GHZCollctionListViewController.m in Sources */,
 				D67092C81D39C48A004A80B4 /* CoreLaunchLite.m in Sources */,
 				D67091701D39C48A004A80B4 /* UIImage+Extension.m in Sources */,
 				D67092BD1D39C48A004A80B4 /* ZXQRCodeMaskUtil.m in Sources */,
