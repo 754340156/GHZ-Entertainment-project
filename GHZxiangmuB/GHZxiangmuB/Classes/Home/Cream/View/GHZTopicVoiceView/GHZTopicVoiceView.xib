@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -36,7 +36,7 @@
                     </constraints>
                     <state key="normal" image="playButtonPlay" backgroundImage="playButton"/>
                     <connections>
-                        <action selector="voiceClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ctf-O2-JyF"/>
+                        <action selector="Playing:" destination="iN0-l3-epB" eventType="touchUpInside" id="5yF-td-ikq"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0q-jf-63o" userLabel="播放次数">
@@ -66,6 +66,7 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="Playbtn" destination="uFJ-9E-qXf" id="Dut-uE-TgI"/>
                 <outlet property="imageView" destination="Mh4-iM-z6i" id="AtC-45-Wlg"/>
                 <outlet property="playCountLabel" destination="C0q-jf-63o" id="dHq-dS-12X"/>
                 <outlet property="voicetimeLabel" destination="vne-7P-Zdk" id="myG-FA-2wt"/>

@@ -10,15 +10,16 @@
 #import "GHZTopic.h"
 #import <UIImageView+WebCache.h>
 #import "GHZShowPictureViewController.h"
-#import <AVFoundation/AVFoundation.h>
-
+#import "GHZNewMusicController.h"
 @interface GHZTopicVoiceView ()
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UILabel *voicetimeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *playCountLabel;
 
-@property (nonatomic, strong) AVAudioPlayer *player;
+@property (weak, nonatomic) IBOutlet UIButton *Playbtn;
+@property (nonatomic,strong)NSMutableArray *arr;
+@property (nonatomic,strong)GHZNewMusicController *musicPlayer;
 @end
 
 
@@ -26,54 +27,49 @@
 @implementation GHZTopicVoiceView
 
 
-+ (instancetype)voiceView{
-
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
-
++(instancetype)voiceView{
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].lastObject;
+    
 }
-
-
-- (void)awakeFromNib{
-    
+-(void)awakeFromNib{
     self.autoresizingMask = UIViewAutoresizingNone;
-    
-    
-    //给图片添加监听器
     self.imageView.userInteractionEnabled = YES;
     [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPicture)]];
 }
 
+
 - (void)showPicture{
     GHZShowPictureViewController *showPicture = [[GHZShowPictureViewController alloc] init];
-    showPicture.topic = self.topic;
+    showPicture.topic = self.model;
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:showPicture animated:YES completion:nil ];
     
     
 }
 
-- (void)setTopic:(GHZTopic *)topic{
-    _topic = topic;
+-(void)setModel:(GHZTopic *)model{
+    _model =  model;
     //图片
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image]];
-    //播放次数
-    self.playCountLabel.text = [NSString stringWithFormat:@"%zd播放",topic.playcount];
-    //时长
-    NSInteger minute = topic.voicetime / 60;
-    NSInteger second = topic.voicetime % 60;
-    self.voicetimeLabel.text = [NSString stringWithFormat:@"%02zd:%02zd",minute,second];
-
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.large_image]];
+    //播放资源
+    self.playCountLabel.text = [NSString stringWithFormat:@"%ld播放",(long)model.playcount];
+    NSInteger f = model.voicetime/60;
+    NSInteger m = model.voicetime%60;
+    self.voicetimeLabel.text = [NSString stringWithFormat:@"%.02ld:%.02ld",(long)f,(long)m];
 }
-- (IBAction)voiceClick:(id)sender {
-    
-    NSURL *url = [NSURL URLWithString:_topic.voiceuri];
-    
-    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-    
-    //[self.player prepareToPlay];
-    
-    [ self.player play];
-    
-    
+- (IBAction)Playing:(id)sender {
+    self.Playbtn.hidden = YES;
+    self.musicPlayer = [[GHZNewMusicController alloc] initWithNibName:@"GHZNewMusicController" bundle:nil];
+    self.musicPlayer.url = self.model.voiceuri;
+    self.musicPlayer.totalTime = self.model.voicetime;
+    self.musicPlayer.view.GHZ_width = self.imageView.GHZ_width;
+    self.musicPlayer.view.GHZ_y = self.imageView.GHZ_height - self.musicPlayer.view.GHZ_height;
+    [self addSubview:self.musicPlayer.view];
+}
+-(void)reset{
+    [self.musicPlayer dismiss];
+    [self.musicPlayer.view removeFromSuperview];
+    self.musicPlayer = nil;
+    self.Playbtn.hidden = NO;
 }
 
 @end

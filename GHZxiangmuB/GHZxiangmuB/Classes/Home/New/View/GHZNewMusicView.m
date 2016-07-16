@@ -10,9 +10,7 @@
 #import "GHZTopicModel.h"
 #import "UIImageView+WebCache.h"
 #import "GHZShowpirtureController.h"
-#import <AVFoundation/AVFoundation.h>
 #import "GHZNewMusicController.h"
-#import <MediaPlayer/MediaPlayer.h>
 @interface GHZNewMusicView ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *playcountLabel;
@@ -34,7 +32,7 @@
 }
 -(void)awakeFromNib{
     self.autoresizingMask = UIViewAutoresizingNone;
-    self.imageView.userInteractionEnabled = YES;
+    self.imageView.userInteractionEnabled = NO;
     [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(ShowImage)]];
 }
 -(void)ShowImage{
@@ -49,17 +47,16 @@
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.bigImage]];
     //播放资源
     self.playcountLabel.text = [NSString stringWithFormat:@"%ld播放",(long)model.playcount];
-//    NSInteger str = [model.voicetime intValue];
+
     NSInteger f = model.voicetime/60;
     NSInteger m = model.voicetime%60;
     self.voicelengthLabel.text = [NSString stringWithFormat:@"%.02ld:%.02ld",(long)f,(long)m];
 }
 - (IBAction)Playing:(id)sender {
     self.Playbtn.hidden = YES;
-    self.musicPlayer = [GHZNewMusicController sharinit];
+    self.musicPlayer = [[GHZNewMusicController alloc] initWithNibName:@"GHZNewMusicController" bundle:nil];
     self.musicPlayer.url = self.model.voiceuri;
     self.musicPlayer.totalTime = self.model.voicetime;
-    NSLog(@"%ld",(long)self.model.voicetime);
     self.musicPlayer.view.GHZ_width = self.imageView.GHZ_width;
     self.musicPlayer.view.GHZ_y = self.imageView.GHZ_height - self.musicPlayer.view.GHZ_height;
     [self addSubview:self.musicPlayer.view];

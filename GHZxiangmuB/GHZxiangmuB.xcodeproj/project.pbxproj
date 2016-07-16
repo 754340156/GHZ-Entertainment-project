@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7ED621499AB0A47C38A4912E /* libPods-GHZxiangmuB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA80B1A43D034F7E977A430 /* libPods-GHZxiangmuB.a */; };
-		C22577211D39D6A8006D5B28 /* GHZCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C22577201D39D6A8006D5B28 /* GHZCollectionView.m */; settings = {ASSET_TAGS = (); }; };
-		C22577241D39E75B006D5B28 /* GHZCollctionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22577231D39E75B006D5B28 /* GHZCollctionListViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C22577291D3A0EF5006D5B28 /* GHZNewCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C22577281D3A0EF5006D5B28 /* GHZNewCollectionView.m */; settings = {ASSET_TAGS = (); }; };
+		C22577211D39D6A8006D5B28 /* GHZCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C22577201D39D6A8006D5B28 /* GHZCollectionView.m */; };
+		C22577241D39E75B006D5B28 /* GHZCollctionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22577231D39E75B006D5B28 /* GHZCollctionListViewController.m */; };
+		C22577291D3A0EF5006D5B28 /* GHZNewCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C22577281D3A0EF5006D5B28 /* GHZNewCollectionView.m */; };
 		D628E8381D33478300624AEE /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C49CCD1D311CE00045731C /* VideoToolbox.framework */; };
 		D63C47DF1D314C1A00BB5A46 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C49CCB1D311B790045731C /* libz.tbd */; };
 		D67091631D39C48A004A80B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708DC31D39C489004A80B4 /* AppDelegate.m */; };
@@ -31,8 +31,6 @@
 		D67091721D39C48A004A80B4 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708DE31D39C489004A80B4 /* UIView+Extension.m */; };
 		D67091731D39C48A004A80B4 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708DE51D39C489004A80B4 /* UIViewController+Extension.m */; };
 		D67091741D39C48A004A80B4 /* GHZCreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708DEA1D39C489004A80B4 /* GHZCreamViewController.m */; };
-		D67091751D39C48A004A80B4 /* GHZShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708DEC1D39C489004A80B4 /* GHZShowPictureViewController.m */; };
-		D67091761D39C48A004A80B4 /* GHZShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6708DED1D39C489004A80B4 /* GHZShowPictureViewController.xib */; };
 		D67091771D39C48A004A80B4 /* GHZTopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708DEF1D39C489004A80B4 /* GHZTopicController.m */; };
 		D67091781D39C48A004A80B4 /* GHZTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708DF21D39C489004A80B4 /* GHZTopic.m */; };
 		D67091791D39C48A004A80B4 /* GHZTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708DF51D39C489004A80B4 /* GHZTopicCell.m */; };
@@ -40,10 +38,6 @@
 		D670917B1D39C48A004A80B4 /* GHZCreamProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708DF91D39C489004A80B4 /* GHZCreamProgressView.m */; };
 		D670917C1D39C48A004A80B4 /* GHZTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708DFB1D39C489004A80B4 /* GHZTopicPictureView.m */; };
 		D670917D1D39C48A004A80B4 /* GHZTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6708DFC1D39C489004A80B4 /* GHZTopicPictureView.xib */; };
-		D670917E1D39C48A004A80B4 /* GHZTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708DFF1D39C489004A80B4 /* GHZTopicVideoView.m */; };
-		D670917F1D39C48A004A80B4 /* GHZTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6708E001D39C489004A80B4 /* GHZTopicVideoView.xib */; };
-		D67091801D39C48A004A80B4 /* GHZTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708E031D39C489004A80B4 /* GHZTopicVoiceView.m */; };
-		D67091811D39C48A004A80B4 /* GHZTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6708E041D39C489004A80B4 /* GHZTopicVoiceView.xib */; };
 		D67091821D39C48A004A80B4 /* GHZCareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708E091D39C489004A80B4 /* GHZCareViewController.m */; };
 		D67091831D39C48A004A80B4 /* GHZCareHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708E0D1D39C489004A80B4 /* GHZCareHeaderView.m */; };
 		D67091841D39C48A004A80B4 /* GHZCareHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6708E0E1D39C489004A80B4 /* GHZCareHeaderView.xib */; };
@@ -81,19 +75,13 @@
 		D67091A51D39C48A004A80B4 /* GHZRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708E5B1D39C489004A80B4 /* GHZRegistViewController.m */; };
 		D67091A61D39C48A004A80B4 /* GHZRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6708E5C1D39C489004A80B4 /* GHZRegistViewController.xib */; };
 		D67091A71D39C48A004A80B4 /* GHZLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6708E5D1D39C489004A80B4 /* GHZLoginViewController.xib */; };
-		D67091A81D39C48A004A80B4 /* GHZNewMusicController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708E611D39C489004A80B4 /* GHZNewMusicController.m */; };
-		D67091A91D39C48A004A80B4 /* GHZNewMusicController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6708E621D39C489004A80B4 /* GHZNewMusicController.xib */; };
 		D67091AA1D39C48A004A80B4 /* GHZNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708E641D39C489004A80B4 /* GHZNewViewController.m */; };
-		D67091AB1D39C48A004A80B4 /* GHZShowpirtureController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708E661D39C489004A80B4 /* GHZShowpirtureController.m */; };
-		D67091AC1D39C48A004A80B4 /* GHZShowpirtureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6708E671D39C489004A80B4 /* GHZShowpirtureController.xib */; };
 		D67091AD1D39C48A004A80B4 /* GHZTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708E691D39C489004A80B4 /* GHZTopicViewController.m */; };
 		D67091AE1D39C48A004A80B4 /* GHZTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708E6C1D39C489004A80B4 /* GHZTopicModel.m */; };
 		D67091AF1D39C48A004A80B4 /* GHZNewMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708E6F1D39C489004A80B4 /* GHZNewMusicView.m */; };
 		D67091B01D39C48A004A80B4 /* GHZNewMusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6708E701D39C489004A80B4 /* GHZNewMusicView.xib */; };
 		D67091B11D39C48A004A80B4 /* GHZNewPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708E721D39C489004A80B4 /* GHZNewPictureView.m */; };
 		D67091B21D39C48A004A80B4 /* GHZNewPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6708E731D39C489004A80B4 /* GHZNewPictureView.xib */; };
-		D67091B31D39C48A004A80B4 /* GHZNewVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708E751D39C489004A80B4 /* GHZNewVideoView.m */; };
-		D67091B41D39C48A004A80B4 /* GHZNewVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6708E761D39C489004A80B4 /* GHZNewVideoView.xib */; };
 		D67091B51D39C48A004A80B4 /* GHZNewWordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708E781D39C489004A80B4 /* GHZNewWordCell.m */; };
 		D67091B61D39C48A004A80B4 /* GHZNewWordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6708E791D39C489004A80B4 /* GHZNewWordCell.xib */; };
 		D67091B71D39C48A004A80B4 /* GHZAssistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708E7F1D39C489004A80B4 /* GHZAssistViewController.m */; };
@@ -138,15 +126,6 @@
 		D67091DE1D39C48A004A80B4 /* UMSnsAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6708EEC1D39C489004A80B4 /* UMSnsAccountViewController.xib */; };
 		D67091DF1D39C48A004A80B4 /* UMSShareListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6708EED1D39C489004A80B4 /* UMSShareListController.xib */; };
 		D67091E01D39C48A004A80B4 /* UMSocialSDKResourcesNew.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6708EEE1D39C489004A80B4 /* UMSocialSDKResourcesNew.bundle */; };
-		D67091E11D39C48A004A80B4 /* libSocialSinaSSO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6708EF21D39C489004A80B4 /* libSocialSinaSSO.a */; };
-		D67091E21D39C48A004A80B4 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6708EF31D39C489004A80B4 /* libWeiboSDK.a */; };
-		D67091E31D39C48A004A80B4 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6708EFE1D39C489004A80B4 /* WeiboSDK.bundle */; };
-		D67091E41D39C48A004A80B4 /* libSocialQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6708F021D39C489004A80B4 /* libSocialQQ.a */; };
-		D67091E51D39C48A004A80B4 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6708F031D39C489004A80B4 /* TencentOpenAPI.framework */; };
-		D67091E61D39C48A004A80B4 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6708F041D39C489004A80B4 /* TencentOpenApi_IOS_Bundle.bundle */; };
-		D67091E71D39C48A004A80B4 /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6708F071D39C489004A80B4 /* libSocialWechat.a */; };
-		D67091E81D39C48A004A80B4 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6708F081D39C489004A80B4 /* libWeChatSDK.a */; };
-		D67091E91D39C48A004A80B4 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = D6708F091D39C489004A80B4 /* README.txt */; };
 		D67091EA1D39C48A004A80B4 /* ZXAztecDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708F121D39C489004A80B4 /* ZXAztecDecoder.m */; };
 		D67091EB1D39C48A004A80B4 /* ZXAztecDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708F151D39C489004A80B4 /* ZXAztecDetector.m */; };
 		D67091EC1D39C48A004A80B4 /* ZXAztecBinaryShiftToken.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708F181D39C489004A80B4 /* ZXAztecBinaryShiftToken.m */; };
@@ -377,14 +356,34 @@
 		D67092CD1D39C48A004A80B4 /* GHZMBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D670910B1D39C48A004A80B4 /* GHZMBManager.m */; };
 		D67092CE1D39C48A004A80B4 /* GHZUserSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = D670910D1D39C48A004A80B4 /* GHZUserSetting.m */; };
 		D67092CF1D39C48A004A80B4 /* NarikoTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D670910F1D39C48A004A80B4 /* NarikoTextField.m */; };
-		D67092D01D39C48A004A80B4 /* ImageResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D67091111D39C48A004A80B4 /* ImageResources.bundle */; };
-		D67092D11D39C48A004A80B4 /* XLSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = D67091141D39C48A004A80B4 /* XLSlider.m */; };
-		D67092D21D39C48A004A80B4 /* XLVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D67091161D39C48A004A80B4 /* XLVideoPlayer.m */; };
-		D67092D31D39C48A004A80B4 /* WMPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D67091181D39C48A004A80B4 /* WMPlayer.bundle */; };
-		D67092D41D39C48A004A80B4 /* WMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D670911A1D39C48A004A80B4 /* WMPlayer.m */; };
 		D67093191D39C48A004A80B4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D67091601D39C48A004A80B4 /* Info.plist */; };
 		D670931A1D39C48A004A80B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D67091611D39C48A004A80B4 /* main.m */; };
 		D67093201D39CD18004A80B4 /* GHZDataBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D670931F1D39CD18004A80B4 /* GHZDataBaseHelper.m */; };
+		D67093321D3A1BAD004A80B4 /* GHZShowpirtureController.m in Sources */ = {isa = PBXBuildFile; fileRef = D67093301D3A1BAD004A80B4 /* GHZShowpirtureController.m */; };
+		D67093331D3A1BAD004A80B4 /* GHZShowpirtureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D67093311D3A1BAD004A80B4 /* GHZShowpirtureController.xib */; };
+		D67093381D3A210E004A80B4 /* GHZShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D67093361D3A210E004A80B4 /* GHZShowPictureViewController.m */; };
+		D67093421D3A2189004A80B4 /* GHZShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D67093411D3A2189004A80B4 /* GHZShowPictureViewController.xib */; };
+		D67093501D3A3B04004A80B4 /* GHZNewMusicController.m in Sources */ = {isa = PBXBuildFile; fileRef = D670934E1D3A3B04004A80B4 /* GHZNewMusicController.m */; };
+		D67093511D3A3B04004A80B4 /* GHZNewMusicController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D670934F1D3A3B04004A80B4 /* GHZNewMusicController.xib */; };
+		D67093551D3A47FB004A80B4 /* GHZNewVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D67093531D3A47FB004A80B4 /* GHZNewVideoView.m */; };
+		D67093561D3A47FB004A80B4 /* GHZNewVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D67093541D3A47FB004A80B4 /* GHZNewVideoView.xib */; };
+		D67093611D3A4841004A80B4 /* GHZTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = D670935F1D3A4841004A80B4 /* GHZTopicVoiceView.m */; };
+		D67093621D3A4841004A80B4 /* GHZTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D67093601D3A4841004A80B4 /* GHZTopicVoiceView.xib */; };
+		D670936D1D3A4878004A80B4 /* GHZTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D670936B1D3A4878004A80B4 /* GHZTopicVideoView.m */; };
+		D670936E1D3A4878004A80B4 /* GHZTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D670936C1D3A4878004A80B4 /* GHZTopicVideoView.xib */; };
+		D670938D1D3A49C7004A80B4 /* libSocialSinaSSO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D67093711D3A49C7004A80B4 /* libSocialSinaSSO.a */; };
+		D670938E1D3A49C7004A80B4 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D67093721D3A49C7004A80B4 /* libWeiboSDK.a */; };
+		D670938F1D3A49C7004A80B4 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D670937D1D3A49C7004A80B4 /* WeiboSDK.bundle */; };
+		D67093901D3A49C7004A80B4 /* libSocialQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D67093811D3A49C7004A80B4 /* libSocialQQ.a */; };
+		D67093911D3A49C7004A80B4 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67093821D3A49C7004A80B4 /* TencentOpenAPI.framework */; };
+		D67093921D3A49C7004A80B4 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D67093831D3A49C7004A80B4 /* TencentOpenApi_IOS_Bundle.bundle */; };
+		D67093931D3A49C7004A80B4 /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D67093861D3A49C7004A80B4 /* libSocialWechat.a */; };
+		D67093941D3A49C7004A80B4 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D67093871D3A49C7004A80B4 /* libWeChatSDK.a */; };
+		D67093951D3A49C7004A80B4 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = D67093881D3A49C7004A80B4 /* README.txt */; };
+		D67093981D3A6D7E004A80B4 /* GHZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D67093971D3A6D7E004A80B4 /* GHZVideoPlayerController.m */; };
+		D670939B1D3A6D9C004A80B4 /* GHZVideoPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = D670939A1D3A6D9C004A80B4 /* GHZVideoPlayerControlView.m */; };
+		D67093A41D3A7C34004A80B4 /* GHZCreamCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D67093A21D3A7C34004A80B4 /* GHZCreamCommentViewController.m */; };
+		D67093A51D3A7C34004A80B4 /* GHZCreamCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D67093A31D3A7C34004A80B4 /* GHZCreamCommentViewController.xib */; };
 		D6963E1E1D373663000C58B4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6963E1D1D373663000C58B4 /* Security.framework */; };
 		D6963E201D37367A000C58B4 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6963E1F1D37367A000C58B4 /* libiconv.tbd */; };
 		D6963E221D37368A000C58B4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6963E211D37368A000C58B4 /* SystemConfiguration.framework */; };
@@ -397,7 +396,6 @@
 /* Begin PBXFileReference section */
 		2C7C3BA1E080C169FD152043 /* Pods-GHZxiangmuB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHZxiangmuB.release.xcconfig"; path = "Pods/Target Support Files/Pods-GHZxiangmuB/Pods-GHZxiangmuB.release.xcconfig"; sourceTree = "<group>"; };
 		9CA80B1A43D034F7E977A430 /* libPods-GHZxiangmuB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GHZxiangmuB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C22577191D39CBF7006D5B28 /* GHZxiangmuB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHZxiangmuB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C225771F1D39D6A8006D5B28 /* GHZCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCollectionView.h; sourceTree = "<group>"; };
 		C22577201D39D6A8006D5B28 /* GHZCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCollectionView.m; sourceTree = "<group>"; };
 		C22577221D39E75B006D5B28 /* GHZCollctionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCollctionListViewController.h; sourceTree = "<group>"; };
@@ -437,9 +435,6 @@
 		D6708DE51D39C489004A80B4 /* UIViewController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
 		D6708DE91D39C489004A80B4 /* GHZCreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCreamViewController.h; sourceTree = "<group>"; };
 		D6708DEA1D39C489004A80B4 /* GHZCreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCreamViewController.m; sourceTree = "<group>"; };
-		D6708DEB1D39C489004A80B4 /* GHZShowPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZShowPictureViewController.h; sourceTree = "<group>"; };
-		D6708DEC1D39C489004A80B4 /* GHZShowPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZShowPictureViewController.m; sourceTree = "<group>"; };
-		D6708DED1D39C489004A80B4 /* GHZShowPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZShowPictureViewController.xib; sourceTree = "<group>"; };
 		D6708DEE1D39C489004A80B4 /* GHZTopicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTopicController.h; sourceTree = "<group>"; };
 		D6708DEF1D39C489004A80B4 /* GHZTopicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZTopicController.m; sourceTree = "<group>"; };
 		D6708DF11D39C489004A80B4 /* GHZTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTopic.h; sourceTree = "<group>"; };
@@ -452,12 +447,6 @@
 		D6708DFA1D39C489004A80B4 /* GHZTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTopicPictureView.h; sourceTree = "<group>"; };
 		D6708DFB1D39C489004A80B4 /* GHZTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZTopicPictureView.m; sourceTree = "<group>"; };
 		D6708DFC1D39C489004A80B4 /* GHZTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZTopicPictureView.xib; sourceTree = "<group>"; };
-		D6708DFE1D39C489004A80B4 /* GHZTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTopicVideoView.h; sourceTree = "<group>"; };
-		D6708DFF1D39C489004A80B4 /* GHZTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZTopicVideoView.m; sourceTree = "<group>"; };
-		D6708E001D39C489004A80B4 /* GHZTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZTopicVideoView.xib; sourceTree = "<group>"; };
-		D6708E021D39C489004A80B4 /* GHZTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTopicVoiceView.h; sourceTree = "<group>"; };
-		D6708E031D39C489004A80B4 /* GHZTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZTopicVoiceView.m; sourceTree = "<group>"; };
-		D6708E041D39C489004A80B4 /* GHZTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZTopicVoiceView.xib; sourceTree = "<group>"; };
 		D6708E081D39C489004A80B4 /* GHZCareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCareViewController.h; sourceTree = "<group>"; };
 		D6708E091D39C489004A80B4 /* GHZCareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCareViewController.m; sourceTree = "<group>"; };
 		D6708E0C1D39C489004A80B4 /* GHZCareHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCareHeaderView.h; sourceTree = "<group>"; };
@@ -519,14 +508,8 @@
 		D6708E5B1D39C489004A80B4 /* GHZRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZRegistViewController.m; sourceTree = "<group>"; };
 		D6708E5C1D39C489004A80B4 /* GHZRegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZRegistViewController.xib; sourceTree = "<group>"; };
 		D6708E5D1D39C489004A80B4 /* GHZLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZLoginViewController.xib; sourceTree = "<group>"; };
-		D6708E601D39C489004A80B4 /* GHZNewMusicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewMusicController.h; sourceTree = "<group>"; };
-		D6708E611D39C489004A80B4 /* GHZNewMusicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewMusicController.m; sourceTree = "<group>"; };
-		D6708E621D39C489004A80B4 /* GHZNewMusicController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZNewMusicController.xib; sourceTree = "<group>"; };
 		D6708E631D39C489004A80B4 /* GHZNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewViewController.h; sourceTree = "<group>"; };
 		D6708E641D39C489004A80B4 /* GHZNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewViewController.m; sourceTree = "<group>"; };
-		D6708E651D39C489004A80B4 /* GHZShowpirtureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZShowpirtureController.h; sourceTree = "<group>"; };
-		D6708E661D39C489004A80B4 /* GHZShowpirtureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZShowpirtureController.m; sourceTree = "<group>"; };
-		D6708E671D39C489004A80B4 /* GHZShowpirtureController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZShowpirtureController.xib; sourceTree = "<group>"; };
 		D6708E681D39C489004A80B4 /* GHZTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTopicViewController.h; sourceTree = "<group>"; };
 		D6708E691D39C489004A80B4 /* GHZTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZTopicViewController.m; sourceTree = "<group>"; };
 		D6708E6B1D39C489004A80B4 /* GHZTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTopicModel.h; sourceTree = "<group>"; };
@@ -537,9 +520,6 @@
 		D6708E711D39C489004A80B4 /* GHZNewPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewPictureView.h; sourceTree = "<group>"; };
 		D6708E721D39C489004A80B4 /* GHZNewPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewPictureView.m; sourceTree = "<group>"; };
 		D6708E731D39C489004A80B4 /* GHZNewPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZNewPictureView.xib; sourceTree = "<group>"; };
-		D6708E741D39C489004A80B4 /* GHZNewVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewVideoView.h; sourceTree = "<group>"; };
-		D6708E751D39C489004A80B4 /* GHZNewVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewVideoView.m; sourceTree = "<group>"; };
-		D6708E761D39C489004A80B4 /* GHZNewVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZNewVideoView.xib; sourceTree = "<group>"; };
 		D6708E771D39C489004A80B4 /* GHZNewWordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewWordCell.h; sourceTree = "<group>"; };
 		D6708E781D39C489004A80B4 /* GHZNewWordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewWordCell.m; sourceTree = "<group>"; };
 		D6708E791D39C489004A80B4 /* GHZNewWordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZNewWordCell.xib; sourceTree = "<group>"; };
@@ -627,32 +607,6 @@
 		D6708EED1D39C489004A80B4 /* UMSShareListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMSShareListController.xib; sourceTree = "<group>"; };
 		D6708EEE1D39C489004A80B4 /* UMSocialSDKResourcesNew.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKResourcesNew.bundle; sourceTree = "<group>"; };
 		D6708EEF1D39C489004A80B4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/UMSocialLocalizable.strings"; sourceTree = "<group>"; };
-		D6708EF21D39C489004A80B4 /* libSocialSinaSSO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialSinaSSO.a; sourceTree = "<group>"; };
-		D6708EF31D39C489004A80B4 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
-		D6708EF41D39C489004A80B4 /* UMSocialSinaSSOHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialSinaSSOHandler.h; sourceTree = "<group>"; };
-		D6708EF51D39C489004A80B4 /* WBHttpRequest+WeiboGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboGame.h"; sourceTree = "<group>"; };
-		D6708EF61D39C489004A80B4 /* WBHttpRequest+WeiboShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboShare.h"; sourceTree = "<group>"; };
-		D6708EF71D39C489004A80B4 /* WBHttpRequest+WeiboToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboToken.h"; sourceTree = "<group>"; };
-		D6708EF81D39C489004A80B4 /* WBHttpRequest+WeiboUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboUser.h"; sourceTree = "<group>"; };
-		D6708EF91D39C489004A80B4 /* WBHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHttpRequest.h; sourceTree = "<group>"; };
-		D6708EFA1D39C489004A80B4 /* WBSDKBasicButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKBasicButton.h; sourceTree = "<group>"; };
-		D6708EFB1D39C489004A80B4 /* WBSDKCommentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKCommentButton.h; sourceTree = "<group>"; };
-		D6708EFC1D39C489004A80B4 /* WBSDKRelationshipButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKRelationshipButton.h; sourceTree = "<group>"; };
-		D6708EFD1D39C489004A80B4 /* WeiboSDK+Statistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WeiboSDK+Statistics.h"; sourceTree = "<group>"; };
-		D6708EFE1D39C489004A80B4 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
-		D6708EFF1D39C489004A80B4 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
-		D6708F001D39C489004A80B4 /* WeiboUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboUser.h; sourceTree = "<group>"; };
-		D6708F021D39C489004A80B4 /* libSocialQQ.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialQQ.a; sourceTree = "<group>"; };
-		D6708F031D39C489004A80B4 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
-		D6708F041D39C489004A80B4 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
-		D6708F051D39C489004A80B4 /* UMSocialQQHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialQQHandler.h; sourceTree = "<group>"; };
-		D6708F071D39C489004A80B4 /* libSocialWechat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialWechat.a; sourceTree = "<group>"; };
-		D6708F081D39C489004A80B4 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
-		D6708F091D39C489004A80B4 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		D6708F0A1D39C489004A80B4 /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialWechatHandler.h; sourceTree = "<group>"; };
-		D6708F0B1D39C489004A80B4 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
-		D6708F0C1D39C489004A80B4 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		D6708F0D1D39C489004A80B4 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		D6708F111D39C489004A80B4 /* ZXAztecDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXAztecDecoder.h; sourceTree = "<group>"; };
 		D6708F121D39C489004A80B4 /* ZXAztecDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXAztecDecoder.m; sourceTree = "<group>"; };
 		D6708F141D39C489004A80B4 /* ZXAztecDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXAztecDetector.h; sourceTree = "<group>"; };
@@ -1129,20 +1083,63 @@
 		D670910D1D39C48A004A80B4 /* GHZUserSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZUserSetting.m; sourceTree = "<group>"; };
 		D670910E1D39C48A004A80B4 /* NarikoTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NarikoTextField.h; sourceTree = "<group>"; };
 		D670910F1D39C48A004A80B4 /* NarikoTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NarikoTextField.m; sourceTree = "<group>"; };
-		D67091111D39C48A004A80B4 /* ImageResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ImageResources.bundle; sourceTree = "<group>"; };
-		D67091131D39C48A004A80B4 /* XLSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLSlider.h; sourceTree = "<group>"; };
-		D67091141D39C48A004A80B4 /* XLSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLSlider.m; sourceTree = "<group>"; };
-		D67091151D39C48A004A80B4 /* XLVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLVideoPlayer.h; sourceTree = "<group>"; };
-		D67091161D39C48A004A80B4 /* XLVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLVideoPlayer.m; sourceTree = "<group>"; };
-		D67091181D39C48A004A80B4 /* WMPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WMPlayer.bundle; sourceTree = "<group>"; };
-		D67091191D39C48A004A80B4 /* WMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayer.h; sourceTree = "<group>"; };
-		D670911A1D39C48A004A80B4 /* WMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayer.m; sourceTree = "<group>"; };
 		D67091601D39C48A004A80B4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D67091611D39C48A004A80B4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D67091621D39C48A004A80B4 /* PCH.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCH.pch; sourceTree = "<group>"; };
-		D670931D1D39CCF4004A80B4 /* GHZxiangmuB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHZxiangmuB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D670931E1D39CD18004A80B4 /* GHZDataBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZDataBaseHelper.h; sourceTree = "<group>"; };
 		D670931F1D39CD18004A80B4 /* GHZDataBaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZDataBaseHelper.m; sourceTree = "<group>"; };
+		D670932F1D3A1BAD004A80B4 /* GHZShowpirtureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZShowpirtureController.h; sourceTree = "<group>"; };
+		D67093301D3A1BAD004A80B4 /* GHZShowpirtureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZShowpirtureController.m; sourceTree = "<group>"; };
+		D67093311D3A1BAD004A80B4 /* GHZShowpirtureController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZShowpirtureController.xib; sourceTree = "<group>"; };
+		D67093351D3A210E004A80B4 /* GHZShowPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZShowPictureViewController.h; sourceTree = "<group>"; };
+		D67093361D3A210E004A80B4 /* GHZShowPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZShowPictureViewController.m; sourceTree = "<group>"; };
+		D67093411D3A2189004A80B4 /* GHZShowPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZShowPictureViewController.xib; sourceTree = "<group>"; };
+		D670934D1D3A3B04004A80B4 /* GHZNewMusicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewMusicController.h; sourceTree = "<group>"; };
+		D670934E1D3A3B04004A80B4 /* GHZNewMusicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewMusicController.m; sourceTree = "<group>"; };
+		D670934F1D3A3B04004A80B4 /* GHZNewMusicController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZNewMusicController.xib; sourceTree = "<group>"; };
+		D67093521D3A47FB004A80B4 /* GHZNewVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewVideoView.h; sourceTree = "<group>"; };
+		D67093531D3A47FB004A80B4 /* GHZNewVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewVideoView.m; sourceTree = "<group>"; };
+		D67093541D3A47FB004A80B4 /* GHZNewVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZNewVideoView.xib; sourceTree = "<group>"; };
+		D670935E1D3A4841004A80B4 /* GHZTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTopicVoiceView.h; sourceTree = "<group>"; };
+		D670935F1D3A4841004A80B4 /* GHZTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZTopicVoiceView.m; sourceTree = "<group>"; };
+		D67093601D3A4841004A80B4 /* GHZTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZTopicVoiceView.xib; sourceTree = "<group>"; };
+		D670936A1D3A4878004A80B4 /* GHZTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZTopicVideoView.h; sourceTree = "<group>"; };
+		D670936B1D3A4878004A80B4 /* GHZTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZTopicVideoView.m; sourceTree = "<group>"; };
+		D670936C1D3A4878004A80B4 /* GHZTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZTopicVideoView.xib; sourceTree = "<group>"; };
+		D67093711D3A49C7004A80B4 /* libSocialSinaSSO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialSinaSSO.a; sourceTree = "<group>"; };
+		D67093721D3A49C7004A80B4 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
+		D67093731D3A49C7004A80B4 /* UMSocialSinaSSOHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialSinaSSOHandler.h; sourceTree = "<group>"; };
+		D67093741D3A49C7004A80B4 /* WBHttpRequest+WeiboGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboGame.h"; sourceTree = "<group>"; };
+		D67093751D3A49C7004A80B4 /* WBHttpRequest+WeiboShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboShare.h"; sourceTree = "<group>"; };
+		D67093761D3A49C7004A80B4 /* WBHttpRequest+WeiboToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboToken.h"; sourceTree = "<group>"; };
+		D67093771D3A49C7004A80B4 /* WBHttpRequest+WeiboUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboUser.h"; sourceTree = "<group>"; };
+		D67093781D3A49C7004A80B4 /* WBHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHttpRequest.h; sourceTree = "<group>"; };
+		D67093791D3A49C7004A80B4 /* WBSDKBasicButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKBasicButton.h; sourceTree = "<group>"; };
+		D670937A1D3A49C7004A80B4 /* WBSDKCommentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKCommentButton.h; sourceTree = "<group>"; };
+		D670937B1D3A49C7004A80B4 /* WBSDKRelationshipButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKRelationshipButton.h; sourceTree = "<group>"; };
+		D670937C1D3A49C7004A80B4 /* WeiboSDK+Statistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WeiboSDK+Statistics.h"; sourceTree = "<group>"; };
+		D670937D1D3A49C7004A80B4 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		D670937E1D3A49C7004A80B4 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+		D670937F1D3A49C7004A80B4 /* WeiboUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboUser.h; sourceTree = "<group>"; };
+		D67093811D3A49C7004A80B4 /* libSocialQQ.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialQQ.a; sourceTree = "<group>"; };
+		D67093821D3A49C7004A80B4 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		D67093831D3A49C7004A80B4 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		D67093841D3A49C7004A80B4 /* UMSocialQQHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialQQHandler.h; sourceTree = "<group>"; };
+		D67093861D3A49C7004A80B4 /* libSocialWechat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialWechat.a; sourceTree = "<group>"; };
+		D67093871D3A49C7004A80B4 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		D67093881D3A49C7004A80B4 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		D67093891D3A49C7004A80B4 /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialWechatHandler.h; sourceTree = "<group>"; };
+		D670938A1D3A49C7004A80B4 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		D670938B1D3A49C7004A80B4 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		D670938C1D3A49C7004A80B4 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		D67093961D3A6D7E004A80B4 /* GHZVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZVideoPlayerController.h; sourceTree = "<group>"; };
+		D67093971D3A6D7E004A80B4 /* GHZVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZVideoPlayerController.m; sourceTree = "<group>"; };
+		D67093991D3A6D9C004A80B4 /* GHZVideoPlayerControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZVideoPlayerControlView.h; sourceTree = "<group>"; };
+		D670939A1D3A6D9C004A80B4 /* GHZVideoPlayerControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZVideoPlayerControlView.m; sourceTree = "<group>"; };
+		D67093A11D3A7C34004A80B4 /* GHZCreamCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCreamCommentViewController.h; sourceTree = "<group>"; };
+		D67093A21D3A7C34004A80B4 /* GHZCreamCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCreamCommentViewController.m; sourceTree = "<group>"; };
+		D67093A31D3A7C34004A80B4 /* GHZCreamCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZCreamCommentViewController.xib; sourceTree = "<group>"; };
+		D67093A81D3A80FB004A80B4 /* GHZxiangmuB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHZxiangmuB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6963E1D1D373663000C58B4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D6963E1F1D37367A000C58B4 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		D6963E211D37368A000C58B4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -1160,23 +1157,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D67093901D3A49C7004A80B4 /* libSocialQQ.a in Frameworks */,
+				D67093911D3A49C7004A80B4 /* TencentOpenAPI.framework in Frameworks */,
+				D67093941D3A49C7004A80B4 /* libWeChatSDK.a in Frameworks */,
 				D6963E2A1D3736CB000C58B4 /* libstdc++.tbd in Frameworks */,
 				D67091D71D39C48A004A80B4 /* libUMSocial_Sdk_5.2.1.a in Frameworks */,
-				D67091E41D39C48A004A80B4 /* libSocialQQ.a in Frameworks */,
 				D6963E281D3736C1000C58B4 /* CoreTelephony.framework in Frameworks */,
+				D670938E1D3A49C7004A80B4 /* libWeiboSDK.a in Frameworks */,
+				D67093931D3A49C7004A80B4 /* libSocialWechat.a in Frameworks */,
 				D6963E261D3736B1000C58B4 /* libsqlite3.tbd in Frameworks */,
 				D6963E241D3736A8000C58B4 /* CoreGraphics.framework in Frameworks */,
 				D6963E221D37368A000C58B4 /* SystemConfiguration.framework in Frameworks */,
 				D6963E201D37367A000C58B4 /* libiconv.tbd in Frameworks */,
-				D67091E11D39C48A004A80B4 /* libSocialSinaSSO.a in Frameworks */,
-				D67091E51D39C48A004A80B4 /* TencentOpenAPI.framework in Frameworks */,
 				D6963E1E1D373663000C58B4 /* Security.framework in Frameworks */,
-				D67091E21D39C48A004A80B4 /* libWeiboSDK.a in Frameworks */,
 				D628E8381D33478300624AEE /* VideoToolbox.framework in Frameworks */,
 				D63C47DF1D314C1A00BB5A46 /* libz.tbd in Frameworks */,
-				D67091E81D39C48A004A80B4 /* libWeChatSDK.a in Frameworks */,
 				7ED621499AB0A47C38A4912E /* libPods-GHZxiangmuB.a in Frameworks */,
-				D67091E71D39C48A004A80B4 /* libSocialWechat.a in Frameworks */,
+				D670938D1D3A49C7004A80B4 /* libSocialSinaSSO.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1292,6 +1289,7 @@
 				D6708DE81D39C489004A80B4 /* Controller */,
 				D6708DF01D39C489004A80B4 /* Model */,
 				D6708DF31D39C489004A80B4 /* View */,
+				D67093341D3A20F8004A80B4 /* Tool */,
 			);
 			path = Cream;
 			sourceTree = "<group>";
@@ -1301,11 +1299,11 @@
 			children = (
 				D6708DE91D39C489004A80B4 /* GHZCreamViewController.h */,
 				D6708DEA1D39C489004A80B4 /* GHZCreamViewController.m */,
-				D6708DEB1D39C489004A80B4 /* GHZShowPictureViewController.h */,
-				D6708DEC1D39C489004A80B4 /* GHZShowPictureViewController.m */,
-				D6708DED1D39C489004A80B4 /* GHZShowPictureViewController.xib */,
 				D6708DEE1D39C489004A80B4 /* GHZTopicController.h */,
 				D6708DEF1D39C489004A80B4 /* GHZTopicController.m */,
+				D67093A11D3A7C34004A80B4 /* GHZCreamCommentViewController.h */,
+				D67093A21D3A7C34004A80B4 /* GHZCreamCommentViewController.m */,
+				D67093A31D3A7C34004A80B4 /* GHZCreamCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1326,8 +1324,8 @@
 				D6708DF51D39C489004A80B4 /* GHZTopicCell.m */,
 				D6708DF61D39C489004A80B4 /* GHZTopicCell.xib */,
 				D6708DF71D39C489004A80B4 /* GHZTopicPictureView */,
-				D6708DFD1D39C489004A80B4 /* GHZTopicVideoView */,
-				D6708E011D39C489004A80B4 /* GHZTopicVoiceView */,
+				D670935D1D3A4841004A80B4 /* GHZTopicVoiceView */,
+				D67093691D3A4878004A80B4 /* GHZTopicVideoView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1342,26 +1340,6 @@
 				D6708DFC1D39C489004A80B4 /* GHZTopicPictureView.xib */,
 			);
 			path = GHZTopicPictureView;
-			sourceTree = "<group>";
-		};
-		D6708DFD1D39C489004A80B4 /* GHZTopicVideoView */ = {
-			isa = PBXGroup;
-			children = (
-				D6708DFE1D39C489004A80B4 /* GHZTopicVideoView.h */,
-				D6708DFF1D39C489004A80B4 /* GHZTopicVideoView.m */,
-				D6708E001D39C489004A80B4 /* GHZTopicVideoView.xib */,
-			);
-			path = GHZTopicVideoView;
-			sourceTree = "<group>";
-		};
-		D6708E011D39C489004A80B4 /* GHZTopicVoiceView */ = {
-			isa = PBXGroup;
-			children = (
-				D6708E021D39C489004A80B4 /* GHZTopicVoiceView.h */,
-				D6708E031D39C489004A80B4 /* GHZTopicVoiceView.m */,
-				D6708E041D39C489004A80B4 /* GHZTopicVoiceView.xib */,
-			);
-			path = GHZTopicVoiceView;
 			sourceTree = "<group>";
 		};
 		D6708E051D39C489004A80B4 /* Live */ = {
@@ -1645,6 +1623,7 @@
 				D6708E5F1D39C489004A80B4 /* Controller */,
 				D6708E6A1D39C489004A80B4 /* Model */,
 				D6708E6D1D39C489004A80B4 /* View */,
+				D67093261D3A15E6004A80B4 /* Tool */,
 			);
 			path = New;
 			sourceTree = "<group>";
@@ -1652,14 +1631,8 @@
 		D6708E5F1D39C489004A80B4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D6708E601D39C489004A80B4 /* GHZNewMusicController.h */,
-				D6708E611D39C489004A80B4 /* GHZNewMusicController.m */,
-				D6708E621D39C489004A80B4 /* GHZNewMusicController.xib */,
 				D6708E631D39C489004A80B4 /* GHZNewViewController.h */,
 				D6708E641D39C489004A80B4 /* GHZNewViewController.m */,
-				D6708E651D39C489004A80B4 /* GHZShowpirtureController.h */,
-				D6708E661D39C489004A80B4 /* GHZShowpirtureController.m */,
-				D6708E671D39C489004A80B4 /* GHZShowpirtureController.xib */,
 				D6708E681D39C489004A80B4 /* GHZTopicViewController.h */,
 				D6708E691D39C489004A80B4 /* GHZTopicViewController.m */,
 			);
@@ -1684,12 +1657,12 @@
 				D6708E711D39C489004A80B4 /* GHZNewPictureView.h */,
 				D6708E721D39C489004A80B4 /* GHZNewPictureView.m */,
 				D6708E731D39C489004A80B4 /* GHZNewPictureView.xib */,
-				D6708E741D39C489004A80B4 /* GHZNewVideoView.h */,
-				D6708E751D39C489004A80B4 /* GHZNewVideoView.m */,
-				D6708E761D39C489004A80B4 /* GHZNewVideoView.xib */,
 				D6708E771D39C489004A80B4 /* GHZNewWordCell.h */,
 				D6708E781D39C489004A80B4 /* GHZNewWordCell.m */,
 				D6708E791D39C489004A80B4 /* GHZNewWordCell.xib */,
+				D67093521D3A47FB004A80B4 /* GHZNewVideoView.h */,
+				D67093531D3A47FB004A80B4 /* GHZNewVideoView.m */,
+				D67093541D3A47FB004A80B4 /* GHZNewVideoView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1936,7 +1909,7 @@
 				D6708EAC1D39C489004A80B4 /* LBXAlertAction */,
 				D6708EB61D39C489004A80B4 /* LBXScan */,
 				D6708ED51D39C489004A80B4 /* UMSocial_Sdk_5.2.1 */,
-				D6708EF01D39C489004A80B4 /* UMSocial_Sdk_Extra_Frameworks */,
+				D670936F1D3A49C7004A80B4 /* UMSocial_Sdk_Extra_Frameworks */,
 				D6708F0E1D39C489004A80B4 /* ZXingObjC */,
 				D67090F81D39C48A004A80B4 /* ZYCornerRadius */,
 			);
@@ -2046,63 +2019,6 @@
 				D6708EED1D39C489004A80B4 /* UMSShareListController.xib */,
 			);
 			path = SocialSDKXib;
-			sourceTree = "<group>";
-		};
-		D6708EF01D39C489004A80B4 /* UMSocial_Sdk_Extra_Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D6708EF11D39C489004A80B4 /* SinaSSO */,
-				D6708F011D39C489004A80B4 /* TencentOpenAPI */,
-				D6708F061D39C489004A80B4 /* Wechat */,
-			);
-			path = UMSocial_Sdk_Extra_Frameworks;
-			sourceTree = "<group>";
-		};
-		D6708EF11D39C489004A80B4 /* SinaSSO */ = {
-			isa = PBXGroup;
-			children = (
-				D6708EF21D39C489004A80B4 /* libSocialSinaSSO.a */,
-				D6708EF31D39C489004A80B4 /* libWeiboSDK.a */,
-				D6708EF41D39C489004A80B4 /* UMSocialSinaSSOHandler.h */,
-				D6708EF51D39C489004A80B4 /* WBHttpRequest+WeiboGame.h */,
-				D6708EF61D39C489004A80B4 /* WBHttpRequest+WeiboShare.h */,
-				D6708EF71D39C489004A80B4 /* WBHttpRequest+WeiboToken.h */,
-				D6708EF81D39C489004A80B4 /* WBHttpRequest+WeiboUser.h */,
-				D6708EF91D39C489004A80B4 /* WBHttpRequest.h */,
-				D6708EFA1D39C489004A80B4 /* WBSDKBasicButton.h */,
-				D6708EFB1D39C489004A80B4 /* WBSDKCommentButton.h */,
-				D6708EFC1D39C489004A80B4 /* WBSDKRelationshipButton.h */,
-				D6708EFD1D39C489004A80B4 /* WeiboSDK+Statistics.h */,
-				D6708EFE1D39C489004A80B4 /* WeiboSDK.bundle */,
-				D6708EFF1D39C489004A80B4 /* WeiboSDK.h */,
-				D6708F001D39C489004A80B4 /* WeiboUser.h */,
-			);
-			path = SinaSSO;
-			sourceTree = "<group>";
-		};
-		D6708F011D39C489004A80B4 /* TencentOpenAPI */ = {
-			isa = PBXGroup;
-			children = (
-				D6708F021D39C489004A80B4 /* libSocialQQ.a */,
-				D6708F031D39C489004A80B4 /* TencentOpenAPI.framework */,
-				D6708F041D39C489004A80B4 /* TencentOpenApi_IOS_Bundle.bundle */,
-				D6708F051D39C489004A80B4 /* UMSocialQQHandler.h */,
-			);
-			path = TencentOpenAPI;
-			sourceTree = "<group>";
-		};
-		D6708F061D39C489004A80B4 /* Wechat */ = {
-			isa = PBXGroup;
-			children = (
-				D6708F071D39C489004A80B4 /* libSocialWechat.a */,
-				D6708F081D39C489004A80B4 /* libWeChatSDK.a */,
-				D6708F091D39C489004A80B4 /* README.txt */,
-				D6708F0A1D39C489004A80B4 /* UMSocialWechatHandler.h */,
-				D6708F0B1D39C489004A80B4 /* WechatAuthSDK.h */,
-				D6708F0C1D39C489004A80B4 /* WXApi.h */,
-				D6708F0D1D39C489004A80B4 /* WXApiObject.h */,
-			);
-			path = Wechat;
 			sourceTree = "<group>";
 		};
 		D6708F0E1D39C489004A80B4 /* ZXingObjC */ = {
@@ -2879,40 +2795,8 @@
 				D670910F1D39C48A004A80B4 /* NarikoTextField.m */,
 				D670931E1D39CD18004A80B4 /* GHZDataBaseHelper.h */,
 				D670931F1D39CD18004A80B4 /* GHZDataBaseHelper.m */,
-				D67091101D39C48A004A80B4 /* VideoPlayer */,
-				D67091171D39C48A004A80B4 /* WMPlayer */,
 			);
 			path = Tools;
-			sourceTree = "<group>";
-		};
-		D67091101D39C48A004A80B4 /* VideoPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				D67091111D39C48A004A80B4 /* ImageResources.bundle */,
-				D67091121D39C48A004A80B4 /* Slider */,
-				D67091151D39C48A004A80B4 /* XLVideoPlayer.h */,
-				D67091161D39C48A004A80B4 /* XLVideoPlayer.m */,
-			);
-			path = VideoPlayer;
-			sourceTree = "<group>";
-		};
-		D67091121D39C48A004A80B4 /* Slider */ = {
-			isa = PBXGroup;
-			children = (
-				D67091131D39C48A004A80B4 /* XLSlider.h */,
-				D67091141D39C48A004A80B4 /* XLSlider.m */,
-			);
-			path = Slider;
-			sourceTree = "<group>";
-		};
-		D67091171D39C48A004A80B4 /* WMPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				D67091181D39C48A004A80B4 /* WMPlayer.bundle */,
-				D67091191D39C48A004A80B4 /* WMPlayer.h */,
-				D670911A1D39C48A004A80B4 /* WMPlayer.m */,
-			);
-			path = WMPlayer;
 			sourceTree = "<group>";
 		};
 		D670931B1D39C50A004A80B4 /* Supporting Files */ = {
@@ -2927,14 +2811,117 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D67093261D3A15E6004A80B4 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				D670932F1D3A1BAD004A80B4 /* GHZShowpirtureController.h */,
+				D67093301D3A1BAD004A80B4 /* GHZShowpirtureController.m */,
+				D67093311D3A1BAD004A80B4 /* GHZShowpirtureController.xib */,
+				D670934D1D3A3B04004A80B4 /* GHZNewMusicController.h */,
+				D670934E1D3A3B04004A80B4 /* GHZNewMusicController.m */,
+				D670934F1D3A3B04004A80B4 /* GHZNewMusicController.xib */,
+				D67093961D3A6D7E004A80B4 /* GHZVideoPlayerController.h */,
+				D67093971D3A6D7E004A80B4 /* GHZVideoPlayerController.m */,
+				D67093991D3A6D9C004A80B4 /* GHZVideoPlayerControlView.h */,
+				D670939A1D3A6D9C004A80B4 /* GHZVideoPlayerControlView.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		D67093341D3A20F8004A80B4 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				D67093351D3A210E004A80B4 /* GHZShowPictureViewController.h */,
+				D67093361D3A210E004A80B4 /* GHZShowPictureViewController.m */,
+				D67093411D3A2189004A80B4 /* GHZShowPictureViewController.xib */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		D670935D1D3A4841004A80B4 /* GHZTopicVoiceView */ = {
+			isa = PBXGroup;
+			children = (
+				D670935E1D3A4841004A80B4 /* GHZTopicVoiceView.h */,
+				D670935F1D3A4841004A80B4 /* GHZTopicVoiceView.m */,
+				D67093601D3A4841004A80B4 /* GHZTopicVoiceView.xib */,
+			);
+			path = GHZTopicVoiceView;
+			sourceTree = "<group>";
+		};
+		D67093691D3A4878004A80B4 /* GHZTopicVideoView */ = {
+			isa = PBXGroup;
+			children = (
+				D670936A1D3A4878004A80B4 /* GHZTopicVideoView.h */,
+				D670936B1D3A4878004A80B4 /* GHZTopicVideoView.m */,
+				D670936C1D3A4878004A80B4 /* GHZTopicVideoView.xib */,
+			);
+			path = GHZTopicVideoView;
+			sourceTree = "<group>";
+		};
+		D670936F1D3A49C7004A80B4 /* UMSocial_Sdk_Extra_Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D67093701D3A49C7004A80B4 /* SinaSSO */,
+				D67093801D3A49C7004A80B4 /* TencentOpenAPI */,
+				D67093851D3A49C7004A80B4 /* Wechat */,
+			);
+			path = UMSocial_Sdk_Extra_Frameworks;
+			sourceTree = "<group>";
+		};
+		D67093701D3A49C7004A80B4 /* SinaSSO */ = {
+			isa = PBXGroup;
+			children = (
+				D67093711D3A49C7004A80B4 /* libSocialSinaSSO.a */,
+				D67093721D3A49C7004A80B4 /* libWeiboSDK.a */,
+				D67093731D3A49C7004A80B4 /* UMSocialSinaSSOHandler.h */,
+				D67093741D3A49C7004A80B4 /* WBHttpRequest+WeiboGame.h */,
+				D67093751D3A49C7004A80B4 /* WBHttpRequest+WeiboShare.h */,
+				D67093761D3A49C7004A80B4 /* WBHttpRequest+WeiboToken.h */,
+				D67093771D3A49C7004A80B4 /* WBHttpRequest+WeiboUser.h */,
+				D67093781D3A49C7004A80B4 /* WBHttpRequest.h */,
+				D67093791D3A49C7004A80B4 /* WBSDKBasicButton.h */,
+				D670937A1D3A49C7004A80B4 /* WBSDKCommentButton.h */,
+				D670937B1D3A49C7004A80B4 /* WBSDKRelationshipButton.h */,
+				D670937C1D3A49C7004A80B4 /* WeiboSDK+Statistics.h */,
+				D670937D1D3A49C7004A80B4 /* WeiboSDK.bundle */,
+				D670937E1D3A49C7004A80B4 /* WeiboSDK.h */,
+				D670937F1D3A49C7004A80B4 /* WeiboUser.h */,
+			);
+			path = SinaSSO;
+			sourceTree = "<group>";
+		};
+		D67093801D3A49C7004A80B4 /* TencentOpenAPI */ = {
+			isa = PBXGroup;
+			children = (
+				D67093811D3A49C7004A80B4 /* libSocialQQ.a */,
+				D67093821D3A49C7004A80B4 /* TencentOpenAPI.framework */,
+				D67093831D3A49C7004A80B4 /* TencentOpenApi_IOS_Bundle.bundle */,
+				D67093841D3A49C7004A80B4 /* UMSocialQQHandler.h */,
+			);
+			path = TencentOpenAPI;
+			sourceTree = "<group>";
+		};
+		D67093851D3A49C7004A80B4 /* Wechat */ = {
+			isa = PBXGroup;
+			children = (
+				D67093861D3A49C7004A80B4 /* libSocialWechat.a */,
+				D67093871D3A49C7004A80B4 /* libWeChatSDK.a */,
+				D67093881D3A49C7004A80B4 /* README.txt */,
+				D67093891D3A49C7004A80B4 /* UMSocialWechatHandler.h */,
+				D670938A1D3A49C7004A80B4 /* WechatAuthSDK.h */,
+				D670938B1D3A49C7004A80B4 /* WXApi.h */,
+				D670938C1D3A49C7004A80B4 /* WXApiObject.h */,
+			);
+			path = Wechat;
+			sourceTree = "<group>";
+		};
 		D686B3101D2DF27300648326 = {
 			isa = PBXGroup;
 			children = (
 				D6708DC11D39C489004A80B4 /* GHZxiangmuB */,
 				6A368DFDEB8919DA8B912498 /* Pods */,
 				5A4F9C47C2CCB30AA9127C6E /* Frameworks */,
-				D670931D1D39CCF4004A80B4 /* GHZxiangmuB.app */,
-				C22577191D39CBF7006D5B28 /* GHZxiangmuB.app */,
+				D67093A81D3A80FB004A80B4 /* GHZxiangmuB.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2958,8 +2945,7 @@
 			);
 			name = GHZxiangmuB;
 			productName = GHZxiangmuB;
-			productReference = D670931D1D39CCF4004A80B4 /* GHZxiangmuB.app */;
-			productReference = C22577191D39CBF7006D5B28 /* GHZxiangmuB.app */;
+			productReference = D67093A81D3A80FB004A80B4 /* GHZxiangmuB.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -3006,12 +2992,12 @@
 				D67091DA1D39C48A004A80B4 /* UMSCommentInputControlleriPad.xib in Resources */,
 				D67091641D39C48A004A80B4 /* Assets.xcassets in Resources */,
 				D67091C21D39C48A004A80B4 /* GHZProfileHeaderView.xib in Resources */,
+				D670936E1D3A4878004A80B4 /* GHZTopicVideoView.xib in Resources */,
 				D67091C71D39C48A004A80B4 /* CodeScan.bundle in Resources */,
-				D670917F1D39C48A004A80B4 /* GHZTopicVideoView.xib in Resources */,
 				D67093191D39C48A004A80B4 /* Info.plist in Resources */,
 				D670919B1D39C48A004A80B4 /* GHZNewTableViewCell.xib in Resources */,
-				D67091B41D39C48A004A80B4 /* GHZNewVideoView.xib in Resources */,
 				D67091B61D39C48A004A80B4 /* GHZNewWordCell.xib in Resources */,
+				D670938F1D3A49C7004A80B4 /* WeiboSDK.bundle in Resources */,
 				D67091DB1D39C48A004A80B4 /* UMShareEditViewController.xib in Resources */,
 				D67091B21D39C48A004A80B4 /* GHZNewPictureView.xib in Resources */,
 				D67091971D39C48A004A80B4 /* GHZLivingUserView.xib in Resources */,
@@ -3019,33 +3005,32 @@
 				D67091B01D39C48A004A80B4 /* GHZNewMusicView.xib in Resources */,
 				D670919E1D39C48A004A80B4 /* GHZShowEndView.xib in Resources */,
 				D67091D81D39C48A004A80B4 /* UMSCommentDetailController.xib in Resources */,
-				D67091AC1D39C48A004A80B4 /* GHZShowpirtureController.xib in Resources */,
+				D67093511D3A3B04004A80B4 /* GHZNewMusicController.xib in Resources */,
+				D67093951D3A49C7004A80B4 /* README.txt in Resources */,
+				D67093561D3A47FB004A80B4 /* GHZNewVideoView.xib in Resources */,
 				D67091661D39C48A004A80B4 /* Main.storyboard in Resources */,
-				D67091E61D39C48A004A80B4 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
-				D67091E91D39C48A004A80B4 /* README.txt in Resources */,
-				D67091A91D39C48A004A80B4 /* GHZNewMusicController.xib in Resources */,
 				D67091E01D39C48A004A80B4 /* UMSocialSDKResourcesNew.bundle in Resources */,
 				D67091A61D39C48A004A80B4 /* GHZRegistViewController.xib in Resources */,
-				D67091E31D39C48A004A80B4 /* WeiboSDK.bundle in Resources */,
+				D67093421D3A2189004A80B4 /* GHZShowPictureViewController.xib in Resources */,
 				D67091D61D39C48A004A80B4 /* UMSocialLocalizable.strings in Resources */,
-				D67092D31D39C48A004A80B4 /* WMPlayer.bundle in Resources */,
 				D670918B1D39C48A004A80B4 /* GHZHotCollectionViewCell.xib in Resources */,
 				D67091931D39C48A004A80B4 /* GHZLivingEndView.xib in Resources */,
 				D67091DF1D39C48A004A80B4 /* UMSShareListController.xib in Resources */,
-				D67091811D39C48A004A80B4 /* GHZTopicVoiceView.xib in Resources */,
 				D67091651D39C48A004A80B4 /* LaunchScreen.storyboard in Resources */,
 				D67091D91D39C48A004A80B4 /* UMSCommentInputController.xib in Resources */,
+				D67093A51D3A7C34004A80B4 /* GHZCreamCommentViewController.xib in Resources */,
+				D67093331D3A1BAD004A80B4 /* GHZShowpirtureController.xib in Resources */,
 				D67091A21D39C48A004A80B4 /* GHZShowPlaceHolderView.xib in Resources */,
 				D67091841D39C48A004A80B4 /* GHZCareHeaderView.xib in Resources */,
 				D67091901D39C48A004A80B4 /* GHZLivingCatEarView.xib in Resources */,
 				D67091A01D39C48A004A80B4 /* GHZShowLivingView.xib in Resources */,
-				D67092D01D39C48A004A80B4 /* ImageResources.bundle in Resources */,
 				D67091DD1D39C48A004A80B4 /* UMSLoginViewController.xib in Resources */,
 				D670918E1D39C48A004A80B4 /* GHZBottomView.xib in Resources */,
-				D67091761D39C48A004A80B4 /* GHZShowPictureViewController.xib in Resources */,
 				D67091DE1D39C48A004A80B4 /* UMSnsAccountViewController.xib in Resources */,
+				D67093921D3A49C7004A80B4 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				D67091DC1D39C48A004A80B4 /* UMShareEditViewControlleriPad.xib in Resources */,
 				D67091A71D39C48A004A80B4 /* GHZLoginViewController.xib in Resources */,
+				D67093621D3A4841004A80B4 /* GHZTopicVoiceView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3106,6 +3091,7 @@
 			files = (
 				D67092041D39C48A004A80B4 /* ZXISBNParsedResult.m in Sources */,
 				D67091B11D39C48A004A80B4 /* GHZNewPictureView.m in Sources */,
+				D67093381D3A210E004A80B4 /* GHZShowPictureViewController.m in Sources */,
 				D67092271D39C48A004A80B4 /* ZXBoolArray.m in Sources */,
 				D67092371D39C48A004A80B4 /* ZXDimension.m in Sources */,
 				D670920C1D39C48A004A80B4 /* ZXSMSTOMMSTOResultParser.m in Sources */,
@@ -3149,16 +3135,17 @@
 				D67091981D39C48A004A80B4 /* GHZLiveNewViewController.m in Sources */,
 				D67092B71D39C48A004A80B4 /* ZXQRCodeFinderPattern.m in Sources */,
 				C22577211D39D6A8006D5B28 /* GHZCollectionView.m in Sources */,
+				D670936D1D3A4878004A80B4 /* GHZTopicVideoView.m in Sources */,
 				D67092471D39C48A004A80B4 /* ZXDataMatrixBase256Encoder.m in Sources */,
 				D670923F1D39C48A004A80B4 /* ZXRGBLuminanceSource.m in Sources */,
 				D670922D1D39C48A004A80B4 /* ZXGlobalHistogramBinarizer.m in Sources */,
 				D67092BA1D39C48A004A80B4 /* ZXQRCode.m in Sources */,
 				D670921C1D39C48A004A80B4 /* ZXImage.m in Sources */,
-				D67091AB1D39C48A004A80B4 /* GHZShowpirtureController.m in Sources */,
 				D67091EB1D39C48A004A80B4 /* ZXAztecDetector.m in Sources */,
 				D67092831D39C48A004A80B4 /* ZXITFReader.m in Sources */,
 				D67091BF1D39C48A004A80B4 /* GHZFriendViewController.m in Sources */,
 				D67092601D39C48A004A80B4 /* ZXAI013x0xDecoder.m in Sources */,
+				D670939B1D3A6D9C004A80B4 /* GHZVideoPlayerControlView.m in Sources */,
 				D67092301D39C48A004A80B4 /* ZXIntArray.m in Sources */,
 				D67092BF1D39C48A004A80B4 /* ZXMultiDetector.m in Sources */,
 				D67091CE1D39C48A004A80B4 /* LBXScanViewController.m in Sources */,
@@ -3200,6 +3187,7 @@
 				D67092AD1D39C48A004A80B4 /* ZXQRCodeDecodedBitStreamParser.m in Sources */,
 				D67092B51D39C48A004A80B4 /* ZXQRCodeAlignmentPatternFinder.m in Sources */,
 				D67092961D39C48A004A80B4 /* ZXPDF417BoundingBox.m in Sources */,
+				D67093501D3A3B04004A80B4 /* GHZNewMusicController.m in Sources */,
 				D67092281D39C48A004A80B4 /* ZXByteArray.m in Sources */,
 				D67091891D39C48A004A80B4 /* GHZHotModel.m in Sources */,
 				D67092141D39C48A004A80B4 /* ZXVCardResultParser.m in Sources */,
@@ -3225,14 +3213,12 @@
 				D67092561D39C48A004A80B4 /* ZXMaxiCodeDecoder.m in Sources */,
 				D670921E1D39C48A004A80B4 /* ZXMonochromeRectangleDetector.m in Sources */,
 				D670928B1D39C48A004A80B4 /* ZXUPCEANExtension2Support.m in Sources */,
-				D67092D21D39C48A004A80B4 /* XLVideoPlayer.m in Sources */,
 				D67092A11D39C48A004A80B4 /* ZXPDF417BarcodeMatrix.m in Sources */,
 				D670920A1D39C48A004A80B4 /* ZXSMSMMSResultParser.m in Sources */,
 				D67091F21D39C48A004A80B4 /* ZXAztecToken.m in Sources */,
 				D67092111D39C48A004A80B4 /* ZXURIParsedResult.m in Sources */,
 				D67091FB1D39C48A004A80B4 /* ZXBookmarkDoCoMoResultParser.m in Sources */,
 				D67092931D39C48A004A80B4 /* ZXPDF417ECErrorCorrection.m in Sources */,
-				D67091751D39C48A004A80B4 /* GHZShowPictureViewController.m in Sources */,
 				D67091681D39C48A004A80B4 /* GHZTabBarViewController.m in Sources */,
 				D670925D1D39C48A004A80B4 /* ZXAI01392xDecoder.m in Sources */,
 				D67091C01D39C48A004A80B4 /* GHZProfileViewController.m in Sources */,
@@ -3282,7 +3268,6 @@
 				D67093201D39CD18004A80B4 /* GHZDataBaseHelper.m in Sources */,
 				D670928A1D39C48A004A80B4 /* ZXUPCAWriter.m in Sources */,
 				D670922C1D39C48A004A80B4 /* ZXDetectorResult.m in Sources */,
-				D67091A81D39C48A004A80B4 /* GHZNewMusicController.m in Sources */,
 				D670928F1D39C48A004A80B4 /* ZXUPCEANWriter.m in Sources */,
 				D67092691D39C48A004A80B4 /* ZXRSSExpandedDecodedNumeric.m in Sources */,
 				D670916F1D39C48A004A80B4 /* UIDevice+Extension.m in Sources */,
@@ -3301,7 +3286,6 @@
 				D67092811D39C48A004A80B4 /* ZXEAN8Writer.m in Sources */,
 				D67091EC1D39C48A004A80B4 /* ZXAztecBinaryShiftToken.m in Sources */,
 				D67092021D39C48A004A80B4 /* ZXGeoParsedResult.m in Sources */,
-				D67092D11D39C48A004A80B4 /* XLSlider.m in Sources */,
 				D67091771D39C48A004A80B4 /* GHZTopicController.m in Sources */,
 				D67092011D39C48A004A80B4 /* ZXExpandedProductResultParser.m in Sources */,
 				D67091B81D39C48A004A80B4 /* GHZChatViewController.m in Sources */,
@@ -3325,14 +3309,13 @@
 				D67092511D39C48A004A80B4 /* ZXDataMatrixX12Encoder.m in Sources */,
 				D67091F71D39C48A004A80B4 /* ZXAddressBookAUResultParser.m in Sources */,
 				D670918A1D39C48A004A80B4 /* GHZHotCollectionViewCell.m in Sources */,
-				D67092D41D39C48A004A80B4 /* WMPlayer.m in Sources */,
 				D67092A01D39C48A004A80B4 /* ZXPDF417.m in Sources */,
 				D670926B1D39C48A004A80B4 /* ZXRSSExpandedFieldParser.m in Sources */,
 				D67092181D39C48A004A80B4 /* ZXWifiParsedResult.m in Sources */,
 				D67092AE1D39C48A004A80B4 /* ZXQRCodeDecoder.m in Sources */,
 				D67091711D39C48A004A80B4 /* UIImageView+Extension.m in Sources */,
 				D67091861D39C48A004A80B4 /* GHZLiveWebViewController.m in Sources */,
-				D67091801D39C48A004A80B4 /* GHZTopicVoiceView.m in Sources */,
+				D67093611D3A4841004A80B4 /* GHZTopicVoiceView.m in Sources */,
 				D67092291D39C48A004A80B4 /* ZXCharacterSetECI.m in Sources */,
 				D670928E1D39C48A004A80B4 /* ZXUPCEANReader.m in Sources */,
 				D67092361D39C48A004A80B4 /* ZXDecodeHints.m in Sources */,
@@ -3368,7 +3351,6 @@
 				D67091FF1D39C48A004A80B4 /* ZXEmailDoCoMoResultParser.m in Sources */,
 				D67091C41D39C48A004A80B4 /* UIAlertController+supportedInterfaceOrientations.m in Sources */,
 				D67091AA1D39C48A004A80B4 /* GHZNewViewController.m in Sources */,
-				D67091B31D39C48A004A80B4 /* GHZNewVideoView.m in Sources */,
 				D67092A91D39C48A004A80B4 /* ZXPDF417Writer.m in Sources */,
 				D67092381D39C48A004A80B4 /* ZXEncodeHints.m in Sources */,
 				D67092151D39C48A004A80B4 /* ZXVEventResultParser.m in Sources */,
@@ -3382,6 +3364,8 @@
 				D670929A1D39C48A004A80B4 /* ZXPDF417DetectionResult.m in Sources */,
 				D670929C1D39C48A004A80B4 /* ZXPDF417DetectionResultRowIndicatorColumn.m in Sources */,
 				D67091D31D39C48A004A80B4 /* ScanResultViewController.m in Sources */,
+				D67093321D3A1BAD004A80B4 /* GHZShowpirtureController.m in Sources */,
+				D67093551D3A47FB004A80B4 /* GHZNewVideoView.m in Sources */,
 				D67091BA1D39C48A004A80B4 /* GHZChatHomeViewController.m in Sources */,
 				D67091B71D39C48A004A80B4 /* GHZAssistViewController.m in Sources */,
 				D67092CC1D39C48A004A80B4 /* GHZH264Encoder.m in Sources */,
@@ -3401,11 +3385,11 @@
 				D670917B1D39C48A004A80B4 /* GHZCreamProgressView.m in Sources */,
 				D67092131D39C48A004A80B4 /* ZXURLTOResultParser.m in Sources */,
 				D67091CB1D39C48A004A80B4 /* LBXScanResult.m in Sources */,
+				D67093981D3A6D7E004A80B4 /* GHZVideoPlayerController.m in Sources */,
 				D67092851D39C48A004A80B4 /* ZXMultiFormatOneDReader.m in Sources */,
 				D67092481D39C48A004A80B4 /* ZXDataMatrixC40Encoder.m in Sources */,
 				D67092191D39C48A004A80B4 /* ZXWifiResultParser.m in Sources */,
 				D67091BE1D39C48A004A80B4 /* GHZConversationViewController.m in Sources */,
-				D670917E1D39C48A004A80B4 /* GHZTopicVideoView.m in Sources */,
 				D67092BC1D39C48A004A80B4 /* ZXQRCodeEncoder.m in Sources */,
 				D670925C1D39C48A004A80B4 /* ZXAI01320xDecoder.m in Sources */,
 				D67091FD1D39C48A004A80B4 /* ZXEmailAddressParsedResult.m in Sources */,
@@ -3420,6 +3404,7 @@
 				D67092451D39C48A004A80B4 /* ZXDataMatrixDetector.m in Sources */,
 				D67091C91D39C48A004A80B4 /* LBXScanNative.m in Sources */,
 				D67091CC1D39C48A004A80B4 /* LBXScanVideoZoomView.m in Sources */,
+				D67093A41D3A7C34004A80B4 /* GHZCreamCommentViewController.m in Sources */,
 				D67091731D39C48A004A80B4 /* UIViewController+Extension.m in Sources */,
 				D67092321D39C48A004A80B4 /* ZXStringUtils.m in Sources */,
 				D67092231D39C48A004A80B4 /* ZXReedSolomonEncoder.m in Sources */,

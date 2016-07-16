@@ -10,29 +10,25 @@
 #import "GHZTopic.h"
 #import <UIImageView+WebCache.h>
 #import "GHZShowPictureViewController.h"
-
+#import "GHZVideoPlayerController.h"
 @interface GHZTopicVideoView ()
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UILabel *playcountLabel;
 @property (strong, nonatomic) IBOutlet UILabel *videotimeLabel;
-
+@property (nonatomic, strong) GHZVideoPlayerController *videoController;
 @end
 
 
 @implementation GHZTopicVideoView
 
-+ (instancetype)videoView{
-    
++(instancetype)videoView{
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
-    
 }
 
 
 - (void)awakeFromNib{
-    
+    [super awakeFromNib];
     self.autoresizingMask = UIViewAutoresizingNone;
-    
-    
     //给图片添加监听器
     self.imageView.userInteractionEnabled = YES;
     [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPicture)]];
@@ -55,6 +51,25 @@
     NSInteger minute = topic.videotime / 60;
     NSInteger second = topic.videotime % 60;
     self.videotimeLabel.text = [NSString stringWithFormat:@"%02zd:%02zd",minute,second];
-    
+}
+- (IBAction)VideoButton:(UIButton *)sender {
+    [self playVideoWithURL:[NSURL URLWithString:self.topic.videouri]];
+    [self addSubview:self.videoController.view];
+}
+- (void)playVideoWithURL:(NSURL *)url {
+    if (!self.videoController) {
+        self.videoController = [[GHZVideoPlayerController alloc] initWithFrame:self.imageView.bounds];
+        __weak typeof(self)weakSelf = self;
+        [self.videoController setDimissCompleteBlock:^{
+            weakSelf.videoController = nil;
+        }];
+    }
+    self.videoController.contentURL = url;
+}
+
+//停止视频的播放
+- (void)reset {
+    [self.videoController dismiss];
+    self.videoController = nil;
 }
 @end

@@ -14,4 +14,5 @@
 
 /**帖子数据*/
 @property(nonatomic, strong)  GHZTopic *topic;
+- (void)reset;
 @end

@@ -12,8 +12,7 @@
 #import "GHZTopicPictureView.h"
 #import "GHZTopicVoiceView.h"
 #import "GHZTopicVideoView.h"
-#import <AVFoundation/AVFoundation.h>
-
+#import "GHZDataBaseHelper.h"
 
 @interface GHZTopicCell ()
 //头像
@@ -86,9 +85,13 @@
     UIImageView *bgView = [[UIImageView alloc] init];
     bgView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bgView;
-    
-    
-
+}
+// 从队列里面复用时调用
+- (void)prepareForReuse
+{
+    [super prepareForReuse];
+    [self.voiceView reset];
+    [self.videoView reset];
 }
 
 - (void)setTopic:(GHZTopic *)topic{
@@ -123,7 +126,7 @@
         self.videoView.hidden = YES;
     }else if (topic.type == Music){  //声音帖子
         self.voiceView.hidden = NO;
-        self.voiceView.topic = topic;
+        self.voiceView.model = topic;
         self.voiceView.frame = topic.voiceF;
     
         self.pictureView.hidden = YES;
@@ -187,14 +190,18 @@
     
     UIAlertController *alertController=[UIAlertController alertControllerWithTitle: nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];//创建界面
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:nil]; //创建按钮cancel以及对应事件
-    UIAlertAction *saveAction=[UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:nil];//创建按钮ok以及对应事件
-    UIAlertAction *report = [UIAlertAction actionWithTitle:@"举报" style: UIAlertActionStyleDefault handler:nil];
-    
+    UIAlertAction *saveAction=[UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[GHZDataBaseHelper shareInstance] create];
+        [[GHZDataBaseHelper shareInstance] insertTopic:self.topic];
+        NSLog(@"%@",NSHomeDirectory());
+    }];//创建按钮ok以及对应事件
+    UIAlertAction *report = [UIAlertAction actionWithTitle:@"举报" style: UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
     //最后将这些按钮都添加到界面上去，显示界面
     [alertController addAction:cancelAction];
     [alertController addAction:saveAction];
     [alertController addAction:report];
-    
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController: alertController animated:YES completion:nil];
     
 }

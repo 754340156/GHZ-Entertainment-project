@@ -13,7 +13,6 @@
 #import "MJRefresh.h"
 #import "GHZNewWordCell.h"
 #import "GHZNewVideoView.h"
-#import "XLVideoPlayer.h"
 #import "GHZNewVideoView.h"
 #import "UMSocial.h"
 @interface GHZTopicViewController ()<UIScrollViewDelegate,GHZNewWordCellDelegate,UMSocialDataDelegate,UMSocialUIDelegate>
@@ -27,9 +26,9 @@
 @property (nonatomic,strong)NSDictionary *params;
 @property (nonatomic,strong)NSIndexPath *paths;
 @property (nonatomic,strong)GHZNewVideoView *v;
-@property (nonatomic,strong) XLVideoPlayer *player;
 @property (nonatomic,strong)GHZTopicModel *mm;
 @property (nonatomic,strong)NSIndexPath *indexs;
+
 @end
 
 @implementation GHZTopicViewController
@@ -47,10 +46,6 @@
     
     //添加下拉刷新
     [self addRefresh];
-    
-    
-    
-    
 }
 
 -(void)setupTable{
@@ -80,11 +75,8 @@
  * 加载数据
  */
 -(void)loadingData{
-    
     //结束上拉
     [self.tableView.mj_footer endRefreshing];
-    
-    
     //参数
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"a"] = @"newlist";
@@ -112,22 +104,15 @@
     }];
     
 }
-
 //先下拉 在上拉
-
 //下拉刷新回来:只有一页数据,page 0
-
-
-
 //上拉刷新成功回来:最前面页 加第5页
-
 /**
  * 下拉加载新数据
  */
 -(void)loadingAddData{
     //结束下拉
     [self.tableView.mj_header endRefreshing];
-    self.page++;
     //参数
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"a"] = @"newlist";
@@ -160,11 +145,6 @@
     }];
     
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     self.tableView.mj_footer.hidden = (self.topics.count==0);
     return self.topics.count;
@@ -172,11 +152,12 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GHZNewWordCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GHZNewWordCell"];
+    __weak GHZNewWordCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GHZNewWordCell"];
     self.mm = self.topics[indexPath.row];
     cell.selectionStyle =  UITableViewCellSelectionStyleNone;
     cell.model = self.mm;
-    cell.delegate =self;
+    cell.delegate = self;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -186,10 +167,6 @@
     return model.cellHeight;
 }
 
-
--(void)clickWithbutton:(UIButton *)sender{
-   
-}
 -(void)getclick:(NSString *)image url:(NSString *)url text:(NSString *)text{
     [[UMSocialData defaultData].urlResource setResourceType:(UMSocialUrlResourceTypeImage) url:image];
     [UMSocialData defaultData].extConfig.title = @"";
@@ -198,8 +175,6 @@
     
 }
 
--(void)click:(NSString *)viedourl width:(NSInteger)width height:(NSInteger)height btn:(UIButton *)btn{
-  
-}
+
 
 @end

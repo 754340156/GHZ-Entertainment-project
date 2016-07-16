@@ -20,7 +20,6 @@
 @property (nonatomic, weak) UIButton *selectedButton;
 /**顶部的标签*/
 @property (nonatomic, weak) UIView *titlesView;
-
 /**底部的所有内容*/
 @property (nonatomic, weak) UIScrollView *contentView;
 
@@ -34,13 +33,10 @@
     self.view.backgroundColor = GHZRGBColor(223, 223, 223);
     //设置导航栏
     [self setupNav];
-    
     //初始化所有的子控制器
     [self setupChildsVc];
-    
     //设置顶部的标签栏
     [self setupTitleView];
-    
     //底部的 scrollView
     [self setupContentView];
 
@@ -75,10 +71,7 @@
     word.title = @"段子";
     word.type = Word;
     [self addChildViewController:word];
-
 }
-
-
 /**
  *  设置顶部的标签栏
  */
@@ -183,26 +176,13 @@
  *  设置导航栏
  */
 - (void)setupNav{
-
-//    //设置导航栏内容
-//    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
-    //设置导航栏左边的按钮
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" hightImage:@"MainTagSubIconClick" target:self action:@selector(tagClick)];
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:(UIBarButtonItemStyleDone) target:nil action:nil];
-    
-    //self.hidesBottomBarWhenPushed = YES;
-
 }
 
-
-
 - (void)tagClick{
-    
-
     GHZLogFunc;
-
-
 }
 
 #pragma mark - <UIScrollViewDelegate>
@@ -223,9 +203,7 @@
 
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    
     [self scrollViewDidEndScrollingAnimation:scrollView];
-    
     //点击按钮
     NSInteger index = scrollView.contentOffset.x / scrollView.GHZ_width;
     [self titleClick:self.titlesView.subviews[index]];

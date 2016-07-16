@@ -13,7 +13,7 @@
 #import <MJExtension/MJExtension.h>
 #import <MJRefresh/MJRefresh.h>
 #import "GHZTopicCell.h"
-
+#import "GHZCreamCommentViewController.h"
 #import "UMSocial.h"
 @interface GHZTopicController ()<GHZTopicCellDelegate,UMSocialDataDelegate,UMSocialUIDelegate>
 /**
@@ -49,17 +49,12 @@
     [self setupTableView];
     //添加刷新控件
     [self setupRefresh];
-    
-    
 }
-
-
 static NSString  *const GHZTopicCellId = @"topic";
 - (void)setupTableView{
     //设置内边距
     CGFloat bottom = self.tabBarController.tabBar.GHZ_height;
     CGFloat top = GHZTitleVY + GHZTitleVH;
-    //    CGFloat top = CGRectGetMaxY(self.titlesView.frame);
     self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
     //设置滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
@@ -83,8 +78,6 @@ static NSString  *const GHZTopicCellId = @"topic";
     self.tableView.mj_footer.hidden = YES;
     
 }
-
-
 #pragma mark - 数据处理
 /**
  *  加载新的帖子数据
@@ -103,8 +96,6 @@ static NSString  *const GHZTopicCellId = @"topic";
     //发送请求
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary  *responseObject) {
         if (self.params != params) return ;
-        
-        
         //存储 maxtime
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
@@ -168,42 +159,33 @@ static NSString  *const GHZTopicCellId = @"topic";
         
         //结束刷新
         [self.tableView.mj_footer endRefreshing];
-        //        //恢复页码
-        //        self.page--;
     }];
     
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     self.tableView.mj_footer.hidden = (self.topics.count == 0);
     return self.topics.count;
 }
-
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     GHZTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:GHZTopicCellId];
     
     cell.topic = self.topics[indexPath.row];
     cell.delegate =self;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
-
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    GHZCreamCommentViewController *creamCommentVC = [[GHZCreamCommentViewController alloc] init];
+    creamCommentVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:creamCommentVC animated:YES];
+}
 #pragma mark - 代理方法
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     //取出帖子的模型
     GHZTopic *topic = self.topics[indexPath.row];
-    
-    //topic.cellHeight = 10;
-    //[topic setValue:@"10" forKeyPath:@"cellHeight"];
-    //返回这个模型对应 cell 的高度
     return topic.cellHeight;
 }
 
@@ -212,18 +194,8 @@ static NSString  *const GHZTopicCellId = @"topic";
         [[UMSocialData defaultData].urlResource setResourceType:UMSocialUrlResourceTypeImage url:image];
 
     }
-    
     [UMSocialData defaultData].extConfig.title = @"分享 title";
     [UMSocialData defaultData].extConfig.qqData.url = @"www.baidu.com";
-    [UMSocialSnsService presentSnsIconSheetView:self
-                                         appKey:@"57490f1ee0f55a75d5002f3f"
-                                      shareText:[NSString stringWithFormat:@"%@%@",text,url]
-                                     shareImage:[UIImage imageNamed:@"icon"]
-                                shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToQQ,UMShareToQzone]
-                                       delegate:self];
-
+    [UMSocialSnsService presentSnsIconSheetView:self appKey:@"57490f1ee0f55a75d5002f3f" shareText:[NSString stringWithFormat:@"%@%@",text,url] shareImage:[UIImage imageNamed:@"icon"] shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToQQ,UMShareToQzone] delegate:self];
 }
-
-
-
 @end

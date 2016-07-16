@@ -46,7 +46,7 @@ static GHZDataBaseHelper *instance = nil;
 {
     [self.DBhepler open];
     //精华
-        [self.DBhepler executeUpdate:@"CREATE TABLE IF NOT EXISTS TopicTableName (name text,profile_image text,create_time text,m_text text,ding integer,cai integer,repost integer,comment integer,sina_v none,width real,height real,small_image text,large_image text,middle_image text,type integer,voicetime integer,videotime integer,playcount integer,voiceuri text,videouri text,weixin_url text)"];
+        [self.DBhepler executeUpdate:@"CREATE TABLE IF NOT EXISTS TopicTableName (name text,profile_image text,create_time text,m_text text,ding int,cai int,repost int,comment int,sina_v none,width real,height real,small_image text,large_image text,middle_image text,type int,voicetime int,videotime int,playcount int,voiceuri text,videouri text,weixin_url text)"];
     //新帖
     [self.DBhepler executeUpdate:@"CREATE TABLE IF NOT EXISTS TopicModelTableName (name text,profile_image text,create_time text,m_text text,ding integer,cai integer,repost integer,comment integer,sina_v none,width real,height real,smallImage text,bigImage text,middleImage text,type integer,longPicture none,voicetime integer,videotime integer,playcount integer,voiceuri text,videouri text,progressTime real)"];
     
@@ -57,7 +57,7 @@ static GHZDataBaseHelper *instance = nil;
 - (void)insertTopic:(GHZTopic *)topic
 {
     [self.DBhepler open];
-    [self.DBhepler executeUpdate:@"insert into TopicTableName (name,profile_image,create_time,m_text,ding,cai,repost,comment,sina_v,width,height,small_image,large_image,middle_image,type,voicetime,videotime,playcount,voiceuri,videouri,weixin_url) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",topic.name,topic.profile_image,topic.create_time,topic.text,topic.ding,topic.cai,topic.repost,topic.comment,topic.sina_v,topic.width,topic.height,topic.small_image,topic.large_image,topic.middle_image,(NSInteger)topic.type,topic.voicetime,topic.videotime,topic.playcount,topic.voiceuri,topic.videouri,topic.weixin_url];
+    [self.DBhepler executeUpdate:@"insert into TopicTableName (name,profile_image,create_time,m_text,ding,cai,repost,comment,sina_v,width,height,small_image,large_image,middle_image,type,voicetime,videotime,playcount,voiceuri,videouri,weixin_url) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",topic.name,topic.profile_image,topic.create_time,topic.text,topic.ding,topic.cai,topic.repost,topic.comment,topic.sina_v,topic.width,topic.height,topic.small_image,topic.large_image,topic.middle_image,(int)topic.type,topic.voicetime,topic.videotime,topic.playcount,topic.voiceuri,topic.videouri,topic.weixin_url];
     [self.DBhepler close];
     
 }

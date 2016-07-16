@@ -1,5 +1,5 @@
 //
-//  GHZTopicVoiceView.h
+//  GHZShowPictureViewController.h
 //  GHZxiangmuB
 //
 //  Created by lanou3g on 16/7/13.
@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 @class GHZTopic;
-@interface GHZTopicVoiceView : UIView
+@interface GHZShowPictureViewController : UIViewController
+/**帖子*/
+@property(nonatomic, strong)  GHZTopic *topic;
 
-+ (instancetype)voiceView;
-/**帖子数据*/
-@property(nonatomic, strong)  GHZTopic *model;
-- (void)reset;
 @end

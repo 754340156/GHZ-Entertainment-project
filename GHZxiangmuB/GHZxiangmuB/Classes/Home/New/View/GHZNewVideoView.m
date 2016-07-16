@@ -9,15 +9,14 @@
 #import "GHZNewVideoView.h"
 #import "GHZTopicModel.h"
 #import "UIImageView+WebCache.h"
-#import "XLVideoPlayer.h"
-
+#import "GHZShowpirtureController.h"
+#import "GHZVideoPlayerController.h"
 @interface GHZNewVideoView ()
 @property (weak, nonatomic) IBOutlet UILabel *playcountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *videotimeLabel;
-//@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (nonatomic,assign)CGRect c;
-@property (nonatomic,copy)NSString *url;
-
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
+@property (nonatomic, strong) GHZVideoPlayerController *videoController;
 @end
 
 @implementation GHZNewVideoView
@@ -27,9 +26,15 @@
 }
 
 -(void)awakeFromNib{
+    [super awakeFromNib];
     self.autoresizingMask = UIViewAutoresizingNone;
     self.imageView.userInteractionEnabled = YES;
-//    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showVideo)]];
+    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(ShowImage)]];
+}
+-(void)ShowImage{
+    GHZShowpirtureController *vc = [[GHZShowpirtureController alloc] init];
+    vc.model = self.model;
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vc animated:YES completion:nil];
 }
 -(void)setModel:(GHZTopicModel *)model{
     _model = model;
@@ -40,35 +45,25 @@
     NSInteger f = model.videotime/60;
     NSInteger m = model.videotime%60;
     self.videotimeLabel.text = [NSString stringWithFormat:@"%.02ld:%.02ld",f,m];
-    self.c = model.videoViewFrame;
-    self.url = model.videouri;
 }
-
-//-(IBAction)showVideo{
-//   
-////    
-////    if (self.click) {
-////        self.click(sender);
-////    }
-////    
-////    if (self.delegate && [self respondsToSelector:@selector(clickWithbutton:)])
-////    {
-////        [self.delegate clickWithbutton:sender];
-////    }
-//    
-//    self.player = [[XLVideoPlayer alloc] init];
-//    self.player.videoUrl = self.model.videouri;
-//    self.player.frame = CGRectMake(0, 0, self.model.videoViewFrame.size.width, self.model.self.height);
-//    [self addSubview:self.player];
-//}
-
 - (IBAction)VideoButton:(UIButton *)sender {
-//    if (self.delegate && [self respondsToSelector:@selector(clickWithbutton)]) {
-        [self.delegate clickWithbutton:sender];
-//    }
-
-    
+    [self playVideoWithURL:[NSURL URLWithString:self.model.videouri]];
+    [self addSubview:self.videoController.view];
+}
+- (void)playVideoWithURL:(NSURL *)url {
+    if (!self.videoController) {
+        self.videoController = [[GHZVideoPlayerController alloc] initWithFrame:self.imageView.bounds];
+        __weak typeof(self)weakSelf = self;
+        [self.videoController setDimissCompleteBlock:^{
+            weakSelf.videoController = nil;
+        }];
+    }
+    self.videoController.contentURL = url;
 }
 
-
+//停止视频的播放
+- (void)reset {
+    [self.videoController dismiss];
+    self.videoController = nil;
+}
 @end

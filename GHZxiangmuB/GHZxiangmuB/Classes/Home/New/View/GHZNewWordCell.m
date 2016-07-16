@@ -11,8 +11,8 @@
 #import "GHZNewPictureView.h"
 #import "UIImageView+WebCache.h"
 #import "GHZNewMusicView.h"
-#import "GHZNewVideoView.h"
-@interface GHZNewWordCell ()<GHZNewVideoViewDelegate>
+#import "GHZDataBaseHelper.h"
+@interface GHZNewWordCell ()
 /** 头像*/
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 /** 昵称*/
@@ -59,36 +59,25 @@
 }
 -(GHZNewVideoView *)videoView{
     if (!_videoView) {
-        GHZNewVideoView *videoView = [GHZNewVideoView videoView];
+        GHZNewVideoView* videoView = [GHZNewVideoView videoView];
         [self.contentView addSubview:videoView];
         _videoView = videoView;
-        _videoView.delegate =self;
     }
     return _videoView;
 }
 
-
+// 从队列里面复用时调用
+- (void)prepareForReuse
+{
+    [super prepareForReuse];
+    [_musicView reset];
+    [_videoView reset];
+}
 -(void)awakeFromNib{
     UIImageView *bjView = [[UIImageView alloc] init];
     bjView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bjView;
 }
-/**
- * 今年
-     今天
-       1分钟内
-            刚刚
-         1小时内
-           xx分中前
-          qita
-            xx小时前
-  昨天
-    昨天 时:分:秒
- 其他
- 月-日 时:分:秒
- 飞今年 就正常年月日
- 
- */
 -(void)setModel:(GHZTopicModel *)model{
     _model = model;
 //页面参数
@@ -106,9 +95,6 @@
     [self ButtonTitle:self.shareButton count:model.repost placeholder:@"分享"];
     [self ButtonTitle:self.commentsButton count:model.comment placeholder:@"评论"];
     self.TextsLabel.text = model.text;
-    NSLog(@"%@",model.create_time);
-   // NSLog(@"%@",model.text);
-   // NSLog(@"%@  %@ %@",model.smallImage,model.bigImage,model.middleImage);
     if (model.type == Picture) { //根据类型把相应的view贴到view上
         self.pictureView.hidden = NO;
         self.pictureView.model = model;
@@ -132,11 +118,7 @@
         self.pictureView.hidden = YES;
         self.musicView.hidden = YES;
         self.videoView.hidden = YES;
-    }{
-//        self.videoView.hidden = YES;
-//        self.musicView.hidden = YES;
-//        self.pictureView.hidden = YES;
-                    }
+    }
 }
 -(void)testDate:(NSString *)create_time
 {
@@ -170,14 +152,6 @@
     frame.origin.y += GHZCellmargin;
     [super setFrame:frame];
 }
-
-
-- (void)clickWithbutton:(UIButton*)btn
-{
-    
-    
-    [self.delegate click:self.model.videouri width:self.model.videoViewFrame.size.width height:self.model.videoViewFrame.size.height btn:btn];
-}
 - (IBAction)shareButtonClick:(id)sender {
     NSString *url = [[NSString alloc] init];
     if (_model.type ==Video) {
@@ -190,11 +164,21 @@
     [self.delegate getclick:_model.bigImage url:url text:_model.text];
 }
 - (IBAction)collectionBtn:(id)sender {
-    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"您确定要收藏吗" message:nil preferredStyle:(UIAlertControllerStyleActionSheet)];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"收藏" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertController *alertController=[UIAlertController alertControllerWithTitle: nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];//创建界面
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:nil]; //创建按钮cancel以及对应事件
+    UIAlertAction *saveAction=[UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[GHZDataBaseHelper shareInstance] create];
+        [[GHZDataBaseHelper shareInstance]insertTopicModel:self.model];
+    }];//创建按钮ok以及对应事件
+    UIAlertAction *report = [UIAlertAction actionWithTitle:@"举报" style: UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
     }];
-    [controller addAction:action];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:controller animated:YES completion:nil];
+    //最后将这些按钮都添加到界面上去，显示界面
+    [alertController addAction:cancelAction];
+    [alertController addAction:saveAction];
+    [alertController addAction:report];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController: alertController animated:YES completion:nil];
 }
+
 
 @end

@@ -23,9 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     self.view.backgroundColor = GHZRGBColor(223, 223, 223);
-
     [self setuptheNav];
     [self setupChildVC];//子控制器
     [self titleViewNA];//标签栏
@@ -76,8 +74,6 @@
     redView.GHZ_y = self.titleV.GHZ_height - redView.GHZ_height;
     
     self.redView = redView;
-    
-//    self.viewArr = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
     for (NSInteger i = 0; i < self.childViewControllers.count; i++) {
         UIButton *button = [[UIButton alloc] init];
         button.tag = i;
@@ -92,8 +88,6 @@
         button.titleLabel.font = [UIFont systemFontOfSize:14];
         [button addTarget:self action:@selector(titleClick:) forControlEvents:(UIControlEventTouchUpInside)];
         [titleV addSubview:button];
-        
-        
                //默认点击第一个
         if (i == 0) {
             button.enabled = NO;
@@ -145,9 +139,6 @@
     [self titleClick:self.titleV.subviews[index]];
 
 }
-
-
-
 //button点击方法
 -(void)titleClick:(UIButton *)button{
     button.enabled = NO;
@@ -166,7 +157,7 @@
 }
 //导航设置
 -(void)setuptheNav{
-//    self.view.backgroundColor = [UIColor blueColor];
+
 }
 
 
