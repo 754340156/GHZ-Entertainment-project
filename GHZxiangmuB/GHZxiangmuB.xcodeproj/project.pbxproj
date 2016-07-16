@@ -10,6 +10,7 @@
 		7ED621499AB0A47C38A4912E /* libPods-GHZxiangmuB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA80B1A43D034F7E977A430 /* libPods-GHZxiangmuB.a */; };
 		C22577211D39D6A8006D5B28 /* GHZCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C22577201D39D6A8006D5B28 /* GHZCollectionView.m */; settings = {ASSET_TAGS = (); }; };
 		C22577241D39E75B006D5B28 /* GHZCollctionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22577231D39E75B006D5B28 /* GHZCollctionListViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C22577291D3A0EF5006D5B28 /* GHZNewCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C22577281D3A0EF5006D5B28 /* GHZNewCollectionView.m */; settings = {ASSET_TAGS = (); }; };
 		D628E8381D33478300624AEE /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C49CCD1D311CE00045731C /* VideoToolbox.framework */; };
 		D63C47DF1D314C1A00BB5A46 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C49CCB1D311B790045731C /* libz.tbd */; };
 		D67091631D39C48A004A80B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6708DC31D39C489004A80B4 /* AppDelegate.m */; };
@@ -400,6 +401,8 @@
 		C22577201D39D6A8006D5B28 /* GHZCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCollectionView.m; sourceTree = "<group>"; };
 		C22577221D39E75B006D5B28 /* GHZCollctionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCollctionListViewController.h; sourceTree = "<group>"; };
 		C22577231D39E75B006D5B28 /* GHZCollctionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCollctionListViewController.m; sourceTree = "<group>"; };
+		C22577271D3A0EF5006D5B28 /* GHZNewCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewCollectionView.h; sourceTree = "<group>"; };
+		C22577281D3A0EF5006D5B28 /* GHZNewCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewCollectionView.m; sourceTree = "<group>"; };
 		D6708DC21D39C489004A80B4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6708DC31D39C489004A80B4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D6708DC41D39C489004A80B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1898,6 +1901,8 @@
 				D6708EA51D39C489004A80B4 /* GHZProfileViewController.m */,
 				C225771F1D39D6A8006D5B28 /* GHZCollectionView.h */,
 				C22577201D39D6A8006D5B28 /* GHZCollectionView.m */,
+				C22577271D3A0EF5006D5B28 /* GHZNewCollectionView.h */,
+				C22577281D3A0EF5006D5B28 /* GHZNewCollectionView.m */,
 				C22577221D39E75B006D5B28 /* GHZCollctionListViewController.h */,
 				C22577231D39E75B006D5B28 /* GHZCollctionListViewController.m */,
 			);
@@ -3160,6 +3165,7 @@
 				D670926A1D39C48A004A80B4 /* ZXRSSExpandedDecodedObject.m in Sources */,
 				D670925B1D39C48A004A80B4 /* ZXAI013103decoder.m in Sources */,
 				D67091671D39C48A004A80B4 /* GHZNavViewController.m in Sources */,
+				C22577291D3A0EF5006D5B28 /* GHZNewCollectionView.m in Sources */,
 				D67092211D39C48A004A80B4 /* ZXGenericGFPoly.m in Sources */,
 				D670925F1D39C48A004A80B4 /* ZXAI013x0x1xDecoder.m in Sources */,
 				D67092391D39C48A004A80B4 /* ZXErrors.m in Sources */,
