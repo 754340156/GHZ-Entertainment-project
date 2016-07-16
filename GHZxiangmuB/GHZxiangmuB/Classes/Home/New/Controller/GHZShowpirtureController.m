@@ -9,7 +9,8 @@
 #import "GHZShowpirtureController.h"
 #import "UIImageView+WebCache.h"
 #import "GHZTopicModel.h"
-@interface GHZShowpirtureController ()
+#import "UMSocial.h"
+@interface GHZShowpirtureController ()<UMSocialUIDelegate,UMSocialDataDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic,strong)UIImageView *imageView;
 @property (nonatomic,strong)MBProgressHUD *hud;
@@ -63,6 +64,24 @@
         self.hud.removeFromSuperViewOnHide = YES;
        [self.hud hide:YES afterDelay:1];
     }
+}
+- (IBAction)shareButtons:(id)sender {
+    
+    if (!(_model.type == Word)) {
+        [[UMSocialData defaultData].urlResource setResourceType:UMSocialUrlResourceTypeImage url:_model.bigImage];
+        
+    }
+    
+    [UMSocialData defaultData].extConfig.title = @"分享 title";
+    [UMSocialData defaultData].extConfig.qqData.url = @"www.baidu.com";
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:@"57490f1ee0f55a75d5002f3f"
+                                      shareText:[NSString stringWithFormat:@"%@%@",_model.text,_model.bigImage]
+                                     shareImage:[UIImage imageNamed:@"icon"]
+                                shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToQQ,UMShareToQzone]
+                                       delegate:self];
+
+    
 }
 
 @end
