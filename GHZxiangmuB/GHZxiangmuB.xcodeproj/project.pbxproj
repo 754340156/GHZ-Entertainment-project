@@ -402,6 +402,7 @@
 		C22577231D39E75B006D5B28 /* GHZCollctionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCollctionListViewController.m; sourceTree = "<group>"; };
 		C22577271D3A0EF5006D5B28 /* GHZNewCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewCollectionView.h; sourceTree = "<group>"; };
 		C22577281D3A0EF5006D5B28 /* GHZNewCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewCollectionView.m; sourceTree = "<group>"; };
+		C26AF8BE1D3A0F460037415B /* GHZxiangmuB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHZxiangmuB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6708DC21D39C489004A80B4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6708DC31D39C489004A80B4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D6708DC41D39C489004A80B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1139,7 +1140,7 @@
 		D67093A11D3A7C34004A80B4 /* GHZCreamCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCreamCommentViewController.h; sourceTree = "<group>"; };
 		D67093A21D3A7C34004A80B4 /* GHZCreamCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCreamCommentViewController.m; sourceTree = "<group>"; };
 		D67093A31D3A7C34004A80B4 /* GHZCreamCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZCreamCommentViewController.xib; sourceTree = "<group>"; };
-		D67093A81D3A80FB004A80B4 /* GHZxiangmuB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHZxiangmuB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D67093A81D3A80FB004A80B4 /* GHZxiangmuB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = GHZxiangmuB.app; path = "/Users/zhaoce/Desktop/GHZxiangmuB/GHZxiangmuB/build/Debug-iphoneos/GHZxiangmuB.app"; sourceTree = "<absolute>"; };
 		D6963E1D1D373663000C58B4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D6963E1F1D37367A000C58B4 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		D6963E211D37368A000C58B4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -2915,13 +2916,21 @@
 			path = Wechat;
 			sourceTree = "<group>";
 		};
+		D67093A91D3A81AD004A80B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C26AF8BE1D3A0F460037415B /* GHZxiangmuB.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D686B3101D2DF27300648326 = {
 			isa = PBXGroup;
 			children = (
 				D6708DC11D39C489004A80B4 /* GHZxiangmuB */,
 				6A368DFDEB8919DA8B912498 /* Pods */,
 				5A4F9C47C2CCB30AA9127C6E /* Frameworks */,
-				D67093A81D3A80FB004A80B4 /* GHZxiangmuB.app */,
+				D67093A91D3A81AD004A80B4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
