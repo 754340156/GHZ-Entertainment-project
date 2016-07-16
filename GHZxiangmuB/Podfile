@@ -13,5 +13,6 @@ pod 'NJKWebViewProgress'
 pod 'BarrageRenderer'
 pod 'LFLiveKit'
 pod 'HyphenateSDK'
+pod 'FMDB'
 pod 'EaseUI', :git => 'https://github.com/easemob/easeui-ios-hyphenate-cocoapods.git'
 end

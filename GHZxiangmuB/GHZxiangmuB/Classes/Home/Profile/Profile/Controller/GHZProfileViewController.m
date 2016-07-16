@@ -97,10 +97,10 @@
     }
     else if (indexPath.row == 1)
     {
-//        GHZCollectionController *VC = [[GHZCollectionController alloc] init];
-//        GHZCollectionView *VC = [[GHZCollectionView alloc] init];
-        GHZCollctionListViewController *VC = [[GHZCollctionListViewController alloc] init];
-        [self.navigationController pushViewController:VC animated:YES];
+
+        GHZCollctionListViewController *CollctionListVC = [[GHZCollctionListViewController alloc] init];
+        CollctionListVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:CollctionListVC animated:YES];
     }
     else if (indexPath.row == 2)
     {

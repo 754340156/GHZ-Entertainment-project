@@ -192,9 +192,6 @@
 - (IBAction)collectionBtn:(id)sender {
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"您确定要收藏吗" message:nil preferredStyle:(UIAlertControllerStyleActionSheet)];
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"收藏" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
-        
-        
-        
     }];
     [controller addAction:action];
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:controller animated:YES completion:nil];

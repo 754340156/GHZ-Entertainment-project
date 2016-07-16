@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -16,7 +16,6 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wUE-fN-ebb" userLabel="头像">
                         <rect key="frame" x="10" y="10" width="35" height="35"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="35" id="QEF-j0-5Ks"/>
                             <constraint firstAttribute="width" constant="35" id="hJf-zd-jXU"/>
@@ -24,21 +23,18 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBk-8c-KFJ" userLabel="昵称">
                         <rect key="frame" x="55" y="10" width="33" height="16"/>
-                        <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBS-Zh-OtB" userLabel="时间">
                         <rect key="frame" x="55" y="31" width="29" height="14"/>
-                        <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayg-aN-o3F">
                         <rect key="frame" x="343" y="10" width="19" height="20"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="19" id="3we-Wn-EYW"/>
                             <constraint firstAttribute="height" constant="20" id="QDe-wr-IGh"/>
@@ -53,7 +49,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xg1-ub-oE5" userLabel="顶">
                                 <rect key="frame" x="0.0" y="0.0" width="93" height="44"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="100" image="mainCellDing">
@@ -63,7 +58,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxD-F1-GBk" userLabel="踩">
                                 <rect key="frame" x="93" y="0.0" width="93" height="44"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="100" image="mainCellCai">
@@ -75,7 +69,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdw-xu-PbW" userLabel="转发">
                                 <rect key="frame" x="186" y="0.0" width="93" height="44"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="100" image="mainCellShare">
@@ -90,39 +83,33 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="Yy5-Q6-E0w" userLabel="分割1">
                                 <rect key="frame" x="93" y="0.0" width="1" height="44"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="7mJ-Bj-KEW"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="giM-6p-HcX" userLabel="分割2">
                                 <rect key="frame" x="186" y="0.0" width="1" height="44"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="PqN-FT-g4e"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="gun-5i-Rjg" userLabel="分割3">
                                 <rect key="frame" x="279" y="0.0" width="1" height="44"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="boW-Zz-djd"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-content-line" translatesAutoresizingMaskIntoConstraints="NO" id="oCF-Fo-c4j">
                                 <rect key="frame" x="0.0" y="0.0" width="372" height="0.0"/>
-                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-content-line" translatesAutoresizingMaskIntoConstraints="NO" id="w4P-Lx-gqK">
                                 <rect key="frame" x="0.0" y="0.0" width="372" height="1"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="kBf-B4-j8t"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGd-dr-fRH" userLabel="评论">
                                 <rect key="frame" x="279" y="0.0" width="93" height="44"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="100" image="mainCellComment">
@@ -131,7 +118,6 @@
                                 <state key="highlighted" image="mainCellCommentClick"/>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="giM-6p-HcX" firstAttribute="top" secondItem="Xg1-ub-oE5" secondAttribute="top" id="2Ve-Bm-t5v"/>
@@ -171,7 +157,6 @@
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_AddV_authen" translatesAutoresizingMaskIntoConstraints="NO" id="Dcr-qi-hrJ">
                         <rect key="frame" x="36" y="36" width="14" height="14"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="14" id="Njx-XJ-13I"/>
                             <constraint firstAttribute="width" constant="14" id="vcG-lh-c99"/>
@@ -179,13 +164,11 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wz-iJ-bvg">
                         <rect key="frame" x="10" y="55" width="352" height="17"/>
-                        <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <animations/>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="FBS-Zh-OtB" firstAttribute="leading" secondItem="sBk-8c-KFJ" secondAttribute="leading" id="2Sc-I4-Bby"/>
@@ -206,7 +189,6 @@
                     <constraint firstItem="6Wz-iJ-bvg" firstAttribute="leading" secondItem="wUE-fN-ebb" secondAttribute="leading" id="zdF-ms-phv"/>
                 </constraints>
             </tableViewCellContentView>
-            <animations/>
             <connections>
                 <outlet property="TextsLabel" destination="6Wz-iJ-bvg" id="OhB-fY-zxW"/>
                 <outlet property="caiButton" destination="hxD-F1-GBk" id="Tf9-zm-nsa"/>

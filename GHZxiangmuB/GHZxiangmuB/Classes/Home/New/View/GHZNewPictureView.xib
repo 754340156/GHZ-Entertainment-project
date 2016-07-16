@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,18 +13,15 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="KNM-ja-sfT">
                     <rect key="frame" x="0.0" y="20" width="257" height="25"/>
-                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="t96-VO-Ct7"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WZo-F7-ph4" userLabel="图片">
                     <rect key="frame" x="0.0" y="0.0" width="257" height="231"/>
-                    <animations/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="qmu-ZY-d4r" userLabel="gif图标">
                     <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
-                    <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="31" id="bZ7-v3-CVD"/>
                         <constraint firstAttribute="height" constant="31" id="m06-3G-kDF"/>
@@ -32,7 +29,6 @@
                 </imageView>
                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OH-RY-Pcn">
                     <rect key="frame" x="0.0" y="188" width="257" height="43"/>
-                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="43" id="3LQ-xb-plf"/>
                     </constraints>
@@ -41,7 +37,6 @@
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5FS-Xv-OFi" userLabel="Loding..." customClass="DALabeledCircularProgressView">
                     <rect key="frame" x="79" y="66" width="100" height="100"/>
-                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="Kwa-Dz-pQe"/>
@@ -49,7 +44,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <animations/>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="KNM-ja-sfT" secondAttribute="trailing" id="1sJ-Md-8qO"/>
