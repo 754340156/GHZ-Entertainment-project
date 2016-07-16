@@ -16,16 +16,21 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJ8-V4-C6d">
-                    <rect key="frame" x="15" y="40" width="30" height="30"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6e-D1-QBg">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <animations/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJ8-V4-C6d">
+                    <rect key="frame" x="15" y="45" width="35" height="35"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="Qtv-mN-1eZ"/>
-                        <constraint firstAttribute="width" constant="30" id="gET-a7-VX4"/>
+                        <constraint firstAttribute="height" constant="35" id="Qtv-mN-1eZ"/>
+                        <constraint firstAttribute="width" constant="35" id="gET-a7-VX4"/>
                     </constraints>
-                    <state key="normal" title="返回">
-                        <color key="titleColor" red="0.86216239100000003" green="1" blue="0.69205338390000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" image="show_image_back_icon">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="back" destination="-1" eventType="touchUpInside" id="tna-8S-CXg"/>
@@ -42,6 +47,9 @@
                     <state key="normal" title="转发">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="shareButtons:" destination="-1" eventType="touchUpInside" id="Jcc-cL-26m"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eED-eg-FtM">
                     <rect key="frame" x="510" y="555" width="70" height="25"/>
@@ -58,11 +66,6 @@
                         <action selector="save" destination="-1" eventType="touchUpInside" id="umu-nK-Qg5"/>
                     </connections>
                 </button>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6e-D1-QBg">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <animations/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                </scrollView>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -73,7 +76,7 @@
                 <constraint firstItem="b6e-D1-QBg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="P5b-Fy-2e9"/>
                 <constraint firstAttribute="bottom" secondItem="b6e-D1-QBg" secondAttribute="bottom" id="V0I-Y2-vWv"/>
                 <constraint firstItem="b6e-D1-QBg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hnp-QF-a7e"/>
-                <constraint firstItem="sJ8-V4-C6d" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="kxx-DI-9Ba"/>
+                <constraint firstItem="sJ8-V4-C6d" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="45" id="kxx-DI-9Ba"/>
                 <constraint firstItem="sJ8-V4-C6d" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="lzB-fF-wjH"/>
                 <constraint firstAttribute="bottom" secondItem="MU2-95-Gib" secondAttribute="bottom" constant="20" id="o6C-EP-W2W"/>
                 <constraint firstAttribute="bottom" secondItem="eED-eg-FtM" secondAttribute="bottom" constant="20" id="w5H-rj-yke"/>
@@ -81,4 +84,7 @@
             <point key="canvasLocation" x="119" y="357"/>
         </view>
     </objects>
+    <resources>
+        <image name="show_image_back_icon" width="35" height="35"/>
+    </resources>
 </document>

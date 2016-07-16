@@ -44,6 +44,9 @@
                             <constraint firstAttribute="height" constant="20" id="QDe-wr-IGh"/>
                         </constraints>
                         <state key="normal" title="Button" image="cellFollowIcon"/>
+                        <connections>
+                            <action selector="collectionBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="yt8-h4-Lce"/>
+                        </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fA6-IT-7uA" userLabel="底部工具栏">
                         <rect key="frame" x="0.0" y="165" width="372" height="44"/>

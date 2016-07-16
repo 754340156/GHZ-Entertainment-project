@@ -54,7 +54,7 @@
     
     }
     
-      [_qRScanView startDeviceReadyingWithText:@"相机启动中"];
+      [_qRScanView startDeviceReadyingWithText:@"正在处理...."];
     
     
 }

@@ -7,12 +7,14 @@
 //
 
 #import "GHZRegistViewController.h"
+#import "GHZMBManager.h"
+#import "NarikoTextField.h"
 #import <EMSDK.h>
 @interface GHZRegistViewController ()
 @property (weak, nonatomic) IBOutlet UIView *backView;
-@property (weak, nonatomic) IBOutlet UITextField *userNameLabel;
-@property (weak, nonatomic) IBOutlet UITextField *passwordLabel;
-@property (weak, nonatomic) IBOutlet UITextField *conPasswordLabel;
+@property (weak, nonatomic) IBOutlet NarikoTextField *userNameLabel;
+@property (weak, nonatomic) IBOutlet NarikoTextField *passwordLabel;
+@property (weak, nonatomic) IBOutlet NarikoTextField *conPasswordLabel;
 @end
 
 @implementation GHZRegistViewController
@@ -28,15 +30,19 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.userNameLabel.placeHolderLabel.text = @"请输入用户名";
+    self.passwordLabel.placeHolderLabel.text = @"请输入密码";
+    self.conPasswordLabel.placeHolderLabel.text = @"请确认密码";
     self.backView.layer.masksToBounds = YES;
     self.backView.layer.cornerRadius = self.backView.GHZ_width * 0.5;
 }
 - (IBAction)registAction:(UIButton *)sender
 {
     [[EMClient sharedClient] asyncRegisterWithUsername:self.userNameLabel.text password:self.passwordLabel.text success:^{
-        NSLog(@"注册成功");
+         [GHZMBManager showBriefMessage:@"注册成功" InView:self.view];
         [self.navigationController popViewControllerAnimated:YES];
     } failure:^(EMError *aError) {
+        [GHZMBManager showBriefMessage:@"注册失败" InView:self.view];
          NSLog(@"注册失败 = %@",aError.errorDescription);
     }];
 }

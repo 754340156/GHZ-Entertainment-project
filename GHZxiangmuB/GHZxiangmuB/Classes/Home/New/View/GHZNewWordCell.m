@@ -189,4 +189,12 @@
     }
     [self.delegate getclick:_model.bigImage url:url text:_model.text];
 }
+- (IBAction)collectionBtn:(id)sender {
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"收藏" message:@"去" preferredStyle:(UIAlertControllerStyleActionSheet)];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"收藏" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    [controller addAction:action];
+}
+
 @end

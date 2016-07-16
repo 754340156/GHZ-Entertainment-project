@@ -26,7 +26,10 @@
 #define kNotifyToseeBigWorld @"kNotifyToseeBigWorld"
 // 点击了用户头像
 #define kNotifyClickUser @"kNotifyClickUser"
-
+//聊天模块收到好友同意通知
+#define kNotifyReceiveFriendAgree @"kNotifyReceiveFriendAgree"
+//聊天模块 点击同意好友请求通知
+#define kNotifyAgreeFriend @"kNotifyAgreeFriend"
 
 #pragma mark - 颜色
 // 颜色相关
@@ -59,11 +62,9 @@
 
 #pragma mark - 导入库
 #import <Masonry/Masonry.h>
-
 #import "UIView+Extension.h"
-
 #import "UIBarButtonItem+GHZExtention.h"
-
+#import "GHZMBManager.h"
 //GZH部分<<<<<<设置
 #ifdef DEBUG
 #define GHZLog(...) NSLog(__VA_ARGS__)
