@@ -59,7 +59,7 @@
         //文字的范围
         CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width-GHZCellTextX*4, MAXFLOAT);
         //文字搞
-        CGFloat textH = [self.text boundingRectWithSize:maxSize options:(NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName :[UIFont systemFontOfSize:14]} context:nil].size.height;
+        CGFloat textH = [self.text boundingRectWithSize:maxSize options:(NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName :[UIFont systemFontOfSize:14]} context:nil].size.height+8;
         _cellHeight = GHZCellTextY + textH + GHZCellmargin ;
         //根据段子类型判断cell高度
         if (self.type == Picture) {

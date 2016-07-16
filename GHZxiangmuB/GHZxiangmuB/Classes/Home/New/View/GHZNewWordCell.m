@@ -106,7 +106,7 @@
     [self ButtonTitle:self.shareButton count:model.repost placeholder:@"分享"];
     [self ButtonTitle:self.commentsButton count:model.comment placeholder:@"评论"];
     self.TextsLabel.text = model.text;
-    
+    NSLog(@"%@",model.create_time);
    // NSLog(@"%@",model.text);
    // NSLog(@"%@  %@ %@",model.smallImage,model.bigImage,model.middleImage);
     if (model.type == Picture) { //根据类型把相应的view贴到view上
@@ -190,11 +190,14 @@
     [self.delegate getclick:_model.bigImage url:url text:_model.text];
 }
 - (IBAction)collectionBtn:(id)sender {
-    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"收藏" message:@"去" preferredStyle:(UIAlertControllerStyleActionSheet)];
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"您确定要收藏吗" message:nil preferredStyle:(UIAlertControllerStyleActionSheet)];
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"收藏" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        
+        
         
     }];
     [controller addAction:action];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:controller animated:YES completion:nil];
 }
 
 @end

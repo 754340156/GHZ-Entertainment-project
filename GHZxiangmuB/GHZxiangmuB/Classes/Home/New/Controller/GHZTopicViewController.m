@@ -52,13 +52,6 @@
     
     
 }
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    
-    [_player destroyPlayer];
-    _player = nil;
-}
-
 
 -(void)setupTable{
     self.view.backgroundColor = [UIColor whiteColor];
@@ -193,58 +186,9 @@
     return model.cellHeight;
 }
 
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
 
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- } else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 -(void)clickWithbutton:(UIButton *)sender{
    
-//    self.player = [[XLVideoPlayer alloc] init];
-//    self.player.videoUrl = self.mm.videouri;
-//    [self.player playerBindTableView:self.tableView currentIndexPath:];
-//    self.player.frame = CGRectMake(0, 0, self.mm.videoViewFrame.size.width, self.mm.videoViewFrame.size.height);
-//    GHZNewWordCell *cell = [[GHZNewWordCell alloc] init];
-//    [cell.contentView addSubview:self.player];
-    NSLog(@"1");
 }
 -(void)getclick:(NSString *)image url:(NSString *)url text:(NSString *)text{
     [[UMSocialData defaultData].urlResource setResourceType:(UMSocialUrlResourceTypeImage) url:image];
@@ -258,24 +202,4 @@
   
 }
 
-
-//
-//-(GHZNewVideoView *)v{
-//    if (!_v) {
-//        _v = [[GHZNewVideoView alloc] init];
-//    }
-//    return _v;
-//}
-
-//- (GHZNewVideoView *)v
-//{
-//    if (!_v) {
-//        _v = [[GHZNewVideoView alloc]init];
-//        _v.delegate = self;
-////        _v.click = ^(UIButton *sender)
-////        {
-////            
-//        };
-//    }
-//}
 @end

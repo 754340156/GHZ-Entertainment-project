@@ -12,6 +12,8 @@
 #import "GHZNavViewController.h"
 #import "GHZLoginViewController.h"
 #import "GHZFileDataHandle.h"
+#import "GHZCollctionListViewController.h"
+#import "GHZCollectionView.h"
 #import <EMSDK.h>
 @interface GHZProfileViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
@@ -95,7 +97,10 @@
     }
     else if (indexPath.row == 1)
     {
-
+//        GHZCollectionController *VC = [[GHZCollectionController alloc] init];
+//        GHZCollectionView *VC = [[GHZCollectionView alloc] init];
+        GHZCollctionListViewController *VC = [[GHZCollctionListViewController alloc] init];
+        [self.navigationController pushViewController:VC animated:YES];
     }
     else if (indexPath.row == 2)
     {
