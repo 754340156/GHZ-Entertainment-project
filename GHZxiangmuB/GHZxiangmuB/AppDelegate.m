@@ -10,8 +10,8 @@
 #import "AppDelegate+GHZUMeng.h"
 #import "AppDelegate+GHZEaseMobAPNS.h"
 #import "CoreLaunchLite.h"
-
-@interface AppDelegate ()
+#import <EMSDK.h>
+@interface AppDelegate ()<EMClientDelegate>
 
 @end
 
@@ -24,10 +24,7 @@
     //环信
     [self setEaseMobWithApplication:application didFinishLaunchingWithOptions:launchOptions];
     
-    
-
-
-
+    [[EMClient sharedClient] addDelegate:self delegateQueue:nil];
     //设置启动图
     [CoreLaunchLite animWithWindow:self.window image:nil];
     return YES;

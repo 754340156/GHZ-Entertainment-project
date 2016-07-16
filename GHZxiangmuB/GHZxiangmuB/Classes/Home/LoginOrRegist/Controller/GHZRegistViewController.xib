@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GHZRegistViewController">
@@ -21,33 +21,30 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading_bg" translatesAutoresizingMaskIntoConstraints="NO" id="UMg-A7-lsY">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.3970366379310345" colorSpace="calibratedWhite"/>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="请输入用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yn2-pK-abN">
-                    <rect key="frame" x="20" y="200" width="560" height="30"/>
-                    <animations/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yn2-pK-abN" customClass="NarikoTextField">
+                    <rect key="frame" x="20" y="150" width="560" height="80"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="fIX-os-FEe"/>
+                        <constraint firstAttribute="height" constant="80" id="fIX-os-FEe"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="请确认密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hFj-Jk-bhF">
-                    <rect key="frame" x="20" y="300" width="560" height="30"/>
-                    <animations/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hFj-Jk-bhF" customClass="NarikoTextField">
+                    <rect key="frame" x="20" y="350" width="560" height="80"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="QLn-ZG-xVa"/>
+                        <constraint firstAttribute="height" constant="80" id="QLn-ZG-xVa"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEm-cO-HvI">
-                    <rect key="frame" x="250" y="370" width="100" height="30"/>
-                    <animations/>
+                    <rect key="frame" x="225" y="470" width="150" height="34"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="zQc-Gj-5IB"/>
+                        <constraint firstAttribute="width" constant="150" id="zQc-Gj-5IB"/>
                     </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <state key="normal" title="注册">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
@@ -55,13 +52,12 @@
                         <action selector="registAction:" destination="-1" eventType="touchUpInside" id="Fcz-nw-cOv"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="请输入密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LiW-cc-Wef">
-                    <rect key="frame" x="20" y="250" width="560" height="30"/>
-                    <animations/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LiW-cc-Wef" customClass="NarikoTextField">
+                    <rect key="frame" x="20" y="250" width="560" height="80"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="xon-DB-MWW"/>
+                        <constraint firstAttribute="height" constant="80" id="xon-DB-MWW"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xM7-gH-oDG">
@@ -69,7 +65,6 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibT-dT-AgU">
                             <rect key="frame" x="10" y="10" width="20" height="20"/>
-                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="2CR-uR-LoR"/>
                                 <constraint firstAttribute="width" constant="20" id="mrz-QA-BkM"/>
@@ -80,7 +75,6 @@
                             </connections>
                         </button>
                     </subviews>
-                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.19913793103448277" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="Rco-MQ-dKx"/>
@@ -90,7 +84,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="xM7-gH-oDG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="0a8-nf-JMp"/>
@@ -109,7 +102,7 @@
                 <constraint firstAttribute="trailing" secondItem="Yn2-pK-abN" secondAttribute="trailing" constant="20" id="pds-RB-5NA"/>
                 <constraint firstItem="UMg-A7-lsY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wUF-Lg-OXn"/>
                 <constraint firstItem="TEm-cO-HvI" firstAttribute="top" secondItem="hFj-Jk-bhF" secondAttribute="bottom" constant="40" id="wVA-Qp-UDQ"/>
-                <constraint firstItem="Yn2-pK-abN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="200" id="yZE-07-YzJ"/>
+                <constraint firstItem="Yn2-pK-abN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="yZE-07-YzJ"/>
             </constraints>
         </view>
     </objects>

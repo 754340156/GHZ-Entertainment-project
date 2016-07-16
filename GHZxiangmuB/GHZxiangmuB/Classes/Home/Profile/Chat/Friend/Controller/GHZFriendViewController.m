@@ -9,7 +9,7 @@
 #import "GHZFriendViewController.h"
 #import "GHZChatViewController.h"
 #import <EMSDK.h>
-@interface GHZFriendViewController ()<EMUserListViewControllerDataSource,EMUserListViewControllerDelegate,EMContactManagerDelegate>
+@interface GHZFriendViewController ()<EMUserListViewControllerDataSource,EMUserListViewControllerDelegate>
 /**  数据源 */
 @property (nonatomic,strong) NSMutableArray *userListArray;
 @end
@@ -19,18 +19,21 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [[EMClient sharedClient].contactManager addDelegate:self delegateQueue:nil];
+    [self tableViewDidTriggerHeaderRefresh];
 }
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    [[EMClient sharedClient].contactManager removeDelegate:self];
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshUserList) name:kNotifyAgreeFriend object:nil ];
+     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshUserList) name:kNotifyReceiveFriendAgree object:nil];
+}
 
+#pragma mark - 好友通知
+- (void)refreshUserList
+{
+    [self tableViewDidTriggerHeaderRefresh];
 }
 
 #pragma mark - EMUserListViewControllerDelegate
@@ -53,46 +56,7 @@
         
     }];
 }
-#pragma mark - EMContactManagerDelegate
-- (void)didReceiveFriendInvitationFromUsername:(NSString *)aUsername
-                                       message:(NSString *)aMessage
-{
-    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"%@%@",aUsername,aMessage]preferredStyle:(UIAlertControllerStyleAlert)];
-    UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
-        EMError *error = [[EMClient sharedClient].contactManager declineInvitationForUsername:aUsername];
-        if (!error) {
-            NSLog(@"发送拒绝成功");
-        }
-    }];
-    [controller addAction:cancleAction];
-    UIAlertAction *doAction = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
-        EMError *error = [[EMClient sharedClient].contactManager acceptInvitationForUsername:aUsername];
-        if (!error) {
-            NSLog(@"发送同意成功");
-        }
-    }];
-    [controller addAction:doAction];
-    [self presentViewController:controller animated:YES completion:nil];
-}
 
-- (void)didReceiveAgreedFromUsername:(NSString *)aUsername
-{
-    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"%@同意了你的好友请求",aUsername]preferredStyle:(UIAlertControllerStyleAlert)];
-    UIAlertAction *doAction = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
-    }];
-    [controller addAction:doAction];
-    [self presentViewController:controller animated:YES completion:nil];
-}
-
-
-- (void)didReceiveDeclinedFromUsername:(NSString *)aUsername
-{
-    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"%@拒绝了你的好友请求",aUsername]preferredStyle:(UIAlertControllerStyleAlert)];
-    UIAlertAction *doAction = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
-    }];
-    [controller addAction:doAction];
-    [self presentViewController:controller animated:YES completion:nil];
-}
 #pragma mark - 懒加载
 - (NSMutableArray *)userListArray
 {
@@ -101,4 +65,9 @@
     }
     return _userListArray;
 }
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 @end

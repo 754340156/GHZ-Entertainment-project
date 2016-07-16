@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface GHZNavViewController : UINavigationController
-
+- (void)coustomButton;
 @end

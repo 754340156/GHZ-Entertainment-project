@@ -7,6 +7,7 @@
 //
 
 #import "GHZProfileHeaderView.h"
+#import "GHZUserSetting.h"
 #import <EMSDK.h>
 
 @interface GHZProfileHeaderView ()
@@ -25,6 +26,12 @@
     [super awakeFromNib];
     self.iconImageView.layer.masksToBounds = YES;
     self.iconImageView.layer.cornerRadius = self.iconImageView.GHZ_width * 0.5;
+    if ([GHZUserSetting shareInstance].nickName) {
+         self.nickNameLabel.text = [GHZUserSetting shareInstance].nickName;
+    }else
+    {
+        self.nickNameLabel.text = [EMClient sharedClient].pushOptions.nickname;
+    }
 }
 
 /**  去聊天按钮 */
