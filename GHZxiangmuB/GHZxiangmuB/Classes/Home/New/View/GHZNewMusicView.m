@@ -48,11 +48,11 @@
     //图片
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.bigImage]];
     //播放资源
-    self.playcountLabel.text = [NSString stringWithFormat:@"%ld播放",model.playcount];
+    self.playcountLabel.text = [NSString stringWithFormat:@"%ld播放",(long)model.playcount];
 //    NSInteger str = [model.voicetime intValue];
     NSInteger f = model.voicetime/60;
     NSInteger m = model.voicetime%60;
-    self.voicelengthLabel.text = [NSString stringWithFormat:@"%.02ld:%.02ld",f,m];
+    self.voicelengthLabel.text = [NSString stringWithFormat:@"%.02ld:%.02ld",(long)f,(long)m];
 }
 - (IBAction)Playing:(id)sender {
     self.Playbtn.hidden = YES;

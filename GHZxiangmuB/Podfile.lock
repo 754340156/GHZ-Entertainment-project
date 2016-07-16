@@ -26,6 +26,9 @@ PODS:
   - EaseUI (3.1.3):
     - MJRefresh (~> 3.1.0)
     - MWPhotoBrowser (~> 2.1.1)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
   - HyphenateSDK (3.1.3)
   - LFLiveKit (1.5.2):
     - CocoaAsyncSocket (~> 7.4.1)
@@ -56,6 +59,7 @@ DEPENDENCIES:
   - AFNetworking
   - BarrageRenderer
   - EaseUI (from `https://github.com/easemob/easeui-ios-hyphenate-cocoapods.git`)
+  - FMDB
   - HyphenateSDK
   - LFLiveKit
   - Masonry
@@ -81,6 +85,7 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   EaseUI: 2892e127ec851abda5895ee848ab42930e30a442
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   HyphenateSDK: b70987d3367391bedd986d7d3de63d07ab1d0df5
   LFLiveKit: 24e1514bb127a686da54c07ba729b34f7ca96e5b
   librtmp-iOS: bfe6a2978e01ac97160ede5d3ccde9e3c1d1ee58
@@ -94,6 +99,6 @@ SPEC CHECKSUMS:
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
 
-PODFILE CHECKSUM: 0e4b7547adbb46eada286b9f2fbe337fbf41dfdf
+PODFILE CHECKSUM: 07a49bd641493d044b803043906a6b4bd3082bf0
 
 COCOAPODS: 1.0.0
