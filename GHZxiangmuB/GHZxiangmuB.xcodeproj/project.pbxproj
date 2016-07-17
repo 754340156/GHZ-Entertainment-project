@@ -391,6 +391,11 @@
 		D6963E261D3736B1000C58B4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6963E251D3736B1000C58B4 /* libsqlite3.tbd */; };
 		D6963E281D3736C1000C58B4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6963E271D3736C1000C58B4 /* CoreTelephony.framework */; };
 		D6963E2A1D3736CB000C58B4 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6963E291D3736CB000C58B4 /* libstdc++.tbd */; };
+		D6D412421D3B54EA006B77A0 /* GHZNewCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D412411D3B54EA006B77A0 /* GHZNewCommentViewController.m */; };
+		D6D412461D3B5D20006B77A0 /* GHZNewCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D412451D3B5D20006B77A0 /* GHZNewCommentViewController.xib */; };
+		D6D4124A1D3B6224006B77A0 /* GHZCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D412481D3B6224006B77A0 /* GHZCommentTableViewCell.m */; };
+		D6D4124D1D3B6276006B77A0 /* GHZCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D4124C1D3B6276006B77A0 /* GHZCommentTableViewCell.xib */; };
+		D6D412501D3B7036006B77A0 /* GHZCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D4124F1D3B7036006B77A0 /* GHZCommentModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1140,7 +1145,6 @@
 		D67093A11D3A7C34004A80B4 /* GHZCreamCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCreamCommentViewController.h; sourceTree = "<group>"; };
 		D67093A21D3A7C34004A80B4 /* GHZCreamCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCreamCommentViewController.m; sourceTree = "<group>"; };
 		D67093A31D3A7C34004A80B4 /* GHZCreamCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZCreamCommentViewController.xib; sourceTree = "<group>"; };
-		D67093A81D3A80FB004A80B4 /* GHZxiangmuB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = GHZxiangmuB.app; path = "/Users/zhaoce/Desktop/GHZxiangmuB/GHZxiangmuB/build/Debug-iphoneos/GHZxiangmuB.app"; sourceTree = "<absolute>"; };
 		D6963E1D1D373663000C58B4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D6963E1F1D37367A000C58B4 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		D6963E211D37368A000C58B4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -1150,6 +1154,15 @@
 		D6963E291D3736CB000C58B4 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		D6C49CCB1D311B790045731C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		D6C49CCD1D311CE00045731C /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		D6D4123D1D3B4902006B77A0 /* GHZxiangmuB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHZxiangmuB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6D412401D3B54EA006B77A0 /* GHZNewCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZNewCommentViewController.h; sourceTree = "<group>"; };
+		D6D412411D3B54EA006B77A0 /* GHZNewCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZNewCommentViewController.m; sourceTree = "<group>"; };
+		D6D412451D3B5D20006B77A0 /* GHZNewCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZNewCommentViewController.xib; sourceTree = "<group>"; };
+		D6D412471D3B6224006B77A0 /* GHZCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCommentTableViewCell.h; sourceTree = "<group>"; };
+		D6D412481D3B6224006B77A0 /* GHZCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCommentTableViewCell.m; sourceTree = "<group>"; };
+		D6D4124C1D3B6276006B77A0 /* GHZCommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZCommentTableViewCell.xib; sourceTree = "<group>"; };
+		D6D4124E1D3B7036006B77A0 /* GHZCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCommentModel.h; sourceTree = "<group>"; };
+		D6D4124F1D3B7036006B77A0 /* GHZCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCommentModel.m; sourceTree = "<group>"; };
 		FA98C4A23AC9EC665AB94AAD /* Pods-GHZxiangmuB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHZxiangmuB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GHZxiangmuB/Pods-GHZxiangmuB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1314,6 +1327,8 @@
 			children = (
 				D6708DF11D39C489004A80B4 /* GHZTopic.h */,
 				D6708DF21D39C489004A80B4 /* GHZTopic.m */,
+				D6D4124E1D3B7036006B77A0 /* GHZCommentModel.h */,
+				D6D4124F1D3B7036006B77A0 /* GHZCommentModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1324,6 +1339,9 @@
 				D6708DF41D39C489004A80B4 /* GHZTopicCell.h */,
 				D6708DF51D39C489004A80B4 /* GHZTopicCell.m */,
 				D6708DF61D39C489004A80B4 /* GHZTopicCell.xib */,
+				D6D412471D3B6224006B77A0 /* GHZCommentTableViewCell.h */,
+				D6D412481D3B6224006B77A0 /* GHZCommentTableViewCell.m */,
+				D6D4124C1D3B6276006B77A0 /* GHZCommentTableViewCell.xib */,
 				D6708DF71D39C489004A80B4 /* GHZTopicPictureView */,
 				D670935D1D3A4841004A80B4 /* GHZTopicVoiceView */,
 				D67093691D3A4878004A80B4 /* GHZTopicVideoView */,
@@ -1636,6 +1654,9 @@
 				D6708E641D39C489004A80B4 /* GHZNewViewController.m */,
 				D6708E681D39C489004A80B4 /* GHZTopicViewController.h */,
 				D6708E691D39C489004A80B4 /* GHZTopicViewController.m */,
+				D6D412401D3B54EA006B77A0 /* GHZNewCommentViewController.h */,
+				D6D412411D3B54EA006B77A0 /* GHZNewCommentViewController.m */,
+				D6D412451D3B5D20006B77A0 /* GHZNewCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2931,6 +2952,7 @@
 				6A368DFDEB8919DA8B912498 /* Pods */,
 				5A4F9C47C2CCB30AA9127C6E /* Frameworks */,
 				D67093A91D3A81AD004A80B4 /* Products */,
+				D6D4123D1D3B4902006B77A0 /* GHZxiangmuB.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2954,7 +2976,7 @@
 			);
 			name = GHZxiangmuB;
 			productName = GHZxiangmuB;
-			productReference = D67093A81D3A80FB004A80B4 /* GHZxiangmuB.app */;
+			productReference = D6D4123D1D3B4902006B77A0 /* GHZxiangmuB.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -2999,6 +3021,7 @@
 				D670917A1D39C48A004A80B4 /* GHZTopicCell.xib in Resources */,
 				D67091951D39C48A004A80B4 /* GHZLivingTopView.xib in Resources */,
 				D67091DA1D39C48A004A80B4 /* UMSCommentInputControlleriPad.xib in Resources */,
+				D6D4124D1D3B6276006B77A0 /* GHZCommentTableViewCell.xib in Resources */,
 				D67091641D39C48A004A80B4 /* Assets.xcassets in Resources */,
 				D67091C21D39C48A004A80B4 /* GHZProfileHeaderView.xib in Resources */,
 				D670936E1D3A4878004A80B4 /* GHZTopicVideoView.xib in Resources */,
@@ -3029,6 +3052,7 @@
 				D67091D91D39C48A004A80B4 /* UMSCommentInputController.xib in Resources */,
 				D67093A51D3A7C34004A80B4 /* GHZCreamCommentViewController.xib in Resources */,
 				D67093331D3A1BAD004A80B4 /* GHZShowpirtureController.xib in Resources */,
+				D6D412461D3B5D20006B77A0 /* GHZNewCommentViewController.xib in Resources */,
 				D67091A21D39C48A004A80B4 /* GHZShowPlaceHolderView.xib in Resources */,
 				D67091841D39C48A004A80B4 /* GHZCareHeaderView.xib in Resources */,
 				D67091901D39C48A004A80B4 /* GHZLivingCatEarView.xib in Resources */,
@@ -3275,6 +3299,7 @@
 				D67091C61D39C48A004A80B4 /* LBXAlertAction.m in Sources */,
 				D67091631D39C48A004A80B4 /* AppDelegate.m in Sources */,
 				D67093201D39CD18004A80B4 /* GHZDataBaseHelper.m in Sources */,
+				D6D412421D3B54EA006B77A0 /* GHZNewCommentViewController.m in Sources */,
 				D670928A1D39C48A004A80B4 /* ZXUPCAWriter.m in Sources */,
 				D670922C1D39C48A004A80B4 /* ZXDetectorResult.m in Sources */,
 				D670928F1D39C48A004A80B4 /* ZXUPCEANWriter.m in Sources */,
@@ -3360,6 +3385,7 @@
 				D67091FF1D39C48A004A80B4 /* ZXEmailDoCoMoResultParser.m in Sources */,
 				D67091C41D39C48A004A80B4 /* UIAlertController+supportedInterfaceOrientations.m in Sources */,
 				D67091AA1D39C48A004A80B4 /* GHZNewViewController.m in Sources */,
+				D6D412501D3B7036006B77A0 /* GHZCommentModel.m in Sources */,
 				D67092A91D39C48A004A80B4 /* ZXPDF417Writer.m in Sources */,
 				D67092381D39C48A004A80B4 /* ZXEncodeHints.m in Sources */,
 				D67092151D39C48A004A80B4 /* ZXVEventResultParser.m in Sources */,
@@ -3420,6 +3446,7 @@
 				D67091EF1D39C48A004A80B4 /* ZXAztecHighLevelEncoder.m in Sources */,
 				D670919C1D39C48A004A80B4 /* GHZShowingViewController.m in Sources */,
 				D67092221D39C48A004A80B4 /* ZXReedSolomonDecoder.m in Sources */,
+				D6D4124A1D3B6224006B77A0 /* GHZCommentTableViewCell.m in Sources */,
 				D67091921D39C48A004A80B4 /* GHZLivingEndView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

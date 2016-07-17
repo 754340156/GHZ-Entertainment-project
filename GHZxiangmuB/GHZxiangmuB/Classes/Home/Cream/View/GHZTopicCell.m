@@ -13,7 +13,7 @@
 #import "GHZTopicVoiceView.h"
 #import "GHZTopicVideoView.h"
 #import "GHZDataBaseHelper.h"
-
+#import "UIImage+Extension.h"
 @interface GHZTopicCell ()
 //头像
 @property (strong, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -101,7 +101,9 @@
     //新浪加 V
     self.sinaVView.hidden = !topic.sina_v;
     //设置头像
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        self.profileImageView.image = image ? [UIImage circleImage:image borderColor:nil borderWidth:0] : [UIImage circleImage:[UIImage imageNamed:@"defaultUserIcon"] borderColor:nil borderWidth:0];
+    }];
     //设置名字
     self.nameLabel.text = topic.name;
     
@@ -169,6 +171,7 @@
     
    
 }
+//点击分享按钮
 - (IBAction)shareButtonClick:(id)sender {
     
     NSString *url = [[NSString alloc] init];
@@ -181,11 +184,21 @@
     
         url = _topic.large_image;
     }
-    
-    [self.delegate getClick:_topic.large_image url:url text:_topic.text];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(getClick:url:text:)]) {
+       [self.delegate getClick:_topic.large_image url:url text:_topic.text];
+    }
+   
     
 }
+//点击评论按钮
+- (IBAction)commentClick:(id)sender
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(getCommentClickWithModel:)]) {
+        [self.delegate getCommentClickWithModel:self.topic];
+    }
+}
 
+//点击的收藏按钮
 - (IBAction)cellmorebtnclick:(id)sender {
     
     UIAlertController *alertController=[UIAlertController alertControllerWithTitle: nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];//创建界面

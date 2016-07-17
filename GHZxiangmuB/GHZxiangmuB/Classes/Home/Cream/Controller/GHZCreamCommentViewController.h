@@ -7,7 +7,8 @@
 //
 
 #import "GHZViewController.h"
-
+@class GHZTopic;
 @interface GHZCreamCommentViewController : GHZViewController
-
+/**  <#Description#> */
+@property (nonatomic,strong) GHZTopic *model;
 @end

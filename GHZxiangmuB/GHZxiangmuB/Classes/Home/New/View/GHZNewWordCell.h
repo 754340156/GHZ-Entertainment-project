@@ -9,13 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "GHZNewVideoView.h"
 @class GHZTopicModel;
-
-
-
 @protocol GHZNewWordCellDelegate <NSObject>
-
--(void)getclick:(NSString *)image url:(NSString *)url text:(NSString *)text;
-
+/**  点击分享按钮 */
+- (void)getclick:(NSString *)image url:(NSString *)url text:(NSString *)text;
+/**  点击评论按钮*/
+- (void)getClickCommentWithModel:(GHZTopicModel *)model;
 @end
 @interface GHZNewWordCell : UITableViewCell
 /** 段子model*/

@@ -12,6 +12,7 @@
 #import "UIImageView+WebCache.h"
 #import "GHZNewMusicView.h"
 #import "GHZDataBaseHelper.h"
+#import "UIImage+Extension.h"
 @interface GHZNewWordCell ()
 /** 头像*/
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -84,7 +85,9 @@
     //新浪V
     self.sinaVView.hidden = !model.sina_v;
     //头像
-     [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:model.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:model.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        self.profileImageView.image = image ? [UIImage circleImage:image borderColor:nil borderWidth:0] : [UIImage circleImage:[UIImage imageNamed:@"defaultUserIcon"] borderColor:nil borderWidth:0];
+    }];
     //昵称
     self.nameLabel.text = model.name;
     //设置时间
@@ -132,8 +135,6 @@
         [now timeIntervalSinceDate:create];
         [now deltaFrom:create];
 }
-
-
 //按钮参数格式
 -(void)ButtonTitle:(UIButton *)button count:(NSInteger)count placeholder:(NSString *)placeholder{
    // NSString *title = nil;
@@ -152,17 +153,27 @@
     frame.origin.y += GHZCellmargin;
     [super setFrame:frame];
 }
+//点击分享按钮
 - (IBAction)shareButtonClick:(id)sender {
     NSString *url = [[NSString alloc] init];
-    if (_model.type ==Video) {
-        url = _model.videouri;
-    }else if(_model.type ==Music){
-        url = _model.voiceuri;
-    }else if (_model.type ==Picture){
-        url = _model.bigImage;
+    if (self.model.type ==Video) {
+        url = self.model.videouri;
+    }else if(self.model.type ==Music){
+        url = self.model.voiceuri;
+    }else if (self.model.type ==Picture){
+        url = self.model.bigImage;
     }
-    [self.delegate getclick:_model.bigImage url:url text:_model.text];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(getclick:url:text:)]) {
+        [self.delegate getclick:self.model.bigImage url:url text:self.model.text];
+    }
 }
+- (IBAction)commentClick:(id)sender
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(getClickCommentWithModel:)]) {
+        [self.delegate getClickCommentWithModel:self.model];
+    }
+}
+//点击收藏按钮
 - (IBAction)collectionBtn:(id)sender {
     UIAlertController *alertController=[UIAlertController alertControllerWithTitle: nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];//创建界面
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:nil]; //创建按钮cancel以及对应事件

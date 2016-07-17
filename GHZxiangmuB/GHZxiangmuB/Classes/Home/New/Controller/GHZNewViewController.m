@@ -98,7 +98,6 @@
             self.redView.GHZ_centerX = button.GHZ_centerX;
         }
     }
-    
     [self.titleV addSubview:redView];
     
 }

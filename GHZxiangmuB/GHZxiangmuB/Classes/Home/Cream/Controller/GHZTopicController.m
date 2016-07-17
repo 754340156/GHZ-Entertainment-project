@@ -15,7 +15,7 @@
 #import "GHZTopicCell.h"
 #import "GHZCreamCommentViewController.h"
 #import "UMSocial.h"
-@interface GHZTopicController ()<GHZTopicCellDelegate,UMSocialDataDelegate,UMSocialUIDelegate>
+@interface GHZTopicController ()<GHZTopicCellDelegate,UMSocialUIDelegate>
 /**
  *  帖子数据
  */
@@ -31,17 +31,6 @@
 @end
 
 @implementation GHZTopicController
-
-
-- (NSMutableArray *)topics{
-    if (!_topics) {
-        _topics = [NSMutableArray array];
-    }
-    return _topics;
-    
-}
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -176,26 +165,38 @@ static NSString  *const GHZTopicCellId = @"topic";
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    GHZCreamCommentViewController *creamCommentVC = [[GHZCreamCommentViewController alloc] init];
-    creamCommentVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:creamCommentVC animated:YES];
-}
-#pragma mark - 代理方法
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     //取出帖子的模型
     GHZTopic *topic = self.topics[indexPath.row];
     return topic.cellHeight;
 }
-
+#pragma mark - GHZTopicCellDelegate
+//分享
 - (void)getClick:(NSString *)image url:(NSString *)url text:(NSString *)text{
     if (!(self.type == Word)) {
         [[UMSocialData defaultData].urlResource setResourceType:UMSocialUrlResourceTypeImage url:image];
 
     }
     [UMSocialData defaultData].extConfig.title = @"分享 title";
-    [UMSocialData defaultData].extConfig.qqData.url = @"www.baidu.com";
+    [UMSocialData defaultData].extConfig.qqData.url = url;
+    [UMSocialData defaultData].extConfig.wechatSessionData.url = url;
+    [UMSocialData defaultData].extConfig.sinaData.urlResource.url = url;
     [UMSocialSnsService presentSnsIconSheetView:self appKey:@"57490f1ee0f55a75d5002f3f" shareText:[NSString stringWithFormat:@"%@%@",text,url] shareImage:[UIImage imageNamed:@"icon"] shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToQQ,UMShareToQzone] delegate:self];
+}
+//评论
+- (void)getCommentClickWithModel:(GHZTopic *)model
+{
+    GHZCreamCommentViewController *creamCommentVC = [[GHZCreamCommentViewController alloc] init];
+    creamCommentVC.hidesBottomBarWhenPushed = YES;
+    creamCommentVC.model = model;
+    [self.navigationController pushViewController:creamCommentVC animated:YES];
+}
+#pragma mark - 懒加载
+
+- (NSMutableArray *)topics{
+    if (!_topics) {
+        _topics = [NSMutableArray array];
+    }
+    return _topics;
 }
 @end

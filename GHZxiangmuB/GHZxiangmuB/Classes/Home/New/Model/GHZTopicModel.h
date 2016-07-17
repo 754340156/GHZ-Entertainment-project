@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 @interface GHZTopicModel : NSObject
+/**  ID */
+@property (nonatomic,assign) NSInteger ID;
 /** 名称*/ 
 @property (nonatomic,strong)NSString *name;
 /** 头像*/

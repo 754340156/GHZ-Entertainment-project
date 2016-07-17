@@ -20,7 +20,7 @@
 + (NSDictionary *)replacedKeyFromPropertyName
 {
     
-    return @{@"smallImage" : @"image0",@"bigImage" : @"image1",@"middleImage" : @"image2"};
+    return @{@"smallImage" : @"image0",@"bigImage" : @"image1",@"middleImage" : @"image2",@"ID" : @"id"};
 }
 
 

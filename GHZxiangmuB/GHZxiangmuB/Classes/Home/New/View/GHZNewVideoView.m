@@ -39,7 +39,6 @@
 -(void)setModel:(GHZTopicModel *)model{
     _model = model;
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.bigImage]];
-    
     self.playcountLabel.text = [NSString stringWithFormat:@"%ld播放",  model.playcount];
     //时长
     NSInteger f = model.videotime/60;

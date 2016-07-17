@@ -7,9 +7,9 @@
 //
 
 #import "GHZCollectionView.h"
-#import "GHZNewWordCell.h"
+#import "GHZTopicCell.h"
 #import "AFNetWorking.h"
-#import "GHZTopicModel.h"
+#import "GHZTopic.h"
 #import "MJExtension.h"
 @interface GHZCollectionView ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView *tableView;
@@ -26,9 +26,11 @@
     self.tableView.backgroundColor = GHZRGBColor(223, 223, 223);
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
     [self lodingdata];
-    [self.tableView registerNib:[UINib nibWithNibName:@"GHZNewWordCell" bundle:nil] forCellReuseIdentifier:@"GHZNewWordCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"GHZTopicCell" bundle:nil] forCellReuseIdentifier:@"topic"];
 }
 
 -(void)lodingdata{
@@ -41,7 +43,7 @@
     //发送请求
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:dic progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        self.clloctionArr = [GHZTopicModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        self.clloctionArr = [GHZTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
@@ -52,18 +54,16 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
    return self.clloctionArr.count;
-;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    GHZTopicModel *model = self.clloctionArr[indexPath.row];
+    GHZTopic *model = self.clloctionArr[indexPath.row];
     return model.cellHeight;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    GHZNewWordCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GHZNewWordCell"];
-    cell.model = self.clloctionArr[indexPath.row];
+    GHZTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:@"topic"];
+    cell.topic = self.clloctionArr[indexPath.row];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
-
-    
 }
 
 @end

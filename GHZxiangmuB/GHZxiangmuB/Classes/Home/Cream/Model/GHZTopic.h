@@ -10,6 +10,8 @@
 
 @interface GHZTopic : NSObject
 
+/**  ID */
+@property (nonatomic,assign) NSInteger ID;
 /**名称*/
 @property(nonatomic,copy)  NSString *name;
 

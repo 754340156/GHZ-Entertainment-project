@@ -13,9 +13,9 @@
 #import "MJRefresh.h"
 #import "GHZNewWordCell.h"
 #import "GHZNewVideoView.h"
-#import "GHZNewVideoView.h"
 #import "UMSocial.h"
-@interface GHZTopicViewController ()<UIScrollViewDelegate,GHZNewWordCellDelegate,UMSocialDataDelegate,UMSocialUIDelegate>
+#import "GHZNewCommentViewController.h"
+@interface GHZTopicViewController ()<UIScrollViewDelegate,GHZNewWordCellDelegate,UMSocialUIDelegate>
 /** 段子*/
 @property (nonatomic,strong)NSMutableArray *topics;
 /** 当前页数*/
@@ -28,22 +28,13 @@
 @property (nonatomic,strong)GHZNewVideoView *v;
 @property (nonatomic,strong)GHZTopicModel *mm;
 @property (nonatomic,strong)NSIndexPath *indexs;
-
 @end
 
 @implementation GHZTopicViewController
--(NSMutableArray *)topics{
-    if (!_topics) {
-        _topics = [NSMutableArray array];
-    }
-    return _topics;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     //初始化
     [self setupTable];
-    
     //添加下拉刷新
     [self addRefresh];
 }
@@ -58,7 +49,6 @@
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView registerNib:[UINib nibWithNibName:@"GHZNewWordCell" bundle:nil] forCellReuseIdentifier:@"GHZNewWordCell"];
-    
 }
 
 -(void)addRefresh{
@@ -68,7 +58,6 @@
     [self.tableView.mj_header beginRefreshing];
     
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadingAddData)];
-    
 }
 
 /**
@@ -145,12 +134,11 @@
     }];
     
 }
+#pragma mark - UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     self.tableView.mj_footer.hidden = (self.topics.count==0);
     return self.topics.count;
 }
-
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     __weak GHZNewWordCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GHZNewWordCell"];
     self.mm = self.topics[indexPath.row];
@@ -160,21 +148,35 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
-
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     GHZTopicModel *model = self.topics[indexPath.row];
-   
     return model.cellHeight;
 }
-
+#pragma mark - GHZNewWordCellDelegate
+//分享
 -(void)getclick:(NSString *)image url:(NSString *)url text:(NSString *)text{
     [[UMSocialData defaultData].urlResource setResourceType:(UMSocialUrlResourceTypeImage) url:image];
-    [UMSocialData defaultData].extConfig.title = @"";
-    [UMSocialData defaultData].extConfig.qqData.url = @"http://baidu.com";
+    [UMSocialData defaultData].extConfig.title = @"分享的title";
+    [UMSocialData defaultData].extConfig.qqData.url = url;
+    [UMSocialData defaultData].extConfig.wechatSessionData.url = url;
+    [UMSocialData defaultData].extConfig.sinaData.urlResource.url = url;
     [UMSocialSnsService presentSnsIconSheetView:self appKey:@"57490f1ee0f55a75d5002f3f" shareText:[NSString stringWithFormat:@"%@%@",text,image] shareImage:image shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToQQ,UMShareToQzone] delegate:self];
-    
 }
-
+//评论
+- (void)getClickCommentWithModel:(GHZTopicModel *)model
+{
+    GHZNewCommentViewController *newCommmentVC = [[GHZNewCommentViewController alloc] init];
+    newCommmentVC.model = model;
+    newCommmentVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:newCommmentVC animated:YES];
+}
+#pragma mark - 懒加载 
+-(NSMutableArray *)topics{
+    if (!_topics) {
+        _topics = [NSMutableArray array];
+    }
+    return _topics;
+}
 
 
 @end

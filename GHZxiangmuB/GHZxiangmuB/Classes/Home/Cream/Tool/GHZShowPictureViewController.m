@@ -12,7 +12,7 @@
 #import <MBProgressHUD.h>
 #import "GHZCreamProgressView.h"
 #import "UMSocial.h"
-@interface GHZShowPictureViewController ()<UMSocialUIDelegate,UMSocialDataDelegate>
+@interface GHZShowPictureViewController ()<UMSocialUIDelegate>
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet GHZCreamProgressView *progressView;

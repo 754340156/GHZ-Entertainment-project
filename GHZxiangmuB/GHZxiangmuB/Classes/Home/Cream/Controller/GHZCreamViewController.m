@@ -115,8 +115,6 @@
         button.titleLabel.font = [UIFont systemFontOfSize:14];
         [button addTarget:self action:@selector(titleClick:) forControlEvents:(UIControlEventTouchUpInside)];
         [titleView addSubview:button];
-        
-        
         //默认点击了第一个按钮
         if (i == 0) {
             button.enabled = NO;
@@ -127,7 +125,6 @@
             self.indicatorView.GHZ_width = button.titleLabel.GHZ_width;
             self.indicatorView.GHZ_centerX = button.GHZ_centerX;
         }
-    
     }
     
     [titleView addSubview:indicatorView];
