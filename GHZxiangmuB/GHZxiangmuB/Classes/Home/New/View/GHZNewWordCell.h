@@ -14,6 +14,8 @@
 - (void)getclick:(NSString *)image url:(NSString *)url text:(NSString *)text;
 /**  点击评论按钮*/
 - (void)getClickCommentWithModel:(GHZTopicModel *)model;
+/**  点击收藏按钮 */
+- (void)getClickCollectWithModel:(GHZTopicModel *)model;
 @end
 @interface GHZNewWordCell : UITableViewCell
 /** 段子model*/

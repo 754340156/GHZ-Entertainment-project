@@ -33,8 +33,12 @@
 
 #pragma mark - 颜色
 // 颜色相关
-#define Color(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
-#define KeyColor Color(216, 41, 116)
+#define Color(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define KeyColor Color(216, 41, 116,1.0)
+//导航栏颜色
+#define NavBarColor Color(126,222,200,1.0)
+//view背景颜色
+#define BackColor Color(233,233,233,1.0)
 
 // 占位图
 #define cycleSVWidth 120
@@ -73,11 +77,6 @@
 #endif
 
 #define GHZLogFunc GHZLog(@"%s",__func__)
-
-//自定义颜色
-#define GHZRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
-
-
 
 //标签参数
 #import "GHZConst.h"

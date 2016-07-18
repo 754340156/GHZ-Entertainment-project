@@ -27,10 +27,9 @@
 @end
 
 @implementation GHZNewPictureView
-+(instancetype)pictureView{
-    
++(instancetype)pictureView
+{
     return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].lastObject;
-    
 }
 -(void)awakeFromNib{
     self.autoresizingMask = UIViewAutoresizingNone;
@@ -43,8 +42,6 @@
     GHZShowpirtureController *show = [[GHZShowpirtureController alloc] init];
     show.model = self.model;
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:show animated:YES completion:nil];
-        
-  
 }
 -(IBAction)play{
     
@@ -56,8 +53,6 @@
      *在不知道图片扩展名的情况下,取出第一个字节就能知道图片的类型
      */
     [self.Loding setProgress:model.progressTime animated:NO];
-    
-//    [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.bigImage] placeholderImage:[UIImage imageNamed:@""]];
     
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.bigImage] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         self.Loding.hidden = NO;
@@ -78,7 +73,6 @@
                CGFloat with = model.pictureViewFrame.size.width;
                CGFloat height = with *image.size.height / image.size.width;
                [image drawInRect:CGRectMake(0, 0, with, height)];
-
                //获取图片
                self.imageView.image =
                UIGraphicsGetImageFromCurrentImageContext();
@@ -86,7 +80,6 @@
                UIGraphicsEndImageContext();
                
            }];
-    
     
     //判断是否为gif
     NSString *extension = model.bigImage.pathExtension;

@@ -16,16 +16,20 @@
 
 /**  插入一个精华数据 */
 - (void)insertTopic:(GHZTopic *)topic;
+/**  是否存在 */
+- (BOOL)isExistsWithTopicID:(NSInteger)TopicID;
 /**  查找精华所有数据 */
 - (NSMutableArray *)searchTopics;
 /**  删除精华某条数据 */
-- (void)deleteTopicWithcreate_time:(NSString *)create_time;
+- (void)deleteTopicWithTopicID:(NSInteger)TopicID;
 
 
 /**  插入一个新帖数据 */
 - (void)insertTopicModel:(GHZTopicModel *)topicModel;
+/**  是否存在 */
+- (BOOL)isExistsWithTopicModelID:(NSInteger)TopicModelID;
 /**  查找新帖所有数据 */
 - (NSMutableArray *)searchTopicModels;
 /**  删除新帖某条数据 */
-- (void)deleteTopicModelWithcreate_time:(NSString *)create_time;
+- (void)deleteTopicModelWithTopicModelID:(NSInteger)TopicModelID;
 @end

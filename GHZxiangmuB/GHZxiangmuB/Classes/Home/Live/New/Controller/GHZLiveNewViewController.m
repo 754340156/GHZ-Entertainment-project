@@ -29,6 +29,7 @@ static NSInteger currentPage = 1;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self setTableView];
     [self setADData];
     [self setRefresh];
@@ -41,6 +42,7 @@ static NSInteger currentPage = 1;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.tableView];
     [self.tableView registerNib:[UINib nibWithNibName:@"GHZNewTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"GHZNewTableViewCell"];
 }
@@ -111,10 +113,12 @@ static NSInteger currentPage = 1;
         
     }];
     [self.tableView.mj_header beginRefreshing];
+    self.tableView.mj_footer.hidden = YES;
 }
 #pragma mark - UITableViewDelegate
 - (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+     self.tableView.mj_footer.hidden = (self.dataArray.count == 0);
     return self.dataArray.count + 1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

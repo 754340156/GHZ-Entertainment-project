@@ -15,7 +15,6 @@
 #import <MJExtension.h>
 #import <AFNetworking/AFNetworking.h>
 @interface GHZCreamCommentViewController ()<UITableViewDelegate,UITableViewDataSource>
-
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /**  评论 */
 @property (weak, nonatomic) IBOutlet UITextField *commentTextFiled;
@@ -52,12 +51,6 @@
 }
 - (void)setNavigationBar
 {
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setBackgroundImage:[UIImage imageNamed:@"comment_nav_item_share_icon"] forState:UIControlStateNormal];
-    [button setBackgroundImage:[UIImage imageNamed:@"comment_nav_item_share_icon_click"] forState:UIControlStateHighlighted];
-    [button addTarget:self action:@selector(collectionAction) forControlEvents:UIControlEventTouchUpInside];
-    [button sizeToFit];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     self.navigationItem.title = @"评论";
 }
 - (void)setTableView
@@ -100,11 +93,7 @@
             }
         }];
     }];
-}
-//点击导航栏收藏按钮
-- (void)collectionAction
-{
-    
+    self.tableView.mj_footer.hidden = YES;
 }
 #pragma mark - UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

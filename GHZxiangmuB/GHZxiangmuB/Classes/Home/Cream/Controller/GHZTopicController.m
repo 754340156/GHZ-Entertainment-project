@@ -15,6 +15,8 @@
 #import "GHZTopicCell.h"
 #import "GHZCreamCommentViewController.h"
 #import "UMSocial.h"
+#import "GHZDataBaseHelper.h"
+#import "GHZMBManager.h"
 @interface GHZTopicController ()<GHZTopicCellDelegate,UMSocialUIDelegate>
 /**
  *  帖子数据
@@ -47,7 +49,6 @@ static NSString  *const GHZTopicCellId = @"topic";
     self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
     //设置滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
-    
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor clearColor];
     
@@ -190,6 +191,30 @@ static NSString  *const GHZTopicCellId = @"topic";
     creamCommentVC.hidesBottomBarWhenPushed = YES;
     creamCommentVC.model = model;
     [self.navigationController pushViewController:creamCommentVC animated:YES];
+}
+//收藏
+- (void)getCollectClickWithModel:(GHZTopic *)model
+{
+    UIAlertController *alertController=[UIAlertController alertControllerWithTitle: nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];//创建界面
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:nil]; //创建按钮cancel以及对应事件
+    UIAlertAction *saveAction=[UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[GHZDataBaseHelper shareInstance] create];
+        if ([[GHZDataBaseHelper shareInstance] isExistsWithTopicID:model.ID] ) {
+            [GHZMBManager showBriefAlert:@"已收藏"];
+        }else
+        {
+            [[GHZDataBaseHelper shareInstance] insertTopic:model];
+            [GHZMBManager showBriefAlert:@"收藏成功"];
+        }
+        
+    }];//创建按钮ok以及对应事件
+    UIAlertAction *report = [UIAlertAction actionWithTitle:@"举报" style: UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    }];
+    //最后将这些按钮都添加到界面上去，显示界面
+    [alertController addAction:cancelAction];
+    [alertController addAction:saveAction];
+    [alertController addAction:report];
+    [self presentViewController: alertController animated:YES completion:nil];
 }
 #pragma mark - 懒加载
 

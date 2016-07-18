@@ -16,15 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+     self.navigationBar.barTintColor = NavBarColor;
+    self.navigationBar.tintColor = [UIColor whiteColor];
 }
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     if (self.childViewControllers.count > 0) {
         //如果push进来的不是第一个控制器
         UIButton *coustomButton =[UIButton buttonWithType:UIButtonTypeCustom];
-        [coustomButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+        [coustomButton setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];
         //根据邻面的控件尺寸决定bounds
         coustomButton.frame = CGRectMake(0, 0, 20, 25);
         //设置内边距可以设置按钮向左靠

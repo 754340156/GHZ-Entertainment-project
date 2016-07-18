@@ -14,24 +14,23 @@
 #import "GHZProfileViewController.h"
 #import "GHZLoginViewController.h"
 #import "EMSDK.h"
+#import "PJXBounceAnimation.h"
+#import "PJXAnimatedTabBarItem.h"
 @interface GHZTabBarViewController ()<EMClientDelegate>
 
 @end
 
 @implementation GHZTabBarViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTabBarWithViewController:[[GHZCreamViewController alloc]init] image:@"paper" selectImage:@"paperH" title:@"精华"];
+    [self setTabBarWithViewController:[[GHZCreamViewController alloc]init] image:@"tabBar_essence_click_icon" selectImage:@"tabBar_essence_click_icon" title:@"精华"];
     
-    [self setTabBarWithViewController:[[GHZNewViewController alloc]init] image:@"video" selectImage:@"videoH" title:@"最新"];
+    [self setTabBarWithViewController:[[GHZNewViewController alloc]init] image:@"tabBar_new_click_icon" selectImage:@"tabBar_new_click_icon" title:@"最新"];
     
-    [self setTabBarWithViewController:[[GHZLiveViewController alloc]init] image:@"2image" selectImage:@"2imageH" title:@"直播"];
+    [self setTabBarWithViewController:[[GHZLiveViewController alloc]init] image:@"tabBar_live_click_icon" selectImage:@"tabBar_live_click_icon" title:@"直播"];
     //自定登录判定
-    [self setTabBarWithViewController:[[GHZProfileViewController alloc]init] image:@"person" selectImage:@"personH" title:@"个人中心"];
+    [self setTabBarWithViewController:[[GHZProfileViewController alloc]init] image:@"tabBar_profile_click_icon" selectImage:@"tabBar_profile_click_icon" title:@"个人中心"];
 }
-
-
 /**
  *  创建导航控制器的方法
  */
@@ -39,9 +38,30 @@
 {
     GHZNavViewController *navc = [[GHZNavViewController alloc] initWithRootViewController:viewControler];
     navc.tabBarItem.title = title;
+      self.tabBar.tintColor = NavBarColor;
     [navc.tabBarItem setImage:[UIImage imageNamed:image]];
-    [navc.tabBarItem setSelectedImage:[[UIImage imageNamed:selectImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    [self addChildViewController:navc];
+    [navc.tabBarItem setSelectedImage:[[UIImage imageNamed:selectImage] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+  
+   
+    
+    
+    
+    
+    
+    
+//    PJXBounceAnimation *bounceAnimation = [[PJXBounceAnimation alloc] init];
+//    bounceAnimation.textSelectedColor = NavBarColor;
+//    bounceAnimation.iconSelectedColor = NavBarColor;
+//    
+//    PJXAnimatedTabBarItem *tabBarItem = [[PJXAnimatedTabBarItem alloc] initWithTitle:title image:[UIImage imageNamed:image] selectedImage:nil];
+//    tabBarItem.animation = bounceAnimation;
+//    tabBarItem.textColor = NavBarColor;
+//    UIImageView *iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:image]];
+//    UILabel *label = [[UILabel alloc] init];
+//    label.text = title;
+//    tabBarItem.iconView = [[PJXIconView alloc] initWithIcon:iconView textLabel:label];
+//    navc.tabBarItem = tabBarItem;
+     [self addChildViewController:navc];
 }
 
 

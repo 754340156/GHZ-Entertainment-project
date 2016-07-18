@@ -14,6 +14,8 @@
 - (void)getClick:(NSString *)image url:(NSString *)url text:(NSString *)text;
 /** 点击评论按钮 */
 - (void)getCommentClickWithModel:(GHZTopic *)model;
+/** 点击收藏按钮 */
+- (void)getCollectClickWithModel:(GHZTopic *)model;
 @end
 
 

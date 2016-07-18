@@ -23,12 +23,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = GHZRGBColor(223, 223, 223);
+    self.view.backgroundColor = BackColor;
     [self setuptheNav];
     [self setupChildVC];//子控制器
     [self titleViewNA];//标签栏
     [self setupControlScroll];//scrollview
-
 }
 
 /**
@@ -68,7 +67,7 @@
     
     //下面的红线
     UIView *redView = [[UIView alloc] init];
-    redView.backgroundColor = [UIColor redColor];
+    redView.backgroundColor = NavBarColor;
     redView.GHZ_height = 2;
     redView.tag = -1;
     redView.GHZ_y = self.titleV.GHZ_height - redView.GHZ_height;
@@ -84,7 +83,7 @@
         
         [button setTitle:v.title forState:(UIControlStateNormal)];
         [button setTitleColor:[UIColor grayColor] forState:(UIControlStateNormal)];
-        [button setTitleColor:[UIColor redColor] forState:(UIControlStateDisabled)];
+        [button setTitleColor:NavBarColor forState:(UIControlStateDisabled)];
         button.titleLabel.font = [UIFont systemFontOfSize:14];
         [button addTarget:self action:@selector(titleClick:) forControlEvents:(UIControlEventTouchUpInside)];
         [titleV addSubview:button];
@@ -109,6 +108,7 @@
     contentView.frame = self.view.bounds;
     contentView.delegate = self;
     contentView.pagingEnabled = YES;
+    contentView.bounces = NO;
     [self.view insertSubview:contentView atIndex:0];
     contentView.contentSize = CGSizeMake(contentView.GHZ_width * self.childViewControllers.count, 0);
     self.contentView = contentView;

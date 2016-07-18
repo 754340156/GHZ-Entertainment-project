@@ -11,14 +11,10 @@
 #import "GHZHotViewController.h"
 #import "GHZLiveNewViewController.h"
 #import "GHZViewController.h"
-#import "GHZSelectedView.h"
 #import "GHZLiveWebViewController.h"
 #import "GHZShowingViewController.h"
+#import "GHZSelectedView.h"
 @interface GHZLiveViewController ()<UIScrollViewDelegate>
-/**  ScrollView */
-@property (nonatomic,strong)UIScrollView *contentView;
-/**  顶部选择器 */
-@property (nonatomic,strong) GHZSelectedView *topMenuView;
 @end
 
 @implementation GHZLiveViewController
@@ -30,8 +26,8 @@
     [self setTopMenuView];
     [self setNavigationItem];
     [self scrollViewDidEndScrollingAnimation:self.contentView];
-    self.navigationController.navigationBar.barTintColor = [UIColor cyanColor];
-    self.view.backgroundColor = [UIColor whiteColor];
+   
+    self.view.backgroundColor = BackColor;
 }
 - (void)viewWillAppear:(BOOL)animated
 {

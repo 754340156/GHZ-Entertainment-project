@@ -33,7 +33,6 @@
     [self setNavigationItem];
     [self setTopMenuView];
     [self scrollViewDidEndScrollingAnimation:self.contentView];
-    self.navigationController.navigationBar.barTintColor = [UIColor cyanColor];
     self.view.backgroundColor = [UIColor whiteColor];
 }
 - (void)viewWillAppear:(BOOL)animated

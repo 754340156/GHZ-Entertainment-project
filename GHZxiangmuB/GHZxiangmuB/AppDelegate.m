@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "AppDelegate+GHZUMeng.h"
 #import "AppDelegate+GHZEaseMobAPNS.h"
+#import "AppDelegate+GHZNetWorkStatus.h"
 #import "CoreLaunchLite.h"
 #import <EMSDK.h>
 @interface AppDelegate ()<EMClientDelegate>
@@ -23,6 +24,8 @@
     [self  setUMengWithApplication:application didFinishLaunchingWithOptions:launchOptions];
     //环信
     [self setEaseMobWithApplication:application didFinishLaunchingWithOptions:launchOptions];
+    //监听网络状态
+    [self  appNetWorkStatus];
     
     [[EMClient sharedClient] addDelegate:self delegateQueue:nil];
     //设置启动图

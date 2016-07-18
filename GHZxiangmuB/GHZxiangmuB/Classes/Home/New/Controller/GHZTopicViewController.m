@@ -15,6 +15,8 @@
 #import "GHZNewVideoView.h"
 #import "UMSocial.h"
 #import "GHZNewCommentViewController.h"
+#import "GHZDataBaseHelper.h"
+#import "GHZMBManager.h"
 @interface GHZTopicViewController ()<UIScrollViewDelegate,GHZNewWordCellDelegate,UMSocialUIDelegate>
 /** 段子*/
 @property (nonatomic,strong)NSMutableArray *topics;
@@ -58,6 +60,7 @@
     [self.tableView.mj_header beginRefreshing];
     
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadingAddData)];
+    self.tableView.mj_footer.hidden = YES;
 }
 
 /**
@@ -170,7 +173,31 @@
     newCommmentVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:newCommmentVC animated:YES];
 }
-#pragma mark - 懒加载 
+//收藏
+- (void)getClickCollectWithModel:(GHZTopicModel *)model
+{
+    UIAlertController *alertController=[UIAlertController alertControllerWithTitle: nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];//创建界面
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:nil]; //创建按钮cancel以及对应事件
+    UIAlertAction *saveAction=[UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[GHZDataBaseHelper shareInstance] create];
+        if ([[GHZDataBaseHelper shareInstance] isExistsWithTopicModelID:model.ID] ) {
+            [GHZMBManager showBriefAlert:@"已收藏"];
+        }else
+        {
+            [[GHZDataBaseHelper shareInstance] insertTopicModel:model];
+            [GHZMBManager showBriefAlert:@"收藏成功"];
+        }
+    }];//创建按钮ok以及对应事件
+    UIAlertAction *report = [UIAlertAction actionWithTitle:@"举报" style: UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    //最后将这些按钮都添加到界面上去，显示界面
+    [alertController addAction:cancelAction];
+    [alertController addAction:saveAction];
+    [alertController addAction:report];
+    [self presentViewController: alertController animated:YES completion:nil];
+}
+#pragma mark - 懒加载
 -(NSMutableArray *)topics{
     if (!_topics) {
         _topics = [NSMutableArray array];

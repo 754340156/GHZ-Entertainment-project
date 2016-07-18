@@ -30,7 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = GHZRGBColor(223, 223, 223);
+    self.view.backgroundColor = BackColor;
     //设置导航栏
     [self setupNav];
     //初始化所有的子控制器
@@ -39,7 +39,6 @@
     [self setupTitleView];
     //底部的 scrollView
     [self setupContentView];
-
 }
 
 /**
@@ -89,7 +88,7 @@
     
     //底部的红色指示器
     UIView *indicatorView = [[UIView alloc] init];
-    indicatorView.backgroundColor = [UIColor redColor];
+    indicatorView.backgroundColor = NavBarColor;
     indicatorView.GHZ_height = 2;
     indicatorView.tag = -1;
     indicatorView.GHZ_y = titleView.GHZ_height - indicatorView.GHZ_height;
@@ -109,9 +108,8 @@
         button.GHZ_x = i *  width;
         UIViewController *vc = self.childViewControllers[i];
         [button setTitle:vc.title forState:(UIControlStateNormal)];
-        //[button layoutIfNeeded]; //强制布局(强制更新子控件的 frame)
         [button setTitleColor:[UIColor grayColor] forState:(UIControlStateNormal)];
-        [button setTitleColor:[UIColor redColor] forState:(UIControlStateDisabled)];
+        [button setTitleColor:NavBarColor forState:(UIControlStateDisabled)];
         button.titleLabel.font = [UIFont systemFontOfSize:14];
         [button addTarget:self action:@selector(titleClick:) forControlEvents:(UIControlEventTouchUpInside)];
         [titleView addSubview:button];
@@ -119,7 +117,6 @@
         if (i == 0) {
             button.enabled = NO;
             self.selectedButton = button;
-            
             //让按钮内部的 label 根据文字内容来计算尺寸
             [button.titleLabel sizeToFit];
             self.indicatorView.GHZ_width = button.titleLabel.GHZ_width;
@@ -159,7 +156,7 @@
     contentView.frame = self.view.bounds;
     contentView.delegate = self;
     contentView.pagingEnabled = YES;
-   
+    contentView.bounces = NO;
     [self.view insertSubview:contentView atIndex:0];
     contentView.contentSize = CGSizeMake(contentView.GHZ_width * self.childViewControllers.count, 0);
     self.contentView = contentView;
@@ -167,8 +164,6 @@
     //添加第一个控制器的 view
     [self scrollViewDidEndScrollingAnimation:contentView];
 }
-
-
 /**
  *  设置导航栏
  */

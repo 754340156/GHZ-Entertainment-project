@@ -15,7 +15,7 @@
 #import "UMSocial.h"
 #import "NarikoTextField.h"
 #import <EMSDK.h>
-@interface GHZLoginViewController ()
+@interface GHZLoginViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet NarikoTextField *userNameLabel;
 @property (weak, nonatomic) IBOutlet NarikoTextField *passwordLabel;
 
@@ -38,18 +38,28 @@
     [super viewDidLoad];
     self.userNameLabel.placeHolderLabel.text = @"请输入用户名";
     self.passwordLabel.placeHolderLabel.text = @"请输入密码";
-    
+    self.userNameLabel.delegate = self;
+    self.passwordLabel.delegate = self;
 }
 //登录按钮
 
 - (IBAction)loginAction:(UIButton *)sender
 {
+    if ([self.userNameLabel.text isEqualToString:@""]) {
+        [GHZMBManager showBriefAlert:@"帐号不能为空"];
+        return;
+    }
+    if ([self.passwordLabel.text isEqualToString:@""]) {
+        [GHZMBManager showBriefAlert:@"密码不能为空"];
+        return;
+    }
+    
     [GHZMBManager showLoading];
     [[EMClient sharedClient] asyncLoginWithUsername:self.userNameLabel.text password:self.passwordLabel.text success:^{
         [[EMClient sharedClient].options setIsAutoLogin:YES];
         dispatch_async(dispatch_get_main_queue(), ^{
             [GHZMBManager hideAlert];
-             [GHZMBManager showBriefMessage:@"登录成功" InView:self.view];
+             [GHZMBManager showBriefAlert:@"登录成功"];
             [[GHZUserSetting shareInstance] setUserName:self.userNameLabel.text];
             [[GHZUserSetting shareInstance] setNickName:self.userNameLabel.text];
             //跳到主界面
@@ -58,9 +68,17 @@
             [self.view.window makeKeyAndVisible];
         });
     } failure:^(EMError *aError) {
-        [GHZMBManager hideAlert];
-         [GHZMBManager showBriefMessage:@"登录失败" InView:self.view];
-        NSLog(@"登录失败 = %@",aError.errorDescription);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [GHZMBManager hideAlert];
+            if (aError.code == 202) {
+                [GHZMBManager showBriefAlert:@"用户名或者密码错误"];
+            }else
+            {
+                [GHZMBManager showBriefAlert:@"登录失败"];
+            }
+            
+        });
+
     }];
     
 }
@@ -129,7 +147,7 @@
         //          获取微博用户名、uid、token等
         
         if (response.responseCode == UMSResponseCodeSuccess) {
-            NSDictionary *dict = [UMSocialAccountManager socialAccountDictionary];
+//            NSDictionary *dict = [UMSocialAccountManager socialAccountDictionary];
             UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:snsPlatform.platformName];
             NSLog(@"\nusername = %@,\n usid = %@,\n token = %@ iconUrl = %@,\n unionId = %@,\n thirdPlatformUserProfile = %@,\n thirdPlatformResponse = %@ \n, message = %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL, snsAccount.unionId, response.thirdPlatformUserProfile, response.thirdPlatformResponse, response.message);
              [self setWithUserName:snsAccount.usid password:snsAccount.accessToken nickName:snsAccount.userName];
@@ -141,7 +159,7 @@
     
     snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
         if (response.responseCode == UMSResponseCodeSuccess) {
-            NSDictionary *dict = [UMSocialAccountManager socialAccountDictionary];
+//            NSDictionary *dict = [UMSocialAccountManager socialAccountDictionary];
             UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:snsPlatform.platformName];
             NSLog(@"\nusername = %@,\n usid = %@,\n token = %@ iconUrl = %@,\n unionId = %@,\n thirdPlatformUserProfile = %@,\n thirdPlatformResponse = %@ \n, message = %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL, snsAccount.unionId, response.thirdPlatformUserProfile, response.thirdPlatformResponse, response.message);
               [self setWithUserName:snsAccount.usid password:snsAccount.accessToken nickName:snsAccount.userName];
@@ -159,16 +177,23 @@
         
         if (response.responseCode == UMSResponseCodeSuccess) {
             
-            NSDictionary *dict = [UMSocialAccountManager socialAccountDictionary];
+//            NSDictionary *dict = [UMSocialAccountManager socialAccountDictionary];
             UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:snsPlatform.platformName];
             NSLog(@"\nusername = %@,\n usid = %@,\n token = %@ iconUrl = %@,\n unionId = %@,\n thirdPlatformUserProfile = %@,\n thirdPlatformResponse = %@ \n, message = %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL, snsAccount.unionId, response.thirdPlatformUserProfile, response.thirdPlatformResponse, response.message);
              [self setWithUserName:snsAccount.usid password:snsAccount.accessToken nickName:snsAccount.userName];
             
         }});
 }
+#pragma mark -  键盘处理
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [self.userNameLabel resignFirstResponder];
     [self.passwordLabel resignFirstResponder];
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.userNameLabel resignFirstResponder];
+    [self.passwordLabel resignFirstResponder];
+    return YES;
 }
 @end

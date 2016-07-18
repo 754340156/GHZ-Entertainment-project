@@ -58,6 +58,7 @@
 {
     if (!_segmentedControl) {
         _segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"精华",@"新帖"]];
+        _segmentedControl.GHZ_width = 150;
         [_segmentedControl addTarget:self action:@selector(segmentSelect:) forControlEvents:UIControlEventValueChanged];
         self.navigationItem.titleView = _segmentedControl;
     }

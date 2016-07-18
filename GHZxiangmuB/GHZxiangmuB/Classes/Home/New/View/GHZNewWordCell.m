@@ -11,7 +11,6 @@
 #import "GHZNewPictureView.h"
 #import "UIImageView+WebCache.h"
 #import "GHZNewMusicView.h"
-#import "GHZDataBaseHelper.h"
 #import "UIImage+Extension.h"
 @interface GHZNewWordCell ()
 /** 头像*/
@@ -175,20 +174,9 @@
 }
 //点击收藏按钮
 - (IBAction)collectionBtn:(id)sender {
-    UIAlertController *alertController=[UIAlertController alertControllerWithTitle: nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];//创建界面
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:nil]; //创建按钮cancel以及对应事件
-    UIAlertAction *saveAction=[UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [[GHZDataBaseHelper shareInstance] create];
-        [[GHZDataBaseHelper shareInstance]insertTopicModel:self.model];
-    }];//创建按钮ok以及对应事件
-    UIAlertAction *report = [UIAlertAction actionWithTitle:@"举报" style: UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        
-    }];
-    //最后将这些按钮都添加到界面上去，显示界面
-    [alertController addAction:cancelAction];
-    [alertController addAction:saveAction];
-    [alertController addAction:report];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController: alertController animated:YES completion:nil];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(getClickCollectWithModel:)]) {
+        [self.delegate getClickCollectWithModel:self.model];
+    }
 }
 
 

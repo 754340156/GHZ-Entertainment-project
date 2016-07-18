@@ -10,7 +10,7 @@
 
 
 static NSString *const kLoadingMessage = @"登录中...";
-static CGFloat const   kShowTime  = 2.0f;
+static CGFloat const   kShowTime  = 1.0f;
 
 @interface GHZMBManager : NSObject
 

@@ -7,48 +7,70 @@
 //
 
 #import "GHZLiveWebViewController.h"
-#import <NJKWebViewProgress/NJKWebViewProgress.h>
-#import <NJKWebViewProgress/NJKWebViewProgressView.h>
-@interface GHZLiveWebViewController ()<NJKWebViewProgressDelegate,UIWebViewDelegate>
-@property (nonatomic,strong)UIWebView *currentWebView;
-/**  进度条类 */
-@property (nonatomic,strong) NJKWebViewProgress *progressProxy;
-/**  进度条 */
-@property (nonatomic,strong) NJKWebViewProgressView *progressView;
+#import <WebKit/WebKit.h>
+@interface GHZLiveWebViewController ()<WKUIDelegate,WKNavigationDelegate>
+@property (nonatomic,strong)WKWebView *currentWebView;
+
 @end
 
 @implementation GHZLiveWebViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
-    self.currentWebView = [[UIWebView alloc] initWithFrame:self.view.frame];
+    self.currentWebView = [[WKWebView alloc] initWithFrame:self.view.frame];
     [self.currentWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.webUrl]]];
     [self.view addSubview:self.currentWebView];
-    self.progressProxy = [[NJKWebViewProgress alloc] init]; // instance variable
-    self.currentWebView.delegate = self.progressProxy;
-    self.progressProxy.webViewProxyDelegate = self;
-    self.progressProxy.progressDelegate = self;
+    self.currentWebView.navigationDelegate=self;
+    self.currentWebView.UIDelegate=self;
+}
 
-    CGRect navBounds = self.navigationController.navigationBar.bounds;
-    CGRect barFrame = CGRectMake(0,navBounds.size.height - 2,navBounds.size.width,2);
-    self.progressView = [[NJKWebViewProgressView alloc] initWithFrame:barFrame];
-    self.progressView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
-    [self.progressView setProgress:0 animated:YES];
-    [self.navigationController.navigationBar addSubview:self.progressView];
+#pragma mark - WKUIDelegate
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
+    switch (navigationAction.navigationType) {
+        case WKNavigationTypeLinkActivated:
+            break;
+        case WKNavigationTypeFormSubmitted:
+            break;
+        case WKNavigationTypeBackForward:
+            break;
+        case WKNavigationTypeReload:
+            break;
+        case WKNavigationTypeFormResubmitted:
+            break;
+        default:
+            break;
+    }
+    //host
+    NSLog(@"%@",navigationAction.sourceFrame.securityOrigin.host);
+    NSLog(@"%@",navigationAction.targetFrame.securityOrigin.host);
+    ///捕获异常
+    //第一用的时候不会用，程序直接崩溃了，有点类似于UIWebVew返回Bool那个方法
+    decisionHandler(WKNavigationActionPolicyAllow);
+}
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler{
+    decisionHandler(WKNavigationResponsePolicyAllow);
+}
+// 接收到服务器跳转请求之后调用
+- (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(null_unspecified WKNavigation *)navigation{
+}
+//页面开始加载时调用
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(null_unspecified WKNavigation *)navigation{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+}
+// 当内容开始返回时调用
+- (void)webView:(WKWebView *)webView didCommitNavigation:(null_unspecified WKNavigation *)navigation{
+}
+// 页面加载完成之后调用
+- (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation{
+}
+// 页面加载失败时调用
+- (void)webView:(WKWebView *)webView   didFailProvisionalNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error{
+}
+// 页面加载失败时调用
+- (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error{
 }
 
 
-#pragma mark - NJKWebViewProgressDelegate
--(void)webViewProgress:(NJKWebViewProgress *)webViewProgress updateProgress:(float)progress
-{
-    [self.progressView setProgress:progress animated:YES];
-    self.title = [self.currentWebView stringByEvaluatingJavaScriptFromString:@"document.title"];
-}
 
-- (void)dealloc
-{
-    [self.progressView removeFromSuperview];
-}
 @end

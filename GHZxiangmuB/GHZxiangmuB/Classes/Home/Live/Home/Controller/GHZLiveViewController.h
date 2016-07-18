@@ -7,7 +7,10 @@
 //
 
 #import "GHZViewController.h"
-
+@class GHZSelectedView;
 @interface GHZLiveViewController : GHZViewController
-
+/**  ScrollView */
+@property (nonatomic,strong)UIScrollView *contentView;
+/**  顶部选择器 */
+@property (nonatomic,strong) GHZSelectedView *topMenuView;
 @end

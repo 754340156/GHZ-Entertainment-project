@@ -27,6 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self setCollectionView];
     [self setRefresh];
 }
@@ -55,7 +56,7 @@
     flowLayout.minimumInteritemSpacing = 2;
     flowLayout.itemSize = CGSizeMake((GHZScreenWidth-14)/3, (GHZScreenWidth-14)/3);
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
-    self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView.backgroundColor = [UIColor clearColor];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.view addSubview:self.collectionView];
@@ -74,9 +75,11 @@
         [weakself setData];
     }];
     [self.collectionView.mj_header beginRefreshing];
+    self.collectionView.mj_footer.hidden = YES;
 }
 - (void)setData
 {
+
     AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
     [manager GET:[NSString stringWithFormat:@"%@%ld",liveHotUrl,self.currentPage] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
 
@@ -104,6 +107,7 @@
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
+     self.collectionView.mj_footer.hidden = (self.dataArray.count == 0);
     return self.dataArray.count;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath

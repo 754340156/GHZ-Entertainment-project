@@ -8,15 +8,19 @@
 
 #import "GHZCareViewController.h"
 #import "GHZCareHeaderView.h"
+#import "GHZLiveViewController.h"
+#import "GHZSelectedView.h"
 @interface GHZCareViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
+/**  头视图 */
+@property (nonatomic,strong) GHZCareHeaderView *headerView;
 @end
 
 @implementation GHZCareViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
     [self setTableView];
 }
 - (void)setTableView
@@ -24,6 +28,7 @@
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
 }
@@ -39,12 +44,11 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld,%ld",(long)indexPath.section,(long)indexPath.row];
     return cell;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-   return  [GHZCareHeaderView GHZ_viewFromXib];
+   return self.headerView;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
@@ -81,5 +85,21 @@
         //停止拖拽
     }
 }
-
+#pragma mark - 懒加载
+- (GHZCareHeaderView *)headerView
+{
+     __weak typeof(self)weakself = self;
+    if (!_headerView) {
+        _headerView = [GHZCareHeaderView GHZ_viewFromXib];
+        _headerView.lookUserAction = ^(UIButton *sender)
+        {
+            //滚到首页
+            GHZLiveViewController *liveVC  = (GHZLiveViewController *)weakself.parentViewController;
+            [liveVC.contentView setContentOffset:CGPointMake(0, -64) animated:YES];
+            liveVC.topMenuView.underLine.GHZ_x = 15;
+            liveVC.topMenuView.selectedType = HomeTypeHot;
+        };
+    }
+    return _headerView;
+}
 @end

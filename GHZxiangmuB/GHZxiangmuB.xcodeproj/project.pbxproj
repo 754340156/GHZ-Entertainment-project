@@ -384,6 +384,24 @@
 		D670939B1D3A6D9C004A80B4 /* GHZVideoPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = D670939A1D3A6D9C004A80B4 /* GHZVideoPlayerControlView.m */; };
 		D67093A41D3A7C34004A80B4 /* GHZCreamCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D67093A21D3A7C34004A80B4 /* GHZCreamCommentViewController.m */; };
 		D67093A51D3A7C34004A80B4 /* GHZCreamCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D67093A31D3A7C34004A80B4 /* GHZCreamCommentViewController.xib */; };
+		D68D17D01D3CAD8E00FD1B53 /* AppDelegate+GHZNetWorkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = D68D17CF1D3CAD8E00FD1B53 /* AppDelegate+GHZNetWorkStatus.m */; };
+		D68D17FC1D3CDA3300FD1B53 /* PJXBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D68D17D51D3CDA3300FD1B53 /* PJXBounceAnimation.m */; };
+		D68D17FD1D3CDA3300FD1B53 /* PJXFrameItemAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D68D17D81D3CDA3300FD1B53 /* PJXFrameItemAnimation.m */; };
+		D68D17FE1D3CDA3300FD1B53 /* PJXFumeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D68D17DB1D3CDA3300FD1B53 /* PJXFumeAnimation.m */; };
+		D68D17FF1D3CDA3300FD1B53 /* PJXLeftRotationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D68D17DE1D3CDA3300FD1B53 /* PJXLeftRotationAnimation.m */; };
+		D68D18001D3CDA3300FD1B53 /* PJXRightRotationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D68D17E01D3CDA3300FD1B53 /* PJXRightRotationAnimation.m */; };
+		D68D18011D3CDA3300FD1B53 /* PJXRotationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D68D17E21D3CDA3300FD1B53 /* PJXRotationAnimation.m */; };
+		D68D18021D3CDA3300FD1B53 /* PJXFlipBottomTransitionItemAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = D68D17E51D3CDA3300FD1B53 /* PJXFlipBottomTransitionItemAnimations.m */; };
+		D68D18031D3CDA3300FD1B53 /* PJXFlipLeftTransitionItemAniamtions.m in Sources */ = {isa = PBXBuildFile; fileRef = D68D17E71D3CDA3300FD1B53 /* PJXFlipLeftTransitionItemAniamtions.m */; };
+		D68D18041D3CDA3300FD1B53 /* PJXFlipRightTransitionItemAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = D68D17E91D3CDA3300FD1B53 /* PJXFlipRightTransitionItemAnimations.m */; };
+		D68D18051D3CDA3300FD1B53 /* PJXFlipTopTransitionItemAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = D68D17EB1D3CDA3300FD1B53 /* PJXFlipTopTransitionItemAnimations.m */; };
+		D68D18061D3CDA3300FD1B53 /* PJXTransitionItemAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = D68D17ED1D3CDA3300FD1B53 /* PJXTransitionItemAnimations.m */; };
+		D68D18071D3CDA3300FD1B53 /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D68D17F01D3CDA3300FD1B53 /* NSArray+Extension.m */; };
+		D68D18081D3CDA3300FD1B53 /* PJXAnimatedTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68D17F21D3CDA3300FD1B53 /* PJXAnimatedTabBarController.m */; };
+		D68D18091D3CDA3300FD1B53 /* PJXAnimatedTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D68D17F41D3CDA3300FD1B53 /* PJXAnimatedTabBarItem.m */; };
+		D68D180A1D3CDA3300FD1B53 /* PJXBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = D68D17F71D3CDA3300FD1B53 /* PJXBadge.m */; };
+		D68D180B1D3CDA3300FD1B53 /* PJXIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = D68D17F91D3CDA3300FD1B53 /* PJXIconView.m */; };
+		D68D180C1D3CDA3300FD1B53 /* PJXItemAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D68D17FB1D3CDA3300FD1B53 /* PJXItemAnimation.m */; };
 		D6963E1E1D373663000C58B4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6963E1D1D373663000C58B4 /* Security.framework */; };
 		D6963E201D37367A000C58B4 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6963E1F1D37367A000C58B4 /* libiconv.tbd */; };
 		D6963E221D37368A000C58B4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6963E211D37368A000C58B4 /* SystemConfiguration.framework */; };
@@ -1145,6 +1163,42 @@
 		D67093A11D3A7C34004A80B4 /* GHZCreamCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCreamCommentViewController.h; sourceTree = "<group>"; };
 		D67093A21D3A7C34004A80B4 /* GHZCreamCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCreamCommentViewController.m; sourceTree = "<group>"; };
 		D67093A31D3A7C34004A80B4 /* GHZCreamCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZCreamCommentViewController.xib; sourceTree = "<group>"; };
+		D68D17CE1D3CAD8E00FD1B53 /* AppDelegate+GHZNetWorkStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+GHZNetWorkStatus.h"; sourceTree = "<group>"; };
+		D68D17CF1D3CAD8E00FD1B53 /* AppDelegate+GHZNetWorkStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+GHZNetWorkStatus.m"; sourceTree = "<group>"; };
+		D68D17D41D3CDA3300FD1B53 /* PJXBounceAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJXBounceAnimation.h; sourceTree = "<group>"; };
+		D68D17D51D3CDA3300FD1B53 /* PJXBounceAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJXBounceAnimation.m; sourceTree = "<group>"; };
+		D68D17D71D3CDA3300FD1B53 /* PJXFrameItemAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJXFrameItemAnimation.h; sourceTree = "<group>"; };
+		D68D17D81D3CDA3300FD1B53 /* PJXFrameItemAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJXFrameItemAnimation.m; sourceTree = "<group>"; };
+		D68D17DA1D3CDA3300FD1B53 /* PJXFumeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJXFumeAnimation.h; sourceTree = "<group>"; };
+		D68D17DB1D3CDA3300FD1B53 /* PJXFumeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJXFumeAnimation.m; sourceTree = "<group>"; };
+		D68D17DD1D3CDA3300FD1B53 /* PJXLeftRotationAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJXLeftRotationAnimation.h; sourceTree = "<group>"; };
+		D68D17DE1D3CDA3300FD1B53 /* PJXLeftRotationAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJXLeftRotationAnimation.m; sourceTree = "<group>"; };
+		D68D17DF1D3CDA3300FD1B53 /* PJXRightRotationAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJXRightRotationAnimation.h; sourceTree = "<group>"; };
+		D68D17E01D3CDA3300FD1B53 /* PJXRightRotationAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJXRightRotationAnimation.m; sourceTree = "<group>"; };
+		D68D17E11D3CDA3300FD1B53 /* PJXRotationAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJXRotationAnimation.h; sourceTree = "<group>"; };
+		D68D17E21D3CDA3300FD1B53 /* PJXRotationAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJXRotationAnimation.m; sourceTree = "<group>"; };
+		D68D17E41D3CDA3300FD1B53 /* PJXFlipBottomTransitionItemAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJXFlipBottomTransitionItemAnimations.h; sourceTree = "<group>"; };
+		D68D17E51D3CDA3300FD1B53 /* PJXFlipBottomTransitionItemAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJXFlipBottomTransitionItemAnimations.m; sourceTree = "<group>"; };
+		D68D17E61D3CDA3300FD1B53 /* PJXFlipLeftTransitionItemAniamtions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJXFlipLeftTransitionItemAniamtions.h; sourceTree = "<group>"; };
+		D68D17E71D3CDA3300FD1B53 /* PJXFlipLeftTransitionItemAniamtions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJXFlipLeftTransitionItemAniamtions.m; sourceTree = "<group>"; };
+		D68D17E81D3CDA3300FD1B53 /* PJXFlipRightTransitionItemAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJXFlipRightTransitionItemAnimations.h; sourceTree = "<group>"; };
+		D68D17E91D3CDA3300FD1B53 /* PJXFlipRightTransitionItemAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJXFlipRightTransitionItemAnimations.m; sourceTree = "<group>"; };
+		D68D17EA1D3CDA3300FD1B53 /* PJXFlipTopTransitionItemAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJXFlipTopTransitionItemAnimations.h; sourceTree = "<group>"; };
+		D68D17EB1D3CDA3300FD1B53 /* PJXFlipTopTransitionItemAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJXFlipTopTransitionItemAnimations.m; sourceTree = "<group>"; };
+		D68D17EC1D3CDA3300FD1B53 /* PJXTransitionItemAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJXTransitionItemAnimations.h; sourceTree = "<group>"; };
+		D68D17ED1D3CDA3300FD1B53 /* PJXTransitionItemAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJXTransitionItemAnimations.m; sourceTree = "<group>"; };
+		D68D17EF1D3CDA3300FD1B53 /* NSArray+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extension.h"; sourceTree = "<group>"; };
+		D68D17F01D3CDA3300FD1B53 /* NSArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extension.m"; sourceTree = "<group>"; };
+		D68D17F11D3CDA3300FD1B53 /* PJXAnimatedTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJXAnimatedTabBarController.h; sourceTree = "<group>"; };
+		D68D17F21D3CDA3300FD1B53 /* PJXAnimatedTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJXAnimatedTabBarController.m; sourceTree = "<group>"; };
+		D68D17F31D3CDA3300FD1B53 /* PJXAnimatedTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJXAnimatedTabBarItem.h; sourceTree = "<group>"; };
+		D68D17F41D3CDA3300FD1B53 /* PJXAnimatedTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJXAnimatedTabBarItem.m; sourceTree = "<group>"; };
+		D68D17F61D3CDA3300FD1B53 /* PJXBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJXBadge.h; sourceTree = "<group>"; };
+		D68D17F71D3CDA3300FD1B53 /* PJXBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJXBadge.m; sourceTree = "<group>"; };
+		D68D17F81D3CDA3300FD1B53 /* PJXIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJXIconView.h; sourceTree = "<group>"; };
+		D68D17F91D3CDA3300FD1B53 /* PJXIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJXIconView.m; sourceTree = "<group>"; };
+		D68D17FA1D3CDA3300FD1B53 /* PJXItemAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJXItemAnimation.h; sourceTree = "<group>"; };
+		D68D17FB1D3CDA3300FD1B53 /* PJXItemAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJXItemAnimation.m; sourceTree = "<group>"; };
 		D6963E1D1D373663000C58B4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D6963E1F1D37367A000C58B4 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		D6963E211D37368A000C58B4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -1281,6 +1335,8 @@
 				D6708DE31D39C489004A80B4 /* UIView+Extension.m */,
 				D6708DE41D39C489004A80B4 /* UIViewController+Extension.h */,
 				D6708DE51D39C489004A80B4 /* UIViewController+Extension.m */,
+				D68D17CE1D3CAD8E00FD1B53 /* AppDelegate+GHZNetWorkStatus.h */,
+				D68D17CF1D3CAD8E00FD1B53 /* AppDelegate+GHZNetWorkStatus.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1928,6 +1984,7 @@
 		D6708EAB1D39C489004A80B4 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				D68D17D11D3CDA3300FD1B53 /* PJXAnimatedTabBarController */,
 				D6708EAC1D39C489004A80B4 /* LBXAlertAction */,
 				D6708EB61D39C489004A80B4 /* LBXScan */,
 				D6708ED51D39C489004A80B4 /* UMSocial_Sdk_5.2.1 */,
@@ -2956,6 +3013,111 @@
 			);
 			sourceTree = "<group>";
 		};
+		D68D17D11D3CDA3300FD1B53 /* PJXAnimatedTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				D68D17D21D3CDA3300FD1B53 /* Animations */,
+				D68D17EE1D3CDA3300FD1B53 /* Category */,
+				D68D17F11D3CDA3300FD1B53 /* PJXAnimatedTabBarController.h */,
+				D68D17F21D3CDA3300FD1B53 /* PJXAnimatedTabBarController.m */,
+				D68D17F31D3CDA3300FD1B53 /* PJXAnimatedTabBarItem.h */,
+				D68D17F41D3CDA3300FD1B53 /* PJXAnimatedTabBarItem.m */,
+				D68D17F51D3CDA3300FD1B53 /* PJXBadge */,
+				D68D17F81D3CDA3300FD1B53 /* PJXIconView.h */,
+				D68D17F91D3CDA3300FD1B53 /* PJXIconView.m */,
+				D68D17FA1D3CDA3300FD1B53 /* PJXItemAnimation.h */,
+				D68D17FB1D3CDA3300FD1B53 /* PJXItemAnimation.m */,
+			);
+			path = PJXAnimatedTabBarController;
+			sourceTree = "<group>";
+		};
+		D68D17D21D3CDA3300FD1B53 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				D68D17D31D3CDA3300FD1B53 /* BounceAnimation */,
+				D68D17D61D3CDA3300FD1B53 /* FrameAnimation */,
+				D68D17D91D3CDA3300FD1B53 /* FumeAnimation */,
+				D68D17DC1D3CDA3300FD1B53 /* RotationAnimation */,
+				D68D17E31D3CDA3300FD1B53 /* TransitionAnimations */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		D68D17D31D3CDA3300FD1B53 /* BounceAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				D68D17D41D3CDA3300FD1B53 /* PJXBounceAnimation.h */,
+				D68D17D51D3CDA3300FD1B53 /* PJXBounceAnimation.m */,
+			);
+			path = BounceAnimation;
+			sourceTree = "<group>";
+		};
+		D68D17D61D3CDA3300FD1B53 /* FrameAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				D68D17D71D3CDA3300FD1B53 /* PJXFrameItemAnimation.h */,
+				D68D17D81D3CDA3300FD1B53 /* PJXFrameItemAnimation.m */,
+			);
+			path = FrameAnimation;
+			sourceTree = "<group>";
+		};
+		D68D17D91D3CDA3300FD1B53 /* FumeAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				D68D17DA1D3CDA3300FD1B53 /* PJXFumeAnimation.h */,
+				D68D17DB1D3CDA3300FD1B53 /* PJXFumeAnimation.m */,
+			);
+			path = FumeAnimation;
+			sourceTree = "<group>";
+		};
+		D68D17DC1D3CDA3300FD1B53 /* RotationAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				D68D17DD1D3CDA3300FD1B53 /* PJXLeftRotationAnimation.h */,
+				D68D17DE1D3CDA3300FD1B53 /* PJXLeftRotationAnimation.m */,
+				D68D17DF1D3CDA3300FD1B53 /* PJXRightRotationAnimation.h */,
+				D68D17E01D3CDA3300FD1B53 /* PJXRightRotationAnimation.m */,
+				D68D17E11D3CDA3300FD1B53 /* PJXRotationAnimation.h */,
+				D68D17E21D3CDA3300FD1B53 /* PJXRotationAnimation.m */,
+			);
+			path = RotationAnimation;
+			sourceTree = "<group>";
+		};
+		D68D17E31D3CDA3300FD1B53 /* TransitionAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				D68D17E41D3CDA3300FD1B53 /* PJXFlipBottomTransitionItemAnimations.h */,
+				D68D17E51D3CDA3300FD1B53 /* PJXFlipBottomTransitionItemAnimations.m */,
+				D68D17E61D3CDA3300FD1B53 /* PJXFlipLeftTransitionItemAniamtions.h */,
+				D68D17E71D3CDA3300FD1B53 /* PJXFlipLeftTransitionItemAniamtions.m */,
+				D68D17E81D3CDA3300FD1B53 /* PJXFlipRightTransitionItemAnimations.h */,
+				D68D17E91D3CDA3300FD1B53 /* PJXFlipRightTransitionItemAnimations.m */,
+				D68D17EA1D3CDA3300FD1B53 /* PJXFlipTopTransitionItemAnimations.h */,
+				D68D17EB1D3CDA3300FD1B53 /* PJXFlipTopTransitionItemAnimations.m */,
+				D68D17EC1D3CDA3300FD1B53 /* PJXTransitionItemAnimations.h */,
+				D68D17ED1D3CDA3300FD1B53 /* PJXTransitionItemAnimations.m */,
+			);
+			path = TransitionAnimations;
+			sourceTree = "<group>";
+		};
+		D68D17EE1D3CDA3300FD1B53 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D68D17EF1D3CDA3300FD1B53 /* NSArray+Extension.h */,
+				D68D17F01D3CDA3300FD1B53 /* NSArray+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		D68D17F51D3CDA3300FD1B53 /* PJXBadge */ = {
+			isa = PBXGroup;
+			children = (
+				D68D17F61D3CDA3300FD1B53 /* PJXBadge.h */,
+				D68D17F71D3CDA3300FD1B53 /* PJXBadge.m */,
+			);
+			path = PJXBadge;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3122,6 +3284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68D18031D3CDA3300FD1B53 /* PJXFlipLeftTransitionItemAniamtions.m in Sources */,
 				D67092041D39C48A004A80B4 /* ZXISBNParsedResult.m in Sources */,
 				D67091B11D39C48A004A80B4 /* GHZNewPictureView.m in Sources */,
 				D67093381D3A210E004A80B4 /* GHZShowPictureViewController.m in Sources */,
@@ -3130,8 +3293,10 @@
 				D670920C1D39C48A004A80B4 /* ZXSMSTOMMSTOResultParser.m in Sources */,
 				D67091FC1D39C48A004A80B4 /* ZXCalendarParsedResult.m in Sources */,
 				D67092991D39C48A004A80B4 /* ZXPDF417DecodedBitStreamParser.m in Sources */,
+				D68D18081D3CDA3300FD1B53 /* PJXAnimatedTabBarController.m in Sources */,
 				D67092BB1D39C48A004A80B4 /* ZXQRCodeBlockPair.m in Sources */,
 				D67091961D39C48A004A80B4 /* GHZLivingUserView.m in Sources */,
+				D68D180A1D3CDA3300FD1B53 /* PJXBadge.m in Sources */,
 				D67092891D39C48A004A80B4 /* ZXUPCAReader.m in Sources */,
 				D67091CF1D39C48A004A80B4 /* LBXScanViewStyle.m in Sources */,
 				D67092571D39C48A004A80B4 /* ZXMaxiCodeReader.m in Sources */,
@@ -3158,6 +3323,7 @@
 				D67092A61D39C48A004A80B4 /* ZXPDF417Common.m in Sources */,
 				D67092A51D39C48A004A80B4 /* ZXPDF417HighLevelEncoder.m in Sources */,
 				D67092941D39C48A004A80B4 /* ZXPDF417BarcodeMetadata.m in Sources */,
+				D68D17FE1D3CDA3300FD1B53 /* PJXFumeAnimation.m in Sources */,
 				D67092C01D39C48A004A80B4 /* ZXMultiFinderPatternFinder.m in Sources */,
 				D67091CD1D39C48A004A80B4 /* LBXScanView.m in Sources */,
 				D670929B1D39C48A004A80B4 /* ZXPDF417DetectionResultColumn.m in Sources */,
@@ -3192,6 +3358,7 @@
 				D67091741D39C48A004A80B4 /* GHZCreamViewController.m in Sources */,
 				D670926A1D39C48A004A80B4 /* ZXRSSExpandedDecodedObject.m in Sources */,
 				D670925B1D39C48A004A80B4 /* ZXAI013103decoder.m in Sources */,
+				D68D18071D3CDA3300FD1B53 /* NSArray+Extension.m in Sources */,
 				D67091671D39C48A004A80B4 /* GHZNavViewController.m in Sources */,
 				C22577291D3A0EF5006D5B28 /* GHZNewCollectionView.m in Sources */,
 				D67092211D39C48A004A80B4 /* ZXGenericGFPoly.m in Sources */,
@@ -3211,6 +3378,7 @@
 				D67092711D39C48A004A80B4 /* ZXAbstractRSSReader.m in Sources */,
 				D67092CA1D39C48A004A80B4 /* GHZConst.m in Sources */,
 				D67092BE1D39C48A004A80B4 /* ZXQRCodeMatrixUtil.m in Sources */,
+				D68D180B1D3CDA3300FD1B53 /* PJXIconView.m in Sources */,
 				D670916E1D39C48A004A80B4 /* UIBarButtonItem+GHZExtention.m in Sources */,
 				D67091AE1D39C48A004A80B4 /* GHZTopicModel.m in Sources */,
 				D67091D51D39C48A004A80B4 /* ZXingWrapper.m in Sources */,
@@ -3239,6 +3407,7 @@
 				D67091D21D39C48A004A80B4 /* MyQRViewController.m in Sources */,
 				D67091C31D39C48A004A80B4 /* UIActionSheet+LBXAlertAction.m in Sources */,
 				D67091D41D39C48A004A80B4 /* SubLBXScanViewController.m in Sources */,
+				D68D17FC1D3CDA3300FD1B53 /* PJXBounceAnimation.m in Sources */,
 				D67092461D39C48A004A80B4 /* ZXDataMatrixASCIIEncoder.m in Sources */,
 				D670927E1D39C48A004A80B4 /* ZXEAN13Reader.m in Sources */,
 				D67092751D39C48A004A80B4 /* ZXRSSPair.m in Sources */,
@@ -3285,6 +3454,7 @@
 				D67091691D39C48A004A80B4 /* GHZViewController.m in Sources */,
 				D67092C31D39C48A004A80B4 /* ZXQRCodeWriter.m in Sources */,
 				D670924B1D39C48A004A80B4 /* ZXDataMatrixEncoderContext.m in Sources */,
+				D68D17FF1D3CDA3300FD1B53 /* PJXLeftRotationAnimation.m in Sources */,
 				D670926D1D39C48A004A80B4 /* ZXBitArrayBuilder.m in Sources */,
 				D670922B1D39C48A004A80B4 /* ZXDefaultGridSampler.m in Sources */,
 				D67092A71D39C48A004A80B4 /* ZXPDF417Reader.m in Sources */,
@@ -3297,11 +3467,13 @@
 				D67092671D39C48A004A80B4 /* ZXRSSExpandedDecodedChar.m in Sources */,
 				D670924C1D39C48A004A80B4 /* ZXDataMatrixErrorCorrection.m in Sources */,
 				D67091C61D39C48A004A80B4 /* LBXAlertAction.m in Sources */,
+				D68D18001D3CDA3300FD1B53 /* PJXRightRotationAnimation.m in Sources */,
 				D67091631D39C48A004A80B4 /* AppDelegate.m in Sources */,
 				D67093201D39CD18004A80B4 /* GHZDataBaseHelper.m in Sources */,
 				D6D412421D3B54EA006B77A0 /* GHZNewCommentViewController.m in Sources */,
 				D670928A1D39C48A004A80B4 /* ZXUPCAWriter.m in Sources */,
 				D670922C1D39C48A004A80B4 /* ZXDetectorResult.m in Sources */,
+				D68D18041D3CDA3300FD1B53 /* PJXFlipRightTransitionItemAnimations.m in Sources */,
 				D670928F1D39C48A004A80B4 /* ZXUPCEANWriter.m in Sources */,
 				D67092691D39C48A004A80B4 /* ZXRSSExpandedDecodedNumeric.m in Sources */,
 				D670916F1D39C48A004A80B4 /* UIDevice+Extension.m in Sources */,
@@ -3323,6 +3495,7 @@
 				D67091771D39C48A004A80B4 /* GHZTopicController.m in Sources */,
 				D67092011D39C48A004A80B4 /* ZXExpandedProductResultParser.m in Sources */,
 				D67091B81D39C48A004A80B4 /* GHZChatViewController.m in Sources */,
+				D68D17FD1D3CDA3300FD1B53 /* PJXFrameItemAnimation.m in Sources */,
 				D67092A81D39C48A004A80B4 /* ZXPDF417ResultMetadata.m in Sources */,
 				D67091781D39C48A004A80B4 /* GHZTopic.m in Sources */,
 				D67091821D39C48A004A80B4 /* GHZCareViewController.m in Sources */,
@@ -3334,6 +3507,7 @@
 				D670924D1D39C48A004A80B4 /* ZXDataMatrixHighLevelEncoder.m in Sources */,
 				D67092491D39C48A004A80B4 /* ZXDataMatrixDefaultPlacement.m in Sources */,
 				D67091FA1D39C48A004A80B4 /* ZXBizcardResultParser.m in Sources */,
+				D68D18091D3CDA3300FD1B53 /* PJXAnimatedTabBarItem.m in Sources */,
 				D670927A1D39C48A004A80B4 /* ZXCode128Writer.m in Sources */,
 				D67091791D39C48A004A80B4 /* GHZTopicCell.m in Sources */,
 				D670918F1D39C48A004A80B4 /* GHZLivingCatEarView.m in Sources */,
@@ -3345,6 +3519,7 @@
 				D670918A1D39C48A004A80B4 /* GHZHotCollectionViewCell.m in Sources */,
 				D67092A01D39C48A004A80B4 /* ZXPDF417.m in Sources */,
 				D670926B1D39C48A004A80B4 /* ZXRSSExpandedFieldParser.m in Sources */,
+				D68D17D01D3CAD8E00FD1B53 /* AppDelegate+GHZNetWorkStatus.m in Sources */,
 				D67092181D39C48A004A80B4 /* ZXWifiParsedResult.m in Sources */,
 				D67092AE1D39C48A004A80B4 /* ZXQRCodeDecoder.m in Sources */,
 				D67091711D39C48A004A80B4 /* UIImageView+Extension.m in Sources */,
@@ -3355,9 +3530,12 @@
 				D67092361D39C48A004A80B4 /* ZXDecodeHints.m in Sources */,
 				D670921B1D39C48A004A80B4 /* ZXCGImageLuminanceSource.m in Sources */,
 				D67092971D39C48A004A80B4 /* ZXPDF417Codeword.m in Sources */,
+				D68D180C1D3CDA3300FD1B53 /* PJXItemAnimation.m in Sources */,
 				D670924A1D39C48A004A80B4 /* ZXDataMatrixEdifactEncoder.m in Sources */,
 				D67091BC1D39C48A004A80B4 /* GHZOutPutView.m in Sources */,
+				D68D18011D3CDA3300FD1B53 /* PJXRotationAnimation.m in Sources */,
 				D67091BB1D39C48A004A80B4 /* GHZResultTableViewController.m in Sources */,
+				D68D18061D3CDA3300FD1B53 /* PJXTransitionItemAnimations.m in Sources */,
 				D67092311D39C48A004A80B4 /* ZXPerspectiveTransform.m in Sources */,
 				D67092441D39C48A004A80B4 /* ZXDataMatrixVersion.m in Sources */,
 				D67091CA1D39C48A004A80B4 /* LBXScanNetAnimation.m in Sources */,
@@ -3400,8 +3578,10 @@
 				D670929C1D39C48A004A80B4 /* ZXPDF417DetectionResultRowIndicatorColumn.m in Sources */,
 				D67091D31D39C48A004A80B4 /* ScanResultViewController.m in Sources */,
 				D67093321D3A1BAD004A80B4 /* GHZShowpirtureController.m in Sources */,
+				D68D18021D3CDA3300FD1B53 /* PJXFlipBottomTransitionItemAnimations.m in Sources */,
 				D67093551D3A47FB004A80B4 /* GHZNewVideoView.m in Sources */,
 				D67091BA1D39C48A004A80B4 /* GHZChatHomeViewController.m in Sources */,
+				D68D18051D3CDA3300FD1B53 /* PJXFlipTopTransitionItemAnimations.m in Sources */,
 				D67091B71D39C48A004A80B4 /* GHZAssistViewController.m in Sources */,
 				D67092CC1D39C48A004A80B4 /* GHZH264Encoder.m in Sources */,
 				D67091F01D39C48A004A80B4 /* ZXAztecSimpleToken.m in Sources */,

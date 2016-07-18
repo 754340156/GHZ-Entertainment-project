@@ -39,7 +39,7 @@
 -(void)setModel:(GHZTopicModel *)model{
     _model = model;
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.bigImage]];
-    self.playcountLabel.text = [NSString stringWithFormat:@"%ld播放",  model.playcount];
+    self.playcountLabel.text = [NSString stringWithFormat:@"%ld播放",model.playcount];
     //时长
     NSInteger f = model.videotime/60;
     NSInteger m = model.videotime%60;
@@ -59,7 +59,6 @@
     }
     self.videoController.contentURL = url;
 }
-
 //停止视频的播放
 - (void)reset {
     [self.videoController dismiss];

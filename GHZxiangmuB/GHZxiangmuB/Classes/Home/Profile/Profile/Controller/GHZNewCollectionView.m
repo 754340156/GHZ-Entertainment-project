@@ -8,9 +8,8 @@
 
 #import "GHZNewCollectionView.h"
 #import "GHZNewWordCell.h"
-#import "AFNetWorking.h"
 #import "GHZTopicModel.h"
-#import "MJExtension.h"
+#import "GHZDataBaseHelper.h"
 @interface GHZNewCollectionView ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray *clloctionArr;
@@ -22,34 +21,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:(UITableViewStylePlain)];
-    self.tableView.backgroundColor = GHZRGBColor(223, 223, 223);
+    self.tableView.backgroundColor = BackColor;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(64, 0, 0, 0);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
-    [self lodingdata];
     [self.tableView registerNib:[UINib nibWithNibName:@"GHZNewWordCell" bundle:nil] forCellReuseIdentifier:@"GHZNewWordCell"];
 }
--(void)lodingdata{
-    //参数
-    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    dic[@"a"] = @"newlist";
-    dic[@"c"] = @"data";
-    dic[@"type"] = @"1";
-    //self.params = dic;
-    //发送请求
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:dic progress:^(NSProgress * _Nonnull downloadProgress) {
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        self.clloctionArr = [GHZTopicModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        [self.tableView reloadData];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error);
-        
-    }];
-    
-}
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.clloctionArr.count;
     ;
@@ -65,5 +45,13 @@
     cell.model = self.clloctionArr[indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
+}
+
+- (NSMutableArray *)clloctionArr
+{
+    if (!_clloctionArr) {
+        _clloctionArr = [[GHZDataBaseHelper shareInstance] searchTopicModels];
+    }
+    return _clloctionArr;
 }
 @end

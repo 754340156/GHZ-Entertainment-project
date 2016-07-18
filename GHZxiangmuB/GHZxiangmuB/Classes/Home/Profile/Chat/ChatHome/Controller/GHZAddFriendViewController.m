@@ -67,11 +67,15 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [[EMClient sharedClient].contactManager  asyncAddContact:searchBar.text message:@"想要加你为好友" success:^{
-        [GHZMBManager showBriefMessage:@"发送好友请求成功" InView:self.searchController.searchResultsController.view];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [GHZMBManager showBriefAlert:@"发送好友请求成功"];
+        });
+        
     } failure:^(EMError *aError) {
-        [GHZMBManager showBriefMessage:[NSString stringWithFormat:@"发送好友请求失败%u",aError.code] InView:self.searchController.searchResultsController.view];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [GHZMBManager showBriefAlert:[NSString stringWithFormat:@"发送好友请求失败%u",aError.code]];
+        });
     }];
-    
 }
 #pragma  mark - 懒加载
 - (NSMutableArray *)dataArray

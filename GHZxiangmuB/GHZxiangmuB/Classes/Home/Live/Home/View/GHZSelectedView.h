@@ -19,4 +19,5 @@ typedef NS_ENUM(NSUInteger, HomeType) {
 @property (nonatomic, weak, readonly)UIView *underLine;
 /** 设置滑动选中的按钮 */
 @property(nonatomic, assign) HomeType selectedType;
+
 @end

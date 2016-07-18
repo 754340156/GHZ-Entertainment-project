@@ -15,6 +15,7 @@
 #import "GHZCollctionListViewController.h"
 #import "GHZCollectionView.h"
 #import <EMSDK.h>
+#import "GHZMBManager.h"
 @interface GHZProfileViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
 /**  头视图 */
@@ -59,7 +60,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     switch (indexPath.row) {
         case 0:
             cell.textLabel.text = @"";
@@ -83,7 +84,6 @@
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    
     return self.headerView;
 }
 - (CGFloat )tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -97,7 +97,6 @@
     }
     else if (indexPath.row == 1)
     {
-
         GHZCollctionListViewController *CollctionListVC = [[GHZCollctionListViewController alloc] init];
         CollctionListVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:CollctionListVC animated:YES];
@@ -122,8 +121,8 @@
     else if (indexPath.row == 4)
     {
         [[EMClient sharedClient] asyncLogout:YES success:^{
-            NSLog(@"退出成功");
             dispatch_async(dispatch_get_main_queue(), ^{
+                [GHZMBManager showBriefAlert:@"退出成功"];
                 //跳到主界面
                 self.view.window.backgroundColor = [UIColor grayColor];
                 GHZNavViewController *navVC = [[GHZNavViewController alloc] initWithRootViewController:[[GHZLoginViewController alloc]init]];
@@ -131,7 +130,7 @@
                 [self.view.window makeKeyAndVisible];
             });
         } failure:^(EMError *aError) {
-            NSLog(@"退出失败");
+           [GHZMBManager showBriefAlert:@"退出失败"];
         }];
     }
 }
@@ -150,12 +149,13 @@
 }
 #pragma mark - 懒加载
 - (GHZProfileHeaderView *)headerView
-{             __weak typeof(self)weakself = self;
+{
+    __weak typeof(self)weakself = self;
     if (!_headerView) {
         _headerView = [GHZProfileHeaderView GHZ_viewFromXib];
         _headerView.chatAction = ^(UIButton *sender)
         {
-          //跳到聊天界面
+            //跳到聊天界面
             GHZChatHomeViewController *chatHomeVC = [[GHZChatHomeViewController alloc] init];
             chatHomeVC.hidesBottomBarWhenPushed = YES;
             [weakself.navigationController pushViewController:chatHomeVC animated:YES];
