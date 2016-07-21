@@ -26,12 +26,8 @@
     [super awakeFromNib];
     self.iconImageView.layer.masksToBounds = YES;
     self.iconImageView.layer.cornerRadius = self.iconImageView.GHZ_width * 0.5;
-    if ([GHZUserSetting shareInstance].nickName) {
-         self.nickNameLabel.text = [GHZUserSetting shareInstance].nickName;
-    }else
-    {
-        self.nickNameLabel.text = [EMClient sharedClient].pushOptions.nickname;
-    }
+    self.nickNameLabel.text = [GHZUserSetting shareInstance].nickName;
+    
 }
 
 /**  去聊天按钮 */

@@ -1,5 +1,5 @@
 //
-//  NarikoTextField.h
+//  JuroTextField.h
 //  BWWalkthroughExample
 //
 //  Created by mukesh mandora on 15/07/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NarikoTextField : UITextField<UITextFieldDelegate>
-@property (strong ,nonatomic) UILabel *placeHolderLabel;
+@interface JuroTextField : UITextField<UITextFieldDelegate>
+
 @end

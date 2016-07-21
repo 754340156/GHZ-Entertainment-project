@@ -84,7 +84,7 @@
     //新浪V
     self.sinaVView.hidden = !model.sina_v;
     //头像
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:model.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:model.profile_image] placeholderImage:[UIImage circleImage:[UIImage imageNamed:@"defaultUserIcon"] borderColor:nil borderWidth:0] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         self.profileImageView.image = image ? [UIImage circleImage:image borderColor:nil borderWidth:0] : [UIImage circleImage:[UIImage imageNamed:@"defaultUserIcon"] borderColor:nil borderWidth:0];
     }];
     //昵称

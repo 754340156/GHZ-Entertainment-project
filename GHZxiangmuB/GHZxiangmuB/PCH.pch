@@ -55,7 +55,7 @@
 
 #pragma mark - url
 //推流url727908 rtmp://daniulive.com:1935/hls/stream727908
-#define rtmpUrl @"rtmp://172.21.24.160:5555/rtmplive/room"
+#define rtmpUrl @"rtmp://172.21.24.160:5566/rtmplive/room"
 //rank
 #define rankUrl @"http://live.9158.com/Rank/WeekRank?Random"
 //NewUrl
@@ -76,7 +76,7 @@
 #define GHZLog(...)
 #endif
 
-#define GHZLogFunc GHZLog(@"%s",__func__)
+//#define GHZLogFunc GHZLog(@"%s",__func__)
 
 //标签参数
 #import "GHZConst.h"

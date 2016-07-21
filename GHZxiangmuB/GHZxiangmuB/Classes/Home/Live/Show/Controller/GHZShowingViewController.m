@@ -26,14 +26,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
     //设置占位的直播图片
     self.showPHView = [GHZShowPlaceHolderView GHZ_viewFromXib];
     [self.view addSubview:self.showPHView];
     [self setPlaceHolderBlock];
 }
-
 - (void)setPlaceHolderBlock
 {
      __weak typeof(self)weakself = self;

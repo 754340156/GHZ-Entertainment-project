@@ -8,7 +8,7 @@
 
 #import "NarikoTextField.h"
 
-@interface NarikoTextField (){
+@interface NarikoTextField ()<UITextFieldDelegate>{
     //    UILabel *self.self.placeholder;
     CGFloat inset;
     CALayer *borderTextField,*contentTextfield;

@@ -42,6 +42,7 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="智能美颜已开启" image="icon_beautifulface_19x19"/>
+                    <state key="selected" title="智能美颜已关闭"/>
                     <connections>
                         <action selector="beautifulAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="aO1-cO-xEW"/>
                     </connections>

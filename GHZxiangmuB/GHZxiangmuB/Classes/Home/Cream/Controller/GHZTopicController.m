@@ -178,7 +178,7 @@ static NSString  *const GHZTopicCellId = @"topic";
         [[UMSocialData defaultData].urlResource setResourceType:UMSocialUrlResourceTypeImage url:image];
 
     }
-    [UMSocialData defaultData].extConfig.title = @"分享 title";
+    [UMSocialData defaultData].extConfig.title = text;
     [UMSocialData defaultData].extConfig.qqData.url = url;
     [UMSocialData defaultData].extConfig.wechatSessionData.url = url;
     [UMSocialData defaultData].extConfig.sinaData.urlResource.url = url;

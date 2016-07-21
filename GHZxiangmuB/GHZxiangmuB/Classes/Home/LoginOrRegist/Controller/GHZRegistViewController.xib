@@ -24,7 +24,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.3970366379310345" colorSpace="calibratedWhite"/>
                 </imageView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yn2-pK-abN" customClass="NarikoTextField">
-                    <rect key="frame" x="20" y="150" width="560" height="80"/>
+                    <rect key="frame" x="20" y="60" width="560" height="80"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="fIX-os-FEe"/>
                     </constraints>
@@ -32,7 +32,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hFj-Jk-bhF" customClass="NarikoTextField">
-                    <rect key="frame" x="20" y="350" width="560" height="80"/>
+                    <rect key="frame" x="20" y="260" width="560" height="80"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="QLn-ZG-xVa"/>
                     </constraints>
@@ -40,7 +40,7 @@
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEm-cO-HvI">
-                    <rect key="frame" x="225" y="470" width="150" height="34"/>
+                    <rect key="frame" x="225" y="380" width="150" height="34"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="zQc-Gj-5IB"/>
                     </constraints>
@@ -53,7 +53,7 @@
                     </connections>
                 </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LiW-cc-Wef" customClass="NarikoTextField">
-                    <rect key="frame" x="20" y="250" width="560" height="80"/>
+                    <rect key="frame" x="20" y="160" width="560" height="80"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="xon-DB-MWW"/>
                     </constraints>
@@ -89,6 +89,7 @@
                 <constraint firstItem="xM7-gH-oDG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="0a8-nf-JMp"/>
                 <constraint firstItem="LiW-cc-Wef" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="8XL-VT-x07"/>
                 <constraint firstItem="hFj-Jk-bhF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="9dY-Tt-7AA"/>
+                <constraint firstItem="hFj-Jk-bhF" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Ecu-xp-Phi"/>
                 <constraint firstAttribute="trailing" secondItem="hFj-Jk-bhF" secondAttribute="trailing" constant="20" id="Fb6-w1-WNf"/>
                 <constraint firstItem="xM7-gH-oDG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Fdo-cD-Gjb"/>
                 <constraint firstItem="Yn2-pK-abN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="IFS-oh-Ijd"/>
@@ -104,6 +105,11 @@
                 <constraint firstItem="TEm-cO-HvI" firstAttribute="top" secondItem="hFj-Jk-bhF" secondAttribute="bottom" constant="40" id="wVA-Qp-UDQ"/>
                 <constraint firstItem="Yn2-pK-abN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="yZE-07-YzJ"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="yZE-07-YzJ"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="233" y="-91"/>
         </view>
     </objects>

@@ -65,12 +65,12 @@
 }
 - (void)setRefresh
 {
-    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        NSLog(@"上啦");
-    }];
-    self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        
-    }];
+//    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+//        NSLog(@"上拉");
+//    }];
+//    self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+//        
+//    }];
 }
 
 #pragma mark - collectionView
