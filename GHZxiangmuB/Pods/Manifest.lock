@@ -54,6 +54,7 @@ PODS:
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
+  - UMengAnalytics-NO-IDFA (4.0.5)
 
 DEPENDENCIES:
   - AFNetworking
@@ -69,6 +70,7 @@ DEPENDENCIES:
   - NJKWebViewProgress
   - SDCycleScrollView
   - SDWebImage
+  - UMengAnalytics-NO-IDFA
 
 EXTERNAL SOURCES:
   EaseUI:
@@ -98,7 +100,8 @@ SPEC CHECKSUMS:
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  UMengAnalytics-NO-IDFA: 965a219b05475ff2a4c09a164139a27bbaa0e25b
 
-PODFILE CHECKSUM: 07a49bd641493d044b803043906a6b4bd3082bf0
+PODFILE CHECKSUM: 56a5a05d4e2bc3246d4adfb76200e3f267930f48
 
 COCOAPODS: 1.0.0

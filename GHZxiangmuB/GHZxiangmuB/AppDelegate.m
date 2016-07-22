@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+GHZUMeng.h"
+#import "AppDelegate+GHZUmengAnalytics.h"
 #import "AppDelegate+GHZEaseMobAPNS.h"
 #import "AppDelegate+GHZNetWorkStatus.h"
 #import "CoreLaunchLite.h"
@@ -20,8 +21,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //Umeng
+    //Umeng分享
     [self  setUMengWithApplication:application didFinishLaunchingWithOptions:launchOptions];
+    //Umeng统计
+    [self setUmengAnalyticsWithApplication:application didFinishLaunchingWithOptions:launchOptions];
     //环信
     [self setEaseMobWithApplication:application didFinishLaunchingWithOptions:launchOptions];
     //监听网络状态

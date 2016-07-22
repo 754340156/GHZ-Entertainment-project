@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(finishAction) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
     [self.progress setThumbImage:[UIImage imageNamed:@"kr-video-player-point"] forState:(UIControlStateNormal)];
     [self startPlayingMusic];
     self.playtime.text = [NSString stringWithTime:self.totalTime];
@@ -93,7 +94,17 @@
         [self addProgressTimer];
     }
 }
-
+//播放完成
+- (void)finishAction
+{
+    if (floor(self.player.currentPlaybackTime)) {
+        [self dismiss];
+        if (self.playerFinish) {
+             self.playerFinish();
+        }
+        [self.view removeFromSuperview];
+    }
+}
 -(void)removeProgressTimer{
     [self.progressTimer invalidate];
     self.progressTimer = nil;

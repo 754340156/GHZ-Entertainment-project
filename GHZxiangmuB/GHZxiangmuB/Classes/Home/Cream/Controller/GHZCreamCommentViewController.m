@@ -106,6 +106,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+     self.tableView.mj_footer.hidden = (self.newsCommentArray.count == 0);
     NSInteger hotCount = self.hotCommentArray.count;
     NSInteger latestCount = self.newsCommentArray.count;
     if (section == 0) {

@@ -204,8 +204,6 @@
     if (self.delegate && [self.delegate respondsToSelector:@selector(getCollectClickWithModel:)]) {
         [self.delegate getCollectClickWithModel:self.topic];
     }
-
-    
 }
 
 

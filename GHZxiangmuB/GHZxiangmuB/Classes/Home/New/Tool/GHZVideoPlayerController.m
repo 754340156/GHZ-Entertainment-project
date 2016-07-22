@@ -198,7 +198,7 @@ static const CGFloat kVideoPlayerControllerAnimationTimeinterval = 0.3f;
         self.isFullscreenMode = YES;
         self.videoControl.fullScreenButton.hidden = YES;
         self.videoControl.shrinkScreenButton.hidden = NO;
-         [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:YES];
+         [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:NO];
     }];
 }
 
@@ -215,7 +215,7 @@ static const CGFloat kVideoPlayerControllerAnimationTimeinterval = 0.3f;
         self.isFullscreenMode = NO;
         self.videoControl.fullScreenButton.hidden = NO;
         self.videoControl.shrinkScreenButton.hidden = YES;
-         [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:YES];
+         [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:NO];
     }];
 }
 

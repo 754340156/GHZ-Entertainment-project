@@ -40,7 +40,7 @@
 - (void)setModel:(GHZCommentModel *)model
 {
     _model = model;
-    [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:model.user.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:model.user.profile_image] placeholderImage:[UIImage circleImage:[UIImage imageNamed:@"defaultUserIcon"] borderColor:nil borderWidth:0] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         self.iconImageView.image = image ? [UIImage circleImage:image borderColor:nil borderWidth:0] : [UIImage circleImage:[UIImage imageNamed:@"defaultUserIcon"] borderColor:nil borderWidth:0];
     }];
     if (model.voiceuri.length) {

@@ -14,5 +14,6 @@ pod 'BarrageRenderer'
 pod 'LFLiveKit'
 pod 'HyphenateSDK'
 pod 'FMDB'
+pod 'UMengAnalytics-NO-IDFA'
 pod 'EaseUI', :git => 'https://github.com/easemob/easeui-ios-hyphenate-cocoapods.git'
 end

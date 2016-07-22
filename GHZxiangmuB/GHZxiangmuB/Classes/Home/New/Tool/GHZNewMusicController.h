@@ -13,5 +13,7 @@
 @property (nonatomic,copy)NSString *url;
 @property (nonatomic,assign) NSInteger totalTime;
 /**  销毁 */
--(void)dismiss;
+- (void)dismiss;
+/**  播放完成 */
+@property (nonatomic,copy) void (^playerFinish)();
 @end

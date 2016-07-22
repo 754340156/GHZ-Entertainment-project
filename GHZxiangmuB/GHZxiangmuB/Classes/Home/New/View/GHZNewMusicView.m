@@ -55,6 +55,11 @@
     self.musicPlayer.totalTime = self.model.voicetime;
     self.musicPlayer.view.GHZ_width = self.imageView.GHZ_width;
     self.musicPlayer.view.GHZ_y = self.imageView.GHZ_height - self.musicPlayer.view.GHZ_height;
+     __weak typeof(self)weakself = self;
+    self.musicPlayer.playerFinish = ^()
+    {
+        weakself.Playbtn.hidden = NO;
+    };
     [self addSubview:self.musicPlayer.view];
 }
 -(void)reset{

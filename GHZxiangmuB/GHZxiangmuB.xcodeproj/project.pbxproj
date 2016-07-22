@@ -421,6 +421,7 @@
 		D6D4124A1D3B6224006B77A0 /* GHZCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D412481D3B6224006B77A0 /* GHZCommentTableViewCell.m */; };
 		D6D4124D1D3B6276006B77A0 /* GHZCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D4124C1D3B6276006B77A0 /* GHZCommentTableViewCell.xib */; };
 		D6D412501D3B7036006B77A0 /* GHZCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D4124F1D3B7036006B77A0 /* GHZCommentModel.m */; };
+		D6DF43A91D41AE27001D4AF3 /* AppDelegate+GHZUmengAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DF43A81D41AE27001D4AF3 /* AppDelegate+GHZUmengAnalytics.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1238,6 +1239,8 @@
 		D6D4124C1D3B6276006B77A0 /* GHZCommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZCommentTableViewCell.xib; sourceTree = "<group>"; };
 		D6D4124E1D3B7036006B77A0 /* GHZCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHZCommentModel.h; sourceTree = "<group>"; };
 		D6D4124F1D3B7036006B77A0 /* GHZCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHZCommentModel.m; sourceTree = "<group>"; };
+		D6DF43A71D41AE27001D4AF3 /* AppDelegate+GHZUmengAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+GHZUmengAnalytics.h"; sourceTree = "<group>"; };
+		D6DF43A81D41AE27001D4AF3 /* AppDelegate+GHZUmengAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+GHZUmengAnalytics.m"; sourceTree = "<group>"; };
 		FA98C4A23AC9EC665AB94AAD /* Pods-GHZxiangmuB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHZxiangmuB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GHZxiangmuB/Pods-GHZxiangmuB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1340,6 +1343,8 @@
 				D6708DD31D39C489004A80B4 /* AppDelegate+GHZEaseMobAPNS.m */,
 				D6708DD41D39C489004A80B4 /* AppDelegate+GHZUMeng.h */,
 				D6708DD51D39C489004A80B4 /* AppDelegate+GHZUMeng.m */,
+				D6DF43A71D41AE27001D4AF3 /* AppDelegate+GHZUmengAnalytics.h */,
+				D6DF43A81D41AE27001D4AF3 /* AppDelegate+GHZUmengAnalytics.m */,
 				D6708DD61D39C489004A80B4 /* NSDate+GHZExtension.h */,
 				D6708DD71D39C489004A80B4 /* NSDate+GHZExtension.m */,
 				D6708DD81D39C489004A80B4 /* NSString+GHZTime.h */,
@@ -3469,6 +3474,7 @@
 				D67091681D39C48A004A80B4 /* GHZTabBarViewController.m in Sources */,
 				D670925D1D39C48A004A80B4 /* ZXAI01392xDecoder.m in Sources */,
 				D67091C01D39C48A004A80B4 /* GHZProfileViewController.m in Sources */,
+				D6DF43A91D41AE27001D4AF3 /* AppDelegate+GHZUmengAnalytics.m in Sources */,
 				D67091FE1D39C48A004A80B4 /* ZXEmailAddressResultParser.m in Sources */,
 				D68F37B31D40BC9400467EB5 /* MinoruTextField.m in Sources */,
 				D67092C11D39C48A004A80B4 /* ZXQRCodeMultiReader.m in Sources */,

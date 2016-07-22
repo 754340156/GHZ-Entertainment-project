@@ -14,6 +14,7 @@
 #import "GHZLiveWebViewController.h"
 #import "GHZShowingViewController.h"
 #import "GHZSelectedView.h"
+#import <UMMobClick/MobClick.h>
 @interface GHZLiveViewController ()<UIScrollViewDelegate>
 @end
 
@@ -33,11 +34,14 @@
 {
     [super viewWillAppear:animated];
     self.topMenuView.hidden = NO;
+    //统计页面
+    [MobClick beginLogPageView:@"直播模块父控制器"];//("PageOne"为页面名称，可自定义)
 }
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     self.topMenuView.hidden = YES;
+    [MobClick endLogPageView:@"直播模块父控制器"];
 }
 - (void)setScrollView
 {
@@ -91,6 +95,8 @@
 }
 - (void)rankAction
 {
+    //事件统计
+    [MobClick event:@"直播界面排行榜按钮点击事件"];
     GHZLiveWebViewController *webVC = [[GHZLiveWebViewController alloc] init];
     webVC.webUrl = rankUrl;
     webVC.hidesBottomBarWhenPushed = YES;
