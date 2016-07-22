@@ -100,7 +100,7 @@
     //新浪加 V
     self.sinaVView.hidden = !topic.sina_v;
     //设置头像
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage circleImage:[UIImage imageNamed:@"defaultUserIcon"] borderColor:nil borderWidth:0] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         self.profileImageView.image = image ? [UIImage circleImage:image borderColor:nil borderWidth:0] : [UIImage circleImage:[UIImage imageNamed:@"defaultUserIcon"] borderColor:nil borderWidth:0];
     }];
     //设置名字

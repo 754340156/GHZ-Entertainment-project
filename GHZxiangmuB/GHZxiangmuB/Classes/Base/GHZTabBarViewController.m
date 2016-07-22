@@ -13,6 +13,7 @@
 #import "GHZLiveViewController.h"
 #import "GHZProfileViewController.h"
 #import "GHZLoginViewController.h"
+#import "GHZShowingViewController.h"
 #import "EMSDK.h"
 #import "PJXBounceAnimation.h"
 #import "PJXAnimatedTabBarItem.h"

@@ -64,8 +64,9 @@ static const CGFloat kVideoControlBarAutoFadeOutTimeinterval = 5.0;
     self.pauseButton.frame = self.playButton.frame;
     self.fullScreenButton.frame = CGRectMake(CGRectGetMaxX(self.bottomBar.bounds) - CGRectGetMaxX(self.fullScreenButton.bounds), CGRectGetMaxY(self.bottomBar.bounds)/2 - CGRectGetMaxY(self.fullScreenButton.bounds)/2, CGRectGetMaxX(self.fullScreenButton.bounds), CGRectGetMaxY(self.fullScreenButton.bounds));
     self.shrinkScreenButton.frame = self.fullScreenButton.frame;
-    self.progressSlider.frame = CGRectMake(CGRectGetMaxX(self.playButton.bounds), CGRectGetMaxY(self.bottomBar.bounds)/2 - CGRectGetMaxY(self.progressSlider.bounds)/2, CGRectGetMaxX(self.bounds) - CGRectGetMaxX(self.playButton.bounds) - CGRectGetMaxX(self.fullScreenButton.bounds), CGRectGetMaxY(self.progressSlider.bounds));
-    self.timeLabel.frame = CGRectMake(CGRectGetMidX(self.progressSlider.frame), CGRectGetMaxY(self.progressSlider.frame) + 2, CGRectGetMidX(self.progressSlider.frame), CGRectGetMaxY(self.timeLabel.bounds));
+    self.progressSlider.frame = CGRectMake(CGRectGetMaxX(self.playButton.bounds), CGRectGetMaxY(self.bottomBar.bounds)/2 - CGRectGetMaxY(self.progressSlider.bounds)/2, CGRectGetMaxX(self.bounds) - CGRectGetMaxX(self.playButton.bounds) - CGRectGetMaxX(self.fullScreenButton.bounds) - self.timeLabel.GHZ_width, CGRectGetMaxY(self.progressSlider.bounds));
+    self.timeLabel.frame = CGRectMake(CGRectGetMaxX(self.progressSlider.frame), CGRectGetMinY(self.progressSlider.frame) + 2, self.timeLabel.GHZ_width, CGRectGetMaxY(self.timeLabel.bounds));
+    self.timeLabel.GHZ_centerY = self.progressSlider.GHZ_centerY;
     self.indicatorView.center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
 }
 
@@ -218,7 +219,7 @@ static const CGFloat kVideoControlBarAutoFadeOutTimeinterval = 5.0;
         _timeLabel.font = [UIFont systemFontOfSize:kVideoControlTimeLabelFontSize];
         _timeLabel.textColor = [UIColor whiteColor];
         _timeLabel.textAlignment = NSTextAlignmentRight;
-        _timeLabel.bounds = CGRectMake(0, 0, kVideoControlTimeLabelFontSize, kVideoControlTimeLabelFontSize);
+        _timeLabel.bounds = CGRectMake(0, 0, 70, kVideoControlTimeLabelFontSize);
     }
     return _timeLabel;
 }

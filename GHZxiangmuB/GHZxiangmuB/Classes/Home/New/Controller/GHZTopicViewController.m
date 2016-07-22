@@ -158,8 +158,11 @@
 #pragma mark - GHZNewWordCellDelegate
 //分享
 -(void)getclick:(NSString *)image url:(NSString *)url text:(NSString *)text{
-    [[UMSocialData defaultData].urlResource setResourceType:(UMSocialUrlResourceTypeImage) url:image];
-    [UMSocialData defaultData].extConfig.title = @"分享的title";
+    if (!(self.type == Word)) {
+        [[UMSocialData defaultData].urlResource setResourceType:UMSocialUrlResourceTypeImage url:image];
+        
+    }
+    [UMSocialData defaultData].extConfig.title = text;
     [UMSocialData defaultData].extConfig.qqData.url = url;
     [UMSocialData defaultData].extConfig.wechatSessionData.url = url;
     [UMSocialData defaultData].extConfig.sinaData.urlResource.url = url;

@@ -10,7 +10,7 @@
 #import "GHZMBManager.h"
 #import "NarikoTextField.h"
 #import <EMSDK.h>
-@interface GHZRegistViewController ()<UITextFieldDelegate>
+@interface GHZRegistViewController ()
 @property (weak, nonatomic) IBOutlet UIView *backView;
 @property (weak, nonatomic) IBOutlet NarikoTextField *userNameLabel;
 @property (weak, nonatomic) IBOutlet NarikoTextField *passwordLabel;
@@ -33,9 +33,6 @@
     self.userNameLabel.placeHolderLabel.text = @"请输入用户名";
     self.passwordLabel.placeHolderLabel.text = @"请输入密码";
     self.conPasswordLabel.placeHolderLabel.text = @"请确认密码";
-    self.userNameLabel.delegate = self;
-    self.passwordLabel.delegate = self;
-    self.conPasswordLabel.delegate = self;
     self.backView.layer.masksToBounds = YES;
     self.backView.layer.cornerRadius = self.backView.GHZ_width * 0.5;
 }
@@ -78,12 +75,5 @@
     [self.userNameLabel resignFirstResponder];
     [self.passwordLabel resignFirstResponder];
     [self.conPasswordLabel resignFirstResponder];
-}
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [self.userNameLabel resignFirstResponder];
-    [self.passwordLabel resignFirstResponder];
-    [self.conPasswordLabel resignFirstResponder];
-    return YES;
 }
 @end

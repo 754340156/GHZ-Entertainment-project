@@ -22,19 +22,19 @@
                 NSLog(@"不清楚");
                 break;
             case AFNetworkReachabilityStatusNotReachable:
-                NSLog(@"连接不上");
+               newWorkStatus = @"当前没有网络";
                 break;
             case AFNetworkReachabilityStatusReachableViaWiFi:
                 NSLog(@"WiFi");
                 break;
             case AFNetworkReachabilityStatusReachableViaWWAN:
-               newWorkStatus = @"2G/3G/4G网络";
+               newWorkStatus = @"当前网络状态已经变为2G/3G/4G网络,如果继续使用可能产生流量费用(运营商收取),点击取消可以关闭蜂窝网络设置";
                 break;
         }
         if (!newWorkStatus.length) {
             return ;
         }
-        UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"流量提醒" message:[NSString stringWithFormat:@"当前网络状态已经变为%@,如果继续使用可能产生流量费用(运营商收取),点击取消可以关闭蜂窝网络设置",newWorkStatus] preferredStyle:(UIAlertControllerStyleAlert)];
+        UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"流量提醒" message:newWorkStatus preferredStyle:(UIAlertControllerStyleAlert)];
         UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
         }];

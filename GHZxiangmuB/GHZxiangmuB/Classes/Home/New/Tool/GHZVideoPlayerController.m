@@ -93,6 +93,7 @@ static const CGFloat kVideoPlayerControllerAnimationTimeinterval = 0.3f;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onMPMoviePlayerLoadStateDidChangeNotification) name:MPMoviePlayerLoadStateDidChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onMPMoviePlayerReadyForDisplayDidChangeNotification) name:MPMoviePlayerReadyForDisplayDidChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onMPMovieDurationAvailableNotification) name:MPMovieDurationAvailableNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onMPMoviePlayerPlaybackDidFinishNotification) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
 }
 
 - (void)cancelObserver
@@ -149,7 +150,12 @@ static const CGFloat kVideoPlayerControllerAnimationTimeinterval = 0.3f;
 {
     [self setProgressSliderMaxMinValues];
 }
-
+- (void)onMPMoviePlayerPlaybackDidFinishNotification
+{
+    if (floor(self.currentPlaybackTime)) {
+        [self dismiss];
+    }
+}
 - (void)playButtonClick
 {
     [self play];
@@ -192,6 +198,7 @@ static const CGFloat kVideoPlayerControllerAnimationTimeinterval = 0.3f;
         self.isFullscreenMode = YES;
         self.videoControl.fullScreenButton.hidden = YES;
         self.videoControl.shrinkScreenButton.hidden = NO;
+         [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:YES];
     }];
 }
 
@@ -208,6 +215,7 @@ static const CGFloat kVideoPlayerControllerAnimationTimeinterval = 0.3f;
         self.isFullscreenMode = NO;
         self.videoControl.fullScreenButton.hidden = NO;
         self.videoControl.shrinkScreenButton.hidden = YES;
+         [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:YES];
     }];
 }
 
@@ -238,8 +246,8 @@ static const CGFloat kVideoPlayerControllerAnimationTimeinterval = 0.3f;
 {
     double currentTime = floor(self.currentPlaybackTime);
     double totalTime = floor(self.duration);
-    [self setTimeLabelValues:currentTime totalTime:totalTime];
     self.videoControl.progressSlider.value = ceil(currentTime);
+    [self setTimeLabelValues:currentTime totalTime:totalTime];
 }
 
 - (void)setTimeLabelValues:(double)currentTime totalTime:(double)totalTime {
@@ -257,12 +265,13 @@ static const CGFloat kVideoPlayerControllerAnimationTimeinterval = 0.3f;
 - (void)startDurationTimer
 {
     self.durationTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(monitorVideoPlayback) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:self.durationTimer forMode:NSDefaultRunLoopMode];
+    [[NSRunLoop currentRunLoop] addTimer:self.durationTimer forMode:NSRunLoopCommonModes];
 }
 
 - (void)stopDurationTimer
 {
     [self.durationTimer invalidate];
+    self.durationTimer = nil;
 }
 
 - (void)fadeDismissControl

@@ -174,7 +174,6 @@
 }
 
 - (void)tagClick{
-    GHZLogFunc;
 }
 
 #pragma mark - <UIScrollViewDelegate>

@@ -7,8 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GHZLoginViewController">
             <connections>
-                <outlet property="passwordLabel" destination="kgl-LH-MpI" id="IAz-OW-EGz"/>
-                <outlet property="userNameLabel" destination="9Ho-vj-HkG" id="e4F-GA-Mca"/>
+                <outlet property="passwordLabel" destination="kgl-LH-MpI" id="lyO-hT-qKc"/>
+                <outlet property="userNameLabel" destination="9Ho-vj-HkG" id="Cg2-Il-dIC"/>
                 <outlet property="view" destination="iN0-l3-epB" id="VSh-mo-a51"/>
             </connections>
         </placeholder>
@@ -21,13 +21,13 @@
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第三方登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b88-R0-2FM">
-                    <rect key="frame" x="255" y="504" width="90" height="22"/>
+                    <rect key="frame" x="255" y="427" width="90" height="22"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkB-XI-O3k">
-                    <rect key="frame" x="60" y="546" width="40" height="40"/>
+                    <rect key="frame" x="60" y="469" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="3da-9y-cAL"/>
                         <constraint firstAttribute="height" constant="40" id="bMQ-Mf-LVB"/>
@@ -38,7 +38,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXl-UC-QrW">
-                    <rect key="frame" x="280" y="546" width="40" height="40"/>
+                    <rect key="frame" x="280" y="469" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="jKs-8Q-BnW"/>
                         <constraint firstAttribute="height" constant="40" id="yff-ki-3xf"/>
@@ -49,7 +49,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvG-Lt-WPJ">
-                    <rect key="frame" x="500" y="546" width="40" height="40"/>
+                    <rect key="frame" x="500" y="469" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="1VM-4x-c5k"/>
                         <constraint firstAttribute="height" constant="40" id="652-6f-MgR"/>
@@ -60,7 +60,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXs-Ze-mtd">
-                    <rect key="frame" x="200" y="400" width="200" height="34"/>
+                    <rect key="frame" x="200" y="323" width="200" height="34"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="nTb-Bn-ypS"/>
                     </constraints>
@@ -72,24 +72,16 @@
                         <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="Zvb-iu-VbK"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ho-vj-HkG" customClass="NarikoTextField">
-                    <rect key="frame" x="20" y="150" width="560" height="80"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="80" id="O8d-ul-ohN"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kgl-LH-MpI" customClass="NarikoTextField">
-                    <rect key="frame" x="20" y="250" width="560" height="80"/>
+                    <rect key="frame" x="20" y="173" width="560" height="80"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="F7o-I4-Vtj"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
-                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIn-ol-Ch0">
-                    <rect key="frame" x="452" y="360" width="88" height="34"/>
+                    <rect key="frame" x="452" y="283" width="88" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <state key="normal" title="&gt;&gt;&gt;去注册">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -98,6 +90,14 @@
                         <action selector="registAction:" destination="-1" eventType="touchUpInside" id="2UI-y1-qrU"/>
                     </connections>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ho-vj-HkG" customClass="NarikoTextField">
+                    <rect key="frame" x="20" y="73" width="560" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="O8d-ul-ohN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -109,6 +109,7 @@
                 <constraint firstItem="QIn-ol-Ch0" firstAttribute="top" secondItem="kgl-LH-MpI" secondAttribute="bottom" constant="30" id="6k8-T9-SK5"/>
                 <constraint firstItem="IjI-iW-UTB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IR9-j6-smU"/>
                 <constraint firstAttribute="trailing" secondItem="9Ho-vj-HkG" secondAttribute="trailing" constant="20" id="Iim-4u-lUf"/>
+                <constraint firstItem="QIn-ol-Ch0" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Iuc-LB-DOX"/>
                 <constraint firstItem="IjI-iW-UTB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JVt-Hg-4Fq"/>
                 <constraint firstAttribute="bottom" secondItem="IjI-iW-UTB" secondAttribute="bottom" id="Mrq-V1-vdS"/>
                 <constraint firstAttribute="trailing" secondItem="IjI-iW-UTB" secondAttribute="trailing" id="TpX-KL-Ore"/>
@@ -124,6 +125,12 @@
                 <constraint firstItem="lXl-UC-QrW" firstAttribute="top" secondItem="b88-R0-2FM" secondAttribute="bottom" constant="20" id="vZF-pq-L5L"/>
                 <constraint firstItem="RkB-XI-O3k" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="60" id="ycc-kb-Lq1"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="gfG-I5-cJF"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="543" y="143"/>
         </view>
     </objects>
     <resources>

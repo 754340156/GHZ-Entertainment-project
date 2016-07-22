@@ -8,7 +8,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GHZShowPictureViewController">
             <connections>
                 <outlet property="progressView" destination="Vpg-P3-qQa" id="2hT-Hk-smD"/>
+                <outlet property="saveButton" destination="xkm-mJ-ACd" id="6J8-lJ-H2A"/>
                 <outlet property="scrollView" destination="ACo-y2-YMY" id="VmA-oW-09R"/>
+                <outlet property="shareButton" destination="ec4-eX-0Sl" id="xil-S5-1h6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -46,7 +48,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ec4-eX-0Sl" userLabel="转发">
                     <rect key="frame" x="425" y="555" width="70" height="25"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.24539331896551725" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="Kof-6e-yTx"/>
                         <constraint firstAttribute="height" constant="25" id="pCv-bE-ttD"/>

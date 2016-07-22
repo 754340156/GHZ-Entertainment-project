@@ -15,7 +15,7 @@
 #import "UMSocial.h"
 #import "NarikoTextField.h"
 #import <EMSDK.h>
-@interface GHZLoginViewController ()<UITextFieldDelegate>
+@interface GHZLoginViewController ()
 @property (weak, nonatomic) IBOutlet NarikoTextField *userNameLabel;
 @property (weak, nonatomic) IBOutlet NarikoTextField *passwordLabel;
 
@@ -38,8 +38,6 @@
     [super viewDidLoad];
     self.userNameLabel.placeHolderLabel.text = @"请输入用户名";
     self.passwordLabel.placeHolderLabel.text = @"请输入密码";
-    self.userNameLabel.delegate = self;
-    self.passwordLabel.delegate = self;
 }
 //登录按钮
 
@@ -190,10 +188,5 @@
     [self.userNameLabel resignFirstResponder];
     [self.passwordLabel resignFirstResponder];
 }
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [self.userNameLabel resignFirstResponder];
-    [self.passwordLabel resignFirstResponder];
-    return YES;
-}
+
 @end

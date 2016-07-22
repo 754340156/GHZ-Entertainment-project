@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface GHZProfileHeaderView : UIView
-
-
 /**  去聊天界面 */
 @property (nonatomic,copy) void (^chatAction)(UIButton *);
 @end

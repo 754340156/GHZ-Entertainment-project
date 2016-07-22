@@ -10,9 +10,13 @@
 #import "UIImageView+WebCache.h"
 #import "GHZTopicModel.h"
 #import "UMSocial.h"
-@interface GHZShowpirtureController ()<UMSocialUIDelegate,UMSocialDataDelegate>
+@interface GHZShowpirtureController ()<UMSocialUIDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic,strong)UIImageView *imageView;
+/**  转发按钮 */
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
+/**  保存按钮 */
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property (nonatomic,strong)MBProgressHUD *hud;
 @end
 
@@ -20,6 +24,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.shareButton.layer.cornerRadius = self.shareButton.GHZ_height * 0.5;
+    self.shareButton.layer.masksToBounds = YES;
+    self.saveButton.layer.cornerRadius = self.saveButton.GHZ_height * 0.5;
+    self.saveButton.layer.masksToBounds = YES;
+    [self.view layoutIfNeeded];
     //宽
     //图片宽度 高度
     UIImageView *imageView = [[UIImageView alloc] init];
@@ -67,15 +76,26 @@
 }
 - (IBAction)shareButtons:(id)sender {
     
+    NSString *url = [[NSString alloc] init];
+    if (_model.type == Video ) {
+        url = _model.videouri;
+    }else if (_model.type == Music){
+        
+        url = _model.voiceuri;
+    }else if(_model.type == Picture){
+        
+        url = _model.bigImage;
+    }
+    
     if (!(_model.type == Word)) {
         [[UMSocialData defaultData].urlResource setResourceType:UMSocialUrlResourceTypeImage url:_model.bigImage];
         
     }
-    [UMSocialData defaultData].extConfig.title = @"分享 title";
+    [UMSocialData defaultData].extConfig.title = _model.text;
     [UMSocialData defaultData].extConfig.qqData.url = @"www.baidu.com";
     [UMSocialSnsService presentSnsIconSheetView:self
                                          appKey:@"57490f1ee0f55a75d5002f3f"
-                                      shareText:[NSString stringWithFormat:@"%@%@",_model.text,_model.bigImage]
+                                      shareText:[NSString stringWithFormat:@"%@%@",_model.text,url]
                                      shareImage:[UIImage imageNamed:@"icon"]
                                 shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToQQ,UMShareToQzone]
                                        delegate:self];

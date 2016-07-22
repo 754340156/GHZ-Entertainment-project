@@ -16,6 +16,10 @@
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet GHZCreamProgressView *progressView;
+/**  转发按钮 */
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
+/**  保存按钮 */
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 @property (nonatomic, strong) UIImageView *imageView;
 
@@ -23,9 +27,14 @@
 
 @implementation GHZShowPictureViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.shareButton.layer.cornerRadius = self.shareButton.GHZ_height * 0.5;
+    self.shareButton.layer.masksToBounds = YES;
+    self.saveButton.layer.cornerRadius = self.saveButton.GHZ_height * 0.5;
+    self.saveButton.layer.masksToBounds = YES;
+    [self.view layoutIfNeeded];
     //屏幕尺寸
     CGFloat screenH = [UIScreen mainScreen].bounds.size.height;
     CGFloat screenW = [UIScreen mainScreen].bounds.size.width;
@@ -95,8 +104,10 @@
         
     }
     
-    [UMSocialData defaultData].extConfig.title = @"分享 title";
-    [UMSocialData defaultData].extConfig.qqData.url = @"www.baidu.com";
+    [UMSocialData defaultData].extConfig.title = _topic.text;
+    [UMSocialData defaultData].extConfig.qqData.url = url;
+    [UMSocialData defaultData].extConfig.wechatSessionData.url = url;
+    [UMSocialData defaultData].extConfig.sinaData.urlResource.url = url;
     [UMSocialSnsService presentSnsIconSheetView:self
                                          appKey:@"57490f1ee0f55a75d5002f3f"
                                       shareText:[NSString stringWithFormat:@"%@%@",_topic.text, url]

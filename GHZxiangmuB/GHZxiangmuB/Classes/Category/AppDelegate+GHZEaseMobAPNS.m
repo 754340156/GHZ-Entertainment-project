@@ -13,6 +13,7 @@
 #import "GHZTabBarViewController.h"
 #import "GHZNavViewController.h"
 #import "GHZChatHomeViewController.h"
+#import "GHZUserSetting.h"
 #import <EMSDK.h>
 @implementation AppDelegate (GHZEaseMobAPNS)
 - (void)setEaseMobWithApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -30,6 +31,7 @@
         self.window.backgroundColor = [UIColor grayColor];
         [self.window makeKeyAndVisible];
         self.window.rootViewController = [[GHZTabBarViewController alloc] init];
+        [[GHZUserSetting shareInstance] setNickName:[EMClient sharedClient].currentUsername];
         //iOS8 注册APNS
         if ([application respondsToSelector:@selector(registerForRemoteNotifications)]) {
             [application registerForRemoteNotifications];
@@ -60,7 +62,15 @@
         NSLog(@"发送token成功");
         dispatch_async(dispatch_get_main_queue(), ^{
             [[EMClient sharedClient] asyncGetPushOptionsFromServer:^(EMPushOptions *pushOptions) {
-                NSLog(@"获取推送属性成功%@%u%u",pushOptions.nickname,pushOptions.displayStyle,pushOptions.noDisturbStatus);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [[EMClient sharedClient] asyncSetApnsNickname:[GHZUserSetting shareInstance].nickName success:^{
+                        NSLog(@"设置推送昵称成功");
+                    } failure:^(EMError *aError) {
+                        NSLog(@"设置推送昵称失败%@",aError.errorDescription);
+                    }];
+                    NSLog(@"获取推送属性成功%@%u%u",pushOptions.nickname,pushOptions.displayStyle,pushOptions.noDisturbStatus);
+                });
+                
             } failure:^(EMError *aError) {
                 
             }];
@@ -74,6 +84,8 @@
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
     NSLog(@"注册token失败%@",error);
 }
+
+//点击推送处理
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
     completionHandler(UIBackgroundFetchResultNewData);

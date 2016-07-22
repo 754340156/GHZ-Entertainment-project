@@ -120,18 +120,28 @@
     }
     else if (indexPath.row == 4)
     {
-        [[EMClient sharedClient] asyncLogout:YES success:^{
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [GHZMBManager showBriefAlert:@"退出成功"];
-                //跳到主界面
-                self.view.window.backgroundColor = [UIColor grayColor];
-                GHZNavViewController *navVC = [[GHZNavViewController alloc] initWithRootViewController:[[GHZLoginViewController alloc]init]];
-                self.view.window.rootViewController = navVC;
-                [self.view.window makeKeyAndVisible];
-            });
-        } failure:^(EMError *aError) {
-           [GHZMBManager showBriefAlert:@"退出失败"];
+         __weak typeof(self)weakself = self;
+        UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"提示" message:@"确定要退出程序吗?" preferredStyle:(UIAlertControllerStyleAlert)];
+        UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
         }];
+        [controller addAction:cancleAction];
+        UIAlertAction *doAction = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+            [[EMClient sharedClient] asyncLogout:YES success:^{
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [GHZMBManager showBriefAlert:@"退出成功"];
+                    //跳到主界面
+                    weakself.view.window.backgroundColor = [UIColor grayColor];
+                    GHZNavViewController *navVC = [[GHZNavViewController alloc] initWithRootViewController:[[GHZLoginViewController alloc]init]];
+                    weakself.view.window.rootViewController = navVC;
+                    [weakself.view.window makeKeyAndVisible];
+                });
+            } failure:^(EMError *aError) {
+                [GHZMBManager showBriefAlert:@"退出失败"];
+            }];
+        }];
+        [controller addAction:doAction];
+        [self presentViewController:controller animated:YES completion:nil];
+
     }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
