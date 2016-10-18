@@ -2,8 +2,8 @@
 //  GHZShowPictureViewController.m
 //  GHZxiangmuB
 //
-//  Created by lanou3g on 16/7/13.
-//  Copyright © 2016年 lanou3g-22赵哲. All rights reserved.
+//  Created by    on 16/7/13.
+//  Copyright © 2016年  赵哲. All rights reserved.
 //
 
 #import "GHZShowPictureViewController.h"

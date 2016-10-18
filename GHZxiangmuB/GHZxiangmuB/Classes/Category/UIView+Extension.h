@@ -2,8 +2,8 @@
 //  UIView+Extension.h
 //  GHZxiangmuB
 //
-//  Created by lanou3g on 16/7/7.
-//  Copyright © 2016年 lanou3g-22赵哲. All rights reserved.
+//  Created by    on 16/7/7.
+//  Copyright © 2016年  赵哲. All rights reserved.
 //
 //快速设置或获取uiview的坐标的分类
 #import <UIKit/UIKit.h>
