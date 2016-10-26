@@ -31,14 +31,16 @@ UIView *hudAddedView;
     return self;
 }
 #pragma mark - 初始化深色背景
--(void)initBackView{
+-(void)initBackView
+{
     bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreen_width, kScreen_height)];
     bottomView.backgroundColor = [UIColor blackColor];
     bottomView.alpha = 0.5;
     bottomView.hidden = YES;
 }
 #pragma mark - 单例
-+(instancetype )shareManager{
++(instancetype )shareManager
+{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         hudManager = [[self alloc] init];
@@ -46,7 +48,8 @@ UIView *hudAddedView;
     return hudManager;
 }
 #pragma mark - 简短提示语
-+ (void) showBriefMessage:(NSString *) message InView:(UIView *) view{
++ (void) showBriefMessage:(NSString *) message InView:(UIView *) view
+{
     hudAddedView = view;
     [self shareManager];
     if (view == nil) {
@@ -62,7 +65,8 @@ UIView *hudAddedView;
     [hudManager addGestureInView:view];
 }
 #pragma mark - 长时间的提示语
-+ (void) showPermanentMessage:(NSString *)message InView:(UIView *) view{
++ (void) showPermanentMessage:(NSString *)message InView:(UIView *) view
+{
     hudAddedView = view;
     [self shareManager];
     if (view == nil) {
@@ -84,7 +88,8 @@ UIView *hudAddedView;
     [hudManager addGestureInView:view];
 }
 #pragma mark - 网络加载提示用
-+ (void) showLoadingInView:(UIView *) view{
++ (void) showLoadingInView:(UIView *) view
+{
     hudAddedView = view;
     [self shareManager];
     if (view == nil) {
@@ -105,7 +110,8 @@ UIView *hudAddedView;
     [hud show:YES];
     [hudManager addGestureInView:view];
 }
-+(void)showAlertWithCustomImage:(NSString *)imageName title:(NSString *)title inView:(UIView *)view{
++(void)showAlertWithCustomImage:(NSString *)imageName title:(NSString *)title inView:(UIView *)view
+{
     hudAddedView = view;
     [self shareManager];
     if (view == nil) {
@@ -124,20 +130,21 @@ UIView *hudAddedView;
     [hudManager addGestureInView:view];
 }
 #pragma mark - 外部调用
-+(void)showLoading{
++(void)showLoading
+{
     [self showLoadingInView:nil];
 }
-+(void)showBriefAlert:(NSString *)alert{
++(void)showBriefAlert:(NSString *)alert
+{
     [self showBriefMessage:alert InView:nil];
 }
-+(void)showPermanentAlert:(NSString *)alert{
++(void)showPermanentAlert:(NSString *)alert
+{
     [self showPermanentMessage:alert InView:nil];
 }
-//+(void)showAlertWithCustomImage:(NSString *)imageName title:(NSString *)title{
-//    [self showAlertWithCustomImage:imageName title:title inView:nil];
-//}
 #pragma mark - 隐藏提示框
-+(void)hideAlert{
++(void)hideAlert
+{
     [hudManager hideBackView];
     UIView *view ;
     if (hudAddedView) {
@@ -151,7 +158,8 @@ UIView *hudAddedView;
 {
     [self hideHUDForView:view animated:YES];
 }
-+ (BOOL)hideHUDForView:(UIView *)view animated:(BOOL)animated {
++ (BOOL)hideHUDForView:(UIView *)view animated:(BOOL)animated
+{
     MBProgressHUD *hud = [self HUDForView:view];
     if (hud != nil) {
         hud.removeFromSuperViewOnHide = YES;
@@ -160,7 +168,8 @@ UIView *hudAddedView;
     }
     return NO;
 }
-+ (MBProgressHUD *)HUDForView:(UIView *)view {
++ (MBProgressHUD *)HUDForView:(UIView *)view
+{
     NSEnumerator *subviewsEnum = [view.subviews reverseObjectEnumerator];
     for (UIView *subview in subviewsEnum) {
         if ([subview isKindOfClass:[MBProgressHUD class]]) {
@@ -170,38 +179,44 @@ UIView *hudAddedView;
     return nil;
 }
 #pragma mark - 深色背景
--(void)showBackView{
+-(void)showBackView
+{
     bottomView.hidden = NO;
 }
--(void)hideBackView{
+-(void)hideBackView
+{
     bottomView.hidden = YES;
     [tap removeTarget:nil action:nil];
     bottomView.frame = CGRectMake(0, 0, kScreen_width, kScreen_height);
 }
 
 #pragma mark - 添加手势,触摸屏幕将提示框隐藏
--(void)addGestureInView:(UIView *)view{
+-(void)addGestureInView:(UIView *)view
+{
     tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapTheScreen)];
     tap.delegate = self;
     [view addGestureRecognizer:tap];
     
 }
 #pragma mark -点击屏幕
--(void)tapTheScreen{
+-(void)tapTheScreen
+{
     NSLog(@"点击屏幕");
     [hudManager hideBackView];
     [tap removeTarget:nil action:nil];
     [GHZMBManager hideAlert];
 }
 #pragma mark - 解决手势冲突
--(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
     if ([touch.view isKindOfClass:[MBProgressHUD class]]) {
         return YES;
     }else{
         return NO;
     }
 }
--(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+-(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
     return YES;
 }
 @end

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-static NSString *const kLoadingMessage = @"登录中...";
+static NSString *const kLoadingMessage = @"加载中...";
 static CGFloat const   kShowTime  = 1.0f;
 
 @interface GHZMBManager : NSObject
@@ -38,13 +38,6 @@ static CGFloat const   kShowTime  = 1.0f;
  *  隐藏alert
  */
 +(void)hideAlert;
-///**
-// *  自定义加载视图接口，支持自定义图片
-// *
-// *  @param imageName  要显示的图片，最好是37 x 37大小的图片
-// *  @param title 要显示的提示文字
-// */
-//+(void)showAlertWithCustomImage:(NSString *)imageName title:(NSString *)title;
 
 /***************************************
  *                                     *
